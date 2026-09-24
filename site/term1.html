@@ -66,6 +66,12 @@
     .qm-source { margin: 10px 0 0 !important; padding-top: 8px; border-top: 1px solid var(--line); font-size: .78rem !important; }
     .qm-source a { display: inline-flex; align-items: center; gap: 5px; color: var(--blue); font-weight: 800; text-decoration: none; }
     .qm-source a:hover { text-decoration: underline; }
+    .qm-weeks { grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); }
+    .qm-week { border-radius: 12px; box-shadow: 0 3px 12px rgba(25, 45, 68, .045); }
+    .qm-week h4 { display: flex; align-items: baseline; gap: 8px; }
+    .qm-week h4 .week-tag { color: #7a8796; font: 700 .72rem/1.2 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .qm-week .qm-source { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .qm-week .qm-source a { padding: 5px 9px; border-radius: 999px; background: #edf3f7; }
     .qm-setup { margin: 12px 0 18px; padding: 16px; border: 1px solid var(--line); background: #fbfaf7; }
     .qm-setup h4 { margin: 14px 0 5px; }
     .qm-setup h4:first-child { margin-top: 0; }
@@ -162,18 +168,18 @@
   <main class="wrap">
     <span class="eyebrow">UCL · Urban Spatial Science MSc · 2026–27</span>
     <h1>Term 1</h1>
-    <p class="lede">目前整理的四門課程：三門課程核心必修，以及一門 CASA 選修。每門 15 credits，合計 60 credits。</p>
+    <p class="lede">目前整理的四門課程：三門課程核心必修，以及一門 CASA 選修。每門 15 credits，合計 60 credits。<a href="https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/urban-spatial-science-msc" target="_blank" rel="noopener">核對 UCL 課程與模組列表</a> · <a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">核對 2026–27 term dates</a></p>
     <div class="summary" aria-label="Term 1 選課摘要">
       <span class="pill">4 門課</span>
       <span class="pill">60 credits</span>
       <span class="pill">2026 年 10 月 5 日 – 12 月 18 日</span>
     </div>
     <p class="note">學習量估算：UCL 的 credit framework 以 1 credit = 10 小時學習量計；每門 15-credit module 約 150 小時，四門合計約 600 小時。這包含課堂、practical、閱讀、自主練習和 assessment preparation，不代表 600 小時都是上課時間，也不等同每週固定課表。<a href="https://www.ucl.ac.uk/study/current-students/academic-manual/chapters/chapter-7-course-and-module-approval-and-amendment-framework/section-3-framework-components" target="_blank" rel="noopener">UCL credit and learning hours 說明</a></p>
-    <p class="note">資料分級：學分、term、module leader 與評分比例以 UCL 2026/27 Module Catalogue 為準；公開 handbook 的週次、閱讀及教學例子可能是 2025/26 版本。新年度的每週安排、授課名單與 assessment brief 若尚未公開，會明確標示待 Moodle 確認。</p>
+    <p class="note">資料分級：學分、term、module leader 與評分比例以 <a href="https://www.ucl.ac.uk/module-catalogue/" target="_blank" rel="noopener">UCL 2026/27 Module Catalogue</a> 為準；公開 handbook 的週次、閱讀及教學例子可能是 2025/26 版本。新年度的每週安排、授課名單與 assessment brief 若尚未公開，會明確標示待 <a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">UCL Moodle</a> 確認。</p>
 
     <section class="learning-route" id="learning-route" aria-labelledby="learning-route-title">
       <h2 id="learning-route-title">四門課各自補上哪一塊？</h2>
-      <p class="route-note">依 UCL 的課程目標與教學說明整理成讀書導覽；這是四門課的概念分工，不是 UCL 公布的授課順序或先修規定。</p>
+        <p class="route-note">依 UCL 的課程目標與教學說明整理成讀書導覽；這是四門課的概念分工，不是 UCL 公布的授課順序或先修規定。各課官方來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">CASA0001</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">CASA0005</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">CASA0007</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">CASA0013</a></p>
       <div class="route-grid">
         <article class="route-step"><strong>CASA0001 · 定義城市問題</strong><p>用城市社會科學、systems thinking 與 complexity 理解城市現象，建立分析問題的理論脈絡。</p></article>
         <article class="route-step"><strong>CASA0005 · 建立空間證據</strong><p>用 R 和基礎 QGIS 處理、呈現及分析地理資料，思考資料中的空間型態代表什麼。</p></article>
@@ -185,7 +191,7 @@
     </section>
 
     <h2 id="course-details">四門課詳解</h2>
-    <p class="route-note">每門課先列教學與評量導覽；展開「完整課程研究筆記與來源」可閱讀原首頁的所有詳細內容。</p>
+      <p class="route-note">每門課先列教學與評量導覽；展開「完整課程研究筆記」可閱讀更完整的內容。</p>
     <section class="course-list" aria-label="Term 1 課程">
       <article class="course">
         <span class="course-type">核心必修</span>
@@ -195,23 +201,35 @@
         <details class="course-dossier">
           <summary>展開：週次脈絡、閱讀、授課者與評量</summary>
           <div class="course-dossier-content">
-            <h3>學習內容與週次</h3>
+            <h3>學習內容與週次 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>UCL 公開課程描述列出 systems thinking、complexity、urbanisation、城市形態與功能、mobility、社會空間差異、urban health、planning 與 governance。可把學習脈絡理解為「城市如何形成與運作 → 人、空間和制度如何互相影響 → 如何把城市問題化為研究問題」；這是主題整理，不是 2026/27 的逐週正式課表。</p>
-            <ul><li>課程安排為 10 次每週兩小時 lecture，另有 optional support hour。</li><li>UCL 沒公布今年「第幾週教哪個主題」。官方涵蓋主題包括 urbanisation、systems/complexity、urban form/function、mobility、socio-spatial differentiation、health、planning 與 governance；可用下列10個 checkpoint 預習，但這是按官方主題整理的讀書順序，不是 UCL 正式週表：城市與社會科學基礎；城市地理概念；urbanisation；systems thinking；complexity；城市形態/功能；mobility/transport；社會空間差異；健康、planning 與 governance；整合並形成研究問題。</li><li>重點是理論閱讀、案例討論、概念比較和批判性寫作；module catalogue 沒有指定必備分析軟體。</li><li>分析工具包括 systems thinking、概念框架、causal diagrams 與批判性案例閱讀，不是 coding module。</li></ul>
-            <h3>工具與閱讀、準備</h3>
+            <p>UCL 說明本課有 10 次每週兩小時 lecture，另有 optional support hour；公開 catalogue 沒列本年度逐週授課題目。下列是依官方主題與推薦書整理的<strong>10 週具體讀書／課堂練習路線</strong>，不是正式 timetable；正式 lecture slides、錄影和指定 readings 請以 Moodle 為準。每週可產出一張概念圖及一段 150 字批判摘要。</p>
+            <div class="qm-weeks">
+              <section class="qm-week"><h4><span class="week-tag">Week 01</span>城市作為社會系統</h4><p><strong>課堂：</strong>界定 city、urban 與 urban system；整理人口、土地、經濟、基礎設施的關係。<strong>練習：</strong>以一個熟悉城市畫出「要素—關係—尺度」概念圖。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">課程範圍 ↗</a><a href="https://doi.org/10.4324/9780203103333" target="_blank" rel="noopener">Urban Sociology Reader ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 02</span>城市地理與 urbanisation</h4><p><strong>課堂：</strong>比較 urban growth、urbanisation、suburbanisation 與全球城市化脈絡。<strong>練習：</strong>挑一個人口或建成區指標，指出它能／不能代表什麼城市變化。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">Catalogue 主題 ↗</a><a href="https://doi.org/10.4324/9780203881927" target="_blank" rel="noopener">Urban Geography ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 03</span>Systems thinking 與因果關係</h4><p><strong>課堂：</strong>拆解 feedback、dependency、stocks/flows 與多尺度關係。<strong>練習：</strong>畫出房租、交通可達性、就業與遷移之間的因果迴路，標出可能的延遲與反饋。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">Catalogue 主題 ↗</a><a href="https://doi.org/10.7551/mitpress/11923.001.0001" target="_blank" rel="noopener">Inventing Future Cities ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 04</span>Complexity、emergence 與城市尺度</h4><p><strong>課堂：</strong>理解局部互動如何產生整體空間型態，討論城市系統的非線性與尺度效應。<strong>練習：</strong>將「城市變大」拆成至少兩個可檢驗的機制／假說。</p><p class="qm-source"><a href="https://doi.org/10.7551/mitpress/11923.001.0001" target="_blank" rel="noopener">Batty：城市複雜性 ↗</a><a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">CASA0001 舊版 reading list ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 05</span>Urban form、function 與土地使用</h4><p><strong>課堂：</strong>把城市形態、土地使用、密度及日常活動放在同一張分析圖。<strong>練習：</strong>比較兩個 neighbourhood 的形態差異，分清觀察到的 pattern 與推測的原因。</p><p class="qm-source"><a href="https://doi.org/10.4324/9780203881927" target="_blank" rel="noopener">Pacione：Urban Geography ↗</a><a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">Reading list ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 06</span>Mobility、transport 與可達性</h4><p><strong>課堂：</strong>檢視交通網絡、土地使用與不同群體出行機會的互相影響。<strong>練習：</strong>用「誰、去哪裡、用什麼方式、付出什麼代價」分析一項交通政策。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/bartlett/research-projects/inclusive-and-healthy-mobility" target="_blank" rel="noopener">Inclusive and Healthy Mobility ↗</a><a href="https://profiles.ucl.ac.uk/37018-jens-kandt" target="_blank" rel="noopener">Jens Kandt 研究方向 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 07</span>Socio-spatial differentiation</h4><p><strong>課堂：</strong>理解階級、年齡、族群與資源如何呈現為空間差異；討論鄰里尺度、分類與代表性問題。<strong>練習：</strong>列出一張 neighbourhood ranking 可能隱藏的群體內差異。</p><p class="qm-source"><a href="https://doi.org/10.4324/9780203103333" target="_blank" rel="noopener">Urban Sociology Reader ↗</a><a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">Reading list ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 08</span>Urban health 與環境</h4><p><strong>課堂：</strong>追蹤 built environment、移動、污染／熱暴露與健康結果可能的路徑。<strong>練習：</strong>畫因果圖並標示混雜因素，避免把相關誤寫為因果。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/bartlett/research-projects/inclusive-and-healthy-mobility" target="_blank" rel="noopener">UCL mobility and health research ↗</a><a href="https://profiles.ucl.ac.uk/37018-jens-kandt" target="_blank" rel="noopener">Module leader profile ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 09</span>Planning、governance 與權力</h4><p><strong>課堂：</strong>辨認治理者、制度、政策工具與受影響群體；比較規劃介入和市場／社區力量。<strong>練習：</strong>替一項城市方案做 stakeholder map，寫出利益衝突與證據缺口。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">Catalogue：planning &amp; governance ↗</a><a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">Reading list ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 10</span>整合理論並形成研究問題</h4><p><strong>課堂：</strong>串連理論、機制、尺度與治理脈絡。<strong>練習：</strong>將一個寬泛的城市議題改寫成可研究問題，列出概念定義、證據需求、比較對象與限制；用「主張—理論／證據—限制」做短論證。</p><p class="qm-source"><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方 learning outcomes ↗</a><a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">指定閱讀入口 ↗</a></p></section>
+            </div>
+            <p class="course-dossier-note">書：三本推薦書已連到出版社／DOI；每週指定文章看 UCL ReadingLists。影片：官方公開資料未列對外影片庫，錄影／slides 如有提供以 Moodle 為準。教材與 demo：以閱讀、城市案例、概念圖和因果圖練習為主，Catalogue 未列公開程式碼庫或固定軟體 demo。</p>
+            <h3>工具與閱讀、準備 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>2026/27 catalogue 建議讀物：Michael Batty, <a href="https://doi.org/10.7551/mitpress/11923.001.0001" target="_blank" rel="noopener"><em>Inventing Future Cities</em> (2018)</a>；J. Lin &amp; C. Mele (eds.), <a href="https://doi.org/10.4324/9780203103333" target="_blank" rel="noopener"><em>The Urban Sociology Reader</em> (2012)</a>；Michael Pacione, <a href="https://doi.org/10.4324/9780203881927" target="_blank" rel="noopener"><em>Urban Geography: A Global Perspective</em> (2009)</a>。它們是推薦書目，不等於每週必讀全部章節；指定文章和章節以 Moodle reading list 為準。UCL 公開的 <a href="https://ucl.rl.talis.com/modules/casa0001.html" target="_blank" rel="noopener">CASA0001 ReadingLists 模組頁</a>目前可查到 2025/26 清單，可作舊年度參考，不能取代 2026/27 reading list。</p>
-            <h3>授課者與研究方向</h3>
+            <h3>授課者與研究方向 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>2026/27 Module Catalogue 列 module leader 為 Dr Jens Kandt（UCL Associate Professor in Urban Geography and Data Science）。他的研究涵蓋城市地理、mobility/transport，以及交通和土地使用如何共同塑造城市。具體例子包括研究長者的交通使用與健康、公車優惠如何影響 mobility；也研究大型交通投資和鄰里變遷。Catalogue 沒有公開本年度所有 lecturer/guest lecturer 名單。<a href="https://profiles.ucl.ac.uk/37018-jens-kandt" target="_blank" rel="noopener">UCL profile：Jens Kandt</a> · <a href="https://www.ucl.ac.uk/bartlett/research-projects/inclusive-and-healthy-mobility" target="_blank" rel="noopener">UCL Inclusive and Healthy Mobility project</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10206070/" target="_blank" rel="noopener">交通投資與鄰里變遷研究（2025）</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10225153/" target="_blank" rel="noopener">長者移動模式研究（2026）</a></p>
-            <h3>評量與準備：作業</h3>
+            <h3>評量與準備：作業 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>2026/27 catalogue 列為 <strong>100% Coursework（2 assessments）</strong>，沒有 exam 比例。</li><li>Catalogue 沒有公布兩份作業的題目、形式、比例、字數或 due date；不能只憑「coursework」就確定是 essay、report 或 presentation。</li><li>準備方向：每週用「主張—理論/證據—限制」寫閱讀摘要，再依今年 brief 發展成正式作業。</li></ul>
             <p class="course-dossier-note">正式授課 roster、每週 reading、essay/作業格式、權重拆分和截止日：以 Moodle 當年度 brief 為準。</p>
-            <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">UCL Module Catalogue：CASA0001</a> · <a href="https://profiles.ucl.ac.uk/" target="_blank" rel="noopener">UCL staff profiles</a> · <a href="https://www.ucl.ac.uk/bartlett/casa/people" target="_blank" rel="noopener">CASA people</a></p>
           </div>
         </details>
         <details class="course-dossier research-detail" id="casa0001">
-          <summary>展開：完整課程研究筆記與來源</summary>
+          <summary>展開：完整課程研究筆記</summary>
           <div class="course-dossier-content research-body">
-            <div class="code">CASA0001</div><h3>Urban Systems Theory</h3>
+            <div class="code">CASA0001</div><h3>Urban Systems Theory <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是整個課程的城市理論與社會科學 foundation：把 urbanisation、systems and complexity、urban form、mobility、社會空間差異與 urban governance 放在同一個分析框架中。</p>
             <div class="module-dossier">
@@ -222,12 +240,12 @@
                 </nav>
                 <div class="module-detail-grid">
                   <div class="module-detail-block full module-dossier-section" id="casa0001-workflow">
-                    <h4>一、這門課具體在問什麼？</h4>
+                    <h4>一、這門課具體在問什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <p>課程用 social science 與 urban theory 來理解城市，而不是把城市只當成一組地圖或數據。你會練習把一個城市問題拆成不同尺度的社會、空間、制度與治理關係，再思考這些關係如何形成 urban system，以及如何轉化成有意義的 research inquiry。</p>
                     <p>它是 programme 的 conceptual foundation，後續的 spatial analysis、urban modelling、smart cities 與 dissertation 都可以回到這裡的系統思考與城市理論。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-themes">
-                    <h4>二、會學哪些城市理論與主題？</h4>
+                    <h4>二、會學哪些城市理論與主題？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>Urbanisation、城市發展與 urban geography。</li>
                       <li>Systems theory、complexity theory 與城市作為互相連結的系統。</li>
@@ -240,11 +258,11 @@
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-tools">
-                    <h4>三、會用什麼工具？</h4>
+                    <h4>三、會用什麼工具？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <p>這門課的官方定位是理論、概念與社會科學 foundation，module page 沒有列出像 R、Python 或 QGIS 這樣的固定 software requirement。你比較會使用的是 systems thinking、概念框架、causal diagrams、文獻與案例的批判性分析；具體工具依當年度 lectures、readings 與 coursework brief 而定。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-delivery">
-                    <h4>四、上課方式與學習活動</h4>
+                    <h4>四、上課方式與學習活動 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li>
                       <li>10 次 weekly 2-hour lectures。</li>
@@ -253,7 +271,7 @@
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-outcomes">
-                    <h4>五、學完後應該能做到什麼？</h4>
+                    <h4>五、學完後應該能做到什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>把 systems thinking 與 social science theories 應用到城市問題。</li>
                       <li>概念化 cities、society 與 space 之間的關係。</li>
@@ -263,11 +281,11 @@
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-preparation">
-                    <h4>六、需要什麼先備知識？</h4>
+                    <h4>六、需要什麼先備知識？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <p>官方 module page 沒有列出 CASA0001 的硬性 prerequisite。對這門課最有幫助的是先接觸 urban geography、城市規劃、社會科學閱讀與基本 systems thinking；不需要先會 GIS、R 或 Python 才能理解這門課的核心。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0001-assessment">
-                    <h4>七、Exam 與 assessment</h4>
+                    <h4>七、Exam 與 assessment <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>2026/27 UCL Module Catalogue 目前列為 <strong>100% Coursework</strong>，並標示為 2 assessments。</li>
                       <li>成績類型為 numeric marks。</li>
@@ -276,7 +294,6 @@
                   </div>
                 </div>
               </div>
-              <p class="module-source-line" id="casa0001-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">UCL Module Catalogue：CASA0001</a></p>
             </div>
           </div>
         </details>
@@ -291,23 +308,35 @@
         <details class="course-dossier">
           <summary>展開：週週進度、工具、參考書與考試</summary>
           <div class="course-dossier-content">
-            <h3>學習內容與週次：公開 practical handbook</h3>
-            <ol><li>地理資訊、spatial data、格式、資料來源與前處理。</li><li>R 入門、資料整理、空間資料及互動地圖。</li><li>空間描述統計、raster 與 interpolation。</li><li>Git/GitHub、RMarkdown 與可重現工作。</li><li>R 製圖與 cartographic design。</li><li>點型態與空間群聚。</li><li>空間自相關與推論。</li><li>空間迴歸與解釋空間型態。</li><li>GWR、spatial lag 等進階空間迴歸。</li><li>MAUP、進階 R、模型比較與驗證。</li></ol>
-            <p>週次依公開 handbook 的章節順序整理為預習地圖；UCL catalogue 確認課程有大量 practical，並說明章節安排可能每年調整。實際 lecture/practical 日期、當年章節編排與考試範圍請看 Moodle。</p>
-            <h3>工具與閱讀</h3>
+            <h3>學習內容與週次：公開 practical handbook <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
+            <p>官方確認課程有大量 practical，但逐週安排會調整。下列 Week 1–8 對應目前公開 practical handbook 的實作主題；Week 9–10 是綜合複習／自我檢核安排，並非 UCL 公布的正式週表。建議每週完成一份可重跑 R script、輸出圖表和 3 句方法解讀。</p>
+            <div class="qm-weeks">
+              <section class="qm-week"><h4><span class="week-tag">Week 01</span>地理資訊與資料模型</h4><p><strong>課堂：</strong>比較 vector/raster、point/line/polygon、屬性表、CRS 及常見空間檔案。<strong>實作：</strong>在 QGIS/R 打開 London borough boundary 與 fly-tipping CSV，檢查欄位、空間參考和資料缺漏，記下資料來源與單位。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">Practical 1：Geographic Information ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">實作程式碼 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 02</span>R、表格整理與空間 join</h4><p><strong>課堂：</strong>RStudio project、物件／套件、讀入 CSV 和 spatial layer。<strong>實作：</strong>清理年度資料、按地理識別碼 join borough polygons，檢查未配對列，輸出第一張地圖並解釋資料粒度。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">Practical 2：Introduction to R ↗</a><a href="https://r4ds.hadley.nz/" target="_blank" rel="noopener">R for Data Science ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 03</span>描述統計、raster 與 CRS</h4><p><strong>課堂：</strong>理解 raster resolution、地理／投影座標與統計摘要。<strong>實作：</strong>讀取氣候 raster、抽取城市位置的值，計算摘要統計與 histogram；解釋解析度、投影選擇對數值的限制。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">Practical 3：Descriptive statistics ↗</a><a href="https://r.geocompx.org/" target="_blank" rel="noopener">Geocomputation with R ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 04</span>Git、GitHub 與可重現報告</h4><p><strong>課堂：</strong>版本控制、repository、RMarkdown 與分析紀錄。<strong>實作：</strong>clone practical 專案、記錄改動、將性別不平等指標 join 到國界圖層，輸出含方法和來源的可重跑報告。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">Practical 4：Git/GitHub/RMarkdown ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">CASA0005 GitHub repository ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 05</span>地圖設計與空間溝通</h4><p><strong>課堂：</strong>比例尺、分類、色階、圖例、分母及 MAUP 的影響。<strong>實作：</strong>把 Airbnb／hotel 資料和倫敦行政區整合，製作靜態 thematic map；比較 raw counts 和標準化指標會講出什麼不同故事。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">Practical 5：Map making ↗</a><a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">線上實作手冊 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 06</span>偵測空間型態</h4><p><strong>課堂：</strong>由點事件探索 clustering／dispersion，理解點型態方法的假設與尺度。<strong>實作：</strong>以 London Blue Plaques 等點資料比較觀察型態和隨機基準，製作 density/quadrat 等探索結果並說明其限制。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">Practical 6：Detecting spatial patterns ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">資料與程式碼 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 07</span>Spatial autocorrelation</h4><p><strong>課堂：</strong>建立 spatial weights，理解 Moran’s I／局部空間關聯及「相鄰觀測並非獨立」的含意。<strong>實作：</strong>以 London ward 指標建鄰接關係、計算全域與局部統計，再比較地圖 pattern 和統計推論。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">Practical 7：Spatial autocorrelation ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">R code repository ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 08</span>解釋空間型態與 regression</h4><p><strong>課堂：</strong>回顧迴歸係數、模型假設、殘差與空間相依，區分描述和因果主張。<strong>實作：</strong>先建立基準線性模型，檢查殘差空間 pattern，再閱讀 GWR／spatial regression 延伸方法的適用條件。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">Practical 8：Explaining spatial patterns ↗</a><a href="https://r.geocompx.org/" target="_blank" rel="noopener">Geocomputation with R ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 09</span>整合練習：raster／interpolation</h4><p><strong>複習工作坊：</strong>把 raster 載入、CRS、抽樣、插值與地圖表達串成一個小流程。這是用公開進階實作設計的自學週，是否列為當年課堂內容請看 Moodle。<strong>交付：</strong>一張對照圖和一段對解析度／插值不確定性的說明。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/advanced-raster-analysis.html" target="_blank" rel="noopener">延伸 practical：Advanced raster analysis ↗</a><a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">手冊目錄 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 10</span>整合練習：從問題到可重跑地圖</h4><p><strong>複習工作坊：</strong>自選一個城市問題，交代來源、清理、空間單位、方法選擇、地圖與限制；檢查另一台電腦能否依專案說明重跑。這是預習／考前整合建議，不代表正式 assessment brief。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">重建 R 專案與套件 ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">範例 codebase ↗</a></p></section>
+            </div>
+            <h3>工具與閱讀 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
+            <div class="qm-setup"><strong>R 環境：照這個順序設好可重跑專案</strong><p>① 安裝 R 和 RStudio Desktop；② 從 GitHub clone 教材專案並開啟 <code>CASA0005repo.Rproj</code>；③ 在 RStudio Console 安裝 <code>renv</code>（<code>install.packages("renv")</code>）；④ 執行 <code>renv::restore()</code> 還原手冊指定套件；⑤ 開啟 Practical 1，確認能讀入圖層、執行程式並輸出地圖。若只做單一 practical，依該章下載 Rmd 和資料即可。資料檔較大，可能要從章節另行下載。</p><p class="qm-source"><a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">官方外部使用與安裝步驟 ↗</a><a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">CASA0005 codebase / R project ↗</a><a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">RStudio Desktop ↗</a></p></div>
             <ul><li>主程式語言為 R/RStudio。公開 practical 使用 <code>sf</code> 做 spatial vector data，<code>tmap</code>/<code>tmaptools</code> 製圖與空間資料處理，<code>RSQLite</code> 連資料庫，也會用到 <code>tidyverse</code> 做資料清理。</li><li>QGIS 用來理解基本 GIS 概念、載入/檢查圖層和處理地圖；課程重心仍是 R。</li><li>可重現工作會碰到 Git/GitHub、RMarkdown；book repository 亦用 <code>renv</code> 固定專案套件版本。</li><li>延伸讀物：Wickham &amp; Grolemund, <a href="https://r4ds.hadley.nz/" target="_blank" rel="noopener"><em>R for Data Science</em></a>；Lovelace, Nowosad &amp; Muenchow, <a href="https://r.geocompx.org/" target="_blank" rel="noopener"><em>Geocomputation with R</em></a>。主要教材是每週 practical handbook。</li></ul>
-            <h3>授課者與研究方向</h3>
+            <h3>授課者與研究方向 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>2026/27 catalogue 列 module leader 為 Dr Andrew Maclachlan（Associate Professor in Spatial Data Science and Visualisation）。除 GIS、R、geocomputation 和可重現空間分析教學外，他的研究案例包括遙測地圖、城市擴張與土地覆蓋變化、城市熱島；近期例子是在 Queen Elizabeth Olympic Park 結合 IoT 感測器與 UMEP 做高解析度熱環境分析。CASA0005 的 R practical 教材也由 MacLachlan 與 Adam Dennett 共同開發，但教材作者不等於今年每週授課名單。<a href="https://profiles.ucl.ac.uk/72290-andrew-maclachlan" target="_blank" rel="noopener">UCL profile：Andrew Maclachlan</a> · <a href="https://www.andymac.uk/teach.html" target="_blank" rel="noopener">課程與研究教材</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10219891/" target="_blank" rel="noopener">Queen Elizabeth Olympic Park 熱環境研究（2025）</a> · <a href="https://doi.org/10.21105/jose.00141" target="_blank" rel="noopener">CASA0005 R practical 教材論文</a></p>
-            <h3>評量與準備：考試與 coursework</h3>
+            <h3>評量與準備：考試與 coursework <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>2026/27 catalogue：90% Exam、10% Other form of assessment。</li><li>目前公開資料沒有確認 exam 是紙筆、上機或 online，也未說明 10% 的形式；不要先假設可用 R/QGIS 或是哪種小作業。</li><li>平時可按 handbook 每章完成 practical，保存程式、地圖與解讀理由，並練習在限定時間內判斷資料型態、分析方法和結果限制。</li></ul>
             <p class="course-dossier-note">參考 handbook 的舊版 assessment 頁面不等於 2026/27 規則；以 Moodle 當年度 assessment brief 為準。</p>
-            <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Module Catalogue：CASA0005</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">CASA0005 practical handbook</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">教材套件與環境</a></p>
+            <p class="course-dossier-note">Python：官方以 R 為主要語言，不要假設可用 Python 取代 R。影片：目前公開手冊是文字與可執行範例，沒有確認的公開 lecture-video 清單；UCL 內部錄影依 Moodle。Demo：各 practical 內含逐步示範、R code、結果與作圖流程。10 週表中的最後兩週為自學整合。</p>
           </div>
         </details>
         <details class="course-dossier research-detail" id="casa0005">
-          <summary>展開：完整課程研究筆記與來源</summary>
+          <summary>展開：完整課程研究筆記</summary>
           <div class="course-dossier-content research-body">
-            <div class="code">CASA0005</div><h3>Geographic Information Systems and Science</h3>
+            <div class="code">CASA0005</div><h3>Geographic Information Systems and Science <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">90% exam</span><span class="pill">10% other assessment</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是一門以實作為主的 GIScience 與 spatial analysis 課程：你會從真實、未必乾淨的地理資料開始，完成資料清理、空間資料整合、地圖製作、空間統計與結果解釋。課程的目的不是只會操作軟體，而是能夠用空間資料回答一個具體的城市、環境或社會地理問題。</p>
             <div class="module-dossier">
@@ -326,12 +355,12 @@
                 </nav>
                 <div class="module-detail-grid">
                 <div class="module-detail-block full module-dossier-section" id="casa0005-workflow">
-                  <h4>一、這門課具體在做什麼？</h4>
+                  <h4>一、這門課具體在做什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <p>典型工作流程是：提出 spatial question 或 hypothesis → 找到 ONS、OSM、政府或其他 contemporary datasets → 清理與整理資料 → 對齊空間範圍與座標系統 → 用 R／QGIS 做空間分析 → 製作地圖與統計圖 → 評估 uncertainty、限制與結果是否合理。</p>
                   <p>公開 practical handbook 特別強調，課程會使用接近真實研究的資料；資料不會永遠是乾淨、可以直接分析的狀態，因此 data wrangling、格式轉換與錯誤排查本身就是課程的一部分。</p>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-r">
-                  <h4>二、R：主要分析工具</h4>
+                  <h4>二、R：主要分析工具 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li>讀取、清理、tidy 與整理資料。</li>
                     <li>處理 vector、raster、point、polygon 等 spatial data。</li>
@@ -342,7 +371,7 @@
                   </ul>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-qgis">
-                  <h4>三、QGIS：基本 GIS 與地圖工作</h4>
+                  <h4>三、QGIS：基本 GIS 與地圖工作 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li>載入、查看與檢查不同空間圖層。</li>
                     <li>理解 projections、coordinate reference systems 與 spatial extent。</li>
@@ -352,11 +381,11 @@
                   </ul>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-python">
-                  <h4>四、Python 可以嗎？</h4>
+                  <h4>四、Python 可以嗎？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <p>目前 UCL CASA0005 官方頁面與公開 handbook 都把 R 列為主要 data science programming language，並沒有把 Python 列為這門課的主要教學工具。因此 Python 可以作為你自己的輔助工具，但不能自行假設正式 coursework 一定接受 Python 取代 R；實際作業規則要以當年度 Moodle assessment brief 為準。</p>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-statistics">
-                  <h4>五、會用到的統計與空間分析</h4>
+                  <h4>五、會用到的統計與空間分析 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li><strong>Descriptive statistics：</strong>資料型態、分布、histogram、基本空間資料描述。</li>
                     <li><strong>Point pattern analysis：</strong>Kernel Density Estimation、Quadrat Analysis、Ripley’s K。</li>
@@ -368,7 +397,7 @@
                   </ul>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-outcomes">
-                  <h4>六、學完後應該能做到什麼？</h4>
+                  <h4>六、學完後應該能做到什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li>用 QGIS 與 R 支援 GIScience 技術的應用。</li>
                     <li>按照 cartographic standards 製作合適的地圖。</li>
@@ -380,12 +409,12 @@
                   </ul>
                 </div>
                 <div class="module-detail-block full module-dossier-section" id="casa0005-preparation">
-                  <h4>七、統計基礎要到什麼程度？</h4>
+                  <h4>七、統計基礎要到什麼程度？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <p>官方沒有要求你入學前已經會 GIS 或 R，但課程進度很快。實際上，先具備基本 descriptive statistics、資料分布、圖表閱讀、相關與 regression 結果解讀會很有幫助；更進階的 spatial statistics 會在課程中逐步建立。</p>
                   <div class="module-detail-note"><strong>準備方向：</strong>不用先把所有 R syntax 或 QGIS 工具背熟，但最好先理解平均數、變異、分布、correlation、regression 的基本概念，以及「空間上相鄰的資料可能不是獨立的」這個核心問題。</div>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-workload">
-                  <h4>八、學習負擔與上課方式</h4>
+                  <h4>八、學習負擔與上課方式 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li>Term 1，15 credits，FHEQ Level 7。</li>
                     <li>官方標示為 in-person teaching。</li>
@@ -394,7 +423,7 @@
                   </ul>
                 </div>
                 <div class="module-detail-block module-dossier-section" id="casa0005-assessment">
-                  <h4>九、Exam 與 assessment</h4>
+                  <h4>九、Exam 與 assessment <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                   <ul>
                     <li>2026/27 UCL Module Catalogue 目前列為 <strong>90% Exam</strong>。</li>
                     <li>另外列有 <strong>10% Other form of assessment</strong>，但公開頁面沒有說明具體是什麼形式。</li>
@@ -404,7 +433,6 @@
                 </div>
               </div>
                 </div>
-                <p class="module-source-line" id="casa0005-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Module Catalogue：CASA0005</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">CASA0005 online practical handbook</a></p>
               </div>
             </div>
           </div>
@@ -420,37 +448,37 @@
         <details class="course-dossier">
           <summary>展開：逐週主題、程式工具、讀物與 coursework</summary>
           <div class="course-dossier-content">
-            <h3>逐週上課內容與進度（公開 2025/26 教材地圖）</h3>
+            <h3>逐週上課內容與進度（公開 2025/26 教材地圖） <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>每週包含一堂 lecture 和一堂 practical。下面把公開 weekly notes 的學習目標轉成「課堂會理解什麼、Notebook 要實際做什麼、最後要能說明什麼」；實際投影片、資料集和練習題以 2026/27 Moodle 為準。公開課程頁明確列出 2026/27 是 10+10 次課，並把本年度內容註明為依 2025/26、可能變動。</p>
             <div class="qm-weeks">
-              <section class="qm-week"><h4>第 1 週｜探索性資料分析 I：資料型態與描述統計</h4><p><strong>Lecture：</strong>分辨類別、順序、連續等資料型態；理解平均數、中位數、四分位距、標準差等摘要指標各自回答什麼問題，以及單看平均值為何會隱藏分布差異。</p><p><strong>Practical：</strong>在 Notebook 載入表格、檢查欄位型態與缺值，計算摘要統計，畫直方圖和箱型圖；比較城市／區域分組後分布是否不同，辨認偏態和離群值。</p><p><strong>本週產出：</strong>一張有標題與單位的箱型圖，以及一段用中位數和四分位距描述城市指標分布的文字。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 2 週｜探索性資料分析 II：機率、分布與資料偏差</h4><p><strong>Lecture：</strong>認識常見機率分布的形狀和特性，理解抽樣／代表性問題，以及指數、對數在資料尺度轉換中的用途。</p><p><strong>Practical：</strong>用圖表比較偏態資料與較對稱分布；練習指數與對數轉換前後的尺度；檢查一份樣本和目標人口在關鍵特徵上是否不同，討論這會如何影響城市研究結論。</p><p><strong>本週產出：</strong>一張分布比較圖，以及「樣本代表誰、可能漏掉誰」的偏差檢查說明。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week2.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 3 週｜假設檢定：把研究問題變成可檢查的證據</h4><p><strong>Lecture：</strong>從研究問題寫出虛無假設與對立假設；理解抽樣變異、p 值、顯著水準，以及第一類錯誤（誤報）和第二類錯誤（漏報）。練習判斷應使用哪類檢定，而不是只背顯著與否。</p><p><strong>Practical：</strong>在 Python 對一個城市指標提出比較問題，執行相應的統計檢定，讀取統計量和 p 值；把數值結果翻譯成一般讀者聽得懂的句子，並寫出不能由此推論的事。</p><p><strong>本週產出：</strong>一份含 H₀/H₁、檢定選擇、結果與限制的短結論。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week3.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 4 週｜線性代數入門：函數、向量與矩陣</h4><p><strong>Lecture：</strong>讀懂簡單數學符號和線性方程；把一組變數看成向量、把多筆觀測看成矩陣，理解矩陣運算如何成為迴歸和多變量方法的計算骨架。</p><p><strong>Practical：</strong>用 NumPy 建立小型向量和矩陣、做基本運算，將一個簡單線性關係寫成矩陣形式，檢查維度是否相容；重點是理解資料如何進模型，不要求手算大型矩陣。</p><p><strong>本週產出：</strong>把一個簡單表格表示為向量／矩陣，並說明每一列和每一欄代表什麼。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week4.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 5 週｜衡量變數關係：共變、相關與 ANOVA</h4><p><strong>Lecture：</strong>區分共變與相關；比較 Pearson（線性關係）和 Spearman（排序／單調關係）；學會相關不代表因果。認識 ANOVA 如何比較多組平均數及其基本解讀。</p><p><strong>Practical：</strong>畫散佈圖後計算 Pearson/Spearman 相關，比較離群值或非線性如何影響係數；用分組圖和 ANOVA 檢視多個區域群組的指標差異，將圖、檢定和研究問題放在一起解讀。</p><p><strong>本週產出：</strong>相關散佈圖、係數解讀，以及一段謹慎區分「一起變動」和「造成影響」的結論。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week5.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 6 週｜簡單線性迴歸：建立第一個解釋模型</h4><p><strong>Lecture：</strong>以一個連續解釋變數預測／描述一個連續結果，理解截距、斜率、殘差、自由度、p 值和 R²。先看資料與模型圖，再讀輸出；不把 p 值或 R² 單獨當作模型好壞判準。</p><p><strong>Practical：</strong>先畫散佈圖，再以 OLS 配適迴歸線；讀取係數、信賴／不確定性資訊和 R²，檢視殘差，找出外推風險及樣本代表性問題。</p><p><strong>本週產出：</strong>一個回歸圖和一段係數解釋（自變數增加一單位時，預期結果平均如何改變），再補上模型限制。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week6.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 7 週｜多元迴歸：控制變數、類別變數與交互作用</h4><p><strong>Lecture：</strong>加入多個連續／類別解釋變數，理解 dummy coding、控制其他條件後的係數、混雜因素和交互作用；辨認多重共線性。城市資料有空間或時間自相關時，殘差可能違反獨立假設。</p><p><strong>Practical：</strong>建立由簡到繁的 OLS 模型，比較加入人口／地區等控制變數前後係數如何改變；檢查共線性和殘差空間／時間型態；嘗試交互作用項，觀察一個變數的關係是否隨另一變數改變。</p><p><strong>本週產出：</strong>模型比較表，清楚指出哪些係數改變、可能的混雜因素及仍未解決的空間依賴。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week7.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 8 週｜多層次迴歸：處理巢狀與群聚資料</h4><p><strong>Lecture：</strong>用個體位於 neighbourhood、學校位於 local authority 等例子理解層級結構；區分 fixed effects 與 random effects；認識 null model、variance components、ICC（組內相關）和 shrinkage。</p><p><strong>Practical：</strong>先以空模型拆解個體層與群組層變異，再比較一般 OLS 和 mixed-effects model；練習設定隨機截距（必要時看隨機斜率）並解讀模型輸出。教材示範 Python/R 類似語法的模型讀法。</p><p><strong>本週產出：</strong>一段說明群組差異有多大、ICC 是否支持多層次模型，以及 random intercept 如何解讀的結果摘要。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week8.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 9 週｜降維：主成分分析（PCA）</h4><p><strong>Lecture：</strong>理解降維是把多個彼此相關的指標濃縮成較少維度；認識 PCA、主成分、解釋變異量，以及結果可視化和解讀時的界線。</p><p><strong>Practical：</strong>選取多個城市指標、處理尺度差異（標準化）、執行 PCA，畫解釋變異圖與前兩個主成分散佈圖；查看各變數載荷，判斷哪些指標共同構成某一主成分。</p><p><strong>本週產出：</strong>一張 PCA 圖和一段解釋保留了多少變異、主成分可能代表什麼，以及降維丟失了什麼資訊。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week9.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>第 10 週｜分群：找出相似觀測的群組</h4><p><strong>Lecture：</strong>理解 clustering 是無監督探索；比較 K-means 和階層式分群的基本邏輯，討論距離、尺度、群數選擇及群組解讀，不把演算法產生的群組直接當成客觀存在的類別。</p><p><strong>Practical：</strong>標準化多項區域指標，試跑 K-means 與階層式分群；比較不同群數的分配，用圖表呈現結果，再回看群組的特徵差別和方法敏感度。</p><p><strong>本週產出：</strong>一張分群視覺化和一份群組摘要，說明群數選擇、各群特徵與分類不確定性。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week10.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 1 週｜探索性資料分析 I：資料型態與描述統計 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>分辨類別、順序、連續等資料型態；理解平均數、中位數、四分位距、標準差等摘要指標各自回答什麼問題，以及單看平均值為何會隱藏分布差異。</p><p><strong>Practical：</strong>在 Notebook 載入表格、檢查欄位型態與缺值，計算摘要統計，畫直方圖和箱型圖；比較城市／區域分組後分布是否不同，辨認偏態和離群值。</p><p><strong>本週產出：</strong>一張有標題與單位的箱型圖，以及一段用中位數和四分位距描述城市指標分布的文字。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 2 週｜探索性資料分析 II：機率、分布與資料偏差 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>認識常見機率分布的形狀和特性，理解抽樣／代表性問題，以及指數、對數在資料尺度轉換中的用途。</p><p><strong>Practical：</strong>用圖表比較偏態資料與較對稱分布；練習指數與對數轉換前後的尺度；檢查一份樣本和目標人口在關鍵特徵上是否不同，討論這會如何影響城市研究結論。</p><p><strong>本週產出：</strong>一張分布比較圖，以及「樣本代表誰、可能漏掉誰」的偏差檢查說明。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week2.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 3 週｜假設檢定：把研究問題變成可檢查的證據 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>從研究問題寫出虛無假設與對立假設；理解抽樣變異、p 值、顯著水準，以及第一類錯誤（誤報）和第二類錯誤（漏報）。練習判斷應使用哪類檢定，而不是只背顯著與否。</p><p><strong>Practical：</strong>在 Python 對一個城市指標提出比較問題，執行相應的統計檢定，讀取統計量和 p 值；把數值結果翻譯成一般讀者聽得懂的句子，並寫出不能由此推論的事。</p><p><strong>本週產出：</strong>一份含 H₀/H₁、檢定選擇、結果與限制的短結論。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week3.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 4 週｜線性代數入門：函數、向量與矩陣 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>讀懂簡單數學符號和線性方程；把一組變數看成向量、把多筆觀測看成矩陣，理解矩陣運算如何成為迴歸和多變量方法的計算骨架。</p><p><strong>Practical：</strong>用 NumPy 建立小型向量和矩陣、做基本運算，將一個簡單線性關係寫成矩陣形式，檢查維度是否相容；重點是理解資料如何進模型，不要求手算大型矩陣。</p><p><strong>本週產出：</strong>把一個簡單表格表示為向量／矩陣，並說明每一列和每一欄代表什麼。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week4.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 5 週｜衡量變數關係：共變、相關與 ANOVA <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>區分共變與相關；比較 Pearson（線性關係）和 Spearman（排序／單調關係）；學會相關不代表因果。認識 ANOVA 如何比較多組平均數及其基本解讀。</p><p><strong>Practical：</strong>畫散佈圖後計算 Pearson/Spearman 相關，比較離群值或非線性如何影響係數；用分組圖和 ANOVA 檢視多個區域群組的指標差異，將圖、檢定和研究問題放在一起解讀。</p><p><strong>本週產出：</strong>相關散佈圖、係數解讀，以及一段謹慎區分「一起變動」和「造成影響」的結論。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week5.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 6 週｜簡單線性迴歸：建立第一個解釋模型 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>以一個連續解釋變數預測／描述一個連續結果，理解截距、斜率、殘差、自由度、p 值和 R²。先看資料與模型圖，再讀輸出；不把 p 值或 R² 單獨當作模型好壞判準。</p><p><strong>Practical：</strong>先畫散佈圖，再以 OLS 配適迴歸線；讀取係數、信賴／不確定性資訊和 R²，檢視殘差，找出外推風險及樣本代表性問題。</p><p><strong>本週產出：</strong>一個回歸圖和一段係數解釋（自變數增加一單位時，預期結果平均如何改變），再補上模型限制。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week6.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 7 週｜多元迴歸：控制變數、類別變數與交互作用 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>加入多個連續／類別解釋變數，理解 dummy coding、控制其他條件後的係數、混雜因素和交互作用；辨認多重共線性。城市資料有空間或時間自相關時，殘差可能違反獨立假設。</p><p><strong>Practical：</strong>建立由簡到繁的 OLS 模型，比較加入人口／地區等控制變數前後係數如何改變；檢查共線性和殘差空間／時間型態；嘗試交互作用項，觀察一個變數的關係是否隨另一變數改變。</p><p><strong>本週產出：</strong>模型比較表，清楚指出哪些係數改變、可能的混雜因素及仍未解決的空間依賴。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week7.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 8 週｜多層次迴歸：處理巢狀與群聚資料 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>用個體位於 neighbourhood、學校位於 local authority 等例子理解層級結構；區分 fixed effects 與 random effects；認識 null model、variance components、ICC（組內相關）和 shrinkage。</p><p><strong>Practical：</strong>先以空模型拆解個體層與群組層變異，再比較一般 OLS 和 mixed-effects model；練習設定隨機截距（必要時看隨機斜率）並解讀模型輸出。教材示範 Python/R 類似語法的模型讀法。</p><p><strong>本週產出：</strong>一段說明群組差異有多大、ICC 是否支持多層次模型，以及 random intercept 如何解讀的結果摘要。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week8.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 9 週｜降維：主成分分析（PCA） <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>理解降維是把多個彼此相關的指標濃縮成較少維度；認識 PCA、主成分、解釋變異量，以及結果可視化和解讀時的界線。</p><p><strong>Practical：</strong>選取多個城市指標、處理尺度差異（標準化）、執行 PCA，畫解釋變異圖與前兩個主成分散佈圖；查看各變數載荷，判斷哪些指標共同構成某一主成分。</p><p><strong>本週產出：</strong>一張 PCA 圖和一段解釋保留了多少變異、主成分可能代表什麼，以及降維丟失了什麼資訊。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week9.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>第 10 週｜分群：找出相似觀測的群組 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><strong>Lecture：</strong>理解 clustering 是無監督探索；比較 K-means 和階層式分群的基本邏輯，討論距離、尺度、群數選擇及群組解讀，不把演算法產生的群組直接當成客觀存在的類別。</p><p><strong>Practical：</strong>標準化多項區域指標，試跑 K-means 與階層式分群；比較不同群數的分配，用圖表呈現結果，再回看群組的特徵差別和方法敏感度。</p><p><strong>本週產出：</strong>一張分群視覺化和一份群組摘要，說明群數選擇、各群特徵與分類不確定性。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week10.html" target="_blank" rel="noopener">本週公開教材 <span aria-hidden="true">↗</span></a></p></section>
             </div>
             <p>上方逐週連結可直接開啟對應的公開教材；各週 practical 練習任務是依公開學習目標整理的預習／複習清單，不代表 Moodle 原始 notebook 題目或正式作業資料集。</p>
-            <h3>Python 環境設置：以 CASA Computing Platform 為主</h3>
+            <h3>Python 環境設置：以 CASA Computing Platform 為主 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>CASA0007 公開教材要求使用 CASA Computing Environment；它推薦 Podman container，讓全班 Python 與函式庫版本一致。不要先自行 pip 安裝一堆套件，以免和課程 container 發生版本衝突。以下是 Windows 的可操作路徑；Mac/Linux 請依同一官方安裝頁切換作業系統指示。</p>
             <div class="qm-setup">
-              <h4>開始前：檢查電腦</h4>
+              <h4>開始前：檢查電腦 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
               <ul><li>官方健康檢查的基本門檻：至少 16GB RAM、超過 30GB 可用空間；Windows 10 Home 是常見虛擬化問題來源。較新年度教材曾建議預留更多空間，先確認 CASA setup health check。</li><li>Windows 開啟 Start，搜尋「Turn Windows features on or off」，啟用 <code>Virtual Machine Platform</code> 和 <code>Windows Hypervisor Platform</code>，重新開機。另依 UCL 指引安裝 WSL2；若校務 IT 管理此電腦，先確認校方政策。</li></ul>
-              <h4>安裝所需程式</h4>
+              <h4>安裝所需程式 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
               <ol><li>安裝 Windows Terminal、Podman Desktop、Git 和 GitHub Desktop。GitHub Desktop 設定用於課程的 GitHub 帳號。</li><li>啟動 Podman Desktop，完成初始設定；開啟新的 Windows Terminal（PowerShell 分頁）。</li><li>建立並啟動 Podman 虛擬機器，然後拉取一個測試 image：</li></ol>
               <pre><code>podman machine init
 podman machine start
 podman run hello-world</code></pre>
               <p>看到 <code>Hello Podman World</code> 即通過 Podman 基本測試。若 machine 已建立，第二次開始只需 <code>podman machine start</code>。</p>
-              <h4>啟動課程 JupyterLab</h4>
+              <h4>啟動課程 JupyterLab <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
               <ol><li>先建立一個專門放 CASA0007 notebooks 的資料夾，在 Windows Terminal 用 <code>cd</code> 進入該資料夾；container 會把目前資料夾掛載成 notebook 工作目錄。</li><li>以下是公開 CASA Computing Platform 指引中的 x64/AMD64 範例命令（整行貼進 PowerShell）。它會下載約數 GB 的課程 image，首次啟動需等候：</li></ol>
               <pre><code>podman run --rm -d --name sds2025 -p 8888:8888 -v "${PWD}:/home/jovyan/work" jreades/sds:2025-amd start.sh jupyter lab --LabApp.password='' --ServerApp.password='' --NotebookApp.token=''</code></pre>
               <p>開啟瀏覽器到 <code>http://localhost:8888</code>，新增 Python 3 notebook。Apple Silicon/M 系列請依官方頁使用 ARM image。<strong>此命令使用文件列出的 sds2025 image；2026/27 Moodle 若提供更新 tag 或啟動指令，以當年度課程公告為準。</strong></p>
-              <h4>確認 Notebook 真正接上課程 Python</h4>
+              <h4>確認 Notebook 真正接上課程 Python <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
               <p>在新 notebook 執行以下 cell。版本號會隨課程 image 更新；重點是每行可匯入、Jupyter kernel 顯示為 Python 3：</p>
               <pre><code>import sys
 import numpy as np
@@ -466,33 +494,32 @@ print("SciPy", scipy.__version__)
 print("statsmodels", statsmodels.__version__)
 print("scikit-learn", sklearn.__version__)</code></pre>
               <p>完成後用 <code>podman stop sds2025</code> 停止環境；因為用了 <code>--rm</code>，container 會移除，但掛載的 notebook 留在本機資料夾。</p>
-              <h4>常見卡點</h4>
+              <h4>常見卡點 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
               <ul><li><code>podman machine start</code> 無法啟動：先確認兩個 Windows virtualization feature 已啟用並重新開機；依 CASA platform common problems 檢查 WSL2／BIOS virtualization。若提示 machine configuration/permission 錯誤，先看錯誤訊息再依官方指南重建命名 machine。</li><li><code>podman: command not found</code>：完全關閉並重新開啟 Terminal，確認 Podman Desktop 已安裝並啟動。</li><li>瀏覽器連不到 8888：確認 <code>podman ps</code> 有 <code>sds2025</code>，且啟動命令中的 port mapping 是 <code>-p 8888:8888</code>。</li><li>Notebook 找不到套件：確認 kernel 是 container 內的 Python 3；先別任意切換本機 Python，並對照 Moodle 的當年 setup 指示。</li></ul>
             </div>
             <p class="qm-source">環境安裝參考：<a href="https://huanfachen.github.io/QM/setup/" target="_blank" rel="noopener">CASA0007 setup 引導</a> · <a href="https://ucl-casa.github.io/sds/setup/health.html" target="_blank" rel="noopener">電腦健康檢查</a> · <a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">Windows 基礎設定與 WSL2</a> · <a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">Podman、JupyterLab 安裝與測試</a>。</p>
-            <h3>課本、教材、影片、codebase 與 demo</h3>
+            <h3>課本、教材、影片、codebase 與 demo <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="qm-weeks">
-              <section class="qm-week"><h4>課本：有，形式是免費線上課程網站</h4><p>目前公開的 CASA0007 主教材是 <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">Quantitative Methods 課程網站</a>，按 10 週整理概念、learning objectives、lecture notes、quiz 入口和 practical；不是一本必須購買的單一教科書。每週頁可從 Week-by-Week 導覽，並可連到 lecture 資料和練習。</p><p>另有 UCL catalogue 推薦的 <em>Statistics in a Nutshell</em>（第 2 版）和 <em>Practical Statistics for Data Scientists</em>（第 2 版）；這是延伸讀物。指定必讀章節要看 2026/27 ReadingLists/Moodle，不需把兩本當成指定購書。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">開啟線上課程網站 <span aria-hidden="true">↗</span></a> · <a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">UCL ReadingLists <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>教材：有，講義、Notebook、quiz 與資料</h4><p><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">每週課程頁</a>提供課堂目標和 Lecture/Practical 入口；講義網頁可以直接閱讀。Practical 有可預覽和下載的 <code>.ipynb</code> Jupyter Notebook，請下載後放進自己的課程資料夾，在課程 JupyterLab 裡執行。每週 Moodle quiz 連結需 UCL 登入。</p><p>公開 Week 1 示範資料是英格蘭與威爾斯 2011/2021 人口普查 local authority 資料，notebook 也保存了資料副本連結，避免外部來源變動就無法跟做。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">開啟逐週教材 <span aria-hidden="true">↗</span></a> · <a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">Moodle quiz（需登入） <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>Codebase：有，官方公開 GitHub repository</h4><p><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">huanfachen/QM</a> 是 CASA0007 module repository，README 說明它包含 lecture notes 和 practical notebooks。主要內容可在 <a href="https://github.com/huanfachen/QM/tree/main/sessions" target="_blank" rel="noopener"><code>sessions/</code></a> 瀏覽；另有 <code>data/</code>、設定檔和網站原始 Quarto 文件。可線上讀或下載單一 notebook，不必先 clone 整個 repo 才能上課。公開教材標示 CC BY-NC-SA 4.0，若轉用或分享要遵守授權和署名。</p><p class="qm-source"><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">開啟 CASA0007 GitHub <span aria-hidden="true">↗</span></a> · <a href="https://github.com/huanfachen/QM/tree/main/sessions" target="_blank" rel="noopener">瀏覽 sessions 原始教材 <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>Demo：有，直接跑公開 Notebook 看完整操作</h4><p><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 Practical 示範</a>展示從讀入 CSV 開始，用 pandas 檢查欄位、資料列數、地理層級、摘要統計、最大最小值、標準差、缺值和離群值，再畫人口分布箱型圖及比較 2011–2021 人口變化。頁面同時提供 Jupyter notebook 入口，下載後可在自己的環境重跑和修改。這是互動式程式示範／範例分析，不是另有確認到的產品 demo 軟體。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">開啟 Week 1 demo <span aria-hidden="true">↗</span></a></p></section>
-              <section class="qm-week"><h4>影片：公開網站沒有可確認的 lecture recording</h4><p>公開課程頁提供 lecture notes 和 Notebook，我沒有在公開週次頁找到可直接觀看的錄影連結。module repo 的 2025 教材 TODO 曾寫「Moodle: add link to lecture recording video」，因此錄影可能由 Moodle 提供或曾待補，但不能保證每週都有影片；請登入 2026/27 Moodle 查本年度 lecture recording 和可觀看權限。</p><p class="qm-source"><a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">到 Moodle 查詢本年度影片（需登入） <span aria-hidden="true">↗</span></a> · <a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">公開教材 repo 註記 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>課本：有，形式是免費線上課程網站 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p>目前公開的 CASA0007 主教材是 <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">Quantitative Methods 課程網站</a>，按 10 週整理概念、learning objectives、lecture notes、quiz 入口和 practical；不是一本必須購買的單一教科書。每週頁可從 Week-by-Week 導覽，並可連到 lecture 資料和練習。</p><p>另有 UCL catalogue 推薦的 <em>Statistics in a Nutshell</em>（第 2 版）和 <em>Practical Statistics for Data Scientists</em>（第 2 版）；這是延伸讀物。指定必讀章節要看 2026/27 ReadingLists/Moodle，不需把兩本當成指定購書。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">開啟線上課程網站 <span aria-hidden="true">↗</span></a> · <a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">UCL ReadingLists <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>教材：有，講義、Notebook、quiz 與資料 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">每週課程頁</a>提供課堂目標和 Lecture/Practical 入口；講義網頁可以直接閱讀。Practical 有可預覽和下載的 <code>.ipynb</code> Jupyter Notebook，請下載後放進自己的課程資料夾，在課程 JupyterLab 裡執行。每週 Moodle quiz 連結需 UCL 登入。</p><p>公開 Week 1 示範資料是英格蘭與威爾斯 2011/2021 人口普查 local authority 資料，notebook 也保存了資料副本連結，避免外部來源變動就無法跟做。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">開啟逐週教材 <span aria-hidden="true">↗</span></a> · <a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">Moodle quiz（需登入） <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>Codebase：有，官方公開 GitHub repository <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">huanfachen/QM</a> 是 CASA0007 module repository，README 說明它包含 lecture notes 和 practical notebooks。主要內容可在 <a href="https://github.com/huanfachen/QM/tree/main/sessions" target="_blank" rel="noopener"><code>sessions/</code></a> 瀏覽；另有 <code>data/</code>、設定檔和網站原始 Quarto 文件。可線上讀或下載單一 notebook，不必先 clone 整個 repo 才能上課。公開教材標示 CC BY-NC-SA 4.0，若轉用或分享要遵守授權和署名。</p><p class="qm-source"><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">開啟 CASA0007 GitHub <span aria-hidden="true">↗</span></a> · <a href="https://github.com/huanfachen/QM/tree/main/sessions" target="_blank" rel="noopener">瀏覽 sessions 原始教材 <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>Demo：有，直接跑公開 Notebook 看完整操作 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 Practical 示範</a>展示從讀入 CSV 開始，用 pandas 檢查欄位、資料列數、地理層級、摘要統計、最大最小值、標準差、缺值和離群值，再畫人口分布箱型圖及比較 2011–2021 人口變化。頁面同時提供 Jupyter notebook 入口，下載後可在自己的環境重跑和修改。這是互動式程式示範／範例分析，不是另有確認到的產品 demo 軟體。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">開啟 Week 1 demo <span aria-hidden="true">↗</span></a></p></section>
+              <section class="qm-week"><h4>影片：公開網站沒有可確認的 lecture recording <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p>公開課程頁提供 lecture notes 和 Notebook，我沒有在公開週次頁找到可直接觀看的錄影連結。module repo 的 2025 教材 TODO 曾寫「Moodle: add link to lecture recording video」，因此錄影可能由 Moodle 提供或曾待補，但不能保證每週都有影片；請登入 2026/27 Moodle 查本年度 lecture recording 和可觀看權限。</p><p class="qm-source"><a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">到 Moodle 查詢本年度影片（需登入） <span aria-hidden="true">↗</span></a> · <a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">公開教材 repo 註記 <span aria-hidden="true">↗</span></a></p></section>
             </div>
             <p>快速入口：<a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">線上課本／逐週教材</a> · <a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">GitHub codebase</a> · <a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 可跟做 demo</a> · <a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">UCL CASA0007 ReadingLists</a> · <a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">UCL Moodle（需登入）</a>。</p>
-            <h3>工具與閱讀</h3>
+            <h3>工具與閱讀 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>Python、Jupyter notebooks、Git/GitHub、Podman；這些都列在 2026/27 catalogue。</li><li>數學方面官方說 little to no prior knowledge assumed；但課程會用 Python/Jupyter 做 practical，2025/26 公開課程預覽特別提醒它不會從頭教 programming，Python 初學者可先修/搭配 CASA0013。這是往年預覽給的準備建議，不是 2026/27 的 prerequisite。</li><li>課程重點是用程式操作資料、理解方法假設、讀懂模型輸出，而非只手算公式。</li><li>catalogue 建議讀物：<a href="https://learning.oreilly.com/library/view/statistics-in-a/9781449361129" target="_blank" rel="noopener"><em>Statistics in a Nutshell</em>（2nd ed.）</a>；<a href="https://learning.oreilly.com/library/view/practical-statistics-for/9781492072935" target="_blank" rel="noopener"><em>Practical Statistics for Data Scientists</em>（2nd ed.）</a>。UCL ReadingLists 已列 CASA0007 的 2026/27 list：<a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">開啟 UCL ReadingLists：CASA0007</a>。2025/26 公開課本另有逐章 notes 和 bibliography；每週實際必讀項目以當年清單/Moodle 為準。</li></ul>
-            <h3>授課者與研究方向</h3>
+            <h3>授課者與研究方向 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>2026/27 catalogue 列 module leader 為 Huanfa Chen（Associate Professor in Spatial Data Science and Quantitative Methods）。研究包括 spatial optimisation、交通與空間規劃、medical geography、public safety/health，以及 GeoAI；研究例子有用最佳化模型配置公共服務設施、分析交通與醫療可近性的差異。另有一則 2026/27 Term 1 教學代理職缺公告指出，代理講師會和 Professor Adam Dennett 各負責約一半的 lectures/practicals；這是招聘公告描述，代理者姓名與最終授課表仍以 Moodle 為準。UCL catalogue 目前仍列 Huanfa Chen 為 module leader。2025/26 公開課本作者還有 Adam Dennett、Bea Taylor；作者名單不等同今年每週授課名單。<a href="https://huanfachen.github.io/" target="_blank" rel="noopener">Huanfa Chen：研究介紹</a> · <a href="https://profiles.ucl.ac.uk/45776-huanfa-chen" target="_blank" rel="noopener">UCL profile</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10179077/1/LIPIcs-GIScience-2023-19.pdf" target="_blank" rel="noopener">公共設施選址最佳化</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10154979/" target="_blank" rel="noopener">交通與醫療可近性公平研究</a> · <a href="https://jobrxiv.org/job/lecturer-teaching-fixed-term-internal-applicants-only/" target="_blank" rel="noopener">Term 1 教學代理職缺公告（2026/27）</a></p>
-            <h3>評量與準備</h3>
+            <h3>評量與準備 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>2026/27 catalogue 列為 100% coursework，沒有 exam 比例。</li><li>2025/26 公開課程頁曾列 Written Investigation 為總結作業，weekly quizzes 為形成性練習；今年正式題目、components/比例、字數與截止日尚未見公開 brief，不能把去年格式直接當今年要求。</li><li>建議每週完成 notebook、用自己的話解釋一個輸出，並記下模型假設和適用限制。先熟悉 Python/Jupyter 會有幫助，但官方沒有要求進階數學背景。</li></ul>
             <p class="course-dossier-note">若尚未有 Moodle 權限，先用公開課程頁預習；不要把 2025/26 assessment brief 當成今年的提交規則。</p>
-            <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">UCL Module Catalogue：CASA0007</a> · <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">Quantitative Methods 公開課程頁</a></p>
           </div>
         </details>
         <details class="course-dossier research-detail" id="casa0007">
-          <summary>展開：完整課程研究筆記與來源</summary>
+          <summary>展開：完整課程研究筆記</summary>
           <div class="course-dossier-content research-body">
-            <div class="code">CASA0007</div><h3>Quantitative Methods</h3>
+            <div class="code">CASA0007</div><h3>Quantitative Methods <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
             <p>這門課建立城市與空間研究需要的 quantitative foundation：從描述資料、機率與假設檢定，到迴歸、multilevel regression、降維與 clustering，重點是能用統計模型描述資料、建立分析並解讀結果。</p>
             <div class="module-dossier">
@@ -503,12 +530,12 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                 </nav>
                 <div class="module-detail-grid">
                   <div class="module-detail-block full module-dossier-section" id="casa0007-workflow">
-                    <h4>一、這門課具體在做什麼？</h4>
+                    <h4>一、這門課具體在做什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <p>你會從城市或空間資料開始，先描述資料的型態與分布，再選擇合適的統計工具，建立模型、檢查關係，最後把模型結果轉化成可以解釋的 spatial／urban insight。它不是只背公式，而是訓練你判斷「這份資料適合怎麼分析」以及「分析結果能不能支持原本的研究問題」。</p>
                     <p>官方明確說明這是一門介紹 statistical and mathematical tools 的碩士課程，目標是建立概念理解，而不是要求非常進階的 technical mathematics；官方也表示不假設學生已有大量先備知識。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-methods">
-                    <h4>二、會學到哪些統計與數學方法？</h4>
+                    <h4>二、會學到哪些統計與數學方法？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li><strong>Data description and representation：</strong>理解資料如何被整理、描述與呈現。</li>
                       <li><strong>Probability distributions：</strong>用機率分布理解不確定性與資料可能的生成型態。</li>
@@ -523,7 +550,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-tools">
-                    <h4>三、會使用哪些工具？</h4>
+                    <h4>三、會使用哪些工具？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li><strong>Python：</strong>官方列出的主要程式工具，用於統計與資料分析實作。</li>
                       <li><strong>Jupyter：</strong>以 notebook 形式交錯撰寫程式、分析與解釋。</li>
@@ -533,7 +560,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                     <p>官方目前沒有把 R 列為 CASA0007 這個 module page 的主要 software list；因此這門課的明確官方工具訊息是 Python、Jupyter、GitHub、Git 與 Podman。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-delivery">
-                    <h4>四、上課方式與實作</h4>
+                    <h4>四、上課方式與實作 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li>
                       <li>10 次 weekly lectures，加上 10 次 weekly practical sessions。</li>
@@ -542,7 +569,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-outcomes">
-                    <h4>五、學完後應該能做到什麼？</h4>
+                    <h4>五、學完後應該能做到什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>描述與呈現城市／空間資料。</li>
                       <li>理解並選用適合研究問題的統計與數學工具。</li>
@@ -553,11 +580,11 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                     </ul>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-preparation">
-                    <h4>六、需要什麼先備知識？</h4>
+                    <h4>六、需要什麼先備知識？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <p>官方課程描述以「conceptual understanding rather than technical mathematics」為定位，並寫明 little or no prior knowledge assumed。因此不需要先成為統計或數學專家；但先複習平均數、變異、機率、圖表閱讀、correlation 與 regression 的基本直覺，會讓 Term 1 的進度比較容易跟上。</p>
                   </div>
                   <div class="module-detail-block module-dossier-section" id="casa0007-assessment">
-                    <h4>七、Exam 與 assessment</h4>
+                    <h4>七、Exam 與 assessment <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方課程來源 ↗</a></h4>
                     <ul>
                       <li>2026/27 UCL Module Catalogue 目前列為 <strong>100% Coursework</strong>。</li>
                       <li>成績類型為 numeric marks。</li>
@@ -566,7 +593,6 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                   </div>
                 </div>
               </div>
-              <p class="module-source-line" id="casa0007-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">UCL Module Catalogue：CASA0007</a> · <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">CASA0007 module preview</a></p>
             </div>
           </div>
         </details>
@@ -581,26 +607,39 @@ print("scikit-learn", sklearn.__version__)</code></pre>
         <details class="course-dossier">
           <summary>展開：每週主題、Python workflow、講師與評量</summary>
           <div class="course-dossier-content">
-            <h3>學習內容與週次：公開課本章節地圖（2025/26 預覽）</h3>
-            <ol><li>Setting Up：開發環境、notebook、課程流程。</li><li>Foundations I：Python 基礎與資料結構。</li><li>Foundations II：條件、迴圈、函式等程式邏輯。</li><li>Efficient Code：寫出易讀、有效率的程式。</li><li>Objects：物件、方法與程式工具。</li><li>Reading Week（公開課程列於 Part 1 與 Part 2 之間）。</li><li>Numeric Data：數值資料的分析與處理。</li><li>Spatial Data：地理資料處理。</li><li>Textual Data：文字資料分析。</li><li>Selecting Data：選取、整理和處理資料。</li><li>Presenting Data：呈現分析並向讀者溝通。</li><li>Bonus：Dimensions in Data（降維）與 Grouping Data（分群）。</li></ol>
-            <p>前五個正式章節為 foundations，接著五章為資料處理流程；降維與分群在公開網站標成 bonus。章節號不是保證的 2026/27 教學週次，實際安排和 Reading Week 日期以 Moodle 為準。</p>
-            <h3>工具與閱讀、上課方式</h3>
+            <h3>學習內容與週次：公開課本章節地圖（2025/26 預覽） <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
+            <p>公開教材按 10 個 teaching topics 排列（另列 Reading Week 與 2 個 bonus topics）。下列依公開週頁逐週拆成<strong>課前準備—課堂／notebook 實作—當週產出</strong>；實際上課日期和 Moodle 指定影片／閱讀以當年度課程頁為準。Flipped format 的設計是先看影片、做閱讀，再到課堂討論和 live coding。</p>
+            <div class="qm-setup"><strong>Python 環境與開課前清單</strong><p>依 FSDS 官方 setup 安裝 Spatial Data Science programming environment（Podman/container、Jupyter、Python 套件），先跑一個 notebook、確認地圖與資料能顯示；用 GitHub 帳號保存自己的作業副本。Week 1 先做電腦健康檢查、base utilities，再完成 environment install；如果安裝失敗，帶錯誤訊息到第一週 practical。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/setup/" target="_blank" rel="noopener">FSDS 環境安裝說明 ↗</a><a href="https://ucl-casa.github.io/sds/setup/health.html" target="_blank" rel="noopener">電腦健康檢查 ↗</a><a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">Base utilities ↗</a><a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">安裝 Python 環境 ↗</a><a href="https://github.com/jreades/fsds" target="_blank" rel="noopener">課程 codebase ↗</a><a href="https://jreades.github.io/code-camp/" target="_blank" rel="noopener">零基礎 Code Camp ↗</a></p></div>
+            <div class="qm-weeks">
+              <section class="qm-week"><h4><span class="week-tag">Week 01</span>Setting Up｜工具與 data-science pipeline</h4><p><strong>課前：</strong>檢查電腦、建立 GitHub 帳號，依序安裝 base utilities 和 FSDS programming environment。<strong>課堂／demo：</strong>拆解資料科學工作流程，設定 GitHub、Podman 與 notebook。<strong>產出：</strong>確認能啟動環境、開啟／執行課程 notebook，留下安裝問題清單。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week1.html" target="_blank" rel="noopener">Week 1 課程與 practical ↗</a><a href="https://jreades.github.io/fsds/setup/" target="_blank" rel="noopener">逐步安裝 ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 02</span>Foundations I｜Python 語法與資料思維</h4><p><strong>課前：</strong>讀指定文章、看 Python 基礎／資料科學影片。<strong>課堂：</strong>以地理計算歷史和 data-science practice 討論「資料」並非中立輸入。<strong>notebook：</strong>練習 operators、變數、布林邏輯與 lists；<strong>產出：</strong>把一句自然語言篩選條件寫成可執行 Python。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week2.html" target="_blank" rel="noopener">Week 2 readings / videos / slides ↗</a><a href="https://jreades.github.io/fsds/practicals/" target="_blank" rel="noopener">Practical notebooks ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 03</span>Foundations II｜lists、dictionaries 與迭代</h4><p><strong>課前：</strong>完成指定影片／閱讀並準備討論重點。<strong>課堂／notebook：</strong>操作 list、dictionary、nested structures、條件判斷與 iteration，將欄位和觀測值表示為 Python 資料結構。<strong>產出：</strong>建立一個可檢查、可迭代的小型城市資料表。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week3.html" target="_blank" rel="noopener">Week 3 指定內容 ↗</a><a href="https://github.com/jreades/fsds/tree/master/practicals" target="_blank" rel="noopener">Notebook code ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 04</span>Efficient Code｜函式、重用與抽象</h4><p><strong>課前：</strong>回顧重複程式片段並讀本週材料。<strong>課堂／demo：</strong>把重複步驟抽成 function，討論迴圈、參數、回傳值、可讀性與避免複製貼上。<strong>產出：</strong>將一段重複資料處理改寫為可重用函式，測試正常與邊界輸入。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week4.html" target="_blank" rel="noopener">Week 4：Efficient Code ↗</a><a href="https://github.com/jreades/fsds/tree/master/lectures" target="_blank" rel="noopener">Lecture code / slides ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 05</span>Objects｜packages、methods 與 classes</h4><p><strong>課前：</strong>閱讀物件導向基本概念。<strong>課堂／notebook：</strong>辨認 object、attribute、method、class 與 package；練習呼叫方法、閱讀文件並理解套件介面。<strong>產出：</strong>用既有 Python object 完成一段資料處理並解釋呼叫鏈，為 pandas/GeoPandas 做準備。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week5.html" target="_blank" rel="noopener">Week 5：Objects ↗</a><a href="https://jreades.github.io/fsds/lectures/5.2-Classes.html" target="_blank" rel="noopener">Classes lecture demo ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Reading Week</span>整理 Part 1 並補環境</h4><p>重跑前五週 notebook、整理 GitHub repo，補齊未完成的課前影片和閱讀。確認能說明 list/dictionary/function/object 的差異；公開課程將這週放在 Foundations 與 Process 兩部分之間。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/reading_week.html" target="_blank" rel="noopener">公開 Reading Week 頁 ↗</a><a href="https://jreades.github.io/fsds/sessions/" target="_blank" rel="noopener">課程總覽與 flipped format ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 06</span>Numeric Data｜Pandas 與 EDA</h4><p><strong>課前：</strong>讀 Inside Airbnb 資料脈絡並看 pandas preparatory videos。<strong>實作：</strong>讀 CSV、檢查資料型態／缺值、篩選與衍生欄位、計算摘要統計、做基礎圖表。<strong>產出：</strong>一頁 EDA notebook，寫出資料來源、品質問題及主要數值 pattern。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week6.html" target="_blank" rel="noopener">Week 6 readings / videos ↗</a><a href="https://jreades.github.io/fsds/practicals/Practical-06-Numeric_Data.html" target="_blank" rel="noopener">Practical 6：Pandas demo ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 07</span>Spatial Data｜GeoPandas 與地圖</h4><p><strong>課前：</strong>準備 spatial data 與 CRS 概念。<strong>實作：</strong>讀入地理資料、檢查 geometry/CRS、作圖、filter、spatial join／overlay；對照數值與空間檢視結果。<strong>產出：</strong>可解釋空間單位、投影和空間操作的地圖 notebook。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week7.html" target="_blank" rel="noopener">Week 7：Spatial Data ↗</a><a href="https://jreades.github.io/fsds/practicals/Practical-07-Spatial_Data.pdf" target="_blank" rel="noopener">Practical 7 notebook ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 08</span>Textual Data｜文字轉為可分析資料</h4><p><strong>課前：</strong>讀文字資料的城市研究案例並觀看指定短片。<strong>實作：</strong>使用 Inside Airbnb 描述欄位，練習 regex pattern、清理文字、詞頻／TF-IDF 和相似度探索；討論文字表徵、偏差與倫理。<strong>產出：</strong>文字分析 notebook 加上方法限制說明。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week8.html" target="_blank" rel="noopener">Week 8 readings / videos ↗</a><a href="https://jreades.github.io/fsds/practicals/Practical-08-Textual_Data.pdf" target="_blank" rel="noopener">Practical 8 PDF / demo ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 09</span>Selecting Data｜Pandas joins 與 DuckDB SQL</h4><p><strong>課前：</strong>確認研究問題需要的資料、空間與時間尺度。<strong>實作：</strong>用 pandas 選取及連結資料，再以 DuckDB SQL 比較作法；把資料連結放進視覺化流程，檢視 join key、資料粒度和 unmatched records。<strong>產出：</strong>可重跑的 join notebook 與資料選擇理由。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week9.html" target="_blank" rel="noopener">Week 9 readings / videos ↗</a><a href="https://github.com/jreades/fsds/tree/master/practicals" target="_blank" rel="noopener">Practical notebook code ↗</a></p></section>
+              <section class="qm-week"><h4><span class="week-tag">Week 10</span>Presenting Data｜Matplotlib、Seaborn 與 atlas</h4><p><strong>課前：</strong>回看個人 notebook 和小組研究問題。<strong>實作：</strong>用 Matplotlib／Seaborn 微調圖表至 publication quality，並將地圖輸出自動化為 atlas；討論如何讓讀者理解資料、分析和限制。<strong>產出：</strong>一組一致、可重跑的圖表／地圖和簡短說明，支援小組成果。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week10.html" target="_blank" rel="noopener">Week 10 readings / video / slides ↗</a><a href="https://jreades.github.io/fsds/assessments/" target="_blank" rel="noopener">公開 assessment overview（舊年度）↗</a></p></section>
+            </div>
+            <p>公開教材另有選讀 bonus：<a href="https://jreades.github.io/fsds/sessions/week11.html" target="_blank" rel="noopener">Dimensions in Data／降維 ↗</a> · <a href="https://jreades.github.io/fsds/sessions/week12.html" target="_blank" rel="noopener">Grouping Data／分群 ↗</a>。教材／課本：上方連結的 FSDS online book，另有週別閱讀文章；影片：各週頁提供課前錄影連結（有些需 UCL 登入）；codebase：公開 GitHub repo；demo：週頁連到可預覽／下載的 Jupyter practical notebooks。官方指出同步課堂通常會錄影，但 practical 和小組活動不錄影。</p>
+            <h3>工具與閱讀、上課方式 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>Python、Jupyter/computational notebooks、command line、Git/GitHub；課程也涵蓋 Docker/Podman、Quarto，並用 FOSS 工具建立可重現資料流程。</li><li>2026/27 catalogue 確認 10 週 flipped format：課前指定錄影，課堂 discussion/presentation 和 notebook practical。課程作者估計 150 小時總投入、每週約 4 小時 timetabled activity；另用於閱讀、coding 練習和自主學習。</li><li>主要教材是 Jon Reades 的開放線上課本 <a href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">Foundations of Spatial Data Science</a>，有週次章節、資料處理實例與 bibliography。</li><li>建議電腦至少 24GB RAM、50GB 以上可用儲存空間（catalogue 說 16GB 可跑但效能較弱）；Markdown editor 或 Git GUI 選用。零程式背景學生建議先做 Code Camp。</li></ul>
-            <h3>閱讀：Catalogue 推薦閱讀（依週次由老師指定）</h3>
+            <h3>閱讀：Catalogue 推薦閱讀（依週次由老師指定） <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>D’Ignazio &amp; Klein, <em>Data Feminism</em> (2020)。</li><li>Delmelle &amp; Nilsson, “The Language of Neighborhoods: A Predictive-Analytical Framework Based on Property Advertisement Text and Mortgage Lending Data” (2021)。</li><li>Knuth, “Literate Programming” (1984)。</li><li>Massey, “Politicising Space and Place” (1996)。</li><li>Mattern, “Mission Control: A History of the Urban Dashboard” (2015)；“A City Is Not a Computer” (2017)。</li><li>Reades et al., “The City as Text” (2025)。</li><li>Rose, “Situating Knowledges: Positionality, Reflexivities and Other Tactics” (1997)。</li></ul>
             <p>這些是 2026/27 module catalogue 的 indicative readings，不是另一本必買的 course textbook；每週實際 assigned reading 以 Moodle 為準。UCL ReadingLists 已列出 CASA0013 的 2026/27 reading list，可由 <a href="https://readinglists.ucl.ac.uk/modules/casa0013.html" target="_blank" rel="noopener">UCL ReadingLists：CASA0013</a> 開啟；列表可能需要 UCL 登入。</p>
-            <h3>授課者與研究方向</h3>
+            <h3>授課者與研究方向 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <p>2026/27 catalogue 列 module leader 為 Professor Jon Reades；UCL CASA 的職稱是 Professor of Geographic Data Science、Head of Department。研究使用 geographic data science 分析城市資料，也涵蓋文字資料與城市分析。2025/26 公開教材列出的其他 lecturers 為 Ollie Ballinger、Sukankana Chakraborty；今年實際每週 roster 仍以 Moodle 為準。<a href="https://profiles.ucl.ac.uk/23068-jon-reades" target="_blank" rel="noopener">UCL profile：Jon Reades</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10211833/" target="_blank" rel="noopener">UCL Discovery：The City as Text（2026）</a> · <a href="https://www.ucl.ac.uk/bartlett/casa/people" target="_blank" rel="noopener">CASA people</a></p>
-            <h3>評量與準備：作業</h3>
+            <h3>評量與準備：作業 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <ul><li>2026/27 catalogue 明確列為 <strong>85% Group activity（2 assessments）+ 15% Coursework</strong>；沒有單獨列 exam。模組頁亦表示 coursework 主要透過 group work 評量。</li><li>2025/26 公開 assessment 曾是 30% timed open-book Python exam；小組資料集分析分為 25% 可重現分析與 35% 報告/展示；另有 10% self/peer evaluation。這和今年的百分比不同，僅供理解舊年度作業型態，不能當成今年 brief。</li><li>今年兩項 group activity 和 15% coursework 的實際任務名稱、個人/小組比例、rubric、交件格式及日期尚未公開；以 Moodle 當年度 brief 為準。準備上可練習維持 notebook 可重跑、留下資料清理與圖表說明、熟悉小組協作和版本控制。</li></ul>
-            <p class="course-dossier-note">今年作業題目、個人/小組分配、評分 rubrics、交件格式和日期：以 Moodle 正式 brief 為準。</p>
-            <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">UCL Module Catalogue：CASA0013</a> · <a href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">公開課本 / week-by-week</a> · <a href="https://jreades.github.io/fsds/assessments/" target="_blank" rel="noopener">assessment overview（2025/26）</a></p>
+            <p class="course-dossier-note">今年作業題目、個人/小組分配、評分 rubrics、交件格式和日期：以 Moodle 正式 brief 為準。上述公開週頁是 2025/26 教材結構，不保證等同 2026/27 的實際日期安排；本年度課前材料及 group-work brief 以 Moodle 為準。</p>
           </div>
         </details>
         <details class="course-dossier research-detail" id="casa0013">
-          <summary>展開：完整課程研究筆記與來源</summary>
+          <summary>展開：完整課程研究筆記</summary>
           <div class="course-dossier-content research-body">
-            <div class="code">CASA0013</div><h3>Foundations of Spatial Data Science</h3>
+            <div class="code">CASA0013</div><h3>Foundations of Spatial Data Science <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">不屬於目前列出的具名 pathway</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是一門以 Python 為核心的 spatial data science foundation：從資料清理、視覺化到 interpretation／presentation，並同時討論技術實務、reproducibility、資料倫理與真實城市資料問題。</p>
             <div class="module-dossier">
@@ -608,16 +647,15 @@ print("scikit-learn", sklearn.__version__)</code></pre>
                 <div class="module-dossier-heading"><span>Complete module dossier</span><strong>Python、資料 pipeline 與 spatial data science practice</strong></div>
                 <nav class="module-dossier-index" aria-label="CASA0013 card 內部索引"><a href="#casa0013-workflow">課程工作</a><a href="#casa0013-python">Python 主題</a><a href="#casa0013-practice">實務與倫理</a><a href="#casa0013-delivery">上課方式</a><a href="#casa0013-preparation">先備與設備</a><a href="#casa0013-outcomes">學習成果</a><a href="#casa0013-assessment">Assessment</a></nav>
                 <div class="module-detail-grid">
-                  <div class="module-detail-block full module-dossier-section" id="casa0013-workflow"><h4>一、這門課具體在做什麼？</h4><p>你會練習一個 end-to-end spatial data science pipeline：取得或讀入資料、清理與整理、用 geographic／quantitative／textual lenses 探索、做視覺化、解讀結果，再把結果清楚地呈現給別人。官方說明它補足 CASA0007 與 CASA0005，把統計、地理與計算概念放進同一個實作流程。</p><p>官方也以真實問題與資料作為脈絡，例如 Airbnb／London 類型的城市資料問題；它不是只教 Python syntax，而是把程式能力、資料判斷、批判性思考與 communication 放在一起。</p></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-python"><h4>二、Python 會學什麼？</h4><ul><li>Variables、lists、dictionaries 等基本資料結構。</li><li>Functions、libraries、methods 與 classes。</li><li>用 Python 處理 large real-world data。</li><li>以 numeric、spatial 與 textual perspectives 看資料。</li><li>從 computational notebooks 逐步建立可讀、可重現的分析。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-practice"><h4>三、技術實務、reproducibility 與倫理</h4><ul><li>用 command line、Docker／Podman、Git／GitHub 與 Quarto 建立較可重現的工作流程。</li><li>討論資料選擇、呈現方式、解讀與 communication，而不是只追求圖表好看。</li><li>理解 spatial data science 的 technical practices 以及更廣泛的 ethics。</li><li>重點包含如何把結果呈現給不同讀者，以及資料與分析如何影響他人對城市的理解。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-delivery"><h4>四、上課方式與活動</h4><ul><li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li><li>10-week flipped format：課前 pre-recorded videos，課堂進行 discussion、presentation 與實作。</li><li>使用 computational notebooks 進行練習。</li><li>課程 assessment 主要透過 group work 完成；這不代表每一個課堂活動都等於正式 assessment。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-preparation"><h4>五、先備知識與設備</h4><ul><li>對 Python 初學者尤其有幫助；官方另建議初學者參加 Code Camp。</li><li>需要能處理 local development、notebooks 與 containers 的電腦環境。</li><li>官方建議 24GB RAM；16GB 可以運作但效能可能較差，並建議保留超過 50GB free storage。</li><li>課程使用 FOSS；Markdown editor 與 Git GUI 可選，不是固定要求。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-outcomes"><h4>六、學完後應該能做到什麼？</h4><ul><li>用 Python 完成一個從資料到結果的 spatial data workflow。</li><li>清理、探索、視覺化並解讀 real-world spatial data。</li><li>使用 Git／GitHub、containers 與 Quarto 支援 reproducibility。</li><li>解釋資料選擇、設計與呈現如何改變研究訊息。</li><li>批判性思考 spatial data science 的技術、倫理與社會影響。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-assessment"><h4>七、Exam 與 assessment</h4><ul><li>2026/27 UCL Module Catalogue 列為 <strong>85% Group activity（2 assessments）+ 15% Coursework</strong>，numeric marks。</li><li>正式兩項 group activity 與 15% coursework 的名稱、題目、交件格式和日期以當年度 Moodle brief 為準。</li><li>2025/26 公開課程頁曾採 30% timed open-book Python exam、25% 可重現小組資料分析、35% 報告/展示、10% self/peer evaluation；這是舊年度版本，不能當成今年評量比例或題目。</li></ul></div>
+                  <div class="module-detail-block full module-dossier-section" id="casa0013-workflow"><h4>一、這門課具體在做什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><p>你會練習一個 end-to-end spatial data science pipeline：取得或讀入資料、清理與整理、用 geographic／quantitative／textual lenses 探索、做視覺化、解讀結果，再把結果清楚地呈現給別人。官方說明它補足 CASA0007 與 CASA0005，把統計、地理與計算概念放進同一個實作流程。</p><p>官方也以真實問題與資料作為脈絡，例如 Airbnb／London 類型的城市資料問題；它不是只教 Python syntax，而是把程式能力、資料判斷、批判性思考與 communication 放在一起。</p></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-python"><h4>二、Python 會學什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>Variables、lists、dictionaries 等基本資料結構。</li><li>Functions、libraries、methods 與 classes。</li><li>用 Python 處理 large real-world data。</li><li>以 numeric、spatial 與 textual perspectives 看資料。</li><li>從 computational notebooks 逐步建立可讀、可重現的分析。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-practice"><h4>三、技術實務、reproducibility 與倫理 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>用 command line、Docker／Podman、Git／GitHub 與 Quarto 建立較可重現的工作流程。</li><li>討論資料選擇、呈現方式、解讀與 communication，而不是只追求圖表好看。</li><li>理解 spatial data science 的 technical practices 以及更廣泛的 ethics。</li><li>重點包含如何把結果呈現給不同讀者，以及資料與分析如何影響他人對城市的理解。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-delivery"><h4>四、上課方式與活動 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li><li>10-week flipped format：課前 pre-recorded videos，課堂進行 discussion、presentation 與實作。</li><li>使用 computational notebooks 進行練習。</li><li>課程 assessment 主要透過 group work 完成；這不代表每一個課堂活動都等於正式 assessment。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-preparation"><h4>五、先備知識與設備 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>對 Python 初學者尤其有幫助；官方另建議初學者參加 Code Camp。</li><li>需要能處理 local development、notebooks 與 containers 的電腦環境。</li><li>官方建議 24GB RAM；16GB 可以運作但效能可能較差，並建議保留超過 50GB free storage。</li><li>課程使用 FOSS；Markdown editor 與 Git GUI 可選，不是固定要求。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-outcomes"><h4>六、學完後應該能做到什麼？ <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>用 Python 完成一個從資料到結果的 spatial data workflow。</li><li>清理、探索、視覺化並解讀 real-world spatial data。</li><li>使用 Git／GitHub、containers 與 Quarto 支援 reproducibility。</li><li>解釋資料選擇、設計與呈現如何改變研究訊息。</li><li>批判性思考 spatial data science 的技術、倫理與社會影響。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-assessment"><h4>七、Exam 與 assessment <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方課程來源 ↗</a></h4><ul><li>2026/27 UCL Module Catalogue 列為 <strong>85% Group activity（2 assessments）+ 15% Coursework</strong>，numeric marks。</li><li>正式兩項 group activity 與 15% coursework 的名稱、題目、交件格式和日期以當年度 Moodle brief 為準。</li><li>2025/26 公開課程頁曾採 30% timed open-book Python exam、25% 可重現小組資料分析、35% 報告/展示、10% self/peer evaluation；這是舊年度版本，不能當成今年評量比例或題目。</li></ul></div>
                 </div>
               </div>
-              <p class="module-source-line" id="casa0013-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">UCL Module Catalogue：CASA0013</a> · <a href="https://jreades.github.io/code-camp/" target="_blank" rel="noopener">CASA Code Camp</a></p>
             </div>
           </div>
         </details>
