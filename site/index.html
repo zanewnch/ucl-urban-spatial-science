@@ -154,7 +154,10 @@
       .dep:nth-child(2)::after { content: ""; }
       .source-list { grid-template-columns: 1fr; }
       .index-list { grid-template-columns: repeat(2, 1fr); }
-      nav { display: none; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
+      nav { display: flex; width: 100%; justify-content: flex-start; gap: 4px 8px; }
+      nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 6px 9px; border: 1px solid var(--line); background: rgba(255,253,249,.78); }
+      nav a.is-active { border-color: var(--navy); background: var(--navy); color: #fffaf1; }
     }
     @media (max-width: 520px) {
       .wrap { width: min(100% - 24px, 1160px); }
@@ -455,6 +458,17 @@
       th { top: 55px; }
       .stats { gap: 0; }
       .stat { border-bottom: 1px solid rgba(255,250,241,.2); }
+      .topbar { padding: 10px 0; }
+      .topbar-inner { align-items: flex-start; gap: 8px; }
+      .topbar-inner > div { min-width: 0; }
+      .brand { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+      .topbar nav { width: 100%; justify-content: flex-start; gap: 6px; }
+      .topbar nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 7px 10px; border: 1px solid var(--line); background: rgba(255,253,248,.78); line-height: 1.25; }
+      .topbar nav a.is-active { border-color: var(--navy); background: var(--navy); color: #fffaf1; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .module-card, .pathway, .term, .list-card, .source, .stat, .dep { min-width: 0; }
+      .module-dossier-index a { min-height: 40px; display: inline-flex; align-items: center; }
+      .table-wrap { max-width: 100%; overscroll-behavior-x: contain; }
     }
     @media (max-width: 520px) {
       .hero { padding-top: 50px; }
@@ -462,6 +476,13 @@
       .hero-grid { grid-template-columns: minmax(0, 1fr); }
       .hero-grid > *, .hero-note, .lede { width: 100%; max-width: 100%; min-width: 0; }
       .hero-note, .hero-note p, .lede { overflow-wrap: anywhere; word-break: break-word; }
+      .wrap { width: min(100% - 24px, 1160px); }
+      section { padding: 42px 0 56px; }
+      .topbar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+      .topbar nav a { justify-content: flex-start; padding-inline: 10px; }
+      .index-panel { padding: 16px; }
+      .index-list { grid-template-columns: 1fr; }
+      .module-card, .pathway, .term, .list-card { padding: 19px; }
       .module-dossier-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
       .module-dossier, .module-dossier-toggle { width: 100%; }
       .module-dossier-toggle { display: flex; justify-content: space-between; align-items: center; min-height: 44px; text-align: left; padding: 12px 14px; font-size: .9rem; visibility: visible; opacity: 1; }
@@ -470,6 +491,18 @@
       .stat::before { left: 14px; }
       .filter-toolbar { align-items: stretch; }
       .filter-chip { flex: 1 1 auto; }
+      .filter-chip { min-height: 42px; }
+      .module-dossier-index { gap: 6px; }
+      .module-dossier-index a { flex: 1 1 auto; justify-content: center; }
+      .table-wrap { border-radius: 2px; }
+      th, td { padding: 12px; }
+    }
+    @media (max-width: 360px) {
+      .topbar nav { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .stat, .stat:nth-child(2), .stat:nth-child(3), .stat:nth-child(4) { min-height: 0; }
+      .summary { gap: 7px; }
+      .stamp, .pill { max-width: 100%; overflow-wrap: anywhere; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
@@ -484,6 +517,7 @@
       <nav aria-label="頁面導覽">
         <a href="#welcome">迎新</a>
         <a href="#structure">結構</a>
+        <a href="term1.html">Term 1</a>
         <a href="#core">必修</a>
         <a href="#pathways">組別</a>
         <a href="#options">選修</a>
@@ -547,11 +581,12 @@
             <h3>城市、空間、數量方法</h3>
             <p class="small-note">5 October – 18 December 2026<br>Reading Week: 9 November</p>
             <ul>
+              <li>CASA0001 Urban Systems Theory</li>
               <li>CASA0005 GIS and Science</li>
               <li>CASA0007 Quantitative Methods</li>
-              <li>CASA0001 Urban Systems Theory</li>
-              <li>需要補 Python 時，可考慮 CASA0013</li>
+              <li>CASA0013 Foundations of Spatial Data Science</li>
             </ul>
+            <p><a class="back-home" href="term1.html">查看 Term 1 四門課程 →</a></p>
           </article>
           <article class="term" data-term="02">
             <span class="term-label">Term 2 · 深入</span>
@@ -585,7 +620,7 @@
           <div><p class="muted">共 105 credits</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
         </div>
         <div class="module-grid">
-          <article class="module-card core featured-module" data-module="casa0005 gis geographic information systems science GIS R QGIS spatial statistics spatial autocorrelation regression Moran I Geary C Getis Ord LISA GWR DBSCAN">
+          <article class="module-card core featured-module" id="casa0005" data-module="casa0005 gis geographic information systems science GIS R QGIS spatial statistics spatial autocorrelation regression Moran I Geary C Getis Ord LISA GWR DBSCAN">
             <div class="code">CASA0005</div><h3>Geographic Information Systems and Science</h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">90% exam</span><span class="pill">10% other assessment</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是一門以實作為主的 GIScience 與 spatial analysis 課程：你會從真實、未必乾淨的地理資料開始，完成資料清理、空間資料整合、地圖製作、空間統計與結果解釋。課程的目的不是只會操作軟體，而是能夠用空間資料回答一個具體的城市、環境或社會地理問題。</p>
@@ -690,7 +725,7 @@
               </div>
             </div>
           </article>
-          <article class="module-card core featured-module" data-module="casa0007 quantitative methods statistics mathematics probability hypothesis testing linear algebra regression multilevel regression dimensionality reduction clustering python jupyter git">
+          <article class="module-card core featured-module" id="casa0007" data-module="casa0007 quantitative methods statistics mathematics probability hypothesis testing linear algebra regression multilevel regression dimensionality reduction clustering python jupyter git">
             <div class="code">CASA0007</div><h3>Quantitative Methods</h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
             <p>這門課建立城市與空間研究需要的 quantitative foundation：從描述資料、機率與假設檢定，到迴歸、multilevel regression、降維與 clustering，重點是能用統計模型描述資料、建立分析並解讀結果。</p>
@@ -769,7 +804,7 @@
               <p class="module-source-line" id="casa0007-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">UCL Module Catalogue：CASA0007</a> · <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">CASA0007 module preview</a></p>
             </div>
           </article>
-          <article class="module-card core featured-module" data-module="casa0001 urban systems theory cities complexity mobility governance planning urbanisation form function socio spatial differentiation causal diagrams">
+          <article class="module-card core featured-module" id="casa0001" data-module="casa0001 urban systems theory cities complexity mobility governance planning urbanisation form function socio spatial differentiation causal diagrams">
             <div class="code">CASA0001</div><h3>Urban Systems Theory</h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是整個課程的城市理論與社會科學 foundation：把 urbanisation、systems and complexity、urban form、mobility、社會空間差異與 urban governance 放在同一個分析框架中。</p>
@@ -1023,7 +1058,7 @@
 
         <div class="subhead"><h3>CASA optional 課程內容</h3></div>
         <div class="module-grid" id="optionalModules">
-          <article class="module-card option featured-module" data-source="casa" data-pathways="" data-module="casa0013 foundations spatial data science python programming ethics data pipeline cleaning visualization reproducibility docker podman git github quarto">
+          <article class="module-card option featured-module" id="casa0013" data-source="casa" data-pathways="" data-module="casa0013 foundations spatial data science python programming ethics data pipeline cleaning visualization reproducibility docker podman git github quarto">
             <div class="code">CASA0013</div><h3>Foundations of Spatial Data Science</h3>
             <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">不屬於目前列出的具名 pathway</span><span class="pill">FHEQ Level 7</span></div>
             <p>這是一門以 Python 為核心的 spatial data science foundation：從資料清理、視覺化到 interpretation／presentation，並同時討論技術實務、reproducibility、資料倫理與真實城市資料問題。</p>
@@ -1039,7 +1074,7 @@
                   <div class="module-detail-block module-dossier-section" id="casa0013-delivery"><h4>四、上課方式與活動</h4><ul><li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li><li>10-week flipped format：課前 pre-recorded videos，課堂進行 discussion、presentation 與實作。</li><li>使用 computational notebooks 進行練習。</li><li>課程 assessment 主要透過 group work 完成；這不代表每一個課堂活動都等於正式 assessment。</li></ul></div>
                   <div class="module-detail-block module-dossier-section" id="casa0013-preparation"><h4>五、先備知識與設備</h4><ul><li>對 Python 初學者尤其有幫助；官方另建議初學者參加 Code Camp。</li><li>需要能處理 local development、notebooks 與 containers 的電腦環境。</li><li>官方建議 24GB RAM；16GB 可以運作但效能可能較差，並建議保留超過 50GB free storage。</li><li>課程使用 FOSS；Markdown editor 與 Git GUI 可選，不是固定要求。</li></ul></div>
                   <div class="module-detail-block module-dossier-section" id="casa0013-outcomes"><h4>六、學完後應該能做到什麼？</h4><ul><li>用 Python 完成一個從資料到結果的 spatial data workflow。</li><li>清理、探索、視覺化並解讀 real-world spatial data。</li><li>使用 Git／GitHub、containers 與 Quarto 支援 reproducibility。</li><li>解釋資料選擇、設計與呈現如何改變研究訊息。</li><li>批判性思考 spatial data science 的技術、倫理與社會影響。</li></ul></div>
-                  <div class="module-detail-block module-dossier-section" id="casa0013-assessment"><h4>七、Exam 與 assessment</h4><ul><li>2026/27 目前列為 <strong>30% Dissertations, extended projects, and reports + 60% Group activity（2 assessments）+ 10% Coursework</strong>。</li><li>成績類型為 numeric marks。</li><li>官方分類確認有 group activity，但公開頁面沒有把每一項固定寫成筆試、上機考或 presentation；正式 brief 以 Moodle 與 module team 為準。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-assessment"><h4>七、Exam 與 assessment</h4><ul><li>2026/27 UCL Module Catalogue 列為 <strong>85% Group activity（2 assessments）+ 15% Coursework</strong>，numeric marks。</li><li>正式兩項 group activity 與 15% coursework 的名稱、題目、交件格式和日期以當年度 Moodle brief 為準。</li><li>2025/26 公開課程頁曾採 30% timed open-book Python exam、25% 可重現小組資料分析、35% 報告/展示、10% self/peer evaluation；這是舊年度版本，不能當成今年評量比例或題目。</li></ul></div>
                 </div>
               </div>
               <p class="module-source-line" id="casa0013-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">UCL Module Catalogue：CASA0013</a> · <a href="https://jreades.github.io/code-camp/" target="_blank" rel="noopener">CASA Code Camp</a></p>
