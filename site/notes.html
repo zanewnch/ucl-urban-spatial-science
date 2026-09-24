@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>筆記區｜UCL Urban Spatial Science MSc</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #102a43;
+      --muted: #5f7184;
+      --paper: #f7f4ee;
+      --line: #dbe2e8;
+      --navy: #082b49;
+      --blue: #1e6f8f;
+      --coral: #e9755b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 0%, rgba(232,178,76,.16), transparent 28rem), linear-gradient(180deg, #fbfaf7 0%, var(--paper) 100%);
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--blue); }
+    a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+    .wrap { width: min(1000px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 2; padding: 16px 0; border-bottom: 1px solid rgba(16,42,67,.10); background: rgba(255,253,249,.9); backdrop-filter: blur(12px); }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-width: 0; }
+    .brand { color: var(--navy); font-size: 1.05rem; font-weight: 850; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; min-width: 0; }
+    nav a { display: inline-flex; align-items: center; min-height: 40px; color: var(--ink); font-size: .9rem; font-weight: 750; text-decoration: none; }
+    nav a[aria-current="page"] { color: var(--coral); }
+    main { padding: 54px 0 72px; }
+    h1 { margin: 10px 0 0; color: var(--navy); font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .98; }
+    @media (max-width: 820px) {
+      .topbar { padding: 10px 0; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .topbar-inner > * { width: 100%; }
+      .brand { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+      nav { justify-content: flex-start; gap: 6px; }
+      nav a { padding: 6px 10px; border: 1px solid var(--line); background: rgba(255,253,249,.78); }
+      nav a[aria-current="page"] { border-color: var(--navy); background: var(--navy); color: #fffaf1; }
+      main { padding-top: 40px; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(100% - 24px, 1000px); }
+      .topbar nav { display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+      .topbar nav a { flex: 0 0 auto; justify-content: flex-start; min-height: 44px; white-space: nowrap; }
+      main { padding-top: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">Urban Spatial Science MSc</a>
+      <nav aria-label="頁面導覽">
+        <a href="index.html">總覽</a>
+        <a href="term1.html">Term 1</a>
+        <a href="term2.html">Term 2</a>
+        <a href="notes.html" aria-current="page">筆記區</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1>筆記區</h1>
+  </main>
+</body>
+</html>
