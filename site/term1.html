@@ -78,6 +78,11 @@
     .qm-setup pre { overflow-x: auto; padding: 12px; background: #102a43; color: #fff; font-size: .84rem; }
     .qm-setup code { overflow-wrap: anywhere; }
     .qm-setup li + li { margin-top: 5px; }
+    .environment-setup > strong { display: block; margin-bottom: 8px; color: var(--blue); }
+    .environment-guide { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .environment-guide summary { color: var(--blue); font-weight: 800; cursor: pointer; }
+    .environment-guide ol, .environment-guide ul { padding-left: 22px; }
+    .environment-guide pre { white-space: pre-wrap; overflow-wrap: anywhere; }
     .course-dossier-content a { overflow-wrap: anywhere; }
     .course-dossier-note { padding: 12px 14px; border-left: 3px solid var(--gold); background: #fff7dc; color: #4d5d6a; }
     .course-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
@@ -609,7 +614,43 @@ print("scikit-learn", sklearn.__version__)</code></pre>
           <div class="course-dossier-content">
             <h3>學習內容與週次：公開課本章節地圖（2025/26 預覽） <a class="section-source-link" href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">CASA0013 公開課本 ↗</a></h3>
             <p>公開教材按 10 個 teaching topics 排列（另列 Reading Week 與 2 個 bonus topics）。下列依公開週頁逐週拆成<strong>課前準備—課堂／notebook 實作—當週產出</strong>；實際上課日期和 Moodle 指定影片／閱讀以當年度課程頁為準。Flipped format 的設計是先看影片、做閱讀，再到課堂討論和 live coding。</p>
-            <div class="qm-setup"><strong>官方 Python 工作環境：Podman + <a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">JupyterLab（瀏覽器）↗</a></strong><p>依 FSDS 官方 setup 安裝 Spatial Data Science programming environment：用 Podman 啟動課程 container，並在瀏覽器開啟 JupyterLab 執行 Python notebooks。官方 setup 和 Week 1 教學採用這套 notebook 工作流程，沒有指定 VS Code 作為課程 IDE；VS Code 可作個人編輯器，但請以課程 JupyterLab/container 執行及檢查 notebook。先跑一個 notebook、確認地圖與資料能顯示；用 GitHub 帳號保存自己的作業副本。Week 1 先做電腦健康檢查、base utilities，再完成 environment install；如果安裝失敗，帶錯誤訊息到第一週 practical。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/setup/" target="_blank" rel="noopener">FSDS 環境安裝說明 ↗</a><a href="https://jreades.github.io/fsds/sessions/week1.html" target="_blank" rel="noopener">Week 1 setup 與 notebook workflow ↗</a><a href="https://ucl-casa.github.io/sds/setup/health.html" target="_blank" rel="noopener">電腦健康檢查 ↗</a><a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">Base utilities ↗</a><a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">安裝 Python 環境 ↗</a><a href="https://github.com/jreades/fsds" target="_blank" rel="noopener">課程 codebase ↗</a><a href="https://jreades.github.io/code-camp/" target="_blank" rel="noopener">零基礎 Code Camp ↗</a></p></div>
+            <div class="qm-setup environment-setup">
+              <strong>CASA0013 Python 環境：Podman container + JupyterLab</strong>
+              <p>可以把 Podman 想成用來啟動課程 Docker 式 container 的工具：container 內已準備 Python 和課程套件；JupyterLab 則是在瀏覽器中開 notebook 的介面。依 <a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">CASA Computing Platform 最新安裝頁</a>，Windows 使用 Podman Desktop、Windows Terminal、Git/GitHub Desktop，並啟動 <code>sds2026</code> image。這裡先列 Windows 10/11 的完整做法；Mac、Apple Silicon 和其他系統請依同一份<a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">官方安裝頁</a>選對應指令。課程以 JupyterLab/container 執行 notebook，官方 setup 沒有指定 VS Code。</p>
+              <details class="environment-guide">
+                <summary>展開 Windows 安裝步驟（Podman → 課程 container → JupyterLab）</summary>
+                <ol>
+                  <li><strong>先檢查電腦規格。</strong>到 Windows「設定 → 系統 → 關於」確認 System type 是 x64-based processor（AMD/Intel）或 ARM-based processor；CASA 建議至少 16 GB RAM、30 GB 可用空間。<a href="https://ucl-casa.github.io/sds/setup/health.html" target="_blank" rel="noopener">官方硬體與系統健康檢查 ↗</a></li>
+                  <li><strong>開啟 Windows 虛擬化功能。</strong>按 Start 搜尋「Turn Windows features on or off」，勾選 <code>Virtual Machine Platform</code> 和 <code>Windows Hypervisor Platform</code>，套用後重新開機。<a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">CASA Windows 虛擬化設定 ↗</a></li>
+                  <li><strong>安裝 WSL2。</strong>以系統管理員身分開啟 PowerShell，執行以下指令；依畫面提示完成，若要求重開機就先重開。Windows 通常會一併安裝預設 Ubuntu 發行版；本課的 Python 仍在 Podman container 裡執行。<pre><code>wsl --install</code></pre>安裝方法見 <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener">Microsoft WSL 安裝說明 ↗</a>及 <a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">CASA WSL2 指引 ↗</a>。</li>
+                  <li><strong>安裝課程基本工具。</strong>安裝 <a href="https://apps.microsoft.com/detail/9n0dx20hk701" target="_blank" rel="noopener">Windows Terminal</a>、<a href="https://podman-desktop.io/downloads" target="_blank" rel="noopener">Podman Desktop</a>、<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a> 和 <a href="https://desktop.github.com/download/" target="_blank" rel="noopener">GitHub Desktop</a>。GitHub Desktop 請以 UCL email 綁定課程 GitHub 帳號。安裝清單和步驟見<a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">CASA 官方安裝頁 ↗</a></li>
+                  <li><strong>重新開啟終端機並啟動 Podman。</strong>安裝完成後關閉舊的 Windows Terminal，再開一個新的 PowerShell 分頁；啟動 Podman Desktop，等它完成初始設定並顯示 engine 可用。官方提醒舊終端機可能還找不到剛安裝的 <code>podman</code> 指令。</li>
+                  <li><strong>建立 Podman 虛擬機。</strong>在新的 PowerShell 分別執行以下兩行。<code>--rootful</code> 是 CASA 本年度指引要求的設定，不要省略。<pre><code>podman machine init --memory 4092 --rootful
+podman machine start</code></pre>如果回報 machine 已存在，不要重複 init，改執行 <code>podman machine start</code>。<a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">官方 Podman machine 設定 ↗</a></li>
+                  <li><strong>先測試 Podman 本身。</strong><pre><code>podman run hello-world</code></pre>第一次執行會下載測試 image；看到 <code>Hello Podman World</code> 表示 Podman 可以下載並執行 container。若失敗，先看<a href="https://ucl-casa.github.io/sds/setup/problems.html" target="_blank" rel="noopener">CASA 安裝問題指南 ↗</a>。</li>
+                  <li><strong>建立本機課程資料夾。</strong>在 PowerShell 執行以下兩行。Notebook 會存在這個 Windows 資料夾，即使停止或移除 container 也會保留。<pre><code>New-Item -ItemType Directory -Force -Path "$HOME\CASA0013"
+Set-Location "$HOME\CASA0013"</code></pre>確認目前位置是該資料夾：<pre><code>Get-Location</code></pre></li>
+                  <li><strong>啟動 CASA 課程環境。</strong>先確認「設定 → 系統 → 關於」的 System type：AMD/Intel x64 用 <code>sds:2026-amd64</code>；ARM Windows 用 <code>sds:2026-arm64</code>。下列指令是 x64 Windows 的 PowerShell 版本，請整行貼上執行（不要在 Command Prompt／<code>cmd</code> 執行）。官方 image 約 1–5 GB，第一次下載需要一些時間。<pre><code>podman run --rm -d --name sds2026 -p 8888:8888 -p 4444:4444 -v "${PWD}:/home/jovyan/work" docker.io/jreades/sds:2026-amd64 start.sh jupyter lab --NotebookApp.notebook_dir=/home/jovyan/work --LabApp.password='' --ServerApp.password='' --NotebookApp.token=''</code></pre>若你的 Windows 是 ARM 架構，把命令中的 <code>sds:2026-amd64</code> 換成 <code>sds:2026-arm64</code>。來源：<a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">官方 sds2026 image 與啟動參數 ↗</a></li>
+                  <li><strong>在瀏覽器開啟 JupyterLab。</strong>前一步成功後前往 <a href="http://localhost:8888" target="_blank" rel="noopener">http://localhost:8888</a>。新增 Python 3 notebook，在第一格輸入並按 Run：<pre><code>import sys
+import pandas as pd
+import geopandas as gpd
+
+print(sys.version)
+print("pandas", pd.__version__)
+print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoPandas 版本而沒有錯誤，代表課程 Python kernel 已啟動。</li>
+                  <li><strong>確認檔案會留在電腦。</strong>在 notebook 建立並儲存測試檔後，回到 <code>$HOME\CASA0013</code> 檢查檔案；container 的 <code>/home/jovyan/work</code> 已對應到這個本機資料夾。<code>--rm</code> 只會在 container 停止時移除 container，不會刪除掛載資料夾或已下載的 image。</li>
+                  <li><strong>結束與下次啟動。</strong>用完在 PowerShell 執行 <code>podman stop sds2026</code>。下次開課先啟動 Podman Desktop，再執行 <code>podman machine start</code>，然後回到 <code>$HOME\CASA0013</code> 重跑第 9 步的 container 指令，最後開啟 <code>http://localhost:8888</code>。若只是關閉瀏覽器，container 仍在執行；要停止它才會釋放資源。</li>
+                </ol>
+                <h4>常見狀況與檢查</h4>
+                <ul>
+                  <li><code>podman</code> 找不到：安裝後重新開啟 Windows Terminal，並確認 Podman Desktop 已啟動。</li>
+                  <li>Podman machine 無法啟動：確認 WSL2 已安裝、兩個 Windows 虛擬化功能已開啟並重開機；對照 <a href="https://ucl-casa.github.io/sds/setup/problems.html" target="_blank" rel="noopener">CASA Common Problems ↗</a>。</li>
+                  <li>8888 網頁打不開：執行 <code>podman ps</code> 確認 <code>sds2026</code> 正在執行；再執行 <code>podman logs sds2026</code> 查看啟動訊息，並確認網址是 <code>http://localhost:8888</code>。</li>
+                  <li>Notebook 找不到檔案：在 JupyterLab 左側檔案列表確認位於 <code>work</code>；PowerShell 的目前資料夾要是 <code>$HOME\CASA0013</code> 才啟動 container。</li>
+                </ul>
+              </details>
+              <p class="qm-source"><a href="https://jreades.github.io/fsds/setup/" target="_blank" rel="noopener">FSDS 三步驟開課設定 ↗</a><a href="https://jreades.github.io/fsds/sessions/week1.html" target="_blank" rel="noopener">Week 1 setup practical ↗</a><a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">CASA Computing Platform 2026 安裝原文 ↗</a></p>
+            </div>
             <div class="qm-weeks">
               <section class="qm-week"><h4><span class="week-tag">Week 01</span>Setting Up｜工具與 data-science pipeline</h4><p><strong>課前：</strong>檢查電腦、建立 GitHub 帳號，依序安裝 base utilities 和 FSDS programming environment。<strong>課堂／demo：</strong>拆解資料科學工作流程，設定 GitHub、Podman 與 notebook。<strong>產出：</strong>確認能啟動環境、開啟／執行課程 notebook，留下安裝問題清單。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week1.html" target="_blank" rel="noopener">Week 1 課程與 practical ↗</a><a href="https://jreades.github.io/fsds/setup/" target="_blank" rel="noopener">逐步安裝 ↗</a></p></section>
               <section class="qm-week"><h4><span class="week-tag">Week 02</span>Foundations I｜Python 語法與資料思維</h4><p><strong>課前：</strong>讀指定文章、看 Python 基礎／資料科學影片。<strong>課堂：</strong>以地理計算歷史和 data-science practice 討論「資料」並非中立輸入。<strong>notebook：</strong>練習 operators、變數、布林邏輯與 lists；<strong>產出：</strong>把一句自然語言篩選條件寫成可執行 Python。</p><p class="qm-source"><a href="https://jreades.github.io/fsds/sessions/week2.html" target="_blank" rel="noopener">Week 2 readings / videos / slides ↗</a><a href="https://jreades.github.io/fsds/practicals/" target="_blank" rel="noopener">Practical notebooks ↗</a></p></section>
