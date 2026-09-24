@@ -72,6 +72,23 @@
     .route-step strong { display: block; margin-bottom: 6px; color: var(--navy); }
     .route-step p { margin: 0; color: #486074; font-size: .86rem; }
     .route-sources { margin: 13px 0 0; color: var(--muted); font-size: .8rem; }
+    .research-detail { margin-top: 2px; }
+    .research-body { overflow-wrap: anywhere; }
+    .research-body > .code, .research-body > h3 { display: none; }
+    .research-body .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .research-body .pill { padding: 3px 8px; font-size: .77rem; }
+    .research-body .module-dossier-heading { margin: 18px 0 10px; font-weight: 800; }
+    .research-body .module-dossier-heading span { display: block; color: var(--coral); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    .research-body .module-dossier-index { display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 6px 12px; margin: 10px 0 18px; }
+    .research-body .module-dossier-index a { font-size: .82rem; }
+    .research-body .module-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .research-body .module-detail-block { min-width: 0; padding: 14px; border: 1px solid var(--line); background: #fbfaf7; }
+    .research-body .module-detail-block.full { grid-column: 1 / -1; }
+    .research-body h4 { margin: 0 0 7px; color: var(--navy); font-size: .94rem; }
+    .research-body p, .research-body li { overflow-wrap: anywhere; }
+    .research-body .module-source-line { margin-top: 14px; }
+    .research-detail:target { scroll-margin-top: 130px; }
+    @media (max-width: 680px) { .research-body .module-detail-grid { grid-template-columns: 1fr; } }
     @media (max-width: 820px) {
       .topbar { padding: 10px 0; }
       .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -121,8 +138,8 @@
         <a href="term1.html" aria-current="page">Term 1</a>
         <a href="#learning-route">四門課分工</a>
         <a href="#course-details">課程詳解</a>
-        <a href="index.html#core">必修課程</a>
-        <a href="index.html#options">選修課程</a>
+        <a href="term2.html">Term 2</a>
+        <a href="term2.html#options">Term 2 選修</a>
       </nav>
     </div>
   </header>
@@ -152,6 +169,7 @@
     </section>
 
     <h2 id="course-details">四門課詳解</h2>
+    <p class="route-note">每門課先列教學與評量導覽；展開「完整課程研究筆記與來源」可閱讀原首頁的所有詳細內容。</p>
     <section class="course-list" aria-label="Term 1 課程">
       <article class="course">
         <span class="course-type">核心必修</span>
@@ -174,7 +192,79 @@
             <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">UCL Module Catalogue：CASA0001</a> · <a href="https://profiles.ucl.ac.uk/" target="_blank" rel="noopener">UCL staff profiles</a> · <a href="https://www.ucl.ac.uk/bartlett/casa/people" target="_blank" rel="noopener">CASA people</a></p>
           </div>
         </details>
-        <div class="course-footer"><span class="credits">15 credits · coursework</span><a class="details" href="index.html#casa0001">課程內容 →</a></div>
+        <details class="course-dossier research-detail" id="casa0001">
+          <summary>展開：完整課程研究筆記與來源</summary>
+          <div class="course-dossier-content research-body">
+            <div class="code">CASA0001</div><h3>Urban Systems Theory</h3>
+            <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
+            <p>這是整個課程的城市理論與社會科學 foundation：把 urbanisation、systems and complexity、urban form、mobility、社會空間差異與 urban governance 放在同一個分析框架中。</p>
+            <div class="module-dossier">
+              <div class="module-dossier-content" id="casa0001-dossier">
+                <div class="module-dossier-heading"><span>Complete module dossier</span><strong>理解城市如何作為社會、空間與複雜系統運作</strong></div>
+                <nav class="module-dossier-index" aria-label="CASA0001 card 內部索引">
+                  <a href="#casa0001-workflow">課程問題</a><a href="#casa0001-themes">核心主題</a><a href="#casa0001-tools">分析工具</a><a href="#casa0001-delivery">上課方式</a><a href="#casa0001-outcomes">學習成果</a><a href="#casa0001-preparation">先備知識</a><a href="#casa0001-assessment">Assessment</a>
+                </nav>
+                <div class="module-detail-grid">
+                  <div class="module-detail-block full module-dossier-section" id="casa0001-workflow">
+                    <h4>一、這門課具體在問什麼？</h4>
+                    <p>課程用 social science 與 urban theory 來理解城市，而不是把城市只當成一組地圖或數據。你會練習把一個城市問題拆成不同尺度的社會、空間、制度與治理關係，再思考這些關係如何形成 urban system，以及如何轉化成有意義的 research inquiry。</p>
+                    <p>它是 programme 的 conceptual foundation，後續的 spatial analysis、urban modelling、smart cities 與 dissertation 都可以回到這裡的系統思考與城市理論。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-themes">
+                    <h4>二、會學哪些城市理論與主題？</h4>
+                    <ul>
+                      <li>Urbanisation、城市發展與 urban geography。</li>
+                      <li>Systems theory、complexity theory 與城市作為互相連結的系統。</li>
+                      <li>Urban form and function：城市形態如何和功能、活動與空間結構連在一起。</li>
+                      <li>Mobility、transport 與城市中的流動。</li>
+                      <li>Socio-spatial differentiation：不同群體與地區如何產生空間差異。</li>
+                      <li>Urban health 與城市環境、社會結果的關聯。</li>
+                      <li>Urban planning、urban governance 與制度如何影響城市。</li>
+                      <li>Systems thinking、causal diagrams 與其他用來整理城市關係的 analytical tools。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-tools">
+                    <h4>三、會用什麼工具？</h4>
+                    <p>這門課的官方定位是理論、概念與社會科學 foundation，module page 沒有列出像 R、Python 或 QGIS 這樣的固定 software requirement。你比較會使用的是 systems thinking、概念框架、causal diagrams、文獻與案例的批判性分析；具體工具依當年度 lectures、readings 與 coursework brief 而定。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-delivery">
+                    <h4>四、上課方式與學習活動</h4>
+                    <ul>
+                      <li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li>
+                      <li>10 次 weekly 2-hour lectures。</li>
+                      <li>另有 optional support hour，讓學生處理閱讀、概念或 coursework 上的問題。</li>
+                      <li>官方頁面沒有公開固定的逐週 presentation 或 exam format，因此不把課堂討論形式誤寫成正式 assessment。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-outcomes">
+                    <h4>五、學完後應該能做到什麼？</h4>
+                    <ul>
+                      <li>把 systems thinking 與 social science theories 應用到城市問題。</li>
+                      <li>概念化 cities、society 與 space 之間的關係。</li>
+                      <li>對 urban systems 進行 critical thinking，而不是只接受單一解釋。</li>
+                      <li>參與關於城市與空間的 scientific discourse。</li>
+                      <li>提出有意義、可以進一步研究的 urban research inquiry。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-preparation">
+                    <h4>六、需要什麼先備知識？</h4>
+                    <p>官方 module page 沒有列出 CASA0001 的硬性 prerequisite。對這門課最有幫助的是先接觸 urban geography、城市規劃、社會科學閱讀與基本 systems thinking；不需要先會 GIS、R 或 Python 才能理解這門課的核心。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0001-assessment">
+                    <h4>七、Exam 與 assessment</h4>
+                    <ul>
+                      <li>2026/27 UCL Module Catalogue 目前列為 <strong>100% Coursework</strong>，並標示為 2 assessments。</li>
+                      <li>成績類型為 numeric marks。</li>
+                      <li>公開頁面沒有進一步確認兩項 coursework 是 essay、report、presentation 或其他形式；實際格式要以當年度 Moodle assessment brief 為準。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="module-source-line" id="casa0001-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">UCL Module Catalogue：CASA0001</a></p>
+            </div>
+          </div>
+        </details>
+        <div class="course-footer"><span class="credits">15 credits · coursework</span><a class="details" href="#casa0001">課程內容 →</a></div>
       </article>
 
       <article class="course">
@@ -198,7 +288,112 @@
             <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Module Catalogue：CASA0005</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">CASA0005 practical handbook</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">教材套件與環境</a></p>
           </div>
         </details>
-        <div class="course-footer"><span class="credits">15 credits · 90% exam</span><a class="details" href="index.html#casa0005">課程內容 →</a></div>
+        <details class="course-dossier research-detail" id="casa0005">
+          <summary>展開：完整課程研究筆記與來源</summary>
+          <div class="course-dossier-content research-body">
+            <div class="code">CASA0005</div><h3>Geographic Information Systems and Science</h3>
+            <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">90% exam</span><span class="pill">10% other assessment</span><span class="pill">FHEQ Level 7</span></div>
+            <p>這是一門以實作為主的 GIScience 與 spatial analysis 課程：你會從真實、未必乾淨的地理資料開始，完成資料清理、空間資料整合、地圖製作、空間統計與結果解釋。課程的目的不是只會操作軟體，而是能夠用空間資料回答一個具體的城市、環境或社會地理問題。</p>
+            <div class="module-dossier">
+              <div class="module-dossier-content" id="casa0005-dossier">
+                <div class="module-dossier-heading"><span>Complete module dossier</span><strong>完整課程內容與你會學會的能力</strong></div>
+                <nav class="module-dossier-index" aria-label="CASA0005 card 內部索引">
+                <a href="#casa0005-workflow">課程工作</a>
+                <a href="#casa0005-r">R</a>
+                <a href="#casa0005-qgis">QGIS</a>
+                <a href="#casa0005-python">Python</a>
+                <a href="#casa0005-statistics">統計方法</a>
+                <a href="#casa0005-outcomes">學習成果</a>
+                <a href="#casa0005-preparation">先備知識</a>
+                <a href="#casa0005-workload">學習負擔</a>
+                <a href="#casa0005-assessment">Assessment</a>
+                </nav>
+                <div class="module-detail-grid">
+                <div class="module-detail-block full module-dossier-section" id="casa0005-workflow">
+                  <h4>一、這門課具體在做什麼？</h4>
+                  <p>典型工作流程是：提出 spatial question 或 hypothesis → 找到 ONS、OSM、政府或其他 contemporary datasets → 清理與整理資料 → 對齊空間範圍與座標系統 → 用 R／QGIS 做空間分析 → 製作地圖與統計圖 → 評估 uncertainty、限制與結果是否合理。</p>
+                  <p>公開 practical handbook 特別強調，課程會使用接近真實研究的資料；資料不會永遠是乾淨、可以直接分析的狀態，因此 data wrangling、格式轉換與錯誤排查本身就是課程的一部分。</p>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-r">
+                  <h4>二、R：主要分析工具</h4>
+                  <ul>
+                    <li>讀取、清理、tidy 與整理資料。</li>
+                    <li>處理 vector、raster、point、polygon 等 spatial data。</li>
+                    <li>進行 spatial joins、attribute／geometry 整合、格式轉換與 CRS 處理。</li>
+                    <li>製作統計圖、靜態地圖與具備 cartographic standards 的視覺化。</li>
+                    <li>用 R packages 執行 spatial statistics、pattern analysis 與 regression。</li>
+                    <li>透過 RMarkdown／GitHub 建立較可重現的分析流程。</li>
+                  </ul>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-qgis">
+                  <h4>三、QGIS：基本 GIS 與地圖工作</h4>
+                  <ul>
+                    <li>載入、查看與檢查不同空間圖層。</li>
+                    <li>理解 projections、coordinate reference systems 與 spatial extent。</li>
+                    <li>做基本的 spatial filtering、buffer、point-in-polygon 與空間資料整理。</li>
+                    <li>協助檢查資料、操作圖層與輸出地圖。</li>
+                    <li>QGIS 是課程的一部分，但官方描述是「basic concepts」；主要分析主軸仍然是 R。</li>
+                  </ul>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-python">
+                  <h4>四、Python 可以嗎？</h4>
+                  <p>目前 UCL CASA0005 官方頁面與公開 handbook 都把 R 列為主要 data science programming language，並沒有把 Python 列為這門課的主要教學工具。因此 Python 可以作為你自己的輔助工具，但不能自行假設正式 coursework 一定接受 Python 取代 R；實際作業規則要以當年度 Moodle assessment brief 為準。</p>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-statistics">
+                  <h4>五、會用到的統計與空間分析</h4>
+                  <ul>
+                    <li><strong>Descriptive statistics：</strong>資料型態、分布、histogram、基本空間資料描述。</li>
+                    <li><strong>Point pattern analysis：</strong>Kernel Density Estimation、Quadrat Analysis、Ripley’s K。</li>
+                    <li><strong>Spatial clustering：</strong>DBSCAN 等以空間位置判斷群聚的方法。</li>
+                    <li><strong>Spatial autocorrelation：</strong>Moran’s I、Geary’s C、Getis-Ord 與 LISA。</li>
+                    <li><strong>Spatial operations：</strong>areal interpolation、point-in-polygon、buffer、hot-spot analysis。</li>
+                    <li><strong>Regression：</strong>linear／multiple regression、bootstrap 與 regression assumptions。</li>
+                    <li><strong>Spatial regression：</strong>spatial lag、spatial error 與 Geographically Weighted Regression（GWR）。</li>
+                  </ul>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-outcomes">
+                  <h4>六、學完後應該能做到什麼？</h4>
+                  <ul>
+                    <li>用 QGIS 與 R 支援 GIScience 技術的應用。</li>
+                    <li>按照 cartographic standards 製作合適的地圖。</li>
+                    <li>清理、連接、轉換與管理空間資料。</li>
+                    <li>選擇適合的 spatial analysis 回答不同空間問題。</li>
+                    <li>理解 geographic data 的 representation、uncertainty 與資料品質問題。</li>
+                    <li>批判性地解釋 spatial statistical analysis，而不是只報告一個數字。</li>
+                    <li>比較不同全球 spatial datasets 的優點、限制與適用情境。</li>
+                  </ul>
+                </div>
+                <div class="module-detail-block full module-dossier-section" id="casa0005-preparation">
+                  <h4>七、統計基礎要到什麼程度？</h4>
+                  <p>官方沒有要求你入學前已經會 GIS 或 R，但課程進度很快。實際上，先具備基本 descriptive statistics、資料分布、圖表閱讀、相關與 regression 結果解讀會很有幫助；更進階的 spatial statistics 會在課程中逐步建立。</p>
+                  <div class="module-detail-note"><strong>準備方向：</strong>不用先把所有 R syntax 或 QGIS 工具背熟，但最好先理解平均數、變異、分布、correlation、regression 的基本概念，以及「空間上相鄰的資料可能不是獨立的」這個核心問題。</div>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-workload">
+                  <h4>八、學習負擔與上課方式</h4>
+                  <ul>
+                    <li>Term 1，15 credits，FHEQ Level 7。</li>
+                    <li>官方標示為 in-person teaching。</li>
+                    <li>公開 handbook 以每週 lecture／practical 約 3 小時，另加約 12 小時自主學習估算。</li>
+                    <li>沒有 GIS 或 R 背景可以開始，但不代表課程會慢慢教；需要持續完成 practical 與課後練習。</li>
+                  </ul>
+                </div>
+                <div class="module-detail-block module-dossier-section" id="casa0005-assessment">
+                  <h4>九、Exam 與 assessment</h4>
+                  <ul>
+                    <li>2026/27 UCL Module Catalogue 目前列為 <strong>90% Exam</strong>。</li>
+                    <li>另外列有 <strong>10% Other form of assessment</strong>，但公開頁面沒有說明具體是什麼形式。</li>
+                    <li>目前公開資訊沒有確認是上機考、紙筆考、online exam、presentation，或是否可以在考試中使用 R／QGIS。</li>
+                    <li>因此不能把它寫死成「一定是上機考」或「一定有 presentation」；正式細節要看當年度 Moodle 或 module team 的 assessment brief。</li>
+                  </ul>
+                </div>
+              </div>
+                </div>
+                <p class="module-source-line" id="casa0005-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Module Catalogue：CASA0005</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">CASA0005 online practical handbook</a></p>
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="course-footer"><span class="credits">15 credits · 90% exam</span><a class="details" href="#casa0005">課程內容 →</a></div>
       </article>
 
       <article class="course">
@@ -222,7 +417,88 @@
             <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">UCL Module Catalogue：CASA0007</a> · <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">Quantitative Methods 公開課程頁</a></p>
           </div>
         </details>
-        <div class="course-footer"><span class="credits">15 credits · coursework</span><a class="details" href="index.html#casa0007">課程內容 →</a></div>
+        <details class="course-dossier research-detail" id="casa0007">
+          <summary>展開：完整課程研究筆記與來源</summary>
+          <div class="course-dossier-content research-body">
+            <div class="code">CASA0007</div><h3>Quantitative Methods</h3>
+            <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">100% coursework</span><span class="pill">FHEQ Level 7</span></div>
+            <p>這門課建立城市與空間研究需要的 quantitative foundation：從描述資料、機率與假設檢定，到迴歸、multilevel regression、降維與 clustering，重點是能用統計模型描述資料、建立分析並解讀結果。</p>
+            <div class="module-dossier">
+              <div class="module-dossier-content" id="casa0007-dossier">
+                <div class="module-dossier-heading"><span>Complete module dossier</span><strong>統計方法、數學概念與城市資料分析</strong></div>
+                <nav class="module-dossier-index" aria-label="CASA0007 card 內部索引">
+                  <a href="#casa0007-workflow">課程工作</a><a href="#casa0007-methods">統計方法</a><a href="#casa0007-tools">工具</a><a href="#casa0007-delivery">上課方式</a><a href="#casa0007-outcomes">學習成果</a><a href="#casa0007-preparation">先備知識</a><a href="#casa0007-assessment">Assessment</a>
+                </nav>
+                <div class="module-detail-grid">
+                  <div class="module-detail-block full module-dossier-section" id="casa0007-workflow">
+                    <h4>一、這門課具體在做什麼？</h4>
+                    <p>你會從城市或空間資料開始，先描述資料的型態與分布，再選擇合適的統計工具，建立模型、檢查關係，最後把模型結果轉化成可以解釋的 spatial／urban insight。它不是只背公式，而是訓練你判斷「這份資料適合怎麼分析」以及「分析結果能不能支持原本的研究問題」。</p>
+                    <p>官方明確說明這是一門介紹 statistical and mathematical tools 的碩士課程，目標是建立概念理解，而不是要求非常進階的 technical mathematics；官方也表示不假設學生已有大量先備知識。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-methods">
+                    <h4>二、會學到哪些統計與數學方法？</h4>
+                    <ul>
+                      <li><strong>Data description and representation：</strong>理解資料如何被整理、描述與呈現。</li>
+                      <li><strong>Probability distributions：</strong>用機率分布理解不確定性與資料可能的生成型態。</li>
+                      <li><strong>Hypothesis testing：</strong>把研究問題轉成可檢驗的統計問題，理解檢定與結果解讀。</li>
+                      <li><strong>Linear algebra：</strong>建立後續模型與多變量分析需要的矩陣／向量概念。</li>
+                      <li><strong>Measuring relationships：</strong>衡量變數之間的關係，並判斷關係的強弱與限制。</li>
+                      <li><strong>Regression：</strong>用迴歸建立解釋或預測模型。</li>
+                      <li><strong>Multiple regression：</strong>同時處理多個解釋變數，理解控制其他因素後的關係。</li>
+                      <li><strong>Multilevel regression：</strong>處理具有層級結構的資料，例如個體位於 neighbourhood、neighbourhood 位於城市。</li>
+                      <li><strong>Dimensionality reduction：</strong>把複雜、多變量資料轉成較容易理解的低維結構。</li>
+                      <li><strong>Clustering：</strong>依資料特徵找出群組或型態，不預先假定每筆資料屬於哪一群。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-tools">
+                    <h4>三、會使用哪些工具？</h4>
+                    <ul>
+                      <li><strong>Python：</strong>官方列出的主要程式工具，用於統計與資料分析實作。</li>
+                      <li><strong>Jupyter：</strong>以 notebook 形式交錯撰寫程式、分析與解釋。</li>
+                      <li><strong>GitHub／Git：</strong>用於版本控制、保存分析工作與協作。</li>
+                      <li><strong>Podman：</strong>官方 software list 中列出的 container 工具。</li>
+                    </ul>
+                    <p>官方目前沒有把 R 列為 CASA0007 這個 module page 的主要 software list；因此這門課的明確官方工具訊息是 Python、Jupyter、GitHub、Git 與 Podman。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-delivery">
+                    <h4>四、上課方式與實作</h4>
+                    <ul>
+                      <li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li>
+                      <li>10 次 weekly lectures，加上 10 次 weekly practical sessions。</li>
+                      <li>實作的角色是把統計概念放回 spatial／urban context，練習從資料、模型到 interpretation 的完整流程。</li>
+                      <li>官方頁面沒有公開每一次 practical 的逐週題目或固定資料集，因此這張 card 不把未公開的案例自行寫成正式課綱。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-outcomes">
+                    <h4>五、學完後應該能做到什麼？</h4>
+                    <ul>
+                      <li>描述與呈現城市／空間資料。</li>
+                      <li>理解並選用適合研究問題的統計與數學工具。</li>
+                      <li>建立 regression、multiple regression 或 multilevel regression 等模型。</li>
+                      <li>用 dimensionality reduction 與 clustering 探索複雜資料。</li>
+                      <li>從模型輸出推導 spatial／urban insight，而不是只報告一個數字。</li>
+                      <li>辨認資料、模型假設與解釋之間的限制。</li>
+                    </ul>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-preparation">
+                    <h4>六、需要什麼先備知識？</h4>
+                    <p>官方課程描述以「conceptual understanding rather than technical mathematics」為定位，並寫明 little or no prior knowledge assumed。因此不需要先成為統計或數學專家；但先複習平均數、變異、機率、圖表閱讀、correlation 與 regression 的基本直覺，會讓 Term 1 的進度比較容易跟上。</p>
+                  </div>
+                  <div class="module-detail-block module-dossier-section" id="casa0007-assessment">
+                    <h4>七、Exam 與 assessment</h4>
+                    <ul>
+                      <li>2026/27 UCL Module Catalogue 目前列為 <strong>100% Coursework</strong>。</li>
+                      <li>成績類型為 numeric marks。</li>
+                      <li>公開 module page 沒有確認是上機考、筆試、presentation、report 或哪一種固定作業格式；實際 brief 要以當年度 Moodle 與 module team 公告為準。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="module-source-line" id="casa0007-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">UCL Module Catalogue：CASA0007</a> · <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">CASA0007 module preview</a></p>
+            </div>
+          </div>
+        </details>
+        <div class="course-footer"><span class="credits">15 credits · coursework</span><a class="details" href="#casa0007">課程內容 →</a></div>
       </article>
 
       <article class="course optional">
@@ -249,11 +525,44 @@
             <p>來源：<a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">UCL Module Catalogue：CASA0013</a> · <a href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">公開課本 / week-by-week</a> · <a href="https://jreades.github.io/fsds/assessments/" target="_blank" rel="noopener">assessment overview（2025/26）</a></p>
           </div>
         </details>
-        <div class="course-footer"><span class="credits">15 credits · optional</span><a class="details" href="index.html#casa0013">課程內容 →</a></div>
+        <details class="course-dossier research-detail" id="casa0013">
+          <summary>展開：完整課程研究筆記與來源</summary>
+          <div class="course-dossier-content research-body">
+            <div class="code">CASA0013</div><h3>Foundations of Spatial Data Science</h3>
+            <div class="meta"><span class="pill">Term 1</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">不屬於目前列出的具名 pathway</span><span class="pill">FHEQ Level 7</span></div>
+            <p>這是一門以 Python 為核心的 spatial data science foundation：從資料清理、視覺化到 interpretation／presentation，並同時討論技術實務、reproducibility、資料倫理與真實城市資料問題。</p>
+            <div class="module-dossier">
+              <div class="module-dossier-content" id="casa0013-dossier">
+                <div class="module-dossier-heading"><span>Complete module dossier</span><strong>Python、資料 pipeline 與 spatial data science practice</strong></div>
+                <nav class="module-dossier-index" aria-label="CASA0013 card 內部索引"><a href="#casa0013-workflow">課程工作</a><a href="#casa0013-python">Python 主題</a><a href="#casa0013-practice">實務與倫理</a><a href="#casa0013-delivery">上課方式</a><a href="#casa0013-preparation">先備與設備</a><a href="#casa0013-outcomes">學習成果</a><a href="#casa0013-assessment">Assessment</a></nav>
+                <div class="module-detail-grid">
+                  <div class="module-detail-block full module-dossier-section" id="casa0013-workflow"><h4>一、這門課具體在做什麼？</h4><p>你會練習一個 end-to-end spatial data science pipeline：取得或讀入資料、清理與整理、用 geographic／quantitative／textual lenses 探索、做視覺化、解讀結果，再把結果清楚地呈現給別人。官方說明它補足 CASA0007 與 CASA0005，把統計、地理與計算概念放進同一個實作流程。</p><p>官方也以真實問題與資料作為脈絡，例如 Airbnb／London 類型的城市資料問題；它不是只教 Python syntax，而是把程式能力、資料判斷、批判性思考與 communication 放在一起。</p></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-python"><h4>二、Python 會學什麼？</h4><ul><li>Variables、lists、dictionaries 等基本資料結構。</li><li>Functions、libraries、methods 與 classes。</li><li>用 Python 處理 large real-world data。</li><li>以 numeric、spatial 與 textual perspectives 看資料。</li><li>從 computational notebooks 逐步建立可讀、可重現的分析。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-practice"><h4>三、技術實務、reproducibility 與倫理</h4><ul><li>用 command line、Docker／Podman、Git／GitHub 與 Quarto 建立較可重現的工作流程。</li><li>討論資料選擇、呈現方式、解讀與 communication，而不是只追求圖表好看。</li><li>理解 spatial data science 的 technical practices 以及更廣泛的 ethics。</li><li>重點包含如何把結果呈現給不同讀者，以及資料與分析如何影響他人對城市的理解。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-delivery"><h4>四、上課方式與活動</h4><ul><li>Term 1、15 credits、FHEQ Level 7，官方標示為 in-person。</li><li>10-week flipped format：課前 pre-recorded videos，課堂進行 discussion、presentation 與實作。</li><li>使用 computational notebooks 進行練習。</li><li>課程 assessment 主要透過 group work 完成；這不代表每一個課堂活動都等於正式 assessment。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-preparation"><h4>五、先備知識與設備</h4><ul><li>對 Python 初學者尤其有幫助；官方另建議初學者參加 Code Camp。</li><li>需要能處理 local development、notebooks 與 containers 的電腦環境。</li><li>官方建議 24GB RAM；16GB 可以運作但效能可能較差，並建議保留超過 50GB free storage。</li><li>課程使用 FOSS；Markdown editor 與 Git GUI 可選，不是固定要求。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-outcomes"><h4>六、學完後應該能做到什麼？</h4><ul><li>用 Python 完成一個從資料到結果的 spatial data workflow。</li><li>清理、探索、視覺化並解讀 real-world spatial data。</li><li>使用 Git／GitHub、containers 與 Quarto 支援 reproducibility。</li><li>解釋資料選擇、設計與呈現如何改變研究訊息。</li><li>批判性思考 spatial data science 的技術、倫理與社會影響。</li></ul></div>
+                  <div class="module-detail-block module-dossier-section" id="casa0013-assessment"><h4>七、Exam 與 assessment</h4><ul><li>2026/27 UCL Module Catalogue 列為 <strong>85% Group activity（2 assessments）+ 15% Coursework</strong>，numeric marks。</li><li>正式兩項 group activity 與 15% coursework 的名稱、題目、交件格式和日期以當年度 Moodle brief 為準。</li><li>2025/26 公開課程頁曾採 30% timed open-book Python exam、25% 可重現小組資料分析、35% 報告/展示、10% self/peer evaluation；這是舊年度版本，不能當成今年評量比例或題目。</li></ul></div>
+                </div>
+              </div>
+              <p class="module-source-line" id="casa0013-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">UCL Module Catalogue：CASA0013</a> · <a href="https://jreades.github.io/code-camp/" target="_blank" rel="noopener">CASA Code Camp</a></p>
+            </div>
+          </div>
+        </details>
+        <div class="course-footer"><span class="credits">15 credits · optional</span><a class="details" href="#casa0013">課程內容 →</a></div>
       </article>
     </section>
 
-    <p class="note">CASA0001、CASA0005 與 CASA0007 是課程核心必修；CASA0013 為 Term 1 CASA 選修。實際可選課狀態與名額請以 UCL module selection 系統為準。</p>
+    <p class="note">CASA0001、CASA0005 與 CASA0007 是課程核心必修；CASA0013 為 Term 1 CASA 選修，不在目前列出的 pathway 建議清單中。實際可選課狀態與名額請以 UCL module selection 系統為準。</p>
   </main>
+  <script>
+    function openResearchHash() {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      const detail = target?.closest('details.research-detail');
+      if (detail) detail.open = true;
+    }
+    window.addEventListener('hashchange', openResearchHash);
+    openResearchHash();
+  </script>
 </body>
 </html>
