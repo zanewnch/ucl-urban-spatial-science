@@ -69,6 +69,7 @@
         <a href="term1.html">Term 1</a>
         <a href="term2.html">Term 2</a>
         <a href="notes.html" aria-current="page">筆記區</a>
+        <a href="change-log.html">Change Log</a>
       </nav>
     </div>
   </header>
@@ -87,5 +88,40 @@
       </section>
     </div>
   </main>
+
+<script id="language-switcher">
+(() => {
+  const translations = {"筆記區":"Note area","模型的 Effort":"Model Effort","筆記區｜UCL Urban Spatial Science MSc":"Notes Area｜UCL Urban Spatial Science MSc","頁面導覽":"Page navigation","AI 的使用方式":"How AI is used","如何下 Prompt":"How to download Prompt","程式基礎":"Programming basics","總覽":"Overview"};
+  const storageKey = 'ucl-urban-spatial-science-language';
+  const nav = document.querySelector('.topbar nav');
+  if (!nav) return;
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'language-toggle';
+  button.setAttribute('aria-label', 'Switch page language');
+  button.style.cssText = 'appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:.84rem;font-weight:800;padding:7px 11px;min-height:40px;cursor:pointer;';
+  nav.append(button);
+  const lang = localStorage.getItem(storageKey) === 'en' ? 'en' : 'zh';
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode(node) { return node.parentElement && !node.parentElement.closest('script,style') && translations[node.nodeValue] !== undefined ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; } });
+  const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+  const attrs = [];
+  document.querySelectorAll('[aria-label], [placeholder], [title]').forEach(el => {
+    for (const name of ['aria-label','placeholder','title']) if (el.hasAttribute(name) && translations[el.getAttribute(name)] !== undefined) attrs.push([el,name,el.getAttribute(name)]);
+  });
+  const originalTitle = document.title;
+  function apply(language) {
+    const english = language === 'en';
+    nodes.forEach(node => { const original = node.__zh ?? node.nodeValue; node.__zh = original; node.nodeValue = english ? translations[original] : original; });
+    attrs.forEach(([el,name,original]) => el.setAttribute(name, english ? translations[original] : original));
+    document.title = english ? (translations[originalTitle] || originalTitle) : originalTitle;
+    document.documentElement.lang = english ? 'en' : 'zh-Hant';
+    button.textContent = english ? '中文' : 'English';
+    button.setAttribute('aria-pressed', String(english));
+    localStorage.setItem(storageKey, language);
+  }
+  button.addEventListener('click', () => apply(document.documentElement.lang === 'en' ? 'zh' : 'en'));
+  apply(lang);
+})();
+</script>
 </body>
 </html>
