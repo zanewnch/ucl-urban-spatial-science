@@ -478,8 +478,8 @@
       .hero-note, .hero-note p, .lede { overflow-wrap: anywhere; word-break: break-word; }
       .wrap { width: min(100% - 24px, 1160px); }
       section { padding: 42px 0 56px; }
-      .topbar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
-      .topbar nav a { justify-content: flex-start; padding-inline: 10px; }
+      .topbar nav { display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; gap: 6px; }
+      .topbar nav a { flex: 0 0 auto; justify-content: flex-start; padding-inline: 10px; white-space: nowrap; }
       .index-panel { padding: 16px; }
       .index-list { grid-template-columns: 1fr; }
       .module-card, .pathway, .term, .list-card { padding: 19px; }
@@ -498,7 +498,7 @@
       th, td { padding: 12px; }
     }
     @media (max-width: 360px) {
-      .topbar nav { grid-template-columns: 1fr; }
+      .topbar nav { flex-wrap: nowrap; }
       .stats { grid-template-columns: 1fr; }
       .stat, .stat:nth-child(2), .stat:nth-child(3), .stat:nth-child(4) { min-height: 0; }
       .summary { gap: 7px; }
@@ -515,12 +515,13 @@
     <div class="wrap topbar-inner">
       <div><span class="eyebrow">CASA / UCL</span><a class="brand" href="#home">Urban Spatial Science MSc</a></div>
       <nav aria-label="頁面導覽">
-        <a href="#welcome">迎新</a>
         <a href="#structure">結構</a>
         <a href="term1.html">Term 1</a>
         <a href="#core">必修</a>
+        <a href="#dependencies">先修</a>
         <a href="#pathways">組別</a>
         <a href="#options">選修</a>
+        <a href="#welcome">迎新</a>
         <a href="#sources">來源</a>
       </nav>
     </div>
@@ -532,47 +533,35 @@
         <div>
           <span class="stamp">2026–27 官方迎新資料已同步</span>
           <h1>Urban Spatial Science MSc</h1>
-          <p class="lede">以 UCL CASA 2026–27 Welcome Sway 為主，整理迎新、年度節奏、核心課程、Term 2 pathways 與選課規劃。</p>
+          <p class="lede">先看 180 credits 如何組成，再看 Term 1、必修、先修與選修；另依 UCL CASA 2026–27 Welcome Sway 整理年度節奏及迎新資訊。</p>
         </div>
       </div>
       <div class="wrap stats" aria-label="課程摘要">
         <div class="stat"><b>180</b><span>總學分（MSc）</span></div>
-        <div class="stat"><b>4</b><span>所有學生都要修的核心模組</span></div>
-        <div class="stat"><b>4</b><span>Term 2 主題 pathway</span></div>
+        <div class="stat"><b>45</b><span>三門必修授課模組學分</span></div>
+        <div class="stat"><b>75</b><span>選修學分</span></div>
         <div class="stat"><b>60</b><span>Dissertation 學分</span></div>
       </div>
       <div class="wrap index-panel" id="index">
+        <p><strong>學分組成：</strong>45 學分必修授課模組＋60 學分 dissertation＋75 學分選修＝180 學分。四門核心模組包含三門授課模組與 dissertation；Term 2 另有四組主題 pathway 可供選課參考。</p>
         <h2>頁面索引</h2>
         <ul class="index-list">
-          <li><a href="#welcome">01．Welcome Week</a></li>
-          <li><a href="#structure">02．課程結構</a></li>
+          <li><a href="#structure">01．學分與全年結構</a></li>
+          <li><a href="#term1">02．Term 1 四門課</a></li>
           <li><a href="#core">03．四門必修</a></li>
-          <li><a href="#pathways">04．Pathways</a></li>
-          <li><a href="#options">05．完整選修分類</a></li>
-          <li><a href="#sources">06．資料來源</a></li>
+          <li><a href="#dependencies">04．先修關係</a></li>
+          <li><a href="#pathways">05．Pathways</a></li>
+          <li><a href="#options">06．選修總表與詳解</a></li>
+          <li><a href="#welcome">07．Welcome Week</a></li>
+          <li><a href="#sources">08．資料來源</a></li>
         </ul>
-      </div>
-    </section>
-
-    <section id="welcome">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="section-kicker">01 / Welcome 2026–27</div><h2>開學前與 Welcome Week</h2></div>
-          <div><p class="muted">28 September – 2 October 2026</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
-        </div>
-        <div class="timeline">
-          <article class="term" data-term="A"><span class="term-label">Before you join</span><h3>完成入學準備</h3><ul><li>接受 offer 並完成 pre-enrolment</li><li>確認住宿、簽證與 international welcome</li><li>完成 online induction 與 module selection</li></ul></article>
-          <article class="term" data-term="B"><span class="term-label">28 Sep – 1 Oct</span><h3>認識 CASA 與課程</h3><ul><li>Course introduction、Library、Student Support、Careers</li><li>CASA Show &amp; Tell 與 Personal Tutor sessions</li><li>Programme Leaders、How to Succeed、optional modules drop-in</li></ul></article>
-          <article class="term" data-term="C"><span class="term-label">2 October</span><h3>從 Bloomsbury 到 Stratford</h3><ul><li>Mandarin-speaking students orientation</li><li>CASA Treasure Hunt</li><li>Food and drinks at Crate Brewery</li></ul></article>
-        </div>
-        <div class="callout"><strong>課程窗口：</strong>Programme Director 為 Dr Claire Dooley；Head of Department 為 Professor Jon Reades。課程問題可聯絡 <a href="mailto:bartlett.pg-casa@ucl.ac.uk">bartlett.pg-casa@ucl.ac.uk</a>。活動時間與教室仍應以 UCL Online Timetable 和 UCL email 為準。</div>
       </div>
     </section>
 
     <section id="structure">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-kicker">02 / Course map</div><h2>一年怎麼走？</h2></div>
+          <div><div class="section-kicker">01 / Course map</div><h2>一年怎麼走？</h2></div>
           <div><p class="muted">Full-time 的官方骨架</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
         </div>
         <div class="timeline">
@@ -609,7 +598,16 @@
             </ul>
           </article>
         </div>
-        <div class="callout"><strong>閱讀重點：</strong>UCL 的頁面同時使用「pathway / recommended / optional / elective」幾種說法。最穩妥的理解是：只有下面四門是全班必修；Term 2 的 pathway 是主題化的建議組合，不是不能跨出的固定組別。</div>
+      </div>
+    </section>
+
+    <section id="term1">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">02 / Selected modules</div><h2>Term 1：四門課先看這裡</h2></div>
+          <a class="back-home" href="#home">↑ 回到首頁</a>
+        </div>
+        <div class="callout"><strong>目前選定的組合：</strong>CASA0001 Urban Systems Theory、CASA0005 Geographic Information Systems and Science、CASA0007 Quantitative Methods 是三門核心必修；CASA0013 Foundations of Spatial Data Science 是 Term 1 CASA 選修。每門 15 credits，合計 60 credits。<a href="term1.html">閱讀四門課的分工、週次、工具、授課者與評量 →</a></div>
       </div>
     </section>
 
@@ -943,25 +941,33 @@
       </div>
     </section>
 
+    <section id="dependencies">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">04 / Study order</div><h2>選課前先看先修關係</h2></div>
+          <div><p class="muted">Flexible study 特別需要注意</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
+        </div>
+        <div class="dependency">
+          <div class="dep"><strong>CASA0013</strong><small>Foundations of Spatial Data Science 或同等程式經驗</small></div>
+          <div class="dep"><strong>→ CASA0002 / 0011 / 0025 / 0029</strong><small>Urban Simulation、ABM、Big Data Applications、Urban Data Visualisation</small></div>
+          <div class="dep"><strong>CASA0007</strong><small>Quantitative Methods</small></div>
+          <div class="dep"><strong>→ CASA0006</strong><small>Data Science for Spatial Systems</small></div>
+        </div>
+        <div class="dependency" style="margin-top:12px">
+          <div class="dep"><strong>CASA0005</strong><small>GIS and Science；並具備 R 基礎</small></div>
+          <div class="dep"><strong>→ CASA0023</strong><small>Remotely Sensing Cities and Environments</small></div>
+          <div class="dep"><strong>CASA0001</strong><small>Urban Systems Theory</small></div>
+          <div class="dep"><strong>→ CASA0008</strong><small>Smart Cities: Context, Policy and Government</small></div>
+        </div>
+        <div class="callout"><strong>Dissertation 提醒：</strong>CASA0010 是課程最後的研究活動，UCL 建議留到 final year；module catalogue 顯示它在 Terms 2–3 進行，正式成果在 Term 3 完成。</div>
+      </div>
+    </section>
+
     <section id="pathways">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-kicker">04 / Guided choices</div><h2>四個主題組</h2></div>
+          <div><div class="section-kicker">05 / Guided choices</div><h2>四個主題組</h2></div>
           <div><p class="muted">官方稱為 pathway / recommended modules</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
-        </div>
-        <div class="table-wrap" style="margin-bottom: 18px">
-          <table>
-            <thead>
-              <tr><th>類型</th><th>性質</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>4 門 core modules</td><td>所有學生都必修</td></tr>
-              <tr><td>Pathway modules</td><td>選修，但 UCL 用來建議你的主題方向</td></tr>
-              <tr><td>Additional optional modules</td><td>額外選修，通常共 30 credits</td></tr>
-              <tr><td>UCL elective</td><td>可從其他 UCL department 選相關課程</td></tr>
-              <tr><td>Dissertation</td><td>必修，60 credits</td></tr>
-            </tbody>
-          </table>
         </div>
         <div class="pathway-grid">
           <article class="pathway">
@@ -1001,17 +1007,32 @@
             </ol>
           </article>
         </div>
-        <div class="callout"><strong>組別的實際含義：</strong>Big Data、Smart Cities and Urban Policy、Data Visualisation、Urban Modelling and Simulation 是 Term 2 的建議組合；Sway 明確說明 module selection 依個人偏好，pathway 是支援不同興趣方向的 recommendation。四組在 2026–27 Welcome Sway 中皆列出 3 門課。</div>
       </div>
     </section>
 
     <section id="options">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-kicker">05 / Build your mix</div><h2>選修總表：所有可以選的課程</h2></div>
+          <div><div class="section-kicker">06 / Build your mix</div><h2>選修總表：所有可以選的課程</h2></div>
           <div><div class="search-row"><input id="moduleSearch" type="search" placeholder="搜尋模組，例如 Python、visualisation…"><span class="small-note" id="resultCount"></span></div><a class="back-home" href="#home">↑ 回到首頁</a></div>
         </div>
 
+        <div class="callout"><strong>閱讀重點：</strong>UCL 的頁面同時使用「pathway / recommended / optional / elective」幾種說法。最穩妥的理解是：只有下面四門是全班必修；Term 2 的 pathway 是主題化的建議組合，不是不能跨出的固定組別。</div>
+        <div class="table-wrap" style="margin-bottom: 18px">
+          <table>
+            <thead>
+              <tr><th>類型</th><th>性質</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>4 門 core modules</td><td>所有學生都必修</td></tr>
+              <tr><td>Pathway modules</td><td>選修，但 UCL 用來建議你的主題方向</td></tr>
+              <tr><td>Additional optional modules</td><td>額外選修，通常共 30 credits</td></tr>
+              <tr><td>UCL elective</td><td>可從其他 UCL department 選相關課程</td></tr>
+              <tr><td>Dissertation</td><td>必修，60 credits</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout"><strong>組別的實際含義：</strong>Big Data、Smart Cities and Urban Policy、Data Visualisation、Urban Modelling and Simulation 是 Term 2 的建議組合；Sway 明確說明 module selection 依個人偏好，pathway 是支援不同興趣方向的 recommendation。四組在 2026–27 Welcome Sway 中皆列出 3 門課。</div>
         <div class="electives">
           <div class="list-card">
             <h3>CASA optional</h3>
@@ -1262,32 +1283,25 @@
       </div>
     </section>
 
-    <section id="dependencies">
+    <section id="welcome">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-kicker">05 / Study order</div><h2>選課前先看先修關係</h2></div>
-          <div><p class="muted">Flexible study 特別需要注意</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
+          <div><div class="section-kicker">07 / Welcome 2026–27</div><h2>開學前與 Welcome Week</h2></div>
+          <div><p class="muted">28 September – 2 October 2026</p><a class="back-home" href="#home">↑ 回到首頁</a></div>
         </div>
-        <div class="dependency">
-          <div class="dep"><strong>CASA0013</strong><small>Foundations of Spatial Data Science 或同等程式經驗</small></div>
-          <div class="dep"><strong>→ CASA0002 / 0011 / 0025 / 0029</strong><small>Urban Simulation、ABM、Big Data Applications、Urban Data Visualisation</small></div>
-          <div class="dep"><strong>CASA0007</strong><small>Quantitative Methods</small></div>
-          <div class="dep"><strong>→ CASA0006</strong><small>Data Science for Spatial Systems</small></div>
+        <div class="timeline">
+          <article class="term" data-term="A"><span class="term-label">Before you join</span><h3>完成入學準備</h3><ul><li>接受 offer 並完成 pre-enrolment</li><li>確認住宿、簽證與 international welcome</li><li>完成 online induction 與 module selection</li></ul></article>
+          <article class="term" data-term="B"><span class="term-label">28 Sep – 1 Oct</span><h3>認識 CASA 與課程</h3><ul><li>Course introduction、Library、Student Support、Careers</li><li>CASA Show &amp; Tell 與 Personal Tutor sessions</li><li>Programme Leaders、How to Succeed、optional modules drop-in</li></ul></article>
+          <article class="term" data-term="C"><span class="term-label">2 October</span><h3>從 Bloomsbury 到 Stratford</h3><ul><li>Mandarin-speaking students orientation</li><li>CASA Treasure Hunt</li><li>Food and drinks at Crate Brewery</li></ul></article>
         </div>
-        <div class="dependency" style="margin-top:12px">
-          <div class="dep"><strong>CASA0005</strong><small>GIS and Science；並具備 R 基礎</small></div>
-          <div class="dep"><strong>→ CASA0023</strong><small>Remotely Sensing Cities and Environments</small></div>
-          <div class="dep"><strong>CASA0001</strong><small>Urban Systems Theory</small></div>
-          <div class="dep"><strong>→ CASA0008</strong><small>Smart Cities: Context, Policy and Government</small></div>
-        </div>
-        <div class="callout"><strong>Dissertation 提醒：</strong>CASA0010 是課程最後的研究活動，UCL 建議留到 final year；module catalogue 顯示它在 Terms 2–3 進行，正式成果在 Term 3 完成。</div>
+        <div class="callout"><strong>課程窗口：</strong>Programme Director 為 Dr Claire Dooley；Head of Department 為 Professor Jon Reades。課程問題可聯絡 <a href="mailto:bartlett.pg-casa@ucl.ac.uk">bartlett.pg-casa@ucl.ac.uk</a>。活動時間與教室仍應以 UCL Online Timetable 和 UCL email 為準。</div>
       </div>
     </section>
 
     <section id="sources">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-kicker">06 / Source notes</div><h2>資料來源與閱讀提醒</h2></div>
+          <div><div class="section-kicker">08 / Source notes</div><h2>資料來源與閱讀提醒</h2></div>
           <a class="back-home" href="#home">↑ 回到首頁</a>
         </div>
         <div class="source-list">
@@ -1301,7 +1315,7 @@
   </main>
 
   <footer>
-    <div class="wrap">UCL Urban Spatial Science MSc · 2026–27 Welcome Sway 為主 · 更新：2026-09-17</div>
+    <div class="wrap">UCL Urban Spatial Science MSc · 2026–27 Welcome Sway 為主 · 更新：2026-09-24</div>
   </footer>
 
   <script>
@@ -1380,7 +1394,7 @@
     syncTopbar();
 
     const navLinks = [...document.querySelectorAll('nav a, .index-list a')];
-    const sectionIds = ['structure', 'core', 'pathways', 'options', 'dependencies', 'sources'];
+    const sectionIds = ['structure', 'term1', 'core', 'dependencies', 'pathways', 'options', 'welcome', 'sources'];
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
     function setActiveSection(id) {
