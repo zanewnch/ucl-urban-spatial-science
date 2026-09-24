@@ -36,6 +36,11 @@
     nav a[aria-current="page"] { color: var(--coral); }
     main { padding: 54px 0 72px; }
     h1 { margin: 10px 0 0; color: var(--navy); font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .98; }
+    .topics { display: grid; gap: 16px; margin-top: 32px; }
+    .topic { padding: 24px; border: 1px solid var(--line); background: rgba(255,253,249,.82); }
+    .topic h2 { margin: 0; color: var(--navy); font-size: clamp(1.35rem, 3vw, 1.8rem); }
+    .subtopics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .subtopic { padding: 16px; border-left: 3px solid var(--blue); background: #f3f6f6; color: var(--ink); font-weight: 750; }
     @media (max-width: 820px) {
       .topbar { padding: 10px 0; }
       .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -46,6 +51,7 @@
       nav a[aria-current="page"] { border-color: var(--navy); background: var(--navy); color: #fffaf1; }
       main { padding-top: 40px; }
     }
+    @media (max-width: 600px) { .subtopics { grid-template-columns: 1fr; } }
     @media (max-width: 480px) {
       .wrap { width: min(100% - 24px, 1000px); }
       .topbar nav { display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
@@ -68,6 +74,18 @@
   </header>
   <main class="wrap">
     <h1>筆記區</h1>
+    <div class="topics">
+      <section class="topic" aria-labelledby="programming-basics">
+        <h2 id="programming-basics">程式基礎</h2>
+      </section>
+      <section class="topic" aria-labelledby="ai-usage">
+        <h2 id="ai-usage">AI 的使用方式</h2>
+        <div class="subtopics">
+          <div class="subtopic">如何下 Prompt</div>
+          <div class="subtopic">模型的 Effort</div>
+        </div>
+      </section>
+    </div>
   </main>
 </body>
 </html>
