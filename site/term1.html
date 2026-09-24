@@ -58,6 +58,17 @@
     .course-dossier-content p { margin: 7px 0; }
     .course-dossier-content ul, .course-dossier-content ol { margin: 6px 0 12px; padding-left: 21px; }
     .course-dossier-content li + li { margin-top: 4px; }
+    .qm-weeks { display: grid; gap: 10px; margin: 12px 0 20px; }
+    .qm-week { padding: 14px 16px; border: 1px solid var(--line); background: #fbfaf7; }
+    .qm-week h4 { margin: 0 0 7px; color: var(--navy); font-size: .98rem; }
+    .qm-week p { margin: 5px 0; }
+    .qm-week strong { color: var(--navy); }
+    .qm-setup { margin: 12px 0 18px; padding: 16px; border: 1px solid var(--line); background: #fbfaf7; }
+    .qm-setup h4 { margin: 14px 0 5px; }
+    .qm-setup h4:first-child { margin-top: 0; }
+    .qm-setup pre { overflow-x: auto; padding: 12px; background: #102a43; color: #fff; font-size: .84rem; }
+    .qm-setup code { overflow-wrap: anywhere; }
+    .qm-setup li + li { margin-top: 5px; }
     .course-dossier-content a { overflow-wrap: anywhere; }
     .course-dossier-note { padding: 12px 14px; border-left: 3px solid var(--gold); background: #fff7dc; color: #4d5d6a; }
     .course-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
@@ -404,9 +415,65 @@
         <details class="course-dossier">
           <summary>展開：逐週主題、程式工具、讀物與 coursework</summary>
           <div class="course-dossier-content">
-            <h3>學習內容與週次：10 週主題地圖</h3>
-            <ol><li>資料描述與呈現。</li><li>機率與機率分布。</li><li>假設檢定。</li><li>線性代數入門。</li><li>變數關係的衡量。</li><li>迴歸入門。</li><li>多元迴歸。</li><li>多層次迴歸。</li><li>降維。</li><li>分群分析。</li></ol>
-            <p>UCL 2026/27 catalogue 說明 10 堂 weekly lecture 加 10 堂 practical，主題以 2025/26 module content 為基礎並可能變更。<a href="https://huanfachen.github.io/QM/sessions/" target="_blank" rel="noopener">公開 2025/26 weekly schedule</a>列出的授課節奏是：資料描述；機率與分布；假設檢定；線性代數；相關與迴歸；基礎迴歸；多元迴歸；多層次迴歸；降維；分群。下方依這個公開 schedule 排列；2026/27 實際週次仍以 Moodle 為準。</p>
+            <h3>逐週上課內容與進度（公開 2025/26 教材地圖）</h3>
+            <p>每週包含一堂 lecture 和一堂 practical。下面把公開 weekly notes 的學習目標轉成「課堂會理解什麼、Notebook 要實際做什麼、最後要能說明什麼」；實際投影片、資料集和練習題以 2026/27 Moodle 為準。公開課程頁明確列出 2026/27 是 10+10 次課，並把本年度內容註明為依 2025/26、可能變動。</p>
+            <div class="qm-weeks">
+              <section class="qm-week"><h4>第 1 週｜探索性資料分析 I：資料型態與描述統計</h4><p><strong>Lecture：</strong>分辨類別、順序、連續等資料型態；理解平均數、中位數、四分位距、標準差等摘要指標各自回答什麼問題，以及單看平均值為何會隱藏分布差異。</p><p><strong>Practical：</strong>在 Notebook 載入表格、檢查欄位型態與缺值，計算摘要統計，畫直方圖和箱型圖；比較城市／區域分組後分布是否不同，辨認偏態和離群值。</p><p><strong>本週產出：</strong>一張有標題與單位的箱型圖，以及一段用中位數和四分位距描述城市指標分布的文字。</p></section>
+              <section class="qm-week"><h4>第 2 週｜探索性資料分析 II：機率、分布與資料偏差</h4><p><strong>Lecture：</strong>認識常見機率分布的形狀和特性，理解抽樣／代表性問題，以及指數、對數在資料尺度轉換中的用途。</p><p><strong>Practical：</strong>用圖表比較偏態資料與較對稱分布；練習指數與對數轉換前後的尺度；檢查一份樣本和目標人口在關鍵特徵上是否不同，討論這會如何影響城市研究結論。</p><p><strong>本週產出：</strong>一張分布比較圖，以及「樣本代表誰、可能漏掉誰」的偏差檢查說明。</p></section>
+              <section class="qm-week"><h4>第 3 週｜假設檢定：把研究問題變成可檢查的證據</h4><p><strong>Lecture：</strong>從研究問題寫出虛無假設與對立假設；理解抽樣變異、p 值、顯著水準，以及第一類錯誤（誤報）和第二類錯誤（漏報）。練習判斷應使用哪類檢定，而不是只背顯著與否。</p><p><strong>Practical：</strong>在 Python 對一個城市指標提出比較問題，執行相應的統計檢定，讀取統計量和 p 值；把數值結果翻譯成一般讀者聽得懂的句子，並寫出不能由此推論的事。</p><p><strong>本週產出：</strong>一份含 H₀/H₁、檢定選擇、結果與限制的短結論。</p></section>
+              <section class="qm-week"><h4>第 4 週｜線性代數入門：函數、向量與矩陣</h4><p><strong>Lecture：</strong>讀懂簡單數學符號和線性方程；把一組變數看成向量、把多筆觀測看成矩陣，理解矩陣運算如何成為迴歸和多變量方法的計算骨架。</p><p><strong>Practical：</strong>用 NumPy 建立小型向量和矩陣、做基本運算，將一個簡單線性關係寫成矩陣形式，檢查維度是否相容；重點是理解資料如何進模型，不要求手算大型矩陣。</p><p><strong>本週產出：</strong>把一個簡單表格表示為向量／矩陣，並說明每一列和每一欄代表什麼。</p></section>
+              <section class="qm-week"><h4>第 5 週｜衡量變數關係：共變、相關與 ANOVA</h4><p><strong>Lecture：</strong>區分共變與相關；比較 Pearson（線性關係）和 Spearman（排序／單調關係）；學會相關不代表因果。認識 ANOVA 如何比較多組平均數及其基本解讀。</p><p><strong>Practical：</strong>畫散佈圖後計算 Pearson/Spearman 相關，比較離群值或非線性如何影響係數；用分組圖和 ANOVA 檢視多個區域群組的指標差異，將圖、檢定和研究問題放在一起解讀。</p><p><strong>本週產出：</strong>相關散佈圖、係數解讀，以及一段謹慎區分「一起變動」和「造成影響」的結論。</p></section>
+              <section class="qm-week"><h4>第 6 週｜簡單線性迴歸：建立第一個解釋模型</h4><p><strong>Lecture：</strong>以一個連續解釋變數預測／描述一個連續結果，理解截距、斜率、殘差、自由度、p 值和 R²。先看資料與模型圖，再讀輸出；不把 p 值或 R² 單獨當作模型好壞判準。</p><p><strong>Practical：</strong>先畫散佈圖，再以 OLS 配適迴歸線；讀取係數、信賴／不確定性資訊和 R²，檢視殘差，找出外推風險及樣本代表性問題。</p><p><strong>本週產出：</strong>一個回歸圖和一段係數解釋（自變數增加一單位時，預期結果平均如何改變），再補上模型限制。</p></section>
+              <section class="qm-week"><h4>第 7 週｜多元迴歸：控制變數、類別變數與交互作用</h4><p><strong>Lecture：</strong>加入多個連續／類別解釋變數，理解 dummy coding、控制其他條件後的係數、混雜因素和交互作用；辨認多重共線性。城市資料有空間或時間自相關時，殘差可能違反獨立假設。</p><p><strong>Practical：</strong>建立由簡到繁的 OLS 模型，比較加入人口／地區等控制變數前後係數如何改變；檢查共線性和殘差空間／時間型態；嘗試交互作用項，觀察一個變數的關係是否隨另一變數改變。</p><p><strong>本週產出：</strong>模型比較表，清楚指出哪些係數改變、可能的混雜因素及仍未解決的空間依賴。</p></section>
+              <section class="qm-week"><h4>第 8 週｜多層次迴歸：處理巢狀與群聚資料</h4><p><strong>Lecture：</strong>用個體位於 neighbourhood、學校位於 local authority 等例子理解層級結構；區分 fixed effects 與 random effects；認識 null model、variance components、ICC（組內相關）和 shrinkage。</p><p><strong>Practical：</strong>先以空模型拆解個體層與群組層變異，再比較一般 OLS 和 mixed-effects model；練習設定隨機截距（必要時看隨機斜率）並解讀模型輸出。教材示範 Python/R 類似語法的模型讀法。</p><p><strong>本週產出：</strong>一段說明群組差異有多大、ICC 是否支持多層次模型，以及 random intercept 如何解讀的結果摘要。</p></section>
+              <section class="qm-week"><h4>第 9 週｜降維：主成分分析（PCA）</h4><p><strong>Lecture：</strong>理解降維是把多個彼此相關的指標濃縮成較少維度；認識 PCA、主成分、解釋變異量，以及結果可視化和解讀時的界線。</p><p><strong>Practical：</strong>選取多個城市指標、處理尺度差異（標準化）、執行 PCA，畫解釋變異圖與前兩個主成分散佈圖；查看各變數載荷，判斷哪些指標共同構成某一主成分。</p><p><strong>本週產出：</strong>一張 PCA 圖和一段解釋保留了多少變異、主成分可能代表什麼，以及降維丟失了什麼資訊。</p></section>
+              <section class="qm-week"><h4>第 10 週｜分群：找出相似觀測的群組</h4><p><strong>Lecture：</strong>理解 clustering 是無監督探索；比較 K-means 和階層式分群的基本邏輯，討論距離、尺度、群數選擇及群組解讀，不把演算法產生的群組直接當成客觀存在的類別。</p><p><strong>Practical：</strong>標準化多項區域指標，試跑 K-means 與階層式分群；比較不同群數的分配，用圖表呈現結果，再回看群組的特徵差別和方法敏感度。</p><p><strong>本週產出：</strong>一張分群視覺化和一份群組摘要，說明群數選擇、各群特徵與分類不確定性。</p></section>
+            </div>
+            <p>週次細節參照：<a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">課程總覽</a>、<a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">Week 1</a> 至 <a href="https://huanfachen.github.io/QM/sessions/week10.html" target="_blank" rel="noopener">Week 10 公開教材</a>。上方每週 practical 的具體練習任務是依公開學習目標轉成的預習／複習清單，不代表 Moodle 上的原始 notebook 題目或正式作業資料集。</p>
+            <h3>Python 環境設置：以 CASA Computing Platform 為主</h3>
+            <p>CASA0007 公開教材要求使用 CASA Computing Environment；它推薦 Podman container，讓全班 Python 與函式庫版本一致。不要先自行 pip 安裝一堆套件，以免和課程 container 發生版本衝突。以下是 Windows 的可操作路徑；Mac/Linux 請依同一官方安裝頁切換作業系統指示。</p>
+            <div class="qm-setup">
+              <h4>開始前：檢查電腦</h4>
+              <ul><li>官方健康檢查的基本門檻：至少 16GB RAM、超過 30GB 可用空間；Windows 10 Home 是常見虛擬化問題來源。較新年度教材曾建議預留更多空間，先確認 CASA setup health check。</li><li>Windows 開啟 Start，搜尋「Turn Windows features on or off」，啟用 <code>Virtual Machine Platform</code> 和 <code>Windows Hypervisor Platform</code>，重新開機。另依 UCL 指引安裝 WSL2；若校務 IT 管理此電腦，先確認校方政策。</li></ul>
+              <h4>安裝所需程式</h4>
+              <ol><li>安裝 Windows Terminal、Podman Desktop、Git 和 GitHub Desktop。GitHub Desktop 設定用於課程的 GitHub 帳號。</li><li>啟動 Podman Desktop，完成初始設定；開啟新的 Windows Terminal（PowerShell 分頁）。</li><li>建立並啟動 Podman 虛擬機器，然後拉取一個測試 image：</li></ol>
+              <pre><code>podman machine init
+podman machine start
+podman run hello-world</code></pre>
+              <p>看到 <code>Hello Podman World</code> 即通過 Podman 基本測試。若 machine 已建立，第二次開始只需 <code>podman machine start</code>。</p>
+              <h4>啟動課程 JupyterLab</h4>
+              <ol><li>先建立一個專門放 CASA0007 notebooks 的資料夾，在 Windows Terminal 用 <code>cd</code> 進入該資料夾；container 會把目前資料夾掛載成 notebook 工作目錄。</li><li>以下是公開 CASA Computing Platform 指引中的 x64/AMD64 範例命令（整行貼進 PowerShell）。它會下載約數 GB 的課程 image，首次啟動需等候：</li></ol>
+              <pre><code>podman run --rm -d --name sds2025 -p 8888:8888 -v "${PWD}:/home/jovyan/work" jreades/sds:2025-amd start.sh jupyter lab --LabApp.password='' --ServerApp.password='' --NotebookApp.token=''</code></pre>
+              <p>開啟瀏覽器到 <code>http://localhost:8888</code>，新增 Python 3 notebook。Apple Silicon/M 系列請依官方頁使用 ARM image。<strong>此命令使用文件列出的 sds2025 image；2026/27 Moodle 若提供更新 tag 或啟動指令，以當年度課程公告為準。</strong></p>
+              <h4>確認 Notebook 真正接上課程 Python</h4>
+              <p>在新 notebook 執行以下 cell。版本號會隨課程 image 更新；重點是每行可匯入、Jupyter kernel 顯示為 Python 3：</p>
+              <pre><code>import sys
+import numpy as np
+import pandas as pd
+import scipy
+import statsmodels
+import sklearn
+
+print(sys.version)
+print("NumPy", np.__version__)
+print("pandas", pd.__version__)
+print("SciPy", scipy.__version__)
+print("statsmodels", statsmodels.__version__)
+print("scikit-learn", sklearn.__version__)</code></pre>
+              <p>完成後用 <code>podman stop sds2025</code> 停止環境；因為用了 <code>--rm</code>，container 會移除，但掛載的 notebook 留在本機資料夾。</p>
+              <h4>常見卡點</h4>
+              <ul><li><code>podman machine start</code> 無法啟動：先確認兩個 Windows virtualization feature 已啟用並重新開機；依 CASA platform common problems 檢查 WSL2／BIOS virtualization。若提示 machine configuration/permission 錯誤，先看錯誤訊息再依官方指南重建命名 machine。</li><li><code>podman: command not found</code>：完全關閉並重新開啟 Terminal，確認 Podman Desktop 已安裝並啟動。</li><li>瀏覽器連不到 8888：確認 <code>podman ps</code> 有 <code>sds2025</code>，且啟動命令中的 port mapping 是 <code>-p 8888:8888</code>。</li><li>Notebook 找不到套件：確認 kernel 是 container 內的 Python 3；先別任意切換本機 Python，並對照 Moodle 的當年 setup 指示。</li></ul>
+            </div>
+            <p>官方逐步安裝連結：<a href="https://huanfachen.github.io/QM/setup/" target="_blank" rel="noopener">CASA0007 setup 引導</a> · <a href="https://ucl-casa.github.io/sds/setup/health.html" target="_blank" rel="noopener">電腦健康檢查</a> · <a href="https://ucl-casa.github.io/sds/setup/base.html" target="_blank" rel="noopener">Windows 基礎設定與 WSL2</a> · <a href="https://ucl-casa.github.io/sds/setup/installation.html" target="_blank" rel="noopener">Podman、JupyterLab 安裝與測試</a>。</p>
+            <h3>課本、教材、影片、codebase 與 demo</h3>
+            <div class="qm-weeks">
+              <section class="qm-week"><h4>課本：有，形式是免費線上課程網站</h4><p>目前公開的 CASA0007 主教材是 <a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">Quantitative Methods 課程網站</a>，按 10 週整理概念、learning objectives、lecture notes、quiz 入口和 practical；不是一本必須購買的單一教科書。每週頁可從 Week-by-Week 導覽，並可連到 lecture 資料和練習。</p><p>另有 UCL catalogue 推薦的 <em>Statistics in a Nutshell</em>（第 2 版）和 <em>Practical Statistics for Data Scientists</em>（第 2 版）；這是延伸讀物。指定必讀章節要看 2026/27 ReadingLists/Moodle，不需把兩本當成指定購書。</p></section>
+              <section class="qm-week"><h4>教材：有，講義、Notebook、quiz 與資料</h4><p><a href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">每週課程頁</a>提供課堂目標和 Lecture/Practical 入口；講義網頁可以直接閱讀。Practical 有可預覽和下載的 <code>.ipynb</code> Jupyter Notebook，請下載後放進自己的課程資料夾，在課程 JupyterLab 裡執行。每週 Moodle quiz 連結需 UCL 登入。</p><p>公開 Week 1 示範資料是英格蘭與威爾斯 2011/2021 人口普查 local authority 資料，notebook 也保存了資料副本連結，避免外部來源變動就無法跟做。</p></section>
+              <section class="qm-week"><h4>Codebase：有，官方公開 GitHub repository</h4><p><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">huanfachen/QM</a> 是 CASA0007 module repository，README 說明它包含 lecture notes 和 practical notebooks。主要內容可在 <a href="https://github.com/huanfachen/QM/tree/main/sessions" target="_blank" rel="noopener"><code>sessions/</code></a> 瀏覽；另有 <code>data/</code>、設定檔和網站原始 Quarto 文件。可線上讀或下載單一 notebook，不必先 clone 整個 repo 才能上課。公開教材標示 CC BY-NC-SA 4.0，若轉用或分享要遵守授權和署名。</p></section>
+              <section class="qm-week"><h4>Demo：有，直接跑公開 Notebook 看完整操作</h4><p><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 Practical 示範</a>展示從讀入 CSV 開始，用 pandas 檢查欄位、資料列數、地理層級、摘要統計、最大最小值、標準差、缺值和離群值，再畫人口分布箱型圖及比較 2011–2021 人口變化。頁面同時提供 Jupyter notebook 入口，下載後可在自己的環境重跑和修改。這是互動式程式示範／範例分析，不是另有確認到的產品 demo 軟體。</p></section>
+              <section class="qm-week"><h4>影片：公開網站沒有可確認的 lecture recording</h4><p>公開課程頁提供 lecture notes 和 Notebook，我沒有在公開週次頁找到可直接觀看的錄影連結。module repo 的 2025 教材 TODO 曾寫「Moodle: add link to lecture recording video」，因此錄影可能由 Moodle 提供或曾待補，但不能保證每週都有影片；請登入 2026/27 Moodle 查本年度 lecture recording 和可觀看權限。</p></section>
+            </div>
+            <p>快速入口：<a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">線上課本／逐週教材</a> · <a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">GitHub codebase</a> · <a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 可跟做 demo</a> · <a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">UCL CASA0007 ReadingLists</a> · <a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">UCL Moodle（需登入）</a>。</p>
             <h3>工具與閱讀</h3>
             <ul><li>Python、Jupyter notebooks、Git/GitHub、Podman；這些都列在 2026/27 catalogue。</li><li>數學方面官方說 little to no prior knowledge assumed；但課程會用 Python/Jupyter 做 practical，2025/26 公開課程預覽特別提醒它不會從頭教 programming，Python 初學者可先修/搭配 CASA0013。這是往年預覽給的準備建議，不是 2026/27 的 prerequisite。</li><li>課程重點是用程式操作資料、理解方法假設、讀懂模型輸出，而非只手算公式。</li><li>catalogue 建議讀物：<a href="https://learning.oreilly.com/library/view/statistics-in-a/9781449361129" target="_blank" rel="noopener"><em>Statistics in a Nutshell</em>（2nd ed.）</a>；<a href="https://learning.oreilly.com/library/view/practical-statistics-for/9781492072935" target="_blank" rel="noopener"><em>Practical Statistics for Data Scientists</em>（2nd ed.）</a>。UCL ReadingLists 已列 CASA0007 的 2026/27 list：<a href="https://readinglists.ucl.ac.uk/modules/casa0007.html" target="_blank" rel="noopener">開啟 UCL ReadingLists：CASA0007</a>。2025/26 公開課本另有逐章 notes 和 bibliography；每週實際必讀項目以當年清單/Moodle 為準。</li></ul>
             <h3>授課者與研究方向</h3>
