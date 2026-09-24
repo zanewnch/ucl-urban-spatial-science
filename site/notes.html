@@ -41,6 +41,13 @@
     .topic h2 { margin: 0; color: var(--navy); font-size: clamp(1.35rem, 3vw, 1.8rem); }
     .subtopics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
     .subtopic { padding: 16px; border-left: 3px solid var(--blue); background: #f3f6f6; color: var(--ink); font-weight: 750; }
+    .model-intro { margin: 10px 0 0; color: var(--muted); }
+    .model-heading { margin: 24px 0 0; color: var(--navy); }
+    .model-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .model-list li { padding: 14px 16px; border: 1px solid var(--line); background: #fffdf9; }
+    .model-list strong { color: var(--navy); }
+    .effort-note { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--coral); background: #fff7ed; color: #40576b; }
+    .sources { margin: 12px 0 0; color: var(--muted); font-size: .82rem; }
     @media (max-width: 820px) {
       .topbar { padding: 10px 0; }
       .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -69,6 +76,7 @@
         <a href="term1.html">Term 1</a>
         <a href="term2.html">Term 2</a>
         <a href="notes.html" aria-current="page">筆記區</a>
+        <a href="change-log.html">Change Log</a>
       </nav>
     </div>
   </header>
@@ -84,6 +92,16 @@
           <div class="subtopic">如何下 Prompt</div>
           <div class="subtopic">模型的 Effort</div>
         </div>
+        <h3 class="model-heading">模型等級：用價格換能力</h3>
+        <p class="model-intro">可以把它想成四種工作檔位。平常從 Sol 或 Luna 開始，遇到難題再換更合適的檔位。</p>
+        <ul class="model-list">
+          <li><strong>Astra（GPT-6）｜高能力、高用量：</strong>最適合很難、步驟很多，或需要仔細判斷的任務。平常小問題通常不用開到這一檔。</li>
+          <li><strong>Sol（GPT-6）｜能力與用量平衡：</strong>適合一般寫程式、整理資料、分析問題，是不知道選哪個時的穩妥起點。</li>
+          <li><strong>Terra（GPT-5.6）｜實用、省用量：</strong>適合日常問題、簡單修改和摘要。它屬於較早一代，複雜任務的能力和 GPT-6 高階模型有差距。</li>
+          <li><strong>Luna（GPT-6）｜快速、省用量：</strong>適合簡單問答、改寫、摘要等明確的小任務；碰到複雜推理時再換 Sol 或 Astra。</li>
+        </ul>
+        <p class="effort-note"><strong>Effort 是模型思考的力道。</strong>同一個模型調高 Effort，通常會花更多時間和用量處理難題；它不會把 Luna 變成 Astra。簡單任務選低或中，卡在多步推理再調高。</p>
+        <p class="sources">價格感受是相對用量的簡化說法。Codex 訂閱內的實際用量依方案及模型而異，API 標價也不等於 Codex 扣量。參考：<a href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">GPT-6 Astra</a>、<a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/" target="_blank" rel="noopener">GPT-6 Sol 與 Luna</a>、<a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">GPT-5.6</a>。</p>
       </section>
     </div>
   </main>
