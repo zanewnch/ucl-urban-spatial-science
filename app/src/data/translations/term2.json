@@ -373,5 +373,19 @@
   "課程處理的是超過一般 local machine compute／storage 能輕鬆處理的 spatial data。你會走完整 cloud geospatial workflow：把資料 import、存進合適的 database、用 SQL／spatial query 分析，再把結果做成 interactive web visualisation 或 spatial application。": "The course handles spatial data that exceeds what ordinary local machine compute/storage can easily handle. You will go through the complete cloud geospatial workflow: import data, save it into a suitable database, analyze it with SQL/spatial query, and then make the results into interactive web visualization or spatial application.",
   "從經濟、社會與科技脈絡理解 smart cities 與 smart urbanism，批判性分析城市資訊技術、政策、治理、夥伴關係、基礎設施與 urban analytics。": "Understand smart cities and smart urbanism from the economic, social and technological context, and critically analyze urban information technology, policy, governance, partnerships, infrastructure and urban analytics.",
   "把分析結果連到 resources、investment 與 policy modifications。": "Connect analysis results to resources, investments, and policy modifications.",
-  "進階主題": "Advanced themes"
+  "進階主題": "Advanced themes",
+  "課程總覽": "Overview",
+  "資料來源": "Sources",
+  "已選": "Selected",
+  "已選 · 15 credits": "Selected · 15 credits",
+  "閱讀詳解 →": "Read details →",
+  "官方來源 ↗": "Official source ↗",
+  "已選的四門課": "Four selected modules",
+  "已選的四門 Term 2 課程": "Four selected Term 2 modules",
+  "查看先修關係 ↓": "See prerequisites ↓",
+  "選修參考": "Elective reference",
+  "已選 · 詳解 →": "Selected · Details →",
+  "前往 CASA0010 完整課程詳解 →": "Read the full CASA0010 module details →",
+  "CASA0010 · 完整課程詳解": "CASA0010 · Full module details",
+  "收合完整課程內容": "Collapse full module content"
 }

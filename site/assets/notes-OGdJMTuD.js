@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-DcO7zkYV.js";import{t as n}from"./page-79Zon-AD.js";e();var r=`<main class="wrap">\r
+import{a as e,t}from"./index-BYboO4p8.js";import{t as n}from"./page-BQEaZiWV.js";e();var r=`<main class="wrap">\r
     <h1>筆記區</h1>\r
     <div class="topics">\r
       <section class="topic" aria-labelledby="programming-basics">\r
@@ -82,4 +82,4 @@ import{a as e,t}from"./index-DcO7zkYV.js";import{t as n}from"./page-79Zon-AD.js"
       .topbar nav a { flex: 0 0 auto; justify-content: flex-start; min-height: 44px; white-space: nowrap; }\r
       main { padding-top: 32px; }\r
     }
-`,a={筆記區:`Note area`,"模型的 Effort":`Model Effort`,"筆記區｜UCL Urban Spatial Science MSc":`Notes Area｜UCL Urban Spatial Science MSc`,頁面導覽:`Page navigation`,"AI 的使用方式":`How AI is used`,"如何下 Prompt":`How to download Prompt`,程式基礎:`Programming basics`,總覽:`Overview`},o=t();function s(){return(0,o.jsx)(n,{page:`notes`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};
+`,a={筆記區:`Note area`,"模型的 Effort":`Model Effort`,"筆記區｜UCL Urban Spatial Science MSc":`Notes Area｜UCL Urban Spatial Science MSc`,頁面導覽:`Page navigation`,"AI 的使用方式":`How AI is used`,"如何下 Prompt":`How to download Prompt`,程式基礎:`Programming basics`,總覽:`Overview`,課程總覽:`Overview`,資料來源:`Sources`,已選:`Selected`,"已選 · 15 credits":`Selected · 15 credits`,"閱讀詳解 →":`Read details →`,"官方來源 ↗":`Official source ↗`,已選的四門課:`Four selected modules`,"已選的四門 Term 2 課程":`Four selected Term 2 modules`,"查看先修關係 ↓":`See prerequisites ↓`,選修參考:`Elective reference`,"已選 · 詳解 →":`Selected · Details →`,"前往 CASA0010 完整課程詳解 →":`Read the full CASA0010 module details →`,"CASA0010 · 完整課程詳解":`CASA0010 · Full module details`},o=t();function s(){return(0,o.jsx)(n,{page:`notes`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};

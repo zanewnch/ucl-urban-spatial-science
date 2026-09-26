@@ -7,6 +7,8 @@
 - Routes: `/`, `/term1`, `/term2`, `/term3`, `/notes`, `/change-log`
 - Build output: `site/` (including the GitHub Pages SPA fallback)
 
+The reader path follows the selected course plan: the overview shows credits and selected modules before the year timeline; Term 1 and Term 2 begin with their selected modules; Dissertation holds the full CASA0010 detail. Notes and Change Log are linked in the secondary footer navigation. The source-backed course copy lives in [`app/src/content/`](app/src/content/).
+
 ## Local development
 
 Requires Node.js 24 or newer.

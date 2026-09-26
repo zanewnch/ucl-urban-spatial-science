@@ -51,7 +51,7 @@ function Header({ config, pathname, pageTranslations }) {
           {eyebrow}
           <Link className="brand" to={brandTo}>{parse(config.brandLabel)}</Link>
         </div>
-        <nav aria-label="頁面導覽">
+        <nav aria-label="主要導覽">
           {config.nav.map((item, index) => {
             const to = routeForHref(item.href, pathname) ?? item.href;
             return (
@@ -72,8 +72,19 @@ function Header({ config, pathname, pageTranslations }) {
 }
 
 function Footer({ config }) {
-  if (!config.hasFooter) return null;
-  return <footer className={config.footerClass || undefined}>{parse(config.footerHtml)}</footer>;
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div>{config.hasFooter ? parse(config.footerHtml) : 'Urban Spatial Science MSc · 2026–27'}</div>
+        <nav className="secondary-nav" aria-label="補充資訊">
+          <Link to="/notes">筆記區</Link>
+          <Link to="/change-log">Change Log</Link>
+          <Link to="/#welcome">Welcome Week</Link>
+          <Link to="/#sources">資料來源</Link>
+        </nav>
+      </div>
+    </footer>
+  );
 }
 
 function LanguageToggle({ title, pageTranslations }) {
@@ -151,12 +162,16 @@ function usePageStyles(page, pageStyles) {
 function useHashNavigation(page, navigate, location) {
   useEffect(() => {
     const decodedHash = decodeURIComponent(location.hash.slice(1));
+    if ((page === 'index' || page === 'term2') && /^casa0010(?:-|$)/.test(decodedHash)) {
+      navigate(`/term3${location.hash}`, { replace: true });
+      return;
+    }
     if (page === 'index') {
       if (/^casa(?:0001|0005|0007|0013)(?:-|$)/.test(decodedHash) || decodedHash === 'core') {
         navigate(`/term1${decodedHash === 'core' ? '#course-details' : location.hash}`, { replace: true });
         return;
       }
-      if (/^casa(?:0010|0002|0006|0008|0011|0023|0025|0028|0029|0034)(?:-|$)/.test(decodedHash)
+      if (/^casa(?:0002|0006|0008|0011|0023|0025|0028|0029|0034)(?:-|$)/.test(decodedHash)
           || ['dependencies', 'pathways', 'options'].includes(decodedHash)) {
         navigate(`/term2${location.hash}`, { replace: true });
         return;
@@ -168,13 +183,15 @@ function useHashNavigation(page, navigate, location) {
       const dossier = target?.closest('details.research-detail');
       if (dossier) dossier.open = true;
     }
-    if (page === 'term2') {
-      const target = document.getElementById(decodedHash);
-      const content = target?.closest('.module-dossier-content');
-      if (content?.hidden) content.previousElementSibling?.click();
-    }
     if (location.hash) {
-      requestAnimationFrame(() => document.getElementById(decodedHash)?.scrollIntoView());
+      requestAnimationFrame(() => {
+        const target = document.getElementById(decodedHash);
+        if (page === 'term2' || page === 'term3') {
+          const content = target?.closest('.module-dossier-content');
+          if (content?.hidden) content.previousElementSibling?.click();
+        }
+        target?.scrollIntoView();
+      });
     }
   }, [page, location.hash, navigate]);
 }
@@ -280,6 +297,20 @@ function useTerm2Filters(page) {
       });
       filterModules();
     };
+    input.addEventListener('input', filterModules);
+    toolbar?.addEventListener('click', onFilterClick);
+    filterModules();
+
+    return () => {
+      input.removeEventListener('input', filterModules);
+      toolbar?.removeEventListener('click', onFilterClick);
+    };
+  }, [page]);
+}
+
+function useModuleDossierToggles(page, pageTranslations) {
+  useEffect(() => {
+    if (!['term2', 'term3'].includes(page)) return undefined;
     const onDossierClick = (event) => {
       const toggle = event.target.closest('.module-dossier-toggle');
       if (!toggle) return;
@@ -290,20 +321,18 @@ function useTerm2Filters(page) {
       toggle.setAttribute('aria-expanded', String(expanded));
       const label = toggle.querySelector('.toggle-label');
       const icon = toggle.querySelector('.toggle-icon');
-      if (label) label.textContent = expanded ? '收合完整課程內容' : '全部顯示';
+      if (label) {
+        const copy = expanded ? '收合完整課程內容' : '全部顯示';
+        label.textContent = document.documentElement.lang === 'en'
+          ? (pageTranslations[copy] ?? copy)
+          : copy;
+        if (label.firstChild) label.firstChild.__zh = copy;
+      }
       if (icon) icon.textContent = expanded ? '−' : '+';
     };
-    input.addEventListener('input', filterModules);
-    toolbar?.addEventListener('click', onFilterClick);
     document.addEventListener('click', onDossierClick);
-    filterModules();
-
-    return () => {
-      input.removeEventListener('input', filterModules);
-      toolbar?.removeEventListener('click', onFilterClick);
-      document.removeEventListener('click', onDossierClick);
-    };
-  }, [page]);
+    return () => document.removeEventListener('click', onDossierClick);
+  }, [page, pageTranslations]);
 }
 
 function Page({ page, content, pageStyles, pageTranslations }) {
@@ -314,6 +343,7 @@ function Page({ page, content, pageStyles, pageTranslations }) {
   useHashNavigation(page, navigate, location);
   useIndexInteractions(page, location);
   useTerm2Filters(page);
+  useModuleDossierToggles(page, pageTranslations);
 
   useEffect(() => {
     const english = localStorage.getItem('ucl-urban-spatial-science-language') === 'en';

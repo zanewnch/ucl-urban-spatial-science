@@ -164,6 +164,44 @@ html body.site-body {
   color: var(--muted);
   font-size: .84rem;
 }
+.site-shell .selected-course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-block: 18px 4px;
+}
+.site-shell .selected-course {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--coral);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.site-shell .selected-badge,
+.site-shell .selected-pill {
+  display: inline-block;
+  color: #744126;
+  font-size: .75rem;
+  font-weight: 850;
+}
+.site-shell .selected-course h3 { margin: 8px 0 4px; font-size: 1.06rem; }
+.site-shell .selected-course p { margin: 0; font-size: .91rem; overflow-wrap: anywhere; }
+.site-shell .selected-links { display: flex; flex-wrap: wrap; gap: 5px 13px; margin-top: 14px; font-size: .82rem; font-weight: 800; }
+.site-shell .selected-overview { scroll-margin-top: 100px; }
+.site-shell .selected-module { border-color: rgba(233, 117, 91, .5); border-top-color: var(--coral); }
+.site-shell .reference-pill { color: var(--blue); }
+.site-shell .row-detail-link { display: inline-block; margin-top: 4px; font-weight: 850; }
+.site-shell .site-footer { padding: 24px 0 34px; border-top: 1px solid var(--line); background: rgba(255, 253, 249, .84); }
+.site-shell .footer-inner { width: min(1240px, calc(100% - 36px)); margin-inline: auto; }
+.site-shell .footer-inner > div:first-child .wrap { width: auto; }
+.site-shell .secondary-nav { display: flex; flex-wrap: wrap; gap: 5px 18px; margin-top: 10px; }
+.site-shell .secondary-nav a { font-weight: 750; }
+
+@media (max-width: 1050px) {
+  .site-shell .selected-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 900px) {
   .site-shell .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -178,10 +216,12 @@ html body.site-body {
   .site-shell .topbar nav a { flex: 0 0 auto; }
 }
 @media (max-width: 520px) {
-  html { scroll-padding-top: 120px; }
+  html { scroll-padding-top: 150px; }
   .site-shell .topbar-inner { width: min(100% - 24px, 1240px); }
   .site-shell .brand { font-size: .94rem; }
+  .site-shell .topbar nav { flex-wrap: wrap; overflow-x: visible; }
   .site-shell :is(.term, .pathway, .module-card, .list-card) { min-width: 0; }
+  .site-shell .selected-course-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
