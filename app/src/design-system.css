@@ -134,7 +134,6 @@ html body.site-body {
 .site-shell .hero :is(h1, h2) { color: #fffdf9; }
 .site-shell .hero a { color: #bfe5ed; }
 .site-shell p { text-wrap: pretty; }
-.site-shell .index-panel { background: var(--card); }
 .site-shell :is(.callout, .hero-note) {
   border: 1px solid rgba(232, 178, 76, .55);
   border-radius: var(--radius-md);

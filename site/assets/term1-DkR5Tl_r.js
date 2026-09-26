@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-BYboO4p8.js";import{t as n}from"./page-BQEaZiWV.js";e();var r=`<main class="wrap">
+import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js";e();var r=`<main class="wrap">
     <span class="eyebrow">UCL · Urban Spatial Science MSc · 2026–27</span>
     <h1>Term 1</h1>
     <p class="lede">目前整理的四門課程：三門課程核心必修，以及一門 CASA 選修。每門 15 credits，合計 60 credits。<a href="https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/urban-spatial-science-msc" target="_blank" rel="noopener">核對 UCL 課程與模組列表</a> · <a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">核對 2026–27 term dates</a></p>

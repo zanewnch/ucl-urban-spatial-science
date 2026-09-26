@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-BYboO4p8.js";import{t as n}from"./page-BQEaZiWV.js";e();var r=`<main class="wrap">
+import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js";e();var r=`<main class="wrap">
     <span class="eyebrow">CASA / UCL · TERM 3</span>
     <h1>把城市問題做成研究</h1>
     <p class="lede">CASA0010 Urban Spatial Science Dissertation 是 60 學分必修研究模組。<a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-spatial-science-dissertation-CASA0010" target="_blank" rel="noopener">核對 UCL Module Catalogue：CASA0010</a> · <a href="https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/urban-spatial-science-msc" target="_blank" rel="noopener">核對 MSc 結構與學分</a>。Term 3 是完成研究成果的階段：從一個可回答的城市或空間問題出發，說明資料與方法，呈現分析結果，並討論證據能支持什麼、有哪些限制。</p>
