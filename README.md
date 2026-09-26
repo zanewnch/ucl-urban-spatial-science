@@ -1,11 +1,26 @@
 # UCL Urban Spatial Science MSc
 
-2026–27 UCL CASA Urban Spatial Science MSc course overview, compiled from public UCL programme, welcome and module catalogue sources. The homepage gives the credit structure and year map; Term 1 and Term 2 pages contain the module details, pathways, elective filters and source links.
+2026–27 UCL CASA Urban Spatial Science MSc course overview. The site is a React single-page application with client-side routes and a shared design system; its course text and sources are maintained in `app/src/content/`.
 
-- Source page: https://ucl-urban-spatial-science.zanewnch.chatgpt.site/urban-spatial-science
-- Published page: https://zanewnch.github.io/ucl-urban-spatial-science/
-- Entry file: site/index.html
-- Term 1: site/term1.html
-- Term 2: site/term2.html
+- Published site: https://zanewnch.github.io/ucl-urban-spatial-science/
+- Alternate source page: https://ucl-urban-spatial-science.zanewnch.chatgpt.site/urban-spatial-science
+- Routes: `/`, `/term1`, `/term2`, `/term3`, `/notes`, `/change-log`
+- Build output: `site/` (including the GitHub Pages SPA fallback)
 
-This is a static page with no build dependencies. GitHub Actions publishes updates to main through GitHub Pages.
+## Local development
+
+Requires Node.js 24 or newer.
+
+```sh
+npm ci
+npm run dev
+```
+
+Vite starts the local development server. To create and preview the production build:
+
+```sh
+npm run build
+npm run preview
+```
+
+GitHub Actions builds the React app when changes are pushed to `main`, then publishes `site/` to GitHub Pages.

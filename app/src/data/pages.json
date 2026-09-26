@@ -1,0 +1,291 @@
+{
+  "index": {
+    "file": "index.html",
+    "title": "UCL Urban Spatial Science MSc｜課程結構研究",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <title>UCL Urban Spatial Science MSc｜課程結構研究</title>",
+    "brandHref": "#home",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "#structure",
+        "label": "結構",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Term 3 Dissertation",
+        "current": false
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": false
+      },
+      {
+        "href": "change-log.html",
+        "label": "Change Log",
+        "current": false
+      },
+      {
+        "href": "#welcome",
+        "label": "迎新",
+        "current": false
+      },
+      {
+        "href": "#sources",
+        "label": "來源",
+        "current": false
+      }
+    ],
+    "footerHtml": "\r\n    <div class=\"wrap\">UCL Urban Spatial Science MSc · 2026–27 Welcome Sway 為主 · 更新：2026-09-24</div>\r\n  ",
+    "footerClass": "",
+    "hasFooter": true,
+    "mainAttrs": ""
+  },
+  "term1": {
+    "file": "term1.html",
+    "title": "Term 1 選課｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 1 選課｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html#structure",
+        "label": "課程結構",
+        "current": false
+      },
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": true
+      },
+      {
+        "href": "#learning-route",
+        "label": "四門課分工",
+        "current": false
+      },
+      {
+        "href": "#course-details",
+        "label": "課程詳解",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": false
+      },
+      {
+        "href": "change-log.html",
+        "label": "Change Log",
+        "current": false
+      },
+      {
+        "href": "term2.html#options",
+        "label": "Term 2 選修",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": " class=\"wrap\""
+  },
+  "term2": {
+    "file": "term2.html",
+    "title": "Term 2｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": false
+      },
+      {
+        "href": "change-log.html",
+        "label": "Change Log",
+        "current": false
+      },
+      {
+        "href": "#dissertation",
+        "label": "Dissertation",
+        "current": false
+      },
+      {
+        "href": "#dependencies",
+        "label": "先修",
+        "current": false
+      },
+      {
+        "href": "#pathways",
+        "label": "Pathways",
+        "current": false
+      },
+      {
+        "href": "#options",
+        "label": "選修",
+        "current": false
+      }
+    ],
+    "footerHtml": "<div class=\"wrap\">UCL Urban Spatial Science MSc · 2026–27 Welcome Sway 為主 · 更新：2026-09-24</div>",
+    "footerClass": "",
+    "hasFooter": true,
+    "mainAttrs": ""
+  },
+  "term3": {
+    "file": "term3.html",
+    "title": "Term 3 Dissertation｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <meta name=\"description\" content=\"UCL CASA Urban Spatial Science MSc Term 3 dissertation 說明、歷屆研究主題與公開論文資源。\"> <title>Term 3 Dissertation｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Term 3 Dissertation",
+        "current": true
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": false
+      }
+    ],
+    "footerHtml": "UCL Urban Spatial Science MSc · Term 3 Dissertation · 研究與公開資料整理",
+    "footerClass": "wrap",
+    "hasFooter": true,
+    "mainAttrs": " class=\"wrap\""
+  },
+  "notes": {
+    "file": "notes.html",
+    "title": "筆記區｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>筆記區｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": true
+      },
+      {
+        "href": "change-log.html",
+        "label": "Change Log",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": " class=\"wrap\""
+  },
+  "change-log": {
+    "file": "change-log.html",
+    "title": "Change Log｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <meta name=\"description\" content=\"依照 Git commit 紀錄整理 UCL Urban Spatial Science MSc 課程網站的更新歷程。\"> <title>Change Log｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "notes.html",
+        "label": "筆記區",
+        "current": false
+      },
+      {
+        "href": "change-log.html",
+        "label": "Change Log",
+        "current": true
+      }
+    ],
+    "footerHtml": "UCL Urban Spatial Science MSc · 更新紀錄以 Git 提交為準",
+    "footerClass": "wrap",
+    "hasFooter": true,
+    "mainAttrs": " class=\"wrap\""
+  }
+}
