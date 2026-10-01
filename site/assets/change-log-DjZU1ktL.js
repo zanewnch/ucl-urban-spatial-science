@@ -1,9 +1,15 @@
-import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js";e();var r=`<main class="wrap">\r
+import{a as e,t}from"./index-4IEf6HKY.js";import{t as n}from"./page-DWytxO33.js";e();var r=`<main class="wrap">\r
     <span class="eyebrow">Project history · based on Git commits</span>\r
     <h1>Change Log</h1>\r
     <p class="lede">依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。</p>\r
     <p class="intro-note">每個 commit hash 都連到 GitHub 原始提交，方便核對變更；摘要依提交訊息整理。最新紀錄列在前面。</p>\r
     <div class="entries">\r
+      <section class="entry" aria-labelledby="date-2026-10-01">\r
+        <div class="entry-head"><h2 id="date-2026-10-01">改善 Term 2 選修總表的手機版閱讀</h2><time datetime="2026-10-01">2026 年 10 月 1 日</time></div>\r
+        <ul>\r
+          <li>手機版將選修總表重排為逐門課程卡片，完整呈現課程類型、學分與 pathway 資訊。</li>\r
+        </ul>\r
+      </section>\r
       <section class="entry" aria-labelledby="date-2026-09-26">
         <div class="entry-head"><h2 id="date-2026-09-26">依選課畫面更新課程組合</h2><time datetime="2026-09-26">2026 年 9 月 26 日</time></div>
         <ul>
@@ -33,7 +39,8 @@ import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js"
         </ul>\r
       </section>\r
     </div>\r
-  </main>`,i=`\r
+  </main>\r
+`,i=`\r
     :root {\r
       color-scheme: light;\r
       --ink: #102a43;\r

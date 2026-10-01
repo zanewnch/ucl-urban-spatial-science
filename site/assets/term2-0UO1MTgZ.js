@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js";e();var r=`<main>
+import{a as e,t}from"./index-4IEf6HKY.js";import{t as n}from"./page-DWytxO33.js";e();var r=`<main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div><span class="stamp">UCL CASA · 2026–27</span><h1>Term 2</h1>
@@ -873,6 +873,57 @@ import{a as e,t}from"./index-kExa1cCG.js";import{t as n}from"./page-C47Ob5SS.js"
       .module-dossier-index a { flex: 1 1 auto; justify-content: center; }\r
       .table-wrap { border-radius: 2px; }\r
       th, td { padding: 12px; }\r
+      .site-shell .table-wrap:has(> table.module-map) {\r
+        overflow: visible;\r
+        border: 0;\r
+        background: transparent;\r
+        box-shadow: none;\r
+      }\r
+      .site-shell table.module-map {\r
+        display: block;\r
+        width: 100%;\r
+        min-width: 0;\r
+        border-collapse: separate;\r
+      }\r
+      .site-shell table.module-map thead { display: none; }\r
+      .site-shell table.module-map tbody {\r
+        display: grid;\r
+        gap: 12px;\r
+      }\r
+      .site-shell table.module-map tbody tr {\r
+        display: block;\r
+        overflow-wrap: anywhere;\r
+        border: 1px solid var(--line);\r
+        border-top: 4px solid var(--blue);\r
+        border-radius: 12px;\r
+        background: var(--card);\r
+        box-shadow: var(--shadow);\r
+      }\r
+      .site-shell table.module-map tbody td {\r
+        display: grid;\r
+        grid-template-columns: 108px minmax(0, 1fr);\r
+        gap: 10px;\r
+        padding: 10px 14px;\r
+        border-bottom: 1px solid var(--line);\r
+        white-space: normal;\r
+      }\r
+      .site-shell table.module-map tbody td:first-child {\r
+        display: block;\r
+        padding: 15px 14px 12px;\r
+        font-family: inherit;\r
+        white-space: normal;\r
+      }\r
+      .site-shell table.module-map tbody td:last-child { border-bottom: 0; }\r
+      .site-shell table.module-map tbody td:nth-child(2)::before { content: "來源／類型"; }\r
+      .site-shell table.module-map tbody td:nth-child(3)::before { content: "Term"; }\r
+      .site-shell table.module-map tbody td:nth-child(4)::before { content: "Credits"; }\r
+      .site-shell table.module-map tbody td:nth-child(5)::before { content: "Pathway"; }\r
+      .site-shell table.module-map tbody td:nth-child(6)::before { content: "Pathway 名稱"; }\r
+      .site-shell table.module-map tbody td:not(:first-child)::before {\r
+        color: var(--muted);\r
+        font-size: .8rem;\r
+        font-weight: 800;\r
+      }\r
     }\r
     @media (max-width: 360px) {\r
       .topbar nav { flex-wrap: nowrap; }\r

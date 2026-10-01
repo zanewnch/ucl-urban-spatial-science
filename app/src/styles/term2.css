@@ -492,6 +492,57 @@
       .module-dossier-index a { flex: 1 1 auto; justify-content: center; }
       .table-wrap { border-radius: 2px; }
       th, td { padding: 12px; }
+      .site-shell .table-wrap:has(> table.module-map) {
+        overflow: visible;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      .site-shell table.module-map {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        border-collapse: separate;
+      }
+      .site-shell table.module-map thead { display: none; }
+      .site-shell table.module-map tbody {
+        display: grid;
+        gap: 12px;
+      }
+      .site-shell table.module-map tbody tr {
+        display: block;
+        overflow-wrap: anywhere;
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--blue);
+        border-radius: 12px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+      .site-shell table.module-map tbody td {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--line);
+        white-space: normal;
+      }
+      .site-shell table.module-map tbody td:first-child {
+        display: block;
+        padding: 15px 14px 12px;
+        font-family: inherit;
+        white-space: normal;
+      }
+      .site-shell table.module-map tbody td:last-child { border-bottom: 0; }
+      .site-shell table.module-map tbody td:nth-child(2)::before { content: "來源／類型"; }
+      .site-shell table.module-map tbody td:nth-child(3)::before { content: "Term"; }
+      .site-shell table.module-map tbody td:nth-child(4)::before { content: "Credits"; }
+      .site-shell table.module-map tbody td:nth-child(5)::before { content: "Pathway"; }
+      .site-shell table.module-map tbody td:nth-child(6)::before { content: "Pathway 名稱"; }
+      .site-shell table.module-map tbody td:not(:first-child)::before {
+        color: var(--muted);
+        font-size: .8rem;
+        font-weight: 800;
+      }
     }
     @media (max-width: 360px) {
       .topbar nav { flex-wrap: nowrap; }
