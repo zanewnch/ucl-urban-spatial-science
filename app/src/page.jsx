@@ -27,6 +27,7 @@ function parsePageHtml(html, pathname) {
   const options = {};
   options.replace = (node, index) => {
       if (node.type !== 'tag' || node.name !== 'a' || !node.attribs?.href) return undefined;
+      if (node.attribs.href.startsWith('/ucl-urban-spatial-science/casa0005-handbook/')) return undefined;
       const to = routeForHref(node.attribs.href, pathname);
       if (!to) return undefined;
       const props = attributesToProps(node.attribs);

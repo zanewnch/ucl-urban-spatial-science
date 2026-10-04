@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/create-gh-pages-404.mjs",
+    "build": "vite build && node scripts/create-gh-pages-404.mjs && node scripts/copy-casa0005-handbook.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

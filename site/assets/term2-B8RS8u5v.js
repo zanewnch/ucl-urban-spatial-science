@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-BKJNTcsv.js";import{t as n}from"./page-DVV7-zLk.js";e();var r=`<main>
+import{a as e,t}from"./index-M_DEFh7C.js";import{t as n}from"./page-DR_7FVea.js";e();var r=`<main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div><span class="stamp">UCL CASA · 2026–27</span><h1>Term 2</h1>
