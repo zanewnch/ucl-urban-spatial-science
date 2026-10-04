@@ -5,6 +5,7 @@
   "閱讀完整指南 →": "Read the complete guide →",
   "Term 1 改為摘要與專頁入口，保留既有課程錨點，提供桌面章節目錄與手機可展開目錄。": "Term 1 now provides a summary and dedicated-page entry, preserving course anchors with a desktop chapter index and expandable mobile index.",
   "在環境安裝的第 4 步直接加入教材 GitHub repository，方便以 RStudio clone 課程 project。": "The setup section now links directly to the handbook GitHub repository in step 4 for cloning the course project in RStudio.",
+  "新增公開 practical handbook 內容索引，逐章整理 Chapter 1–8 與 repository 延伸檔案，並標示它們不等同本屆正式作業範圍。": "Added a public handbook contents index covering Chapters 1–8 and repository extras, with a note that repository files are not automatically current assignments.",
   "頁面導覽": "Page navigation",
   "筆記區": "Notes",
   "課程網站擴充與內容整理": "Course site expansion and content updates",
