@@ -202,5 +202,39 @@
     "footerClass": "wrap",
     "hasFooter": true,
     "mainAttrs": " class=\"wrap\""
+  },
+  "casa0005": {
+    "file": "casa0005.html",
+    "title": "CASA0005 完整課程與逐週學習指南｜UCL",
+    "head": "",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": true
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
   }
 }

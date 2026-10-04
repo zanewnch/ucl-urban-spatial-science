@@ -1,9 +1,16 @@
-import{a as e,t}from"./index-4IEf6HKY.js";import{t as n}from"./page-DWytxO33.js";e();var r=`<main class="wrap">\r
+import{a as e,t}from"./index-1MgakOfY.js";import{t as n}from"./page-CPHHiBO9.js";e();var r=`<main class="wrap">\r
     <span class="eyebrow">Project history · based on Git commits</span>\r
     <h1>Change Log</h1>\r
     <p class="lede">依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。</p>\r
     <p class="intro-note">每個 commit hash 都連到 GitHub 原始提交，方便核對變更；摘要依提交訊息整理。最新紀錄列在前面。</p>\r
     <div class="entries">\r
+      <section class="entry" aria-labelledby="date-2026-10-04">\r
+        <div class="entry-head"><h2 id="date-2026-10-04">新增 CASA0005 完整課程與逐週學習指南</h2><time datetime="2026-10-04">2026 年 10 月 4 日</time></div>\r
+        <ul>\r
+          <li>新增中英文 CASA0005 專頁，整理本屆 Moodle 課表、師資、評量日期、十週實作指南、環境安裝、方法比較與術語；保留來源及未確認事項。 <a href="casa0005.html">閱讀完整指南 →</a></li>\r
+          <li>Term 1 改為摘要與專頁入口，保留既有課程錨點，提供桌面章節目錄與手機可展開目錄。</li>\r
+        </ul>\r
+      </section>\r
       <section class="entry" aria-labelledby="date-2026-10-01">\r
         <div class="entry-head"><h2 id="date-2026-10-01">改善 Term 2 選修總表的手機版閱讀</h2><time datetime="2026-10-01">2026 年 10 月 1 日</time></div>\r
         <ul>\r
@@ -101,4 +108,4 @@ import{a as e,t}from"./index-4IEf6HKY.js";import{t as n}from"./page-DWytxO33.js"
       .entry { padding: 19px; }\r
       main { padding-top: 32px; }\r
     }
-`,a={頁面導覽:`Page navigation`,筆記區:`Notes`,課程網站擴充與內容整理:`Course site expansion and content updates`,"依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。":`A history of the course site, from its creation to recent content updates, based on this project's Git commits.`,"以下 commit hash 可在 GitHub 上用來查閱原始提交內容；摘要依提交訊息整理。最新紀錄列在前面。":`Use each commit hash to find the original change on GitHub. Summaries are based on commit messages, with the latest first.`,"UCL Urban Spatial Science MSc · 更新紀錄以 Git 提交為準":`UCL Urban Spatial Science MSc · Git commits are the source of record`,"Change Log｜UCL Urban Spatial Science MSc":`Change Log｜UCL Urban Spatial Science MSc`,課程總覽:`Overview`,資料來源:`Sources`,已選:`Selected`,"已選 · 15 credits":`Selected · 15 credits`,"閱讀詳解 →":`Read details →`,"官方來源 ↗":`Official source ↗`,已選的四門課:`Four selected modules`,"已選的四門 Term 2 課程":`Four selected Term 2 modules`,"查看先修關係 ↓":`See prerequisites ↓`,選修參考:`Elective reference`,"已選 · 詳解 →":`Selected · Details →`,"前往 CASA0010 完整課程詳解 →":`Read the full CASA0010 module details →`,"CASA0010 · 完整課程詳解":`CASA0010 · Full module details`},o=t();function s(){return(0,o.jsx)(n,{page:`change-log`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};
+`,a={"新增 CASA0005 完整課程與逐週學習指南":`Added a complete CASA0005 course and weekly study guide`,"2026 年 10 月 4 日":`4 October 2026`,"新增中英文 CASA0005 專頁，整理本屆 Moodle 課表、師資、評量日期、十週實作指南、環境安裝、方法比較與術語；保留來源及未確認事項。 ":`Added a bilingual CASA0005 page with the current Moodle timetable, staff, assessment dates, ten-week practical guide, setup, method comparisons and glossary, preserving sources and unresolved details. `,"閱讀完整指南 →":`Read the complete guide →`,"Term 1 改為摘要與專頁入口，保留既有課程錨點，提供桌面章節目錄與手機可展開目錄。":`Term 1 now provides a summary and dedicated-page entry, preserving course anchors with a desktop chapter index and expandable mobile index.`,頁面導覽:`Page navigation`,筆記區:`Notes`,課程網站擴充與內容整理:`Course site expansion and content updates`,"依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。":`A history of the course site, from its creation to recent content updates, based on this project's Git commits.`,"以下 commit hash 可在 GitHub 上用來查閱原始提交內容；摘要依提交訊息整理。最新紀錄列在前面。":`Use each commit hash to find the original change on GitHub. Summaries are based on commit messages, with the latest first.`,"UCL Urban Spatial Science MSc · 更新紀錄以 Git 提交為準":`UCL Urban Spatial Science MSc · Git commits are the source of record`,"Change Log｜UCL Urban Spatial Science MSc":`Change Log｜UCL Urban Spatial Science MSc`,課程總覽:`Overview`,資料來源:`Sources`,已選:`Selected`,"已選 · 15 credits":`Selected · 15 credits`,"閱讀詳解 →":`Read details →`,"官方來源 ↗":`Official source ↗`,已選的四門課:`Four selected modules`,"已選的四門 Term 2 課程":`Four selected Term 2 modules`,"查看先修關係 ↓":`See prerequisites ↓`,選修參考:`Elective reference`,"已選 · 詳解 →":`Selected · Details →`,"前往 CASA0010 完整課程詳解 →":`Read the full CASA0010 module details →`,"CASA0010 · 完整課程詳解":`CASA0010 · Full module details`},o=t();function s(){return(0,o.jsx)(n,{page:`change-log`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};

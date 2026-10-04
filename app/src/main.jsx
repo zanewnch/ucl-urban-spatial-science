@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 const IndexPage = lazy(() => import('./route-pages/index.jsx'));
 const Term1Page = lazy(() => import('./route-pages/term1.jsx'));
+const Casa0005Page = lazy(() => import('./route-pages/casa0005.jsx'));
 const Term2Page = lazy(() => import('./route-pages/term2.jsx'));
 const Term3Page = lazy(() => import('./route-pages/term3.jsx'));
 const NotesPage = lazy(() => import('./route-pages/notes.jsx'));
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/term1" element={<Term1Page />} />
+          <Route path="/casa0005" element={<Casa0005Page />} />
           <Route path="/term2" element={<Term2Page />} />
           <Route path="/term3" element={<Term3Page />} />
           <Route path="/notes" element={<NotesPage />} />

@@ -6,6 +6,7 @@ import pages from './data/pages.json';
 const routeByHtml = {
   'index.html': '/',
   'term1.html': '/term1',
+  'casa0005.html': '/casa0005',
   'term2.html': '/term2',
   'term3.html': '/term3',
   'notes.html': '/notes',
@@ -16,7 +17,7 @@ function routeForHref(href, pathname) {
   if (!href) return null;
   if (href.startsWith('#')) return `${pathname}${href}`;
   const localHref = href.replace(/^\.\//, '');
-  const match = localHref.match(/^(index|term1|term2|term3|notes|change-log)\.html(.*)$/);
+  const match = localHref.match(/^(index|term1|casa0005|term2|term3|notes|change-log)\.html(.*)$/);
   if (match) return `${routeByHtml[`${match[1]}.html`]}${match[2]}`;
   if (href.startsWith('/')) return href;
   return null;
@@ -162,6 +163,10 @@ function usePageStyles(page, pageStyles) {
 function useHashNavigation(page, navigate, location) {
   useEffect(() => {
     const decodedHash = decodeURIComponent(location.hash.slice(1));
+    if (['index', 'term1'].includes(page) && /^casa0005(?:-|$)/.test(decodedHash)) {
+      navigate(`/casa0005${decodedHash === 'casa0005' ? '' : location.hash}`, { replace: true });
+      return;
+    }
     if ((page === 'index' || page === 'term2') && /^casa0010(?:-|$)/.test(decodedHash)) {
       navigate(`/term3${location.hash}`, { replace: true });
       return;
@@ -186,6 +191,11 @@ function useHashNavigation(page, navigate, location) {
     if (location.hash) {
       requestAnimationFrame(() => {
         const target = document.getElementById(decodedHash);
+        if (page === 'casa0005') {
+          for (let parent = target?.parentElement; parent; parent = parent.parentElement) {
+            if (parent.tagName === 'DETAILS') parent.open = true;
+          }
+        }
         if (page === 'term2' || page === 'term3') {
           const content = target?.closest('.module-dossier-content');
           if (content?.hidden) content.previousElementSibling?.click();

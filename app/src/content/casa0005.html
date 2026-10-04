@@ -1,0 +1,1212 @@
+<main class="guide-wrap">
+<header class="guide-hero">
+<a href="term1.html">← 返回 Term 1</a>
+<p class="eyebrow">CASA / UCL · 2026–27</p>
+<h1>CASA0005 完整課程與逐週學習指南</h1>
+<p class="guide-lede">Geographic Information Systems and Science：從空間資料、R 與地圖，到空間統計、可重現研究與批判思考。</p>
+<div class="guide-badges">
+<span class="guide-badge">Term 1</span>
+<span class="guide-badge">15 credits</span>
+<span class="guide-badge">90% Exam · 10% Other</span>
+<span class="guide-badge">核對：2026-10-04</span>
+</div>
+<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Catalogue 2026/27 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">本屆 Moodle Welcome ↗</a>
+</p>
+<div class="guide-callout">閱讀方式：先看正式安排與環境，再逐週跟讀。各週「操作流程、成果與自我檢核」是本網站依教材整理的學習指南，不是新增的 UCL 作業。Moodle 連結需要 UCL 登入；本頁不會自動同步課程異動。</div>
+</header>
+<div class="guide-layout">
+<aside class="guide-toc guide-toc-desktop">
+<nav aria-label="課程章節">
+<a href="#casa0005-overview">課程與學習成果</a>
+<a href="#casa0005-workload">上課與師資</a>
+<a href="#casa0005-setup">環境與第一次執行</a>
+<a href="#casa0005-schedule">正式課表</a>
+<a href="#casa0005-week-1">Week 01 · 從資料到第一張地圖</a>
+<a href="#casa0005-week-2">Week 02 · 用 R 整理資料與表達流程</a>
+<a href="#casa0005-week-3">Week 03 · 投影、raster 與描述統計</a>
+<a href="#casa0005-week-4">Week 04 · 把分析變成可重現的報告</a>
+<a href="#casa0005-week-5">Week 05 · 讓地圖回答問題</a>
+<a href="#casa0005-week-6">Week 06 · 點事件是群聚、分散還是隨機？</a>
+<a href="#casa0005-week-7">Week 07 · 相鄰地區的數值是否相似？</a>
+<a href="#casa0005-week-8">Week 08 · 以模型解釋空間關聯</a>
+<a href="#casa0005-week-9">Week 09 · 從題目選擇方法並完成分析</a>
+<a href="#casa0005-week-10">Week 10 · 批判檢視資料、方法與主張</a>
+<a href="#casa0005-assessment">評量與考試</a>
+<a href="#casa0005-materials">教材與錄影狀態</a>
+<a href="#casa0005-methods">方法選擇與術語</a>
+<a href="#casa0005-revision">成果與考前檢核</a>
+<a href="#casa0005-faq">常見問題</a>
+<a href="#casa0005-sources">來源與版本</a>
+</nav>
+</aside>
+<details class="guide-toc guide-toc-mobile">
+<summary>展開章節目錄</summary>
+<nav aria-label="課程章節">
+<a href="#casa0005-overview">課程與學習成果</a>
+<a href="#casa0005-workload">上課與師資</a>
+<a href="#casa0005-setup">環境與第一次執行</a>
+<a href="#casa0005-schedule">正式課表</a>
+<a href="#casa0005-week-1">Week 01 · 從資料到第一張地圖</a>
+<a href="#casa0005-week-2">Week 02 · 用 R 整理資料與表達流程</a>
+<a href="#casa0005-week-3">Week 03 · 投影、raster 與描述統計</a>
+<a href="#casa0005-week-4">Week 04 · 把分析變成可重現的報告</a>
+<a href="#casa0005-week-5">Week 05 · 讓地圖回答問題</a>
+<a href="#casa0005-week-6">Week 06 · 點事件是群聚、分散還是隨機？</a>
+<a href="#casa0005-week-7">Week 07 · 相鄰地區的數值是否相似？</a>
+<a href="#casa0005-week-8">Week 08 · 以模型解釋空間關聯</a>
+<a href="#casa0005-week-9">Week 09 · 從題目選擇方法並完成分析</a>
+<a href="#casa0005-week-10">Week 10 · 批判檢視資料、方法與主張</a>
+<a href="#casa0005-assessment">評量與考試</a>
+<a href="#casa0005-materials">教材與錄影狀態</a>
+<a href="#casa0005-methods">方法選擇與術語</a>
+<a href="#casa0005-revision">成果與考前檢核</a>
+<a href="#casa0005-faq">常見問題</a>
+<a href="#casa0005-sources">來源與版本</a>
+</nav>
+</details>
+<div class="guide-content">
+<section id="casa0005-overview">
+<span id="casa0005-outcomes">
+</span>
+<span id="casa0005-workflow">
+</span>
+<span id="casa0005-dossier">
+</span>
+<span id="casa0005-intro">
+</span>
+<h2>01 · 課程定位與七項學習成果</h2>
+<p>Catalogue 確認本課為 Term 1、15 credits、FHEQ Level 7、in-person；主體使用 R，亦涵蓋 QGIS 基本概念。不要求先有 GIS 或 R 知識，但會快速進入進階方法。</p>
+<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">正式課程資料 ↗</a>
+</p>
+<p>Moodle 概述將 geographic representation、GIScience、spatial analysis、raster／vector 方法與近期的視覺化、互動製圖串在一起。讀這門課時，應同時練「資料操作」與「對方法、測量及限制的解釋」。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h3>七項官方成果，以及如何檢查自己學會了</h3>
+<ul>
+<li>1. QGIS 與 R 工作知識：官方要求能用兩者支持 GI Science 技術。學習檢核：能在軟體中讀入資料、辨認圖層與欄位，並用 R 留下可重跑紀錄。</li>
+<li>2. 高標準地圖：官方要求製作合適的地理資訊視覺化。學習檢核：圖例、單位、來源、分類與符號可讀，且能解釋設計決定。</li>
+<li>3. 空間資料管理：包含 attribute–geometry join、清理、檔案格式與參考系統轉換。學習檢核：能證明配對正確，且轉換前後位置與資料意義一致。</li>
+<li>4. 解讀與應用空間分析：官方例子有 autocorrelation／hot spot、areal interpolation、point-in-polygon／buffer。學習檢核：從問題選方法，交代輸入、參數與限制；這些例子不等於每項都有本屆獨立實作週。</li>
+<li>5. 表達與不確定性：官方要求評估 geographic data 的常見問題。學習檢核：能指出解析度、行政區、資料涵蓋與缺值如何影響結論。</li>
+<li>6. 空間統計推論與批判：官方要求應用並評析 spatial statistical techniques。學習檢核：區分描述、顯著性、模型關聯與因果主張。</li>
+<li>7. 全球空間資料多樣性：官方要求評估各種資料的優點與缺點。學習檢核：比較兩個來源的時間、尺度、定義、覆蓋與適用問題。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h3>這些概念如何連在一起？</h3>
+<p>本頁的讀書順序是：研究問題 → 空間表示與測量 → 資料整理 → 地圖／摘要 → 適當方法 → 不確定性與結論 → 可重現報告。Vector 和 raster 是表示方法；GIS 是處理工具；GIScience 問表示與分析是否合理；製圖是溝通；版本與報告則使結果可追查。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方概述與成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">資料與 R 流程 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">可重現研究 ↗</a>
+</p>
+</section>
+<section id="casa0005-workload">
+<h2>02 · 上課安排、師資與溝通</h2>
+<ul>
+<li>Lectures：Moodle 列週四 09:00–10:00；地點原文為「20 Gordon Square (31–34) &amp; (14) Taviton St」。房間與時間若有疑義，以 UCL common timetable 查核，不從這段文字推定完整教室編號。</li>
+<li>Workshops：週四 10:00–11:00，Moodle 連到同一地點；另列週五 optional session。以上照錄 UCL 課程安排的時間，不當作台灣時間。</li>
+<li>Optional session 疑義：原文寫「Fridays 9–11pm」。本頁保留 21:00–23:00 的字面含意與待確認狀態，不自行改為 09:00–11:00，也不把它當成已核定時段。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">本屆上課安排 ↗</a> · <a href="https://timetable.ucl.ac.uk/tt/homePage.do" target="_blank" rel="noopener">UCL common timetable ↗</a> · <a href="https://www.google.com/maps?q=51.524838,-0.131684" target="_blank" rel="noopener">Moodle 提供的地點 ↗</a>
+</p>
+<h3>本屆授課分工</h3>
+<ul>
+<li>Andy MacLachlan：module lead；課表列 Week 1、3、4、5、10。</li>
+<li>Claire Dooley：課表列 Week 2、6、7。</li>
+<li>Ruth Neville：課表列 Week 8、9。</li>
+<li>Tutors：Yuxin Zhao、Deng Hong、Huixin Liu、Jishan Duan、Chongyang Ren。Moodle 未在這份名單指定各人的 workshop 分配。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">師資名單 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">逐週 presenter ↗</a>
+</p>
+<h3>聯絡與課程通知</h3>
+<p>課程內容、課表疑義或評量規則，優先透過課程公告、GIS Slack 或 module team 詢問；本網站的整理不取代老師的更正。個別課程聯絡資料可回 Welcome 查詢。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/mod/forum/view.php?id=9275846" target="_blank" rel="noopener">Announcements ↗</a> · <a href="https://moodle.ucl.ac.uk/mod/url/view.php?id=9275847" target="_blank" rel="noopener">GIS Slack 課程入口 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">Welcome／課程聯絡 ↗</a>
+</p>
+</section>
+<section id="casa0005-setup">
+<span id="casa0005-qgis">
+</span>
+<span id="casa0005-r">
+</span>
+<span id="casa0005-demo">
+</span>
+<span id="casa0005-tools">
+</span>
+<h2>03 · 安裝環境與第一次成功執行</h2>
+<p>公開教材的 External usage 指定 R、RStudio、從 GitHub clone project，以及使用 renv::restore() 還原 renv.lock 中的套件。也可只下載單章 Rmd、該章套件與資料。部分資料因大小限制不在 GitHub，須照章節另行取得。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h3>安裝順序與成功判斷</h3>
+<ol>
+<li>1. 安裝 R：R 是實際執行程式的環境。依自己的作業系統選官方安裝包；成功判斷是在 RStudio Console 能取得 R.version.string。</li>
+<li>2. 安裝 RStudio Desktop：它提供 editor、Console、Files 與圖形介面。開啟後確認找到 R，建立小型 script 並執行，不只看應用程式有開啟。</li>
+<li>3. 安裝 Git：完整 clone／版本管理流程需要 Git。依目前官方安裝說明操作，重新開啟 RStudio 後檢查 Version Control 的 Git 選項。</li>
+<li>4. 取得課程 project：RStudio → File → New Project → Version Control → Git，使用教材 repository URL，將專案放在自己可辨識的位置，再開啟 .Rproj。</li>
+<li>5. 還原套件：在課程 project 的 Console 安裝 renv 並執行 renv::restore()。閱讀它即將安裝的版本與訊息；不要以升級全部套件來取代教材環境。</li>
+<li>6. 取得該週資料：開啟對應章節，按章節資料連結下載並解壓縮；檢查 script 引用位置與實際路徑一致，保留原始資料。</li>
+<li>7. QGIS：使用官方下載入口；用它檢視圖層、屬性與 CRS。QGIS 是本課學習成果的一部分，但不由此推定考試允許或要求使用。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">教材安裝流程 ↗</a> · <a href="https://cran.r-project.org/" target="_blank" rel="noopener">R / CRAN ↗</a> · <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">RStudio Desktop ↗</a> · <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git ↗</a> · <a href="https://qgis.org/download/" target="_blank" rel="noopener">QGIS ↗</a> · <a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">課程 repository ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：套件還原指令與環境紀錄</summary>
+<p>下面是依教材安裝要求整理的基本指令。renv::restore() 會安裝專案依賴，必須在正確 project 中執行；成功以套件可載入且 practical 能跑為準，不只看指令沒有立即報錯。</p>
+<pre>
+<code>getwd()
+R.version.string
+install.packages(&quot;renv&quot;)
+renv::restore()
+sessionInfo()</code>
+</pre>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">安裝原文 ↗</a> · <a href="https://rstudio.github.io/renv/reference/restore.html" target="_blank" rel="noopener">renv restore 文件 ↗</a>
+</p>
+</details>
+<h3>第一次執行的最小閉環</h3>
+<ul>
+<li>先確認 project 根目錄與輸入檔案存在；read data 之後查看列數、欄位、geometry type、CRS 和 extent。</li>
+<li>先畫只有幾何的圖，確認位置合理，再增加屬性或分析；複雜圖層之前先驗證最小输入。</li>
+<li>保存 script，輸出圖與資料檢查紀錄，再用新 session 從頭執行。成功標準是讀檔、檢查、出圖、重跑全部可完成。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：不需下載的 sf 示範與預期結果</summary>
+<p>以下為本站自寫示範，使用 sf 隨附的 nc 資料；需要已安裝 sf。它不是當週指定資料，也未宣稱在本機 R 環境執行過。預期看到有效的 spatial object 資訊與 polygon 圖；實際 CRS 和套件版本請以輸出為準。</p>
+<pre>
+<code>library(sf)
+nc &lt;- st_read(system.file(&quot;shape/nc.shp&quot;, package = &quot;sf&quot;), quiet = TRUE)
+print(nrow(nc))
+print(st_crs(nc))
+print(st_bbox(nc))
+plot(st_geometry(nc))
+sessionInfo()</code>
+</pre>
+<p class="guide-source">來源與延伸：<a href="https://r-spatial.github.io/sf/articles/sf1.html" target="_blank" rel="noopener">sf 官方範例與資料物件 ↗</a>
+</p>
+</details>
+<h3>資料夾與版本：本站建議</h3>
+<p>練習專案可分為 data/raw、data/processed、R、reports、outputs：原始檔保留來源；處理檔由程式產生；R script 負責轉換；Rmd 連結方法與結果。這是編輯建議，不要求改寫教材已有的 Prac*_data 路徑。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">檔案與 project ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">版本與報告 ↗</a>
+</p>
+</section>
+<section id="casa0005-schedule">
+<span id="casa0005-topics">
+</span>
+<h2>04 · 本屆正式課表</h2>
+<p>日期依 2026/27 Moodle 課表整理；Reading Week 未列精確日期，不能從空檔自行推定。Lecture 與 practical 原始名稱保留，Week 10 沒有列獨立 practical。</p>
+<div class="guide-table" tabindex="0" role="region" aria-label="可水平捲動的正式課表">
+<table>
+<caption>2026/27 Lecture、Practical 與 Presenter</caption>
+<thead>
+<tr>
+<th scope="col">日期</th>
+<th scope="col">週次</th>
+<th scope="col">Lecture</th>
+<th scope="col">Practical</th>
+<th scope="col">Presenter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-10-08</td>
+<td>
+<a href="#casa0005-week-1">Week 1</a>
+</td>
+<td>Introduction to GIS</td>
+<td>Geographic Information: The Basics</td>
+<td>Andy MacLachlan</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td>
+<a href="#casa0005-week-2">Week 2</a>
+</td>
+<td>Geospatial Information Systems</td>
+<td>Introduction to R</td>
+<td>Claire Dooley</td>
+</tr>
+<tr>
+<td>2026-10-22</td>
+<td>
+<a href="#casa0005-week-3">Week 3</a>
+</td>
+<td>Representing the World: From infinitely complex reality to models and representations</td>
+<td>Spatial descriptive statistics</td>
+<td>Andy MacLachlan</td>
+</tr>
+<tr>
+<td>2026-10-29</td>
+<td>
+<a href="#casa0005-week-4">Week 4</a>
+</td>
+<td>GI Science and Reproducible Research</td>
+<td>Git, GitHub and RMarkdown</td>
+<td>Andy MacLachlan</td>
+</tr>
+<tr>
+<td>2026-11-05</td>
+<td>
+<a href="#casa0005-week-5">Week 5</a>
+</td>
+<td>Cartographic principles</td>
+<td>Map making</td>
+<td>Andy MacLachlan</td>
+</tr>
+<tr>
+<td>未列日期</td>
+<td>Reading Week</td>
+<td colspan="3">課表列 Reading week；評量頁稱此週發布 practice exam。</td>
+</tr>
+<tr>
+<td>2026-11-19</td>
+<td>
+<a href="#casa0005-week-6">Week 6</a>
+</td>
+<td>GI Science 1: Point Pattern Analysis</td>
+<td>Detecting Spatial Patterns (Points)</td>
+<td>Claire Dooley</td>
+</tr>
+<tr>
+<td>2026-11-26</td>
+<td>
+<a href="#casa0005-week-7">Week 7</a>
+</td>
+<td>GI Science 2: Spatial Association and Autocorrelation</td>
+<td>Spatial Autocorrelation (Continuous observations)</td>
+<td>Claire Dooley</td>
+</tr>
+<tr>
+<td>2026-12-03</td>
+<td>
+<a href="#casa0005-week-8">Week 8</a>
+</td>
+<td>GI Science 3: Explaining Spatial Patterns</td>
+<td>Explaining Spatial Patterns</td>
+<td>Ruth Neville</td>
+</tr>
+<tr>
+<td>2026-12-10</td>
+<td>
+<a href="#casa0005-week-9">Week 9</a>
+</td>
+<td>Answering geospatial questions</td>
+<td>GIS methods review</td>
+<td>Ruth Neville</td>
+</tr>
+<tr>
+<td>2026-12-17</td>
+<td>
+<a href="#casa0005-week-10">Week 10</a>
+</td>
+<td>Critical GIS and critical thinking</td>
+<td>未列 practical</td>
+<td>Andy MacLachlan</td>
+</tr>
+<tr>
+<td>2026-12-18</td>
+<td>Exam</td>
+<td colspan="3">09:00–15:00；詳見評量區。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式課表 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">考試日期與時間 ↗</a>
+</p>
+</section>
+<h2>05 · 十週學習指南</h2>
+<p>各週先列 Moodle 的正式安排，接著以公開教材與本站編輯建議展開。教材的 homework、例子及時間投入可能屬其他版本，不能自動當成本屆計分作業；正式要求以 Moodle 最新發布為準。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">本屆課表 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">公開教材 ↗</a>
+</p>
+<article class="guide-week" id="casa0005-week-1">
+<span class="guide-badge">Week 01 · 2026-10-08</span>
+<h3>從資料到第一張地圖</h3>
+<p>
+<strong>Lecture: </strong>Introduction to GIS<br>
+<strong>Practical: </strong>Geographic Information: The Basics<br>
+<strong>Presenter: </strong>Andy MacLachlan</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>GIS 把位置、幾何與屬性放在一起；GIScience 進一步追問資料如何代表真實世界。先知道一列資料代表一個 borough、一個事件或一個格網，才能決定如何合併與分析。</li>
+<li>Vector 以點、線、面表示離散物件；raster 以格網表示數值。CSV 只有表格，不會自動具有幾何。資料有地區代碼，也仍需對應邊界才能畫出行政區地圖。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>先能辨識檔案副檔名與資料夾。下載前記錄資料的日期、地理範圍、欄位單位及授權，保留原始檔，避免一開始就覆寫。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>目前公開章節用 London borough 邊界與 fly-tipping CSV 示範屬性合併；實際資料連結及檔案位置依章節。QGIS 可輔助檢視圖層，R 用來記錄可重跑流程。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>先解壓縮邊界資料，確認讀的是 borough layer；若用 Shapefile，保留同名的配套檔，不只移動 .shp。</li>
+<li>在 RStudio 開啟課程 project，確認 working directory，讀入邊界與 CSV；先看欄位名稱、列數及資料型態，再畫簡單邊界圖。</li>
+<li>找出兩份資料共同的地區識別碼，檢查空值、重複值與字串格式。不要先用名字猜配對，因為拼字差異不等於不同地區。</li>
+<li>先選定要用的年度和欄位，再做 attribute join；比較合併前後列數，列出未配對區域，確認沒有因重複 key 把一個面複製多次。</li>
+<li>畫出數值分布並匯出結果；寫清楚事件件數的時間範圍，不能把空值自動當零，也不能把件數直接當成每人發生率。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>地圖是資料與邊界的共同產物。空白區域可能是未配對或無資料，不一定是沒有事件。第一週的成功標準是配對可核對、位置合理、單位可解釋。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>讀不到檔案：檢查解壓縮後的實際位置與檔名大小寫；不要照抄教材作者電腦的絕對路徑。</li>
+<li>合併後一片 NA：檢查 key 類型、年度、空白字元及行政區版本；先列 unmatched keys 再改資料。</li>
+</ul>
+<p>能指著一個面說明它的識別碼、資料年度與數值單位嗎？能證明每個 borough 最終只有一列嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>一張基礎地圖、原始資料來源表、合併檢查紀錄與可重跑 R script。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://r-spatial.github.io/sf/articles/sf1.html" target="_blank" rel="noopener">sf：空間資料物件</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-2">
+<span class="guide-badge">Week 02 · 2026-10-15</span>
+<h3>用 R 整理資料與表達流程</h3>
+<p>
+<strong>Lecture: </strong>Geospatial Information Systems<br>
+<strong>Practical: </strong>Introduction to R<br>
+<strong>Presenter: </strong>Claire Dooley</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>R 的 object、function、vector 與 data frame 是基礎。函式的輸入、參數和回傳值要能分開讀；程式跑過一次不代表資料型態或操作順序正確。</li>
+<li>filter 選列、select 選欄、group_by 加 summarise 做分組統計；join 是配對兩份資料。先把問題寫成「依何種單位、選哪些觀察、算什麼量」，再選函式。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>重跑 Week 1 的讀檔與合併。把不知道的 R 指令記到問題清單，學會用 ?函式名稱查說明；練習從 script 執行，不只在 Console 留下零散命令。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>教材涵蓋 CSV 清理、data frame 操作、spatial data、簡單製圖及 tidy data；使用 RStudio、dplyr／tidyverse、sf 與章節指定的製圖工具。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>建立小型練習表，檢查 numeric、character 與 NA；用 names、str 和 head 觀察結構，避免直接對整份資料做不可追蹤的轉換。</li>
+<li>讀入 CSV，辨識標題列、空白列及混合格式欄位；把清理動作存成程式，保留原始讀取物件供比較。</li>
+<li>依資料定義篩選年份或類別，選欄、改名與建立新變數。每一步查看列數，確認沒有因條件或缺值把需要的資料丟掉。</li>
+<li>分組計算摘要時明說分母。比較「各組百分比的平均」與「先加總分子分母再算比例」，不要把兩者視為同一估計。</li>
+<li>將整理後表格 join 到幾何，做一張地圖與一張非空間圖，檢查相同變數在兩種表達下是否一致。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>資料清理是有理由的轉換，不是讓錯誤訊息消失。可以用少量資料手算預期值，確認程式做的事情與研究問題一致。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>object not found：檢查是否先跑建立物件的 chunk、是否拼錯大小寫；從乾淨 session 重跑能揭露隱藏依賴。</li>
+<li>數字欄位變文字或多出 NA：先查原始值中的符號和缺值編碼，再選擇轉換方法。</li>
+</ul>
+<p>能解釋一條資料管線每一步的輸入與輸出嗎？能說明 group_by 後一列結果代表哪個群組嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>一份有註解的清理 script、一個摘要表、一張圖及一段資料清理理由。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/introduction-to-r.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://r4ds.hadley.nz/data-transform.html" target="_blank" rel="noopener">R for Data Science：資料轉換</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-3">
+<span class="guide-badge">Week 03 · 2026-10-22</span>
+<h3>投影、raster 與描述統計</h3>
+<p>
+<strong>Lecture: </strong>Representing the World: From infinitely complex reality to models and representations<br>
+<strong>Practical: </strong>Spatial descriptive statistics<br>
+<strong>Presenter: </strong>Andy MacLachlan</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>CRS 定義座標如何對應地球；地理座標的角度不等於公尺。指定 CRS 是補上座標的解釋，transform 是把位置轉到另一個參考系統，兩者不能交換。</li>
+<li>Raster resolution 決定格網尺度，取樣點得到的是格網支持範圍內的資料值。平均、標準差、分位數和 histogram 描述分布的不同面向。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>複習 vector／raster 及欄位型態，能解釋 mean 和 median 的差別。確認下載空間 raster 的儲存空間，先閱讀資料產品的單位與時間範圍。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>公開章節使用 WorldClim raster、城市／位置資料，依序處理投影、載入 raster、取值與 histogram；實際解析度、檔案及套件依章節。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>載入一份 vector 和 raster，列出兩者 CRS、extent、單位與解析度；先畫圖看位置是否合理。</li>
+<li>依分析目的選擇參考系統，必要時真正轉換座標；不要只把 EPSG 標籤換成想要的值。</li>
+<li>讀入所需 raster layer，確認變數、月份或年度，避免將不同 layer 當成同一時間的觀測。</li>
+<li>在指定位置抽取格網值，檢查 NA 是否來自超出 extent 或缺值；選幾個位置回到地圖核對。</li>
+<li>計算摘要與 histogram，記錄 bins、有效樣本數及單位；比較位置樣本的分布，不把抽樣城市當成全世界面積的分布。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>相同地點在不同解析度下可能得到不同值。呈現結果時應說明資料支持尺度與抽樣方式，不能把地圖上細密的點視為量測精度。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>圖層對不上：檢查 datum、CRS 與原始座標單位；st_set_crs 不能修正原本屬於另一套座標的數字。</li>
+<li>摘要受極端值支配：同時看 histogram、分位數與缺值，調查資料定義後再決定是否排除。</li>
+</ul>
+<p>能說明一次 raster extraction 的空間與時間意義嗎？能區分重投影、改標籤與 resampling 嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>CRS／解析度紀錄、抽取值表、histogram 與一段尺度及抽樣限制。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://r.geocompx.org/reproj-geo-data" target="_blank" rel="noopener">Geocomputation with R：重投影</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-4">
+<span class="guide-badge">Week 04 · 2026-10-29</span>
+<h3>把分析變成可重現的報告</h3>
+<p>
+<strong>Lecture: </strong>GI Science and Reproducible Research<br>
+<strong>Practical: </strong>Git, GitHub and RMarkdown<br>
+<strong>Presenter: </strong>Andy MacLachlan</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>Git 追蹤本機檔案版本；GitHub 提供遠端 repository。commit 是可識別的版本，push／pull 在本機與遠端間同步，不會替你驗證統計方法。</li>
+<li>RMarkdown 把敘述、程式及輸出連在一起；Knit/render 依文件的執行順序產生報告。可重現還需要資料來源、相對路徑、套件版本與處理紀錄。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>先準備一份可重跑的 Week 1–3 script；確認 Git 安裝，使用自己的練習 repository，不把密碼、token 或私人資料寫入檔案。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>教材包含 RStudio Git 操作、commit、push／pull、branch 與 RMarkdown HTML 輸出；套件還原另見 External usage。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>開啟 project 並確認 repository root；先查看 status／diff，知道哪些檔案即將被記錄，不把產生的大型原始資料任意推上遠端。</li>
+<li>建立簡單 Rmd，加入標題、研究問題、資料來源及 code chunk；把讀檔與分析放進文件，避免依賴 Console 裡現有物件。</li>
+<li>逐段確認 chunk 的輸入和輸出，再 Knit 成 HTML；區分顯示 code 的設定與是否執行 code，不用隱藏錯誤代替修正。</li>
+<li>檢查地圖、表格、來源和方法是否一起出現，記錄套件版本；在新 session 重跑，確認文件不依賴手動操作。</li>
+<li>檢查 diff，建立描述清楚的 commit；依教材同步自己的遠端，理解若兩邊都改檔案，可能需要處理衝突。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>可重現報告的價值是讓讀者追查結果如何產生。只交一張 PNG，或只有程式卻沒有資料來源與環境說明，都不足以讓另一位讀者完整重建分析。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>Knit 找不到物件：將建立物件的程式納入文件，按順序執行；檢查工作目錄和相對路徑。</li>
+<li>Git 驗證方式與舊教材不同：查目前 GitHub 官方登入文件，不照抄過期的密碼登入指令。</li>
+</ul>
+<p>另一台電腦能從 README 找到資料、還原套件並產生報告嗎？能指出某張圖對應的 chunk 與 commit 嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>一份 Rmd 與 HTML 報告、環境說明及可追查的版本紀錄。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" target="_blank" rel="noopener">GitHub：目前登入與驗證方式</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-5">
+<span class="guide-badge">Week 05 · 2026-11-05</span>
+<h3>讓地圖回答問題</h3>
+<p>
+<strong>Lecture: </strong>Cartographic principles<br>
+<strong>Practical: </strong>Map making<br>
+<strong>Presenter: </strong>Andy MacLachlan</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>製圖要先有比較問題，再決定符號、色階、分類與圖例。Choropleth 的每個面代表統計單位，面積大不代表人數多，原始件數與標準化比率回答不同問題。</li>
+<li>Attribute join 根據識別碼配對；spatial join 根據空間關係配對。點落在面內、面相交與 buffer 距離的定義不同，會改變統計結果。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>熟悉 sf 物件、join、CRS 及 group summary。先草畫想呈現的地圖，寫出研究範圍、變數、分母與比較對象。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>公開教材使用 OSM、Airbnb、London boroughs 等資料；live 章節已說明更新至 tmap 4。不要將舊版 tmap 參數直接混入新環境。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>取得章節資料並篩選目標類別與研究區域，記錄下載版本；檢查位置、重複資料及缺值。</li>
+<li>確認點與面 CRS 一致，按問題決定 spatial relationship，將點分配到行政區；核對邊界點和沒有配對的點。</li>
+<li>每區計算需要的量，區分 raw count、per-area density 與其他 rate；若有分母，檢查它是否匹配相同年度和區域。</li>
+<li>用 tmap 建立圖層、符號和圖例，加入標題、來源、單位和必要的比例尺；先確保語意正確，再調整美觀。</li>
+<li>比較兩種分類或指標版本，觀察哪些區域排名或視覺重點改變；匯出靜態圖並檢查文字、圖例和留白。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>地圖中的高值可用來提出問題，不能單憑顏色宣稱因果。讀者應能從圖例知道「比較的是什麼」，並從來源知道「資料來自何時、何處」。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>地圖看起來對，但用錯變數：確認 plotted column、標籤與單位一致，尤其是數量和密度。</li>
+<li>點數超出原始資料：檢查一對多的 spatial join；邊界點可能匹配多個面，需明確記錄分配規則。</li>
+</ul>
+<p>能說明分類方式、分母、色階和空值顯示嗎？拿掉標題後，讀者仍能從圖例理解變數嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>一張正式 thematic map、一張設計對照圖及方法與資料限制說明。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://r.geocompx.org/geometry-operations.html" target="_blank" rel="noopener">Geocomputation with R：幾何與 buffer</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-6">
+<span class="guide-badge">Week 06 · 2026-11-19</span>
+<h3>點事件是群聚、分散還是隨機？</h3>
+<p>
+<strong>Lecture: </strong>GI Science 1: Point Pattern Analysis<br>
+<strong>Practical: </strong>Detecting Spatial Patterns (Points)<br>
+<strong>Presenter: </strong>Claire Dooley</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>Point pattern analysis 研究事件的位置。KDE 描述平滑後密度，quadrat 以格網計數，Ripley’s K 觀察不同距離尺度；不同方法各有參數與假設。</li>
+<li>CSR 是 complete spatial randomness，CRS 是座標參考系統。比較隨機性之前，要先定義 observation window 與事件的可觀測範圍。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>複習 CRS、空間篩選與事件去重。先問資料如何被記錄：資料稀少可能是觀察不足，不一定是實際事件少。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>章節使用 London Blue Plaques、borough boundaries 與 spatstat；另有 KDE、quadrat、Ripley’s K、DBSCAN 的比較。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>讀入點與研究區邊界，檢查重複座標、區外點和 CRS；保留清理前後點數及每項排除理由。</li>
+<li>先在全圖檢查資料，再選適合的 borough 作為 observation window；不要用任意矩形把實際不可觀測区域算進面積。</li>
+<li>製作 KDE，記錄 bandwidth；用至少兩個尺度做敏感度比較，理解平滑程度如何改變看到的高密度區。</li>
+<li>做 quadrat 或距離尺度分析，閱讀 null model、模擬 envelope 及邊界處理設定；把圖形與檢定結果一起看。</li>
+<li>如讀 DBSCAN 延伸，說明參數對群集的影響；區分演算法找到的群集與統計上對隨機基準的偏離。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>群聚結論是相對於某個基準與尺度。Blue Plaques 的分布也受人口、建築、紀念政策與資料收集影響，不能直接解讀為某種都市現象的原因。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>直接用經緯度當公尺距離：先確認分析軟體的距離定義，選合適投影與單位。</li>
+<li>密度圖有紅色就寫 significant hotspot：描述密度與統計顯著性不是同一結果。</li>
+</ul>
+<p>能完整說明 observation window、null model、bandwidth 或距離尺度嗎？換參數後結論還穩定嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>點資料清理紀錄、密度／檢定圖、參數表及尺度敏感度說明。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">公開章節：KDE、quadrat 與 Ripley’s K</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-7">
+<span class="guide-badge">Week 07 · 2026-11-26</span>
+<h3>相鄰地區的數值是否相似？</h3>
+<p>
+<strong>Lecture: </strong>GI Science 2: Spatial Association and Autocorrelation<br>
+<strong>Practical: </strong>Spatial Autocorrelation (Continuous observations)<br>
+<strong>Presenter: </strong>Claire Dooley</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>本週分析的是附在空間單位上的數值，和上週直接研究點的位置不同。必須先把事件轉成各區指標，再建立鄰近關係。</li>
+<li>Global Moran’s I 描述整體自相關；Local Moran’s I 指出局部群聚或異常。Getis–Ord 與 Geary’s C 有不同統計定義，不要把名稱不同的結果視為同一張圖。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>能做 point-in-polygon 計數，理解密度與件數。複習 hypothesis、p-value 與空間鄰近關係，先寫出欲檢驗的變數。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>教材以 London wards、Blue Plaques 指標示範 weight matrix、Moran’s I、Geary’s C、Getis–Ord 及局部統計。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>整理 ward 邊界與屬性，確認一區一列，處理 NA；保留零件數區域，避免因無事件而直接刪除。</li>
+<li>計算區域指標並確認分母與單位，畫初步分布圖；檢查是否是行政區大小在主導件數模式。</li>
+<li>定義 neighbours 和 weights，檢查沒有鄰居的區域、連通性與標準化方式；固定資料排序，讓權重與觀察一一對應。</li>
+<li>計算全域指標與相應檢定，記錄假設、方向與推論方式；不要只抄 statistic 而沒有參照基準或 p-value。</li>
+<li>閱讀局部分析，分開呈現 cluster type 與 significance；檢查權重或尺度改變後的結果，討論多重局部檢定。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>High–High 描述高值區與高值鄰近區的組合，不等於所有高值都是顯著群聚。空間權重是分析定義的一部分，要與結果一起報告。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>資料排序和 weights 不一致：以地區 ID 檢查，重排／刪列後重新建立權重。</li>
+<li>把點群聚和數值自相關混為一談：先確認研究的是事件位置，還是區域屬性。</li>
+</ul>
+<p>能說明誰是誰的 neighbour，及為何採用此定義嗎？能區分全域結果、局部類型與局部顯著性嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>權重定義與檢查表、全域統計、局部分類圖及方法敏感度討論。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">公開章節：全域與局部統計比較</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-8">
+<span class="guide-badge">Week 08 · 2026-12-03</span>
+<h3>以模型解釋空間關聯</h3>
+<p>
+<strong>Lecture: </strong>GI Science 3: Explaining Spatial Patterns<br>
+<strong>Practical: </strong>Explaining Spatial Patterns<br>
+<strong>Presenter: </strong>Ruth Neville</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>Regression 將結果變數與解釋變數連結；係數需帶單位、條件與不確定性。控制了幾個變數仍不等於建立因果。</li>
+<li>模型殘差可暴露未解釋的空間結構。Spatial lag、spatial error 與 GWR 是不同建模思路，要從研究問題和診斷選擇，不只是追求較高 fit。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>複習相關、散布圖、線性迴歸與 Moran’s I。先用一句話定義 outcome、predictors、空間單位、時間與假說。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>教材以 London ward GCSE 表現與其他區域變數示範 regression、假設診斷、spatial models 及 GWR。它是公開教材例子，不代表正式考題。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>讀入、清理並核對各變數的定義及樣本；列出缺值造成的排除，保證合併後仍是一區一列。</li>
+<li>畫散布圖、分布圖與地圖，建立有研究理由的 baseline model；先解釋係數符號、單位及估計的不確定性。</li>
+<li>依章節檢查 linearity、殘差分布、multicollinearity、homoscedasticity 與 errors independence，记錄發現，而非只寫 passed。</li>
+<li>對殘差做空間診斷，明確定義 weights；如果存在結構，先考慮資料、漏變數與研究機制，再比較 spatial model。</li>
+<li>比較模型的研究意義、診斷與限制；GWR 作延伸閱讀時，另說明局部估計與尺度，不把所有模型堆在同一結論裡。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>區域平均的關聯不能直接推論個人行為。結論應是「在這份資料、變數及模型條件下觀察到的關聯」，並交代殘差、缺值和空間尺度限制。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>R² 高就當作模型正確：還要檢查假設、研究設計及 outliers；加入更多變數不是自動改善解釋。</li>
+<li>把局部係數地圖當成確定因果：先看不確定性、樣本支持與模型條件。</li>
+</ul>
+<p>能用完整句子解釋一個係數嗎？能說明為何使用某個 spatial model，以及它仍沒有解決什麼嗎？</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>研究假說、baseline model、診斷圖表、殘差地圖與有條件的結論。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">公開章節：假設診斷與 spatial models</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-9">
+<span class="guide-badge">Week 09 · 2026-12-10</span>
+<h3>從題目選擇方法並完成分析</h3>
+<p>
+<strong>Lecture: </strong>Answering geospatial questions<br>
+<strong>Practical: </strong>GIS methods review<br>
+<strong>Presenter: </strong>Ruth Neville</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>本週正式主題是回答 geospatial questions 與 GIS methods review。下列流程是本網站整合 Week 1–8 的學習建議，並非 Moodle 已公布的逐步 workshop 指示。</li>
+<li>問題先於軟體：定位／計數、比較分布、檢驗群聚、解釋關聯各需要不同觀察單位、輸入與推論。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>把前八週的成果與錯誤整理放在一起；選一個練習問題，先寫資料需求、分析單位和預期輸出，再打開程式。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>使用前八章已核對來源的練習資料與 script；本次 Moodle 沒有可見的 Week 9 獨立教材連結，因此不指定未公布資料或考題。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>把題目改寫成能分析的問句，明確定義地理範圍、時間、觀察單位與結果變數。</li>
+<li>判斷是 attribute join、spatial relation、raster extraction、point pattern、autocorrelation 還是 regression 問題；寫下選擇理由。</li>
+<li>列一張來源與資料品質表，檢查 CRS、缺值、重複、邊界年度和分母；記錄哪些限制無法補救。</li>
+<li>建立最小可重跑管線，先在小樣本核對，再產生完整結果與一個適當的敏感度比較。</li>
+<li>以問題、資料、方法、結果、限制的順序寫結論，確認每張圖表都對應一個明確的主張。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>好的方法選擇能說明「為何這個輸入可以回答這個問題」。描述性的地圖不自動提供檢定，統計顯著也不自動提供實質重要性。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>先選熟悉套件才找問題：回到研究問句與輸入類型，避免把每題都做成 choropleth。</li>
+<li>結果有圖但沒有答案：每個輸出加入一段直接回答問題的解讀和限制。</li>
+</ul>
+<p>能不用程式碼向同學解釋方法選擇嗎？若資料換成另一種空間單位，哪些部分要重新檢查？</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>一份完整小型分析報告、方法選擇表及可重跑專案。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">以可重現報告整合分析</a>
+</p>
+</article>
+<article class="guide-week" id="casa0005-week-10">
+<span class="guide-badge">Week 10 · 2026-12-17</span>
+<h3>批判檢視資料、方法與主張</h3>
+<p>
+<strong>Lecture: </strong>Critical GIS and critical thinking<br>
+<strong>Practical: </strong>課表未列<br>
+<strong>Presenter: </strong>Andy MacLachlan</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<h4>概念與分析問題</h4>
+<ul>
+<li>Moodle 這週列 Critical GIS and critical thinking，沒有列 Practical 10；12/18 另列 Exam。下列活動是編輯整理的考前檢核，不是新增的正式作業。</li>
+<li>Critical GIS 問的不只是哪個演算法，還包括誰被記錄、誰被排除、誰定義分類，以及地圖結果如何影響判斷；這與 Moodle 的 representation／uncertainty 學習成果相連。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>課前準備（學習建議）</h4>
+<p>回看所有輸出中的假設、缺值、分母、尺度與權重。準備一張「主張—證據—限制」表，標出尚未能說清楚的地方。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>教材、資料與工具</h4>
+<p>使用本課 Moodle 學習成果、前八章方法與自己的成果；當週投影片及錄影尚需回到教材頁確認。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：逐步操作流程（學習指南）</summary>
+<ol>
+<li>選一張自己的地圖，說明資料代表哪些人、事件或區域，哪些群體或時間没有被觀察。</li>
+<li>重新檢查分類、空間單位、分母與視覺設計，說明它們如何改變讀者看到的比較。</li>
+<li>把每個結論拆成描述、推論與可能的因果主張，逐一核對目前證據能支持哪一層。</li>
+<li>以不同 CRS、權重、分類或分析尺度中適用的一項重算／比較，記錄結論穩定與不穩定之處。</li>
+<li>整理自己的檢核表、方法理由與錯誤紀錄；正式考試前再次查 Moodle 的工具、時間與提交指示。</li>
+</ol>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+</details>
+<h4>成果如何解讀？</h4>
+<p>批判思考不是否定所有數據，而是把主張限制在可支持的範圍，明說不確定性，讓讀者知道哪些結論值得相信、哪些還需要研究。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<details class="guide-detail">
+<summary>展開：常見錯誤與自我檢核</summary>
+<ul>
+<li>將一張有說服力的圖當成完整證據：還要核對測量、資料涵蓋、方法和替代解释。</li>
+<li>用網站的複習建議代替 assessment brief：工具、題目與提交規則仍要看正式文件。</li>
+</ul>
+<p>每個主張都能指出資料、方法和限制嗎？是否把區域關聯當成個人特性，或把 correlation 寫成 causation？</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+</details>
+<h4>建議保留的成果（非新增作業）</h4>
+<p>主張與證據對照表、完整方法檢核清單及尚待釐清問題。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">正式主題 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">方法複習來源 ↗</a>
+</p>
+<h4>延伸閱讀（選讀）</h4>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">回到表示與不確定性的學習成果</a>
+</p>
+</article>
+<section id="casa0005-assessment">
+<h2>06 · 評量、考試與尚待確認事項</h2>
+<p>Catalogue 本屆列 90% Exam、10% Other form of assessment，成績採 Numeric Marks。Moodle 已有時間安排，但目前可見頁面沒有把 practice exam 明確對應到該 10%，因此不能自行等同。</p>
+<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">2026/27 評量比例 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">Assessment ↗</a>
+</p>
+<ul>
+<li>正式考試：2026/12/18（Friday）09:00–15:00。這是 Moodle 公布的時段，不由六小時時窗推定作答形式、題數或可使用工具。</li>
+<li>Practice exam：Reading Week 發布，2026/11/25（Wednesday）17:00 截止。Moodle 說 Reading Week 之後它會成為 weekly homework；具體每週任務仍需看正式發布。</li>
+<li>頁面文字說正式 Exam link 於考試當天發布；本次檢查只見 Practice exam／Exam 標題，沒有可見的題目或提交連結。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<div class="guide-callout">評分文件年度疑義：Mark scheme 入口實際開啟的檔名為 GIS-MarkScheme-2025.pdf。此次未能完整讀取 PDF，因此不刊登未核對的評分級距，也不把檔名年份直接認定為本屆失效或有效；適用年度需向 module team 確認。</div>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/mod/resource/view.php?id=9275922" target="_blank" rel="noopener">Mark scheme 文件入口（需登入）↗</a>
+</p>
+<h3>不可從現有頁面推定的規則</h3>
+<ul>
+<li>考試是紙筆、上機或 online；是否 open-book；可用 R、QGIS、Python 或 AI；合作、引用與提交格式；late submission 與補考細節。</li>
+<li>上述不是「允許使用」或「禁止使用」的結論，而是本次來源沒有確認。考前需要讀正式 brief，仍不清楚時詢問 module team。</li>
+<li>頁面殘留 Late Summer Assessment 2026，並說只供 deferral／resubmission。此區不納入 2026/27 一般考試時程。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+</section>
+<section id="casa0005-materials">
+<h2>07 · 教材、投影片與錄影狀態</h2>
+<p>Moodle Workshop material 明確指向 Andy 的公開 GitHub Pages handbook。Lecture material 說 weekly presentations 與 recordings 位於下方，但本次可見 Week 1–10 各只有標題，沒有逐週可見資源連結；這表示此次尚未看到，不代表永遠不會發布。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=2#tabs-tree-start" target="_blank" rel="noopener">2026/27 Moodle（需登入）↗</a>
+</p>
+<ul>
+<li>Week 1、2、3、4、5、6、7、8、9、10：本次皆未見標題下的投影片或錄影連結。逐週指南使用正式課表與公開教材，不聲稱已閱讀未發布 lecture slides。</li>
+<li>Complete course recording library：Moodle 有嵌入 iframe 入口；此次未核對其中的影片清單、長度或觀看權限，不將 iframe 存在視為十週錄影已齊備。</li>
+<li>公開教科書是可閱讀與執行範例的實作教材；日期、homework、範例資料與套件可能變動。使用教材時先對照當週 Moodle 指示，不能直接移植舊版考試規則。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=2#tabs-tree-start" target="_blank" rel="noopener">回 Moodle 查本屆教材與錄影 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">實作教科書 ↗</a>
+</p>
+</section>
+<section id="casa0005-methods">
+<span id="casa0005-statistics">
+</span>
+<span id="casa0005-application">
+</span>
+<h2>08 · 方法選擇與術語表</h2>
+<p>以下為編輯讀書對照表。用研究問題選擇方法，並回來源章節確認假設與參數；不是正式考試答案或指定的唯一方法。</p>
+<div class="guide-table" tabindex="0" role="region" aria-label="方法比較表">
+<table>
+<thead>
+<tr>
+<th scope="col">問題</th>
+<th scope="col">方法</th>
+<th scope="col">輸入與檢查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>兩份表格按地區配對</td>
+<td>Attribute join</td>
+<td>
+<span>共同且唯一的 key；核對年度、重複及 unmatched keys。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+<tr>
+<td>事件在哪個區／附近？</td>
+<td>Spatial relation / buffer</td>
+<td>
+<span>點、面與一致的空間參考；明確定義包含、相交與距離。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+<tr>
+<td>某位置的格網值？</td>
+<td>Raster extraction</td>
+<td>
+<span>Raster layer、位置、CRS；記錄解析度、單位與時間。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+<tr>
+<td>點的位置是否群聚？</td>
+<td>KDE / quadrat / Ripley’s K</td>
+<td>
+<span>事件點與 observation window；密度表達與假說檢定分開。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+<tr>
+<td>鄰近區數值是否相似？</td>
+<td>Moran’s I / local statistics</td>
+<td>
+<span>區域數值與 weights；核對 ID、排序、孤島與推論方式。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+<tr>
+<td>哪些變數與結果關聯？</td>
+<td>Regression / spatial models</td>
+<td>
+<span>Outcome、predictors 與研究假說；診斷殘差並限制因果主張。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">章節來源 ↗</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>常用術語：定義、意義與限制</h3>
+<dl>
+<dt>
+<strong>GIS / GIScience</strong>
+</dt>
+<dd>
+<span>GIS 是處理地理資訊的系統與工具；GIScience 關注表示、測量與分析的原理。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Vector / raster</strong>
+</dt>
+<dd>
+<span>前者用點線面，後者用格網。選擇應匹配研究現象和資料支持尺度。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Geometry / attribute</strong>
+</dt>
+<dd>
+<span>Geometry 表達位置與形狀；attribute 是附在物件上的變數。先辨識一列代表什麼。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>CRS / EPSG</strong>
+</dt>
+<dd>
+<span>CRS 是座標參考系統，EPSG code 是識別方式之一。標籤與真正座標轉換不同。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Resolution / extent</strong>
+</dt>
+<dd>
+<span>解析度是格網尺度；extent 是涵蓋範圍。較密的圖像不代表較可靠的測量。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Join / clip</strong>
+</dt>
+<dd>
+<span>Join 配對資料；clip 依幾何裁切。先決定要增加屬性、選物件還是改幾何。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Count / density / rate</strong>
+</dt>
+<dd>
+<span>件數、每面積密度和有特定分母的比例不能互換；必须報告單位與分母。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>CSR / observation window</strong>
+</dt>
+<dd>
+<span>CSR 是完全空間隨機性；window 定義觀察區。它們不是座標參考系統 CRS。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Bandwidth</strong>
+</dt>
+<dd>
+<span>KDE 的平滑尺度。改變它會改變密度圖，因此需記錄並比較。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Weights / spatial lag</strong>
+</dt>
+<dd>
+<span>Weights 定義鄰近影響；spatial lag 將鄰近數值按權重組合。意義依定義而變。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Global / local statistics</strong>
+</dt>
+<dd>
+<span>全域描述整體，局部定位差異或異常；局部顯著性與高值並不相同。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/spatial-autocorrelation.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Residual / association / causation</strong>
+</dt>
+<dd>
+<span>殘差是模型未解釋的部分；關聯不等於因果，需要研究設計支持。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>MAUP / ecological inference</strong>
+</dt>
+<dd>
+<span>彙整單位改變可能改變結果；區域關聯不能直接推到個人。這是尺度與推論限制的檢核。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/explaining-spatial-patterns.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+<dt>
+<strong>Reproducibility / renv</strong>
+</dt>
+<dd>
+<span>以資料、程式、環境及說明重建結果；renv 支持套件環境，不保證資料來源與研究方法正確。</span> <a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">來源 ↗</a>
+</dd>
+</dl>
+</section>
+<section id="casa0005-revision">
+<span id="casa0005-preparation">
+</span>
+<h2>09 · 逐週成果與考前自我檢核</h2>
+<p>以下是本站建議的學習成果檔案，不增加正式作業或評分要求。每週至少保留資料來源、可重跑程式、輸出、解讀及錯誤紀錄；具體内容對照各週來源。</p>
+<ul>
+<li>Week 1：一張基礎地圖、原始資料來源表、合併檢查紀錄與可重跑 R script。</li>
+<li>Week 2：一份有註解的清理 script、一個摘要表、一張圖及一段資料清理理由。</li>
+<li>Week 3：CRS／解析度紀錄、抽取值表、histogram 與一段尺度及抽樣限制。</li>
+<li>Week 4：一份 Rmd 與 HTML 報告、環境說明及可追查的版本紀錄。</li>
+<li>Week 5：一張正式 thematic map、一張設計對照圖及方法與資料限制說明。</li>
+<li>Week 6：點資料清理紀錄、密度／檢定圖、參數表及尺度敏感度說明。</li>
+<li>Week 7：權重定義與檢查表、全域統計、局部分類圖及方法敏感度討論。</li>
+<li>Week 8：研究假說、baseline model、診斷圖表、殘差地圖與有條件的結論。</li>
+<li>Week 9：一份完整小型分析報告、方法選擇表及可重跑專案。</li>
+<li>Week 10：主張與證據對照表、完整方法檢核清單及尚待釐清問題。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">實作章節 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">本屆主題 ↗</a>
+</p>
+<h3>從讀到會做：建議的每週節奏</h3>
+<ul>
+<li>課前：閱讀本週 learning outcomes，辨識資料、方法與未知名詞；下載必要資料並確認環境。</li>
+<li>課中：先跟上分析問題與流程，標記不能解釋的輸出；把軟體錯誤和概念問題分開記錄。</li>
+<li>課後：從新 session 重跑，做一個小型參數或資料對照，用自己的話解釋結果並補上來源。</li>
+<li>Reading Week 之後：依 Moodle practice exam 實際題目與 weekly homework 指示安排練習，不以公開教科書舊版 homework 當成本屆 deadline。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">公開實作與 outcomes ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">Practice exam 安排 ↗</a>
+</p>
+<h3>考前能逐項回答的問題</h3>
+<ul>
+<li>資料：誰／什麼是一個 observation？時間、地理範圍、樣本、缺值、授權與單位是什麼？</li>
+<li>空間：CRS 和距離單位是什麼？有哪些尺度、邊界、解析度、鄰近或 observation window 決定？</li>
+<li>方法：為何這個方法適合問題？輸入格式、關鍵參數、假設、null model 與診斷是什麼？</li>
+<li>結果：數值與圖形各代表什麼？顯著性、實質影響、不確定性與因果是否被混淆？</li>
+<li>可重現：程式、資料位置、套件版本與報告能否從頭重跑？每張圖有來源和方法嗎？</li>
+<li>正式規則：是否重新查過最新 brief、時間、工具、引用與提交方式？任何不明規則先向 module team 確認。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">正式評量入口 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">可重現報告 ↗</a>
+</p>
+</section>
+<section id="casa0005-faq">
+<span id="casa0005-python">
+</span>
+<h2>10 · 常見問題與診斷順序</h2>
+<details class="guide-detail">
+<summary>讀不到檔案或下載資料不全？</summary>
+<p>先用 getwd() 與 file.exists() 檢查自己的 project 與檔案路徑；檢查是否已解壓縮，以及資料是否本來就不在 repo。教材作者的絕對路徑不是你的電腦路徑。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<details class="guide-detail">
+<summary>套件載入失敗、範例參數不相容？</summary>
+<p>先記錄完整錯誤、R 和 package 版本，再核對 renv.lock／教材版本；用 renv 還原而非連續盲目升級。tmap 章節已更新至 version 4，舊版範例可能不同。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/map-making.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<details class="guide-detail">
+<summary>圖層錯位、距離離譜？</summary>
+<p>先檢查原始 CRS、座標值、單位與 extent；只更改 CRS 標籤不會轉換數值。沒有來源的 CRS 不應靠視覺猜定。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/descriptive-statistics.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<details class="guide-detail">
+<summary>Join 後 NA 或列數變多？</summary>
+<p>查 key、空白字元、型態、地區年度、重複與未配對資料；空間 join 再查多重相交與邊界規則。先找到原因，不直接補零或刪列。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<details class="guide-detail">
+<summary>Knit 失敗但 Console 可以跑？</summary>
+<p>Console 可能保留之前的物件，render 卻依文件順序執行。將讀取、清理和建立變數的步驟放進文件，核對相對路徑與 chunk 順序。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+</details>
+<details class="guide-detail">
+<summary>可以用 Python、VS Code 或 AI 取代課程流程嗎？</summary>
+<p>Catalogue 以 R 為主，教材安裝流程使用 RStudio；其他工具可自行探索，但不能據此推定 assessment 允許。正式工具、AI 與提交規則以當年度 brief 為準，目前頁面未確認。</p>
+<p class="guide-source">來源與延伸：<a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">公開教材章節 ↗</a>
+</p>
+<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">主程式語言 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">評量規則入口 ↗</a>
+</p>
+</details>
+</section>
+<section id="casa0005-sources">
+<h2>11 · 來源、版本與適用範圍</h2>
+<ul>
+<li>核對日期：2026-10-04。課程資訊來自已登入的 2026/27 Moodle；僅整理課程內容，未納入登入者資料、成績或訊息。</li>
+<li>Catalogue 用於學分、term、level、教學形式與評量比例；本屆 Moodle 用於課表、師資、考試日期和可見教材狀態。正式來源若改動，需重新核對本頁。</li>
+<li>公開 handbook live 章節可能與搜尋引擎快取不同；本次以實際讀取頁面整理，日期與套件說明仍是教材版本資訊，不自動等同 2026/27 規則。</li>
+<li>逐週流程、成果、術語和複習是中文改寫與編輯補充。公開教材作者為 Andy MacLachlan、Adam Dennett、Claire Dooley；基於教材的改寫部分依 CC BY-SA 4.0 提供，保留署名、來源及改寫說明。UCL 正式頁面與登入文件仍以各自權利與規則為準。</li>
+</ul>
+<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Catalogue ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=0#tabs-tree-start" target="_blank" rel="noopener">Moodle Welcome ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">Module Outline ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=2#tabs-tree-start" target="_blank" rel="noopener">Lecture and Workshop Material ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">Assessment ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/external-usage.html" target="_blank" rel="noopener">教材版本、套件與授權 ↗</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0 ↗</a>
+</p>
+<p>未確認項目集中保留：optional Friday 時段、Mark scheme 2025 檔案的本屆適用性、10% 評量形式、考試工具／AI／提交規則、Reading Week 精確日期與録影清單。這些都不以推測補成正式要求。</p>
+<p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=1#tabs-tree-start" target="_blank" rel="noopener">時間與週次來源 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=2#tabs-tree-start" target="_blank" rel="noopener">錄影來源 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&amp;section=3#tabs-tree-start" target="_blank" rel="noopener">評量來源 ↗</a>
+</p>
+<a href="term1.html">← 返回 Term 1 選課</a>
+</section>
+<details class="guide-detail">
+<summary>展開：原有課程筆記的參考連結</summary>
+<p>保留原有網站的補充閱讀與研究參考入口；此區不代表這些資料是本屆指定教材，也未用它們推定評量規則。</p>
+<ul>
+<li>
+<a href="https://r4ds.hadley.nz/" target="_blank" rel="noopener">R for Data Science</a>
+</li>
+<li>
+<a href="https://r.geocompx.org/" target="_blank" rel="noopener">Geocomputation with R</a>
+</li>
+<li>
+<a href="https://andrewmaclachlan.github.io/CASA0005repo/advanced-raster-analysis.html" target="_blank" rel="noopener">延伸 practical：Advanced raster analysis ↗</a>
+</li>
+<li>
+<a href="https://profiles.ucl.ac.uk/72290-andrew-maclachlan" target="_blank" rel="noopener">UCL profile：Andrew Maclachlan</a>
+</li>
+<li>
+<a href="https://www.andymac.uk/teach.html" target="_blank" rel="noopener">課程與研究教材</a>
+</li>
+<li>
+<a href="https://discovery.ucl.ac.uk/id/eprint/10219891/" target="_blank" rel="noopener">Queen Elizabeth Olympic Park 熱環境研究（2025）</a>
+</li>
+<li>
+<a href="https://doi.org/10.21105/jose.00141" target="_blank" rel="noopener">CASA0005 R practical 教材論文</a>
+</li>
+</ul>
+</details>
+</div>
+</div>
+</main>
