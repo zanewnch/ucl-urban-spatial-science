@@ -75,6 +75,7 @@
   "7. QGIS：使用官方下載入口；用它檢視圖層、屬性與 CRS。QGIS 是本課學習成果的一部分，但不由此推定考試允許或要求使用。": "7. Use the official QGIS download and inspect layers, attributes and CRS. QGIS is a learning outcome; this does not establish exam permissions or requirements.",
   "教材安裝流程 ↗": "Handbook setup ↗",
   "課程 repository ↗": "Course repository ↗",
+  "CASA0005 課程 GitHub repository ↗": "CASA0005 course GitHub repository ↗",
   "下面是依教材安裝要求整理的基本指令。renv::restore() 會安裝專案依賴，必須在正確 project 中執行；成功以套件可載入且 practical 能跑為準，不只看指令沒有立即報錯。": "These basic commands follow the handbook setup. renv::restore() installs dependencies and must run in the correct project. Success means packages load and the practical runs, not merely no immediate error.",
   "安裝原文 ↗": "Setup source ↗",
   "renv restore 文件 ↗": "renv restore documentation ↗",
