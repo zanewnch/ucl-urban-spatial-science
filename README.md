@@ -2,7 +2,7 @@
 
 2026–27 UCL CASA Urban Spatial Science MSc course overview. The site is a React single-page application with client-side routes and a shared design system; its course text and sources are maintained in `app/src/content/`.
 
-- Published site: https://zanewnch.github.io/ucl-urban-spatial-science/
+- Published GitHub Pages site: [https://zanewnch.github.io/ucl-urban-spatial-science/](https://zanewnch.github.io/ucl-urban-spatial-science/)
 - Alternate source page: https://ucl-urban-spatial-science.zanewnch.chatgpt.site/urban-spatial-science
 - Routes: `/`, `/term1`, `/casa0005`, `/term2`, `/term3`, `/notes`, `/change-log`
 - Build output: `site/` (including the GitHub Pages SPA fallback)
