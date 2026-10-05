@@ -8,6 +8,7 @@ const Casa0005Page = lazy(() => import('./route-pages/casa0005.jsx'));
 const Term2Page = lazy(() => import('./route-pages/term2.jsx'));
 const Term3Page = lazy(() => import('./route-pages/term3.jsx'));
 const NotesPage = lazy(() => import('./route-pages/notes.jsx'));
+const Casa0005NotePage = lazy(() => import('./route-pages/note-casa0005.jsx'));
 const ChangeLogPage = lazy(() => import('./route-pages/change-log.jsx'));
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/term2" element={<Term2Page />} />
           <Route path="/term3" element={<Term3Page />} />
           <Route path="/notes" element={<NotesPage />} />
+          <Route path="/notes/casa0005" element={<Casa0005NotePage />} />
           <Route path="/change-log" element={<ChangeLogPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

@@ -26,6 +26,11 @@
         "href": "term3.html",
         "label": "Dissertation",
         "current": false
+      },
+      {
+        "href": "/notes/casa0005",
+        "label": "Notes",
+        "current": false
       }
     ],
     "footerHtml": "\r\n    <div class=\"wrap\">UCL Urban Spatial Science MSc · 2026–27 Welcome Sway 為主 · 更新：2026-09-24</div>\r\n  ",
@@ -168,6 +173,24 @@
     "footerClass": "",
     "hasFooter": false,
     "mainAttrs": " class=\"wrap\""
+  },
+  "note-casa0005": {
+    "file": "note-casa0005.html",
+    "title": "CASA0005 課程筆記｜UCL Urban Spatial Science MSc",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>CASA0005 課程筆記｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      { "href": "index.html", "label": "課程總覽", "current": false },
+      { "href": "term1.html", "label": "Term 1", "current": false },
+      { "href": "term2.html", "label": "Term 2", "current": false },
+      { "href": "term3.html", "label": "Dissertation", "current": false }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
   },
   "change-log": {
     "file": "change-log.html",
