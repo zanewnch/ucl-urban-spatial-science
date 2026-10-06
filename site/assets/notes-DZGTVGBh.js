@@ -1,4 +1,4 @@
-import{o as e,t}from"./index-BRYVHUdW.js";import{t as n}from"./page-CLR7n3Ss.js";e();var r=`<main class="wrap">\r
+import{o as e,t}from"./index-oZ0zhkBt.js";import{t as n}from"./page-DTsIHfpa.js";e();var r=`<main class="wrap">\r
     <h1>筆記區</h1>\r
     <div class="topics">\r
       <section class="topic" aria-labelledby="programming-basics">\r
@@ -23,63 +23,18 @@ import{o as e,t}from"./index-BRYVHUdW.js";import{t as n}from"./page-CLR7n3Ss.js"
       </section>
     </div>\r
   </main>`,i=`\r
-    :root {\r
-      color-scheme: light;\r
-      --ink: #102a43;\r
-      --muted: #5f7184;\r
-      --paper: #f7f4ee;\r
-      --line: #dbe2e8;\r
-      --navy: #082b49;\r
-      --blue: #1e6f8f;\r
-      --coral: #e9755b;\r
-    }\r
-    * { box-sizing: border-box; }\r
-    body {\r
-      min-height: 100vh;\r
-      margin: 0;\r
-      color: var(--ink);\r
-      background: radial-gradient(circle at 10% 0%, rgba(232,178,76,.16), transparent 28rem), linear-gradient(180deg, #fbfaf7 0%, var(--paper) 100%);\r
-      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;\r
-      line-height: 1.65;\r
-    }\r
-    a { color: var(--blue); }\r
-    a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }\r
-    .wrap { width: min(1000px, calc(100% - 36px)); margin: 0 auto; }\r
-    .topbar { position: sticky; top: 0; z-index: 2; padding: 16px 0; border-bottom: 1px solid rgba(16,42,67,.10); background: rgba(255,253,249,.9); backdrop-filter: blur(12px); }\r
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-width: 0; }\r
-    .brand { color: var(--navy); font-size: 1.05rem; font-weight: 850; text-decoration: none; }\r
-    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; min-width: 0; }\r
-    nav a { display: inline-flex; align-items: center; min-height: 40px; color: var(--ink); font-size: .9rem; font-weight: 750; text-decoration: none; }\r
-    nav a[aria-current="page"] { color: var(--coral); }\r
-    main { padding: 54px 0 72px; }\r
-    h1 { margin: 10px 0 0; color: var(--navy); font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .98; }\r
-    .topics { display: grid; gap: 16px; margin-top: 32px; }\r
-    .topic { padding: 24px; border: 1px solid var(--line); background: rgba(255,253,249,.82); }\r
-    .topic h2 { margin: 0; color: var(--navy); font-size: clamp(1.35rem, 3vw, 1.8rem); }\r
-    .subtopics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
-    .subtopic { padding: 16px; border-left: 3px solid var(--blue); background: #f3f6f6; color: var(--ink); font-weight: 750; }
-    .model-intro { margin: 10px 0 0; color: var(--muted); }
-    .model-heading { margin: 24px 0 0; color: var(--navy); }
-    .model-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
-    .model-list li { padding: 14px 16px; border: 1px solid var(--line); background: #fffdf9; }
-    .model-list strong { color: var(--navy); }
-    .effort-note { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--coral); background: #fff7ed; color: #40576b; }
-    .sources { margin: 12px 0 0; color: var(--muted); font-size: .82rem; }
-    @media (max-width: 820px) {\r
-      .topbar { padding: 10px 0; }\r
-      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }\r
-      .topbar-inner > * { width: 100%; }\r
-      .brand { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }\r
-      nav { justify-content: flex-start; gap: 6px; }\r
-      nav a { padding: 6px 10px; border: 1px solid var(--line); background: rgba(255,253,249,.78); }\r
-      nav a[aria-current="page"] { border-color: var(--navy); background: var(--navy); color: #fffaf1; }\r
-      main { padding-top: 40px; }\r
-    }\r
-    @media (max-width: 600px) { .subtopics { grid-template-columns: 1fr; } }\r
-    @media (max-width: 480px) {\r
-      .wrap { width: min(100% - 24px, 1000px); }\r
-      .topbar nav { display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }\r
-      .topbar nav a { flex: 0 0 auto; justify-content: flex-start; min-height: 44px; white-space: nowrap; }\r
-      main { padding-top: 32px; }\r
-    }
+.topics { display: grid; gap: 16px; margin-top: 32px; }\r
+.topic { padding: 24px; border: 1px solid var(--line); background: rgba(255,253,249,.82); }\r
+.topic h2 { margin: 0; color: var(--navy); font-size: clamp(1.35rem, 3vw, 1.8rem); }\r
+.subtopics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }\r
+.subtopic { padding: 16px; border-left: 3px solid var(--blue); background: #f3f6f6; color: var(--ink); font-weight: 750; }\r
+.model-intro { margin: 10px 0 0; color: var(--muted); }\r
+.model-heading { margin: 24px 0 0; color: var(--navy); }\r
+.model-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }\r
+.model-list li { padding: 14px 16px; border: 1px solid var(--line); background: #fffdf9; }\r
+.model-list strong { color: var(--navy); }\r
+.effort-note { margin: 16px 0 0; padding: 14px 16px; border-left: 3px solid var(--coral); background: #fff7ed; color: #40576b; }\r
+.sources { margin: 12px 0 0; color: var(--muted); font-size: .82rem; }\r
+    @media (max-width: 600px) {\r
+.subtopics { grid-template-columns: 1fr; } }\r
 `,a={筆記區:`Note area`,"模型的 Effort":`Model Effort`,"筆記區｜UCL Urban Spatial Science MSc":`Notes Area｜UCL Urban Spatial Science MSc`,頁面導覽:`Page navigation`,"AI 的使用方式":`How AI is used`,"如何下 Prompt":`How to download Prompt`,程式基礎:`Programming basics`,總覽:`Overview`,課程總覽:`Overview`,資料來源:`Sources`,已選:`Selected`,"已選 · 15 credits":`Selected · 15 credits`,"閱讀詳解 →":`Read details →`,"官方來源 ↗":`Official source ↗`,已選的四門課:`Four selected modules`,"已選的四門 Term 2 課程":`Four selected Term 2 modules`,"查看先修關係 ↓":`See prerequisites ↓`,選修參考:`Elective reference`,"已選 · 詳解 →":`Selected · Details →`,"前往 CASA0010 完整課程詳解 →":`Read the full CASA0010 module details →`,"CASA0010 · 完整課程詳解":`CASA0010 · Full module details`},o=t();function s(){return(0,o.jsx)(n,{page:`notes`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};

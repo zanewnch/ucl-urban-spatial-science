@@ -1,0 +1,38 @@
+/* Page owns content layout; this sheet owns the common shell and reading controls. */
+.site-shell { --content-width:1080px; }
+.site-shell .wrap,.site-shell > main.wrap,.site-shell .footer-inner { width:min(var(--content-width),calc(100% - 48px)); margin-inline:auto; }
+.site-shell > main.wrap { padding:32px 0 64px; }
+.site-shell main { min-width:0; }
+.site-shell main h1 { color:var(--navy); font-size:clamp(2rem,4vw,3rem); line-height:1.2; letter-spacing:-.03em; margin:0 0 18px; }
+.site-shell main h2 { color:var(--navy); font-size:clamp(1.35rem,2.6vw,1.75rem); line-height:1.4; margin:0 0 18px; }
+.site-shell main h3 { color:var(--navy); font-size:1.15rem; line-height:1.5; }
+.site-shell main p,.site-shell main li { line-height:1.8; overflow-wrap:anywhere; }
+.site-shell main a { text-underline-offset:.2em; }
+.site-shell .topbar { padding:12px 0; }
+.site-shell .topbar-inner { width:min(var(--content-width),calc(100% - 48px)); gap:16px; }
+.site-shell .brand { font-family:inherit; font-size:1rem; }
+.site-shell .ui-button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 16px; border:1px solid #c9dcd3; border-radius:8px; background:var(--mint); color:var(--navy); font:inherit; font-size:.9rem; font-weight:700; cursor:pointer; text-decoration:none; }
+.site-shell .ui-button:hover { background:#c9e3d6; }
+.site-shell main :is(.topic,.course-note-card,.entry,.list-card,.module-card,.uniform-course-card,.source,.card,.dep) { border-radius:14px; border:1px solid var(--line); background:var(--card); box-shadow:none; }
+.site-shell main details { border:1px solid var(--line); border-radius:12px; background:var(--card); }
+.site-shell main summary { cursor:pointer; padding:16px 20px; color:var(--navy); font-size:1rem; line-height:1.5; font-weight:750; }
+.site-shell main details[open] > summary { border-bottom:1px solid var(--line); }
+.site-shell main :is(.table-wrap,.guide-table) { max-width:100%; overflow-x:auto; }
+.site-shell main table { width:100%; border-collapse:collapse; font-size:.9rem; }
+.site-shell main :is(th,td) { padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+.site-shell main th { color:var(--navy); background:#eaf0ed; }
+.site-shell main pre { max-width:100%; overflow-x:auto; border-radius:10px; }
+.site-shell main :is(.index-list,.secondary-nav,.module-dossier-index) a { min-height:40px; }
+@media(max-width:900px) {
+ .site-shell .topbar-inner { flex-direction:column; align-items:flex-start; gap:8px; }
+ .site-shell .primary-nav { width:100%; justify-content:flex-start; }
+}
+@media(max-width:600px) {
+ .site-shell .wrap,.site-shell > main.wrap,.site-shell .footer-inner,.site-shell .topbar-inner { width:calc(100% - 28px); }
+ .site-shell > main.wrap { padding:24px 0 48px; }
+ .site-shell main h1 { font-size:2rem; }
+ .site-shell main summary { padding:16px; }
+}
+
+.site-shell .hero :is(h1,h2) { color:#fffdf9; }
+.site-shell .footer-inner > div:first-child .wrap { width:auto; }

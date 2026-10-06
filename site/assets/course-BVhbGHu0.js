@@ -1,4 +1,4 @@
-import{n as e,o as t,t as n}from"./index-BRYVHUdW.js";import{a as r,i,n as a,r as o,t as s}from"./page-CLR7n3Ss.js";var c=`<article class="course">
+import{n as e,o as t,t as n}from"./index-oZ0zhkBt.js";import{a as r,i,n as a,r as o,t as s}from"./page-DTsIHfpa.js";var c=`<article class="course">
         <span class="course-type">核心必修</span>
         <div class="code">CASA0001</div>
         <h2>Urban Systems Theory <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h2>
@@ -1830,27 +1830,15 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
   display:inline-flex; margin-bottom:18px; font-size:.88rem; font-weight:650; text-decoration:none;\r
 }\r
 .site-shell .course-detail .uniform-course-hero {\r
-  padding:36px 40px; border:0; border-radius:20px; color:#f5f9fb;\r
+  padding:24px 30px; border:0; border-radius:20px; color:#f5f9fb;\r
   background:radial-gradient(ellipse at top right,#22566b 0%,transparent 65%),#082b49;\r
 }\r
-.site-shell .course-detail .uniform-course-code { display:flex; align-items:center; gap:12px; margin:0 0 18px; color:#c9e9df; font-size:.82rem; }\r
+.site-shell .course-detail .uniform-course-code { display:flex; align-items:center; gap:12px; margin:0 0 12px; color:#c9e9df; font-size:.82rem; }\r
 .site-shell .course-detail .uniform-course-code span:first-child { padding:5px 10px; border:1px solid #8cbfb466; border-radius:6px; }\r
 .site-shell .course-detail .uniform-course-code span:last-child { letter-spacing:.04em; opacity:.85; }\r
-.site-shell .course-detail .uniform-course-hero h1 { color:#fffdf9; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:1.2; letter-spacing:-.03em; margin:0 0 20px; max-width:900px; overflow-wrap:anywhere; }\r
-.site-shell .course-detail .uniform-course-hero .course-description { color:#e1edf1; max-width:82ch; margin:0; font-size:1rem; line-height:1.85; }\r
+.site-shell .course-detail .uniform-course-hero h1 { color:#fffdf9; font-size:clamp(1.6rem,2.8vw,2.25rem); line-height:1.2; letter-spacing:-.03em; margin:0 0 12px; max-width:900px; overflow-wrap:anywhere; }\r
+.site-shell .course-detail .uniform-course-hero .course-description { color:#e1edf1; max-width:82ch; margin:0; font-size:.92rem; line-height:1.7; }\r
 .site-shell .course-detail .uniform-course-hero a { color:#c5e9df; }\r
-.site-shell .course-detail .uniform-course-nav {\r
-  display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:18px 0 34px;\r
-  padding:8px; background:#e9eeeb; border:0; border-radius:14px;\r
-}\r
-.site-shell .course-detail .uniform-course-nav a {\r
-  display:flex; align-items:center; justify-content:flex-start; gap:10px; width:100%; min-height:52px;\r
-  padding:12px 14px; border:0; border-radius:9px; color:var(--navy); background:var(--card);\r
-  font-size:.86rem; font-weight:750; line-height:1.45; text-decoration:none; text-align:left;\r
-  transition:background-color .15s,color .15s;\r
-}\r
-.site-shell .course-detail .uniform-course-nav a:hover { background:#d0e6dd; }\r
-.site-shell .course-detail .chapter-number { color:#68817a; font-size:.74rem; flex:0 0 auto; }\r
 .site-shell .course-detail .course-section { padding:0; margin:0 0 36px; border:0; scroll-margin-top:24px; min-width:0; }\r
 .site-shell .course-detail h2 { color:var(--navy); margin:0 0 18px; font-size:1.5rem; line-height:1.4; letter-spacing:-.02em; }\r
 .site-shell .course-detail .course-summary-fields { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px; margin:0; }\r
@@ -1884,10 +1872,10 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
 .site-shell .course-detail :is(.pill,.guide-badge,.course-type) { display:inline-flex; padding:4px 9px; border-radius:6px; background:#eaf0ed; color:var(--blue); font-size:.77rem; font-weight:650; }\r
 .site-shell .course-detail :is(.guide-source,.module-source-line,.section-source-link) { font-size:.8rem; }\r
 .site-shell .course-detail :is(.callout,.guide-callout) { padding:16px 20px; margin:18px 0; border-left:3px solid #d8ae5f; border-radius:0 10px 10px 0; background:#fbf3e3; }\r
-.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:20px 0; }\r
-.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a { display:block; padding:18px; border:1px solid #d4e1df; border-radius:12px; background:#edf5f1; text-decoration:none; line-height:1.6; font-weight:700; overflow-wrap:anywhere; }\r
-.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a:hover { background:#dcece4; }\r
-.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a small { display:block; margin-top:6px; font-size:.78rem; font-weight:400; color:var(--muted); }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links,.qm-archive-links) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:20px 0; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links,.qm-archive-links) > a { display:block; padding:18px; border:1px solid #d4e1df; border-radius:12px; background:#edf5f1; text-decoration:none; line-height:1.6; font-weight:700; overflow-wrap:anywhere; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links,.qm-archive-links) > a:hover { background:#dcece4; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links,.qm-archive-links) > a small { display:block; margin-top:6px; font-size:.78rem; font-weight:400; color:var(--muted); }\r
 .site-shell .course-detail .course-empty { min-height:0; padding:20px 22px; border:1px solid #d9e2e1; border-radius:12px; background:#f0f3ef; }\r
 .site-shell .course-detail .course-empty p { margin:0; color:var(--muted); }\r
 .site-shell .course-detail :is(details,.uniform-course-reference) { padding:0; margin:16px 0; border:1px solid #d9e2e1; border-radius:12px; background:var(--card); min-width:0; }\r
@@ -1908,19 +1896,16 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
 .site-shell .course-detail :not(pre) > code { background:#eaf0ed; padding:2px 5px; border-radius:4px; font-size:.86em; overflow-wrap:anywhere; }\r
 .site-shell .course-detail [id] { scroll-margin-top:24px; }\r
 @media(max-width:900px) {\r
-  .site-shell .course-detail .uniform-course-nav { grid-template-columns:repeat(2,minmax(0,1fr)); }\r
   .site-shell .course-detail .course-summary-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }\r
   .site-shell .course-detail .course-summary-fields > div { grid-column:span 1; }\r
   .site-shell .course-detail .course-summary-fields > .course-material-status { grid-column:1/-1; }\r
-  .site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) { grid-template-columns:1fr; }\r
+  .site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links,.qm-archive-links) { grid-template-columns:1fr; }\r
 }\r
 @media(max-width:600px) {\r
   .site-shell main.course-detail { width:calc(100% - 28px); padding-top:20px; }\r
   .site-shell .course-detail .uniform-course-hero { padding:26px 22px; border-radius:16px; }\r
   .site-shell .course-detail .uniform-course-hero h1 { font-size:1.85rem; margin-bottom:16px; }\r
   .site-shell .course-detail .uniform-course-hero .course-description { font-size:.92rem; }\r
-  .site-shell .course-detail .uniform-course-nav { gap:6px; padding:6px; margin-bottom:28px; }\r
-  .site-shell .course-detail .uniform-course-nav a { padding:12px 10px; gap:8px; font-size:.8rem; }\r
   .site-shell .course-detail .course-summary-fields > div { padding:16px; }\r
   .site-shell .course-detail .module-detail-grid { grid-template-columns:1fr; }\r
   .site-shell .course-detail .module-detail-block { padding:18px; }\r
@@ -1936,15 +1921,32 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
 .site-shell .course-detail .guide-toc nav { display:flex; flex-wrap:wrap; gap:8px; }\r
 .site-shell .course-detail .guide-toc nav a { padding:6px 10px; border-radius:6px; background:#eaf0ed; text-decoration:none; }\r
 .site-shell .course-detail .guide-week > h3 { margin-top:0; }\r
-`,j=n(),M=Object.assign({"../content/courses/casa0001-current.html":``,"../content/courses/casa0001-official.html":c,"../content/courses/casa0001-reference.html":l,"../content/courses/casa0002-current.html":``,"../content/courses/casa0002-official.html":u,"../content/courses/casa0002-reference.html":``,"../content/courses/casa0005-current.html":d,"../content/courses/casa0005-official.html":f,"../content/courses/casa0005-reference.html":p,"../content/courses/casa0006-current.html":``,"../content/courses/casa0006-official.html":m,"../content/courses/casa0006-reference.html":``,"../content/courses/casa0007-current.html":h,"../content/courses/casa0007-official.html":g,"../content/courses/casa0007-reference.html":_,"../content/courses/casa0008-current.html":``,"../content/courses/casa0008-official.html":v,"../content/courses/casa0008-reference.html":``,"../content/courses/casa0010-current.html":``,"../content/courses/casa0010-official.html":y,"../content/courses/casa0010-reference.html":b,"../content/courses/casa0011-current.html":``,"../content/courses/casa0011-official.html":x,"../content/courses/casa0011-reference.html":``,"../content/courses/casa0013-current.html":``,"../content/courses/casa0013-official.html":S,"../content/courses/casa0013-reference.html":C,"../content/courses/casa0023-current.html":``,"../content/courses/casa0023-official.html":w,"../content/courses/casa0023-reference.html":``,"../content/courses/casa0025-current.html":``,"../content/courses/casa0025-official.html":T,"../content/courses/casa0025-reference.html":``,"../content/courses/casa0028-current.html":``,"../content/courses/casa0028-official.html":E,"../content/courses/casa0028-reference.html":``,"../content/courses/casa0029-current.html":``,"../content/courses/casa0029-official.html":D,"../content/courses/casa0029-reference.html":``,"../content/courses/casa0033-current.html":``,"../content/courses/casa0033-official.html":O,"../content/courses/casa0033-reference.html":``,"../content/courses/casa0034-current.html":``,"../content/courses/casa0034-official.html":k,"../content/courses/casa0034-reference.html":``}),N=[[`basic-information`,`基本資訊`],[`current-materials`,`本屆教材與課程內容`],[`official-information`,`官方課程資訊`],[`reference-materials`,`歷屆教材與學習參考`]];function P({code:t}){let n=e[t],c=e=>M[`../content/courses/${t}-${e}.html`]?.trim()||``,l=c(`current`),u=c(`reference`),d=`<main class="uniform-course-page course-detail">
+\r
+.site-shell .course-detail .materials-tabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; padding:6px; background:#e6ede8; border-radius:12px; margin:20px 0 26px; }\r
+.site-shell .course-detail .materials-tabs button { font:inherit; font-size:1rem; font-weight:750; padding:14px 20px; border:0; border-radius:8px; color:var(--muted); background:transparent; cursor:pointer; }\r
+.site-shell .course-detail .materials-tabs button[aria-selected='true'] { color:var(--navy); background:var(--card); box-shadow:0 2px 7px #102a430a; }\r
+.site-shell .course-detail [role='tabpanel'][hidden] { display:none; }\r
+.site-shell .course-detail [role='tabpanel'] { min-width:0; }\r
+.site-shell .course-detail .course-information > summary { font-size:1.1rem; }\r
+.site-shell .course-detail .course-information-body { padding:24px; }\r
+.site-shell .course-detail .course-information-body > section:last-child { margin-bottom:0; }\r
+.site-shell .course-detail .course-empty .ui-button { margin-top:16px; }\r
+@media(max-width:600px) {\r
+ .site-shell .course-detail .uniform-course-hero { padding:22px; }\r
+ .site-shell .course-detail .materials-tabs button { padding:12px; font-size:.92rem; }\r
+}\r
+`,j=n(),M=Object.assign({"../content/courses/casa0001-current.html":``,"../content/courses/casa0001-official.html":c,"../content/courses/casa0001-reference.html":l,"../content/courses/casa0002-current.html":``,"../content/courses/casa0002-official.html":u,"../content/courses/casa0002-reference.html":``,"../content/courses/casa0005-current.html":d,"../content/courses/casa0005-official.html":f,"../content/courses/casa0005-reference.html":p,"../content/courses/casa0006-current.html":``,"../content/courses/casa0006-official.html":m,"../content/courses/casa0006-reference.html":``,"../content/courses/casa0007-current.html":h,"../content/courses/casa0007-official.html":g,"../content/courses/casa0007-reference.html":_,"../content/courses/casa0008-current.html":``,"../content/courses/casa0008-official.html":v,"../content/courses/casa0008-reference.html":``,"../content/courses/casa0010-current.html":``,"../content/courses/casa0010-official.html":y,"../content/courses/casa0010-reference.html":b,"../content/courses/casa0011-current.html":``,"../content/courses/casa0011-official.html":x,"../content/courses/casa0011-reference.html":``,"../content/courses/casa0013-current.html":``,"../content/courses/casa0013-official.html":S,"../content/courses/casa0013-reference.html":C,"../content/courses/casa0023-current.html":``,"../content/courses/casa0023-official.html":w,"../content/courses/casa0023-reference.html":``,"../content/courses/casa0025-current.html":``,"../content/courses/casa0025-official.html":T,"../content/courses/casa0025-reference.html":``,"../content/courses/casa0028-current.html":``,"../content/courses/casa0028-official.html":E,"../content/courses/casa0028-reference.html":``,"../content/courses/casa0029-current.html":``,"../content/courses/casa0029-official.html":D,"../content/courses/casa0029-reference.html":``,"../content/courses/casa0033-current.html":``,"../content/courses/casa0033-official.html":O,"../content/courses/casa0033-reference.html":``,"../content/courses/casa0034-current.html":``,"../content/courses/casa0034-official.html":k,"../content/courses/casa0034-reference.html":``});function N({code:t}){let n=e[t],c=e=>M[`../content/courses/${t}-${e}.html`]?.trim()||``,l=c(`current`),u=c(`reference`),d=`<main class="uniform-course-page course-detail">
     <a class="course-breadcrumb" href="/${n.term}">← 返回學期總覽</a>
     <header class="uniform-course-hero">
       <p class="uniform-course-code"><span>${t.toUpperCase()}</span><span>2026/27</span></p>
       <h1>${i(n.title)}</h1>${a(n)}
     </header>
-    <nav class="uniform-course-nav" aria-label="章節導覽">${N.map(([e,t],n)=>`<a href="#${e}"><span class="chapter-number" aria-hidden="true">0${n+1}</span><span>${t}</span></a>`).join(``)}</nav>
-    <section id="basic-information" class="course-section"><h2>基本資訊</h2>${o(n)}</section>
-    <section id="current-materials" class="course-section"><h2>本屆教材與課程內容</h2><div class="course-existing-content">${l||`<div class="course-empty"><p>${t===`casa0010`?`本屆研究 brief 與里程碑日期尚未取得或確認。`:`本屆教材尚未取得或確認`}</p></div>`}</div></section>
-    <section id="official-information" class="course-section"><h2>官方課程資訊</h2><div class="course-existing-content">${c(`official`)}</div></section>
-    <details id="reference-materials" class="uniform-course-reference"><summary>歷屆教材與學習參考</summary><div class="course-existing-content">${u||`<p>尚無已確認的歷屆教材。</p>`}</div></details>
-  </main>`;return(0,j.jsx)(s,{page:t,content:d,pageStyles:A,pageTranslations:r},t)}export{P as default};
+    <course-materials>
+      <section id="current-materials" class="course-section"><h2>本屆教材</h2><div class="course-existing-content">${l||`<div class="course-empty"><p>${t===`casa0010`?`本屆研究 brief 與里程碑日期尚未取得或確認。`:`本屆教材尚未取得或確認`}</p><button type="button" class="ui-button" data-show-history>查看歷屆教材與學習參考 →</button></div>`}</div></section>
+      <section id="reference-materials" class="course-section"><h2>歷屆教材與學習參考</h2><div class="course-existing-content">${u||`<div class="course-empty"><p>尚無已確認的歷屆教材。</p></div>`}</div></section>
+    </course-materials>
+    <details id="course-information" class="course-information"><summary>課程資訊</summary><div class="course-information-body">
+      <section id="basic-information" class="course-section"><h2>基本資訊</h2>${o(n)}</section>
+      <section id="official-information" class="course-section"><h2>官方課程資訊</h2><div class="course-existing-content">${c(`official`)}</div></section>
+    </div></details>
+  </main>`;return(0,j.jsx)(s,{page:t,content:d,pageStyles:A,pageTranslations:r},t)}export{N as default};

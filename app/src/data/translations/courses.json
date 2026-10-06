@@ -1797,5 +1797,10 @@
   "以 R、QGIS 與空間資料建立地圖、分析空間型態並批判解讀結果。": "Use R, QGIS and spatial data to map, analyse spatial patterns and critically interpret results.",
   "學期": "Term",
   "學分": "Credits",
-  "可水平捲動的表格": "Horizontally scrollable table"
+  "可水平捲動的表格": "Horizontally scrollable table",
+  "本屆教材": "Current materials",
+  "歷屆教材": "Previous cohorts",
+  "教材年度": "Material cohort",
+  "課程資訊": "Course information",
+  "查看歷屆教材與學習參考 →": "View previous cohorts and study references →"
 }

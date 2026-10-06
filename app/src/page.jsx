@@ -6,6 +6,8 @@ import courses from './data/courses.json';
 import courseAliases from './data/course-aliases.json';
 import courseTranslations from './data/translations/courses.json';
 import courseStyles from './styles/courses.css?raw';
+import CourseMaterials from './components/course-materials.jsx';
+import sharedStyles from './styles/shared-ui.css?raw';
 import { courseCardHtml } from './course-content.js';
 
 const routeByHtml = {
@@ -28,9 +30,21 @@ function routeForHref(href, pathname) {
   return null;
 }
 
+function HashLink({ hash, children, ...props }) {
+  const location = useLocation();
+  return <Link {...props} to={{ pathname: location.pathname, search: location.search, hash }}>{children}</Link>;
+}
+
 function parsePageHtml(html, pathname) {
   const options = {};
   options.replace = (node, index) => {
+      if (node.name === 'course-materials') {
+        const panels = node.children.filter(child => child.type === 'tag');
+        const current = panels.find(child => child.attribs.id === 'current-materials');
+        const history = panels.find(child => child.attribs.id === 'reference-materials');
+        const ids = item => [item.attribs?.id, ...(item.children || []).flatMap(ids)].filter(Boolean);
+        return <CourseMaterials current={domToReact([current], options)} history={domToReact([history], options)} currentIds={ids(current)} historyIds={ids(history)} />;
+      }
       const course = courses[pathname.slice(1)];
       if (course && node.type === 'tag') {
         const props = attributesToProps(node.attribs || {});
@@ -50,7 +64,7 @@ function parsePageHtml(html, pathname) {
           return <div key={index} {...props} className="course-content-panel">{domToReact(node.children, options)}</div>;
         }
         if (node.name === 'details' && classes.includes('course-dossier')) {
-          return <div key={index} {...preserveId} className="course-content-panel">{domToReact(node.children.filter(child => child.name !== 'summary'), options)}</div>;
+          return <div key={index} {...preserveId} className="course-content-panel">{classes.includes('qm-history') && <h3>{domToReact(node.children.find(child => child.name === 'summary')?.children || [], options)}</h3>}{domToReact(node.children.filter(child => child.name !== 'summary'), options)}</div>;
         }
         if (classes.includes('module-dossier-heading')) {
           return <div key={index} {...preserveId} className="course-content-heading">{domToReact(node.children.filter(child => child.name === 'strong'), options)}</div>;
@@ -67,6 +81,7 @@ function parsePageHtml(html, pathname) {
       if (!to) return undefined;
       const props = attributesToProps(node.attribs);
       delete props.href;
+      if (node.attribs.href.startsWith('#')) return <HashLink key={`${node.attribs.href}-${index}`} {...props} hash={node.attribs.href}>{domToReact(node.children, options)}</HashLink>;
       return (
         <Link key={`${node.attribs.href}-${index}`} {...props} to={to}>
           {domToReact(node.children, options)}
@@ -235,11 +250,16 @@ function usePageStyles(page, pageStyles) {
     const style = document.createElement('style');
     style.dataset.pageStyles = page;
     style.textContent = pageStyles;
+    const shared = document.createElement('style');
+    shared.dataset.sharedUi = 'true';
+    shared.textContent = sharedStyles;
     const designSystem = document.getElementById('design-system');
     document.head.insertBefore(style, designSystem ?? null);
+    document.head.appendChild(shared);
     document.body.classList.add('site-body');
     return () => {
       style.remove();
+      shared.remove();
       document.body.classList.remove('site-body');
     };
   }, [page, pageStyles]);
@@ -250,7 +270,7 @@ function useHashNavigation(page, navigate, location) {
     const decodedHash = decodeURIComponent(location.hash.slice(1));
     const alias = courseAliases[`${page}#${decodedHash}`];
     if (alias && !courses[page]) {
-      navigate(alias, { replace: true });
+      navigate(`${alias.split('#')[0]}${location.search}${alias.includes('#') ? `#${alias.split('#')[1]}` : ''}`, { replace: true });
       return;
     }
     const courseMatch = decodedHash.match(/^(casa\d{4})(?:-|$)/);

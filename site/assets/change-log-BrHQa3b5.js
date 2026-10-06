@@ -1,4 +1,4 @@
-import{o as e,t}from"./index-BRYVHUdW.js";import{t as n}from"./page-CLR7n3Ss.js";e();var r=`<main class="wrap">\r
+import{o as e,t}from"./index-oZ0zhkBt.js";import{t as n}from"./page-DTsIHfpa.js";e();var r=`<main class="wrap">\r
     <span class="eyebrow">Project history · based on Git commits</span>\r
     <h1>Change Log</h1>\r
     <p class="lede">依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。</p>\r
@@ -50,64 +50,17 @@ import{o as e,t}from"./index-BRYVHUdW.js";import{t as n}from"./page-CLR7n3Ss.js"
     </div>\r
   </main>\r
 `,i=`\r
-    :root {\r
-      color-scheme: light;\r
-      --ink: #102a43;\r
-      --muted: #5f7184;\r
-      --paper: #f7f4ee;\r
-      --line: #dbe2e8;\r
-      --navy: #082b49;\r
-      --blue: #1e6f8f;\r
-      --coral: #e9755b;\r
-      --card: #fffdf9;\r
-    }\r
-    * { box-sizing: border-box; }\r
-    body {\r
-      min-height: 100vh;\r
-      margin: 0;\r
-      color: var(--ink);\r
-      background: radial-gradient(circle at 10% 0%, rgba(232,178,76,.16), transparent 28rem), linear-gradient(180deg, #fbfaf7 0%, var(--paper) 100%);\r
-      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;\r
-      line-height: 1.65;\r
-    }\r
-    a { color: var(--blue); }\r
-    a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }\r
-    .wrap { width: min(1000px, calc(100% - 36px)); margin: 0 auto; }\r
-    .topbar { position: sticky; top: 0; z-index: 2; padding: 16px 0; border-bottom: 1px solid rgba(16,42,67,.10); background: rgba(255,253,249,.9); backdrop-filter: blur(12px); }\r
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-width: 0; }\r
-    .brand { color: var(--navy); font-size: 1.05rem; font-weight: 850; text-decoration: none; }\r
-    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 16px; min-width: 0; }\r
-    nav a { display: inline-flex; align-items: center; min-height: 40px; color: var(--ink); font-size: .9rem; font-weight: 750; text-decoration: none; }\r
-    nav a[aria-current="page"] { color: var(--coral); }\r
-    main { padding: 54px 0 72px; }\r
-    .eyebrow { color: var(--coral); font-size: .76rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }\r
-    h1 { margin: 10px 0 12px; color: var(--navy); font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .98; }\r
-    .lede { max-width: 690px; margin: 0; color: #3d5368; font-size: 1.08rem; }\r
-    .entries { display: grid; gap: 16px; margin-top: 34px; }\r
-    .entry { padding: 22px 24px; border: 1px solid var(--line); background: rgba(255,253,249,.84); }\r
-    .entry-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin-bottom: 12px; }\r
-    .entry h2 { margin: 0; color: var(--navy); font-size: 1.35rem; }\r
-    .entry time { color: var(--muted); font-size: .88rem; font-weight: 750; }\r
-    .entry ul { margin: 0; padding-left: 21px; }\r
-    .entry li + li { margin-top: 8px; }\r
-    code { color: var(--coral); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .8em; font-weight: 800; }\r
-    .intro-note { margin-top: 24px; padding: 15px 18px; border-left: 3px solid var(--blue); background: #f0f5f5; color: #40576b; font-size: .9rem; }\r
-    footer { padding: 0 0 42px; color: var(--muted); font-size: .84rem; }\r
-    @media (max-width: 820px) {\r
-      .topbar { padding: 10px 0; }\r
-      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 8px; }\r
-      .topbar-inner > * { width: 100%; }\r
-      .brand { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }\r
-      nav { justify-content: flex-start; gap: 6px; }\r
-      nav a { padding: 6px 10px; border: 1px solid var(--line); background: rgba(255,253,249,.78); }\r
-      nav a[aria-current="page"] { border-color: var(--navy); background: var(--navy); color: #fffaf1; }\r
-      main { padding-top: 40px; }\r
-    }\r
+.lede { max-width: 690px; margin: 0; color: #3d5368; font-size: 1.08rem; }\r
+.entries { display: grid; gap: 16px; margin-top: 34px; }\r
+.entry { padding: 22px 24px; border: 1px solid var(--line); background: rgba(255,253,249,.84); }\r
+.entry-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin-bottom: 12px; }\r
+.entry h2 { margin: 0; color: var(--navy); font-size: 1.35rem; }\r
+.entry time { color: var(--muted); font-size: .88rem; font-weight: 750; }\r
+.entry ul { margin: 0; padding-left: 21px; }\r
+.entry li + li { margin-top: 8px; }\r
+code { color: var(--coral); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .8em; font-weight: 800; }\r
+.intro-note { margin-top: 24px; padding: 15px 18px; border-left: 3px solid var(--blue); background: #f0f5f5; color: #40576b; font-size: .9rem; }\r
     @media (max-width: 480px) {\r
-      .wrap { width: min(100% - 24px, 1000px); }\r
-      .topbar nav { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }\r
-      .topbar nav a { flex: 0 0 auto; white-space: nowrap; }\r
-      .entry { padding: 19px; }\r
-      main { padding-top: 32px; }\r
-    }
+.entry { padding: 19px; }\r
+    }\r
 `,a={"新增 CASA0005 完整課程與逐週學習指南":`Added a complete CASA0005 course and weekly study guide`,"2026 年 10 月 4 日":`4 October 2026`,"新增中英文 CASA0005 專頁，整理本屆 Moodle 課表、師資、評量日期、十週實作指南、環境安裝、方法比較與術語；保留來源及未確認事項。 ":`Added a bilingual CASA0005 page with the current Moodle timetable, staff, assessment dates, ten-week practical guide, setup, method comparisons and glossary, preserving sources and unresolved details. `,"閱讀完整指南 →":`Read the complete guide →`,"Term 1 改為摘要與專頁入口，保留既有課程錨點，提供桌面章節目錄與手機可展開目錄。":`Term 1 now provides a summary and dedicated-page entry, preserving course anchors with a desktop chapter index and expandable mobile index.`,"在環境安裝的第 4 步直接加入教材 GitHub repository，方便以 RStudio clone 課程 project。":`The setup section now links directly to the handbook GitHub repository in step 4 for cloning the course project in RStudio.`,"新增公開 practical handbook 內容索引，逐章整理 Chapter 1–8 與 repository 延伸檔案，並標示它們不等同本屆正式作業範圍。":`Added a public handbook contents index covering Chapters 1–8 and repository extras, with a note that repository files are not automatically current assignments.`,頁面導覽:`Page navigation`,筆記區:`Notes`,課程網站擴充與內容整理:`Course site expansion and content updates`,"依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。":`A history of the course site, from its creation to recent content updates, based on this project's Git commits.`,"以下 commit hash 可在 GitHub 上用來查閱原始提交內容；摘要依提交訊息整理。最新紀錄列在前面。":`Use each commit hash to find the original change on GitHub. Summaries are based on commit messages, with the latest first.`,"UCL Urban Spatial Science MSc · 更新紀錄以 Git 提交為準":`UCL Urban Spatial Science MSc · Git commits are the source of record`,"Change Log｜UCL Urban Spatial Science MSc":`Change Log｜UCL Urban Spatial Science MSc`,課程總覽:`Overview`,資料來源:`Sources`,已選:`Selected`,"已選 · 15 credits":`Selected · 15 credits`,"閱讀詳解 →":`Read details →`,"官方來源 ↗":`Official source ↗`,已選的四門課:`Four selected modules`,"已選的四門 Term 2 課程":`Four selected Term 2 modules`,"查看先修關係 ↓":`See prerequisites ↓`,選修參考:`Elective reference`,"已選 · 詳解 →":`Selected · Details →`,"前往 CASA0010 完整課程詳解 →":`Read the full CASA0010 module details →`,"CASA0010 · 完整課程詳解":`CASA0010 · Full module details`},o=t();function s(){return(0,o.jsx)(n,{page:`change-log`,content:r,pageStyles:i,pageTranslations:a})}export{s as default};
