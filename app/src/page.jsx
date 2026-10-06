@@ -71,10 +71,15 @@ function CourseMenu({ pathname }) {
     }}>
       <summary ref={trigger} aria-controls="course-menu-links" className={courses[pathname.slice(1)] ? 'is-current-course' : undefined}>課程總覽</summary>
       <div className="course-menu-panel" id="course-menu-links">
-        {['term1', 'term2', 'term3'].map(term => (
-          <section key={term} aria-label={term === 'term3' ? 'Dissertation' : term === 'term1' ? 'Term 1' : 'Term 2'}>
-            <h2>{term === 'term3' ? 'Dissertation' : term === 'term1' ? 'Term 1' : 'Term 2'}</h2>
-            {Object.values(courses).filter(course => course.term === term).map(course => (
+        {[
+          { label: 'Term 1', items: Object.values(courses).filter(course => course.term === 'term1' && course.selected) },
+          { label: 'Term 2', items: Object.values(courses).filter(course => course.term === 'term2' && course.selected) },
+          { label: 'Dissertation', items: Object.values(courses).filter(course => course.term === 'term3') },
+          { label: 'Other', items: Object.values(courses).filter(course => !course.selected && course.term !== 'term3') },
+        ].map(group => (
+          <section key={group.label} aria-label={group.label}>
+            <h2>{group.label}</h2>
+            {group.items.map(course => (
               <Link key={course.code} to={`/${course.code}`} aria-current={pathname === `/${course.code}` ? 'page' : undefined}
                 onClick={() => { menu.current.open = false; trigger.current.focus(); }}>
                 <span>{course.code.toUpperCase()}</span> {course.title}

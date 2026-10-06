@@ -1,4 +1,4 @@
-import{n as e,o as t,t as n}from"./index-CswNZki6.js";import{a as r,i,n as a,o,r as s,t as c}from"./page-fmarXlhn.js";import{t as l}from"./term1-DtGTINBS.js";import{t as u}from"./term2-BVIludt2.js";import{t as d}from"./term3-DMHKDCK-.js";var f=`<article class="course">
+import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r as s,t as c}from"./page-B8rv8gbQ.js";import{t as l}from"./term1-DtGTINBS.js";import{t as u}from"./term2-BVIludt2.js";import{t as d}from"./term3-DMHKDCK-.js";var f=`<article class="course">
         <span class="course-type">核心必修</span>
         <div class="code">CASA0001</div>
         <h2>Urban Systems Theory <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h2>

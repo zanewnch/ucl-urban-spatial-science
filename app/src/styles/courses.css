@@ -85,3 +85,14 @@
  .site-shell .course-menu { position:static; }
  .site-shell .course-menu-panel { left:14px; right:14px; top:100%; width:auto; max-height:65vh; }
 }
+
+/* Match the disclosure trigger to the adjacent Home and language controls. */
+.site-shell .topbar .primary-nav { align-items:center; gap:6px; }
+.site-shell .topbar .course-menu > summary {
+ min-height:40px; margin:0; padding:7px 10px; border:1px solid transparent;
+ border-radius:999px; font-size:.82rem; line-height:1.2; font-weight:750;
+ color:var(--ink); background:transparent;
+}
+.site-shell .topbar .course-menu > summary.is-current-course,
+.site-shell .topbar .course-menu[open] > summary { color:var(--navy); background:var(--mint); }
+.site-shell .topbar nav .course-menu-panel a { text-align:left; }
