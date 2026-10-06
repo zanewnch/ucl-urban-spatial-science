@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js";e();var r=`<main>
+import{o as e,t}from"./index-d_7Kg0pB.js";import{t as n}from"./page-Cbc9J4Og.js";e();var r=`<main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
@@ -26,11 +26,11 @@ import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js"
           <a class="back-home" href="#home">↑ 回到首頁</a>
         </div>
         <div class="callout"><strong>目前選定的 Term 1 組合：</strong>三門核心必修 CASA0001 Urban Systems Theory、CASA0005 Geographic Information Systems and Science、CASA0007 Quantitative Methods，加上 CASA0013 Foundations of Spatial Data Science 選修；各 15 credits，共 60 credits。課程連結：<a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">CASA0001</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">CASA0005</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">CASA0007</a> · <a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">CASA0013</a>。<a href="term1.html">閱讀四門課的分工、週次、工具、授課者與評量 →</a></div>
-        <div class="selected-course-grid" aria-label="TERM1 已選課程">
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0001</h3><p>Urban Systems Theory</p><div class="selected-links"><a href="term1.html#casa0001">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0005</h3><p>Geographic Information Systems and Science</p><div class="selected-links"><a href="term1.html#casa0005">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0007</h3><p>Quantitative Methods</p><div class="selected-links"><a href="term1.html#casa0007">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/quantitative-methods-CASA0007" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0013</h3><p>Foundations of Spatial Data Science</p><div class="selected-links"><a href="term1.html#casa0013">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/foundations-of-spatial-data-science-CASA0013" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
+        <div class="selected-course-grid uniform-course-grid" aria-label="TERM1 已選課程">
+          <course-card code="casa0001"></course-card>
+          <course-card code="casa0005"></course-card>
+          <course-card code="casa0007"></course-card>
+          <course-card code="casa0013"></course-card>
         </div>
       </div>
     </section>
@@ -42,11 +42,11 @@ import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js"
           <a class="back-home" href="#home">↑ 回到首頁</a>
         </div>
         <div class="callout"><strong>目前選定的 Term 2 選修：</strong><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-simulation-CASA0002" target="_blank" rel="noopener">CASA0002 Urban Simulation</a>、<a href="https://www.ucl.ac.uk/module-catalogue/modules/agent-based-modelling-for-spatial-systems-CASA0011" target="_blank" rel="noopener">CASA0011 Agent Based Modelling for Spatial Systems</a>、<a href="https://www.ucl.ac.uk/module-catalogue/modules/building-spatial-applications-with-big-data-CASA0025" target="_blank" rel="noopener">CASA0025 Building Spatial Applications with Big Data</a>、<a href="https://www.ucl.ac.uk/module-catalogue/modules/city-futures-systems-and-methods-of-place-based-change-CASA0034" target="_blank" rel="noopener">CASA0034 City Futures: Systems and Methods of Place-Based Change</a>，各 15 credits，共 60 credits。連同 Term 1 的 CASA0013，選修合計 75 credits；再加 45 credits 三門核心必修與 60 credits dissertation，總計 180。依提供的選課畫面整理；availability 與選課資格仍請以 <a href="https://www.ucl.ac.uk/module-catalogue/" target="_blank" rel="noopener">UCL Module Catalogue</a> 和 <a href="https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/urban-spatial-science-msc" target="_blank" rel="noopener">programme page</a> 為準。<a href="term2.html">查看 Term 2 課程、pathway 與選修詳解 →</a></div>
-        <div class="selected-course-grid" aria-label="TERM2 已選課程">
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0002</h3><p>Urban Simulation</p><div class="selected-links"><a href="term2.html#casa0002-dossier">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-simulation-CASA0002" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0011</h3><p>Agent Based Modelling for Spatial Systems</p><div class="selected-links"><a href="term2.html#casa0011-dossier">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/agent-based-modelling-for-spatial-systems-CASA0011" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0025</h3><p>Building Spatial Applications with Big Data</p><div class="selected-links"><a href="term2.html#casa0025-dossier">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/building-spatial-applications-with-big-data-CASA0025" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
-          <article class="selected-course"><span class="selected-badge">已選 · 15 credits</span><h3>CASA0034</h3><p>City Futures: Systems and Methods of Place-Based Change</p><div class="selected-links"><a href="term2.html#casa0034-dossier">閱讀詳解 →</a><a href="https://www.ucl.ac.uk/module-catalogue/modules/city-futures-systems-and-methods-of-place-based-change-CASA0034" target="_blank" rel="noopener">官方來源 ↗</a></div></article>
+        <div class="selected-course-grid uniform-course-grid" aria-label="TERM2 已選課程">
+          <course-card code="casa0002"></course-card>
+          <course-card code="casa0011"></course-card>
+          <course-card code="casa0025"></course-card>
+          <course-card code="casa0034"></course-card>
         </div>
       </div>
     </section>
@@ -103,7 +103,7 @@ import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js"
         </div>
         <div class="timeline">
           <article class="term" data-term="A"><span class="term-label">Before you join</span><h3>完成入學準備</h3><ul><li>接受 offer 並完成 pre-enrolment</li><li>確認住宿、簽證與 international welcome</li><li>完成 online induction 與 module selection</li></ul><a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源：UCL CASA Welcome 2026–27</a></article>
-          <article class="term" data-term="B"><span class="term-label">28 Sep – 1 Oct</span><h3>認識 CASA 與課程</h3><ul><li>Course introduction、Library、Student Support、Careers</li><li>CASA Show &amp; Tell 與 Personal Tutor sessions</li><li>Programme Leaders、How to Succeed、optional modules drop-in <a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源 ↗</a></li></ul><a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源：UCL CASA Welcome 2026–27</a></article>
+          <article class="term" data-term="B"><span class="term-label">28 Sep – 1 Oct</span><h3>認識 CASA 與課程</h3><ul><li>Course introduction、Library、Student Support、Careers</li><li>CASA Show & Tell 與 Personal Tutor sessions</li><li>Programme Leaders、How to Succeed、optional modules drop-in <a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源 ↗</a></li></ul><a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源：UCL CASA Welcome 2026–27</a></article>
           <article class="term" data-term="C"><span class="term-label">2 October</span><h3>從 Bloomsbury 到 Stratford</h3><ul><li>Mandarin-speaking students orientation</li><li>CASA Treasure Hunt</li><li>Food and drinks at Crate Brewery</li></ul><a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源：UCL CASA Welcome 2026–27</a></article>
         </div>
         <div class="callout"><strong>課程窗口：</strong>Programme Director 為 Dr Claire Dooley；Head of Department 為 Professor Jon Reades。課程問題可聯絡 <a href="mailto:bartlett.pg-casa@ucl.ac.uk">bartlett.pg-casa@ucl.ac.uk</a>。活動時間與教室仍應以 UCL Online Timetable 和 UCL email 為準。<a href="https://sway.cloud.microsoft/nDoVumNgOh4tpubH?ref=Link" target="_blank" rel="noopener">來源：UCL CASA Welcome 2026–27</a></div>
@@ -136,7 +136,8 @@ import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js"
         </ul>
       </div>
     </section>
-  </main>`,i=`\r
+  </main>
+`,i=`\r
     :root {\r
       --ink: #102a43;\r
       --muted: #5f7184;\r

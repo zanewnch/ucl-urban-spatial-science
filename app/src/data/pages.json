@@ -182,10 +182,26 @@
     "brandLabel": "Urban Spatial Science MSc",
     "eyebrow": "CASA / UCL",
     "nav": [
-      { "href": "index.html", "label": "課程總覽", "current": false },
-      { "href": "term1.html", "label": "Term 1", "current": false },
-      { "href": "term2.html", "label": "Term 2", "current": false },
-      { "href": "term3.html", "label": "Dissertation", "current": false }
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
     ],
     "footerHtml": "",
     "footerClass": "",
@@ -228,8 +244,8 @@
   },
   "casa0005": {
     "file": "casa0005.html",
-    "title": "CASA0005 完整課程與逐週學習指南｜UCL",
-    "head": "",
+    "title": "CASA0005 · Geographic Information Systems and Science",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 1 選課｜UCL Urban Spatial Science MSc</title>",
     "brandHref": "index.html",
     "brandLabel": "Urban Spatial Science MSc",
     "eyebrow": "",
@@ -257,6 +273,482 @@
     ],
     "footerHtml": "",
     "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0001": {
+    "file": "casa0001.html",
+    "title": "CASA0001 · Urban Systems Theory",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 1 選課｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": true
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0007": {
+    "file": "casa0007.html",
+    "title": "CASA0007 · Quantitative Methods",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 1 選課｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": true
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0013": {
+    "file": "casa0013.html",
+    "title": "CASA0013 · Foundations of Spatial Data Science",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 1 選課｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": true
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0002": {
+    "file": "casa0002.html",
+    "title": "CASA0002 · Urban Simulation",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0011": {
+    "file": "casa0011.html",
+    "title": "CASA0011 · Agent Based Modelling for Spatial Systems",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0025": {
+    "file": "casa0025.html",
+    "title": "CASA0025 · Building Spatial Applications with Big Data",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0034": {
+    "file": "casa0034.html",
+    "title": "CASA0034 · City Futures: Systems and Methods of Place-Based Change",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0006": {
+    "file": "casa0006.html",
+    "title": "CASA0006 · Data Science for Spatial Systems",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0008": {
+    "file": "casa0008.html",
+    "title": "CASA0008 · Smart Cities: Context, Policy and Government",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0023": {
+    "file": "casa0023.html",
+    "title": "CASA0023 · Remotely Sensing Cities and Environments",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0029": {
+    "file": "casa0029.html",
+    "title": "CASA0029 · Urban Data Visualisation",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0028": {
+    "file": "casa0028.html",
+    "title": "CASA0028 · Designing Spatial Data Stories",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0033": {
+    "file": "casa0033.html",
+    "title": "CASA0033 · Spatial AI in Practice",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <title>Term 2｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "CASA / UCL",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": true
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": false
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "",
+    "hasFooter": false,
+    "mainAttrs": ""
+  },
+  "casa0010": {
+    "file": "casa0010.html",
+    "title": "CASA0010 · Urban Spatial Science Dissertation",
+    "head": "<meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta name=\"theme-color\" content=\"#f7f4ee\"> <meta name=\"description\" content=\"UCL CASA Urban Spatial Science MSc Term 3 dissertation 說明、歷屆研究主題與公開論文資源。\"> <title>Term 3 Dissertation｜UCL Urban Spatial Science MSc</title>",
+    "brandHref": "index.html",
+    "brandLabel": "Urban Spatial Science MSc",
+    "eyebrow": "",
+    "nav": [
+      {
+        "href": "index.html",
+        "label": "課程總覽",
+        "current": false
+      },
+      {
+        "href": "term1.html",
+        "label": "Term 1",
+        "current": false
+      },
+      {
+        "href": "term2.html",
+        "label": "Term 2",
+        "current": false
+      },
+      {
+        "href": "term3.html",
+        "label": "Dissertation",
+        "current": true
+      }
+    ],
+    "footerHtml": "",
+    "footerClass": "wrap",
     "hasFooter": false,
     "mainAttrs": ""
   }

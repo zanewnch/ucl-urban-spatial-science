@@ -1,7 +1,12 @@
-import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import parse, { attributesToProps, domToReact } from 'html-react-parser';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import pages from './data/pages.json';
+import courses from './data/courses.json';
+import courseAliases from './data/course-aliases.json';
+import courseTranslations from './data/translations/courses.json';
+import courseStyles from './styles/courses.css?raw';
+import { courseCardHtml } from './course-content.js';
 
 const routeByHtml = {
   'index.html': '/',
@@ -17,8 +22,8 @@ function routeForHref(href, pathname) {
   if (!href) return null;
   if (href.startsWith('#')) return `${pathname}${href}`;
   const localHref = href.replace(/^\.\//, '');
-  const match = localHref.match(/^(index|term1|casa0005|term2|term3|notes|change-log)\.html(.*)$/);
-  if (match) return `${routeByHtml[`${match[1]}.html`]}${match[2]}`;
+  const match = localHref.match(/^(index|term1|casa\d{4}|term2|term3|notes|change-log)\.html(.*)$/);
+  if (match) return `${routeByHtml[`${match[1]}.html`] || `/${match[1]}`}${match[2]}`;
   if (href.startsWith('/')) return href;
   return null;
 }
@@ -26,6 +31,7 @@ function routeForHref(href, pathname) {
 function parsePageHtml(html, pathname) {
   const options = {};
   options.replace = (node, index) => {
+      if (node.name === 'course-card') return parsePageHtml(courseCardHtml(node.attribs.code, node.attribs), pathname);
       if (node.type !== 'tag' || node.name !== 'a' || !node.attribs?.href) return undefined;
       if (node.attribs.href.startsWith('/ucl-urban-spatial-science/casa0005-handbook/')) return undefined;
       const to = routeForHref(node.attribs.href, pathname);
@@ -41,31 +47,57 @@ function parsePageHtml(html, pathname) {
   return parse(html, options);
 }
 
+function CourseMenu({ pathname }) {
+  const menu = useRef(null);
+  const trigger = useRef(null);
+  useEffect(() => {
+    if (menu.current) menu.current.open = false;
+  }, [pathname]);
+  useEffect(() => {
+    const outside = event => {
+      if (!menu.current?.contains(event.target)) menu.current.open = false;
+    };
+    document.addEventListener('pointerdown', outside);
+    return () => document.removeEventListener('pointerdown', outside);
+  }, []);
+  return (
+    <details className="course-menu" ref={menu} onKeyDown={event => {
+      if (event.key === 'Escape') {
+        menu.current.open = false;
+        trigger.current.focus();
+      }
+    }} onBlur={event => {
+      if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+    }}>
+      <summary ref={trigger} aria-controls="course-menu-links" className={courses[pathname.slice(1)] ? 'is-current-course' : undefined}>課程總覽</summary>
+      <div className="course-menu-panel" id="course-menu-links">
+        {['term1', 'term2', 'term3'].map(term => (
+          <section key={term} aria-label={term === 'term3' ? 'Dissertation' : term === 'term1' ? 'Term 1' : 'Term 2'}>
+            <h2>{term === 'term3' ? 'Dissertation' : term === 'term1' ? 'Term 1' : 'Term 2'}</h2>
+            {Object.values(courses).filter(course => course.term === term).map(course => (
+              <Link key={course.code} to={`/${course.code}`} aria-current={pathname === `/${course.code}` ? 'page' : undefined}
+                onClick={() => { menu.current.open = false; trigger.current.focus(); }}>
+                <span>{course.code.toUpperCase()}</span> {course.title}
+              </Link>
+            ))}
+          </section>
+        ))}
+      </div>
+    </details>
+  );
+}
+
 function Header({ config, pathname, pageTranslations }) {
-  const eyebrow = config.eyebrow
-    ? <span className="eyebrow">{parse(config.eyebrow)}</span>
-    : null;
-  const brandTo = routeForHref(config.brandHref, pathname) ?? config.brandHref;
   return (
     <header className="topbar">
       <div className="wrap topbar-inner">
         <div className="brand-group">
-          {eyebrow}
-          <Link className="brand" to={brandTo}>{parse(config.brandLabel)}</Link>
+          {config.eyebrow && <span className="eyebrow">{parse(config.eyebrow)}</span>}
+          <Link className="brand" to="/">Urban Spatial Science MSc</Link>
         </div>
-        <nav aria-label="主要導覽">
-          {config.nav.map((item, index) => {
-            const to = routeForHref(item.href, pathname) ?? item.href;
-            return (
-              <Link
-                key={`${item.href}-${index}`}
-                to={to}
-                aria-current={item.current ? 'page' : undefined}
-              >
-                {parse(item.label)}
-              </Link>
-            );
-          })}
+        <nav className="primary-nav" aria-label="主要導覽">
+          <Link to="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</Link>
+          <CourseMenu pathname={pathname} />
           <LanguageToggle title={config.title} pageTranslations={pageTranslations} />
         </nav>
       </div>
@@ -93,6 +125,11 @@ function LanguageToggle({ title, pageTranslations }) {
   const [language, setLanguage] = useState(() => (
     localStorage.getItem('ucl-urban-spatial-science-language') === 'en' ? 'en' : 'zh'
   ));
+  const normalizedTranslations = useMemo(() => Object.fromEntries(
+    Object.entries(pageTranslations).map(([key, value]) => [key.replace(/\s+/g, ' ').trim(), value]),
+  ), [pageTranslations]);
+  const translated = value => pageTranslations[value]
+    ?? normalizedTranslations[value.replace(/\s+/g, ' ').trim()];
 
   useEffect(() => {
     if (Object.keys(pageTranslations).length === 0) return undefined;
@@ -110,27 +147,40 @@ function LanguageToggle({ title, pageTranslations }) {
     const attributes = [];
     document.querySelectorAll('[aria-label],[placeholder],[title]').forEach((element) => {
       for (const name of ['aria-label', 'placeholder', 'title']) {
-        const value = element.getAttribute(name);
-        if (value && pageTranslations[value] !== undefined) attributes.push([element, name, value]);
+        element.__zhAttributes ??= {};
+        const value = element.__zhAttributes[name] ?? element.getAttribute(name);
+        if (value && translated(value) !== undefined) {
+          element.__zhAttributes[name] = value;
+          attributes.push([element, name, value]);
+        }
       }
     });
 
     const english = language === 'en';
     textNodes.forEach((node) => {
+      if (node.parentElement?.id === 'resultCount') return;
       const original = node.__zh ?? node.nodeValue;
       node.__zh = original;
-      if (pageTranslations[original] !== undefined) {
-        node.nodeValue = english ? pageTranslations[original] : original;
+      if (translated(original) !== undefined) {
+        const leading = original.match(/^\s*/)[0];
+        const trailing = original.match(/\s*$/)[0];
+        node.nodeValue = english ? `${leading}${translated(original).trim()}${trailing}` : original;
       }
     });
     attributes.forEach(([element, name, original]) => {
-      element.setAttribute(name, english ? pageTranslations[original] : original);
+      element.setAttribute(name, english ? translated(original) : original);
     });
+    const count = document.getElementById('resultCount');
+    if (count?.dataset.visibleRows !== undefined) {
+      count.textContent = english
+        ? `${count.dataset.visibleRows} results · ${count.dataset.visibleCards} course cards`
+        : `${count.dataset.visibleRows} 筆分類結果 · ${count.dataset.visibleCards} 門內容卡`;
+    }
     document.title = english ? (pageTranslations[title] ?? title) : title;
     document.documentElement.lang = english ? 'en' : 'zh-Hant';
     localStorage.setItem('ucl-urban-spatial-science-language', language);
     return undefined;
-  }, [language, pageTranslations, title]);
+  }, [language, pageTranslations, normalizedTranslations, title]);
 
   if (Object.keys(pageTranslations).length === 0) return null;
   return (
@@ -164,21 +214,22 @@ function usePageStyles(page, pageStyles) {
 function useHashNavigation(page, navigate, location) {
   useEffect(() => {
     const decodedHash = decodeURIComponent(location.hash.slice(1));
-    if (['index', 'term1'].includes(page) && /^casa0005(?:-|$)/.test(decodedHash)) {
-      navigate(`/casa0005${decodedHash === 'casa0005' ? '' : location.hash}`, { replace: true });
+    const alias = courseAliases[`${page}#${decodedHash}`];
+    if (alias && !courses[page]) {
+      navigate(alias, { replace: true });
       return;
     }
-    if ((page === 'index' || page === 'term2') && /^casa0010(?:-|$)/.test(decodedHash)) {
-      navigate(`/term3${location.hash}`, { replace: true });
+    const courseMatch = decodedHash.match(/^(casa\d{4})(?:-|$)/);
+    if (courseMatch && courses[courseMatch[1]] && !courses[page]) {
+      navigate(`/${courseMatch[1]}${decodedHash === courseMatch[1] ? '' : location.hash}`, { replace: true });
       return;
     }
     if (page === 'index') {
-      if (/^casa(?:0001|0005|0007|0013)(?:-|$)/.test(decodedHash) || decodedHash === 'core') {
-        navigate(`/term1${decodedHash === 'core' ? '#course-details' : location.hash}`, { replace: true });
+      if (decodedHash === 'core') {
+        navigate('/term1#course-details', { replace: true });
         return;
       }
-      if (/^casa(?:0002|0006|0008|0011|0023|0025|0028|0029|0034)(?:-|$)/.test(decodedHash)
-          || ['dependencies', 'pathways', 'options'].includes(decodedHash)) {
+      if (['dependencies', 'pathways', 'options'].includes(decodedHash)) {
         navigate(`/term2${location.hash}`, { replace: true });
         return;
       }
@@ -192,7 +243,8 @@ function useHashNavigation(page, navigate, location) {
     if (location.hash) {
       requestAnimationFrame(() => {
         const target = document.getElementById(decodedHash);
-        if (page === 'casa0005') {
+        if (courses[page]) {
+          if (target?.tagName === 'DETAILS') target.open = true;
           for (let parent = target?.parentElement; parent; parent = parent.parentElement) {
             if (parent.tagName === 'DETAILS') parent.open = true;
           }
@@ -203,6 +255,8 @@ function useHashNavigation(page, navigate, location) {
         }
         target?.scrollIntoView();
       });
+    } else if (courses[page]) {
+      window.scrollTo(0, 0);
     }
   }, [page, location.hash, navigate]);
 }
@@ -219,7 +273,7 @@ function useIndexInteractions(page, location) {
       ? ['structure', 'term1', 'term2', 'welcome', 'sources']
       : ['dissertation', 'dependencies', 'pathways', 'options'];
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
-    const navLinks = [...document.querySelectorAll('nav a, .index-list a')];
+    const navLinks = [...document.querySelectorAll('main nav a[href*="#"], .index-list a[href*="#"]')];
     const setActiveSection = (id) => {
       navLinks.forEach((link) => {
         let matches = false;
@@ -294,7 +348,11 @@ function useTerm2Filters(page) {
       let visibleRows = 0;
       cards.forEach((card) => { card.hidden = !matchesItem(card, query, activeFilter); if (!card.hidden) visibleCards++; });
       rows.forEach((row) => { row.hidden = !matchesItem(row, query, activeFilter); if (!row.hidden) visibleRows++; });
-      count.textContent = `${visibleRows} 筆分類結果 · ${visibleCards} 門內容卡`;
+      count.dataset.visibleRows = String(visibleRows);
+      count.dataset.visibleCards = String(visibleCards);
+      count.textContent = document.documentElement.lang === 'en'
+        ? `${visibleRows} results · ${visibleCards} course cards`
+        : `${visibleRows} 筆分類結果 · ${visibleCards} 門內容卡`;
       empty.hidden = visibleRows !== 0 || visibleCards !== 0;
     };
     const toolbar = document.querySelector('.filter-toolbar');
@@ -347,10 +405,11 @@ function useModuleDossierToggles(page, pageTranslations) {
 }
 
 function Page({ page, content, pageStyles, pageTranslations }) {
+  pageTranslations = useMemo(() => ({ ...pageTranslations, ...courseTranslations }), [pageTranslations]);
   const config = pages[page];
   const location = useLocation();
   const navigate = useNavigate();
-  usePageStyles(page, pageStyles);
+  usePageStyles(page, pageStyles + courseStyles);
   useHashNavigation(page, navigate, location);
   useIndexInteractions(page, location);
   useTerm2Filters(page);
