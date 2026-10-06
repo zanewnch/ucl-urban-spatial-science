@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-CK74R_uL.js";import{t as n}from"./page-zRXK5O_R.js";e();var r=`<main class="wrap course-note-page">
+import{a as e,t}from"./index-Dyik8IHo.js";import{t as n}from"./page-CeIi7i2o.js";e();var r=`<main class="wrap course-note-page">
   <a class="back-link" href="/casa0005">← 回到 CASA0005 課程頁</a>
   <p class="eyebrow">COURSE NOTE · CASA / UCL</p>
   <h1>CASA0005：GIS、R 與 QGIS</h1>
