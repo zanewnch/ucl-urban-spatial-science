@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-Dyik8IHo.js";import{t as n}from"./page-CeIi7i2o.js";e();var r=`<main class="guide-wrap">\r
+import{a as e,t}from"./index-DiHQZ6EZ.js";import{t as n}from"./page-DEDI5kmq.js";e();var r=`<main class="guide-wrap">\r
 <header class="guide-hero">\r
 <a href="term1.html">← 返回 Term 1</a>\r
 <p class="eyebrow">CASA / UCL · 2026–27</p>\r
