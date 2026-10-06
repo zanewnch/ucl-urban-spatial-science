@@ -144,3 +144,23 @@
       .course { transition: transform .2s ease, box-shadow .2s ease; }
       .course:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
     }
+
+    /* CASA0007: current materials first, with secondary information collapsed. */
+    .casa0007-course .qm-current { margin: 12px 0 22px; padding: 20px; border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: 12px; background: #f5f9fb; }
+    .casa0007-course .qm-cohort-label { color: var(--blue); font-size: .78rem; font-weight: 850; }
+    .casa0007-course .qm-current h3 { color: var(--navy); margin: 9px 0; font-size: 1.15rem; }
+    .casa0007-course .qm-current-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+    .casa0007-course .qm-current-links a { display: block; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 8px; font-weight: 800; text-decoration: none; overflow-wrap: anywhere; }
+    .casa0007-course .qm-current-links small { display: block; margin-top: 6px; color: var(--muted); font-size: .72rem; font-weight: 500; }
+    .casa0007-course .qm-cohort-note { font-size: .82rem; color: #536777; }
+    .casa0007-course .qm-subdetails { margin: 14px 0; border-top: 1px solid var(--line); padding-top: 10px; }
+    .casa0007-course .qm-subdetails summary { cursor: pointer; padding: 9px 0; min-height: 44px; color: var(--blue); font-weight: 800; }
+    .casa0007-course summary { display: list-item; }
+    .casa0007-course summary:focus-visible, .casa0007-course a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+    .casa0007-course .qm-archive-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 12px 0; font-size: .82rem; }
+    .casa0007-course .qm-history { background: #faf9f6; padding: 12px 16px; border-radius: 10px; }
+    @media (max-width: 600px) {
+      .casa0007-course .qm-current { padding: 16px; }
+      .casa0007-course .qm-current-links { grid-template-columns: 1fr; }
+      .casa0007-course .qm-history { padding: 12px; }
+    }

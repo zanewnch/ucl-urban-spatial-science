@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-GAmbOngf.js";import{t as n}from"./page-BWXLdW7U.js";e();var r=`<main class="wrap">\r
+import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js";e();var r=`<main class="wrap">\r
     <h1>筆記區</h1>\r
     <div class="topics">\r
       <section class="topic" aria-labelledby="programming-basics">\r

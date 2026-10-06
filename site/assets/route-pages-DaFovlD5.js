@@ -1,4 +1,4 @@
-import{a as e,t}from"./index-GAmbOngf.js";import{t as n}from"./page-BWXLdW7U.js";e();var r=`<main>
+import{a as e,t}from"./index-D9ucFj-7.js";import{t as n}from"./page-BC9oMWyK.js";e();var r=`<main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
