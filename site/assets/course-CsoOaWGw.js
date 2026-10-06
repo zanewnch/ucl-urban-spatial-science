@@ -1,4 +1,4 @@
-import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r as s,t as c}from"./page-B8rv8gbQ.js";import{t as l}from"./term1-DtGTINBS.js";import{t as u}from"./term2-BVIludt2.js";import{t as d}from"./term3-DMHKDCK-.js";var f=`<article class="course">
+import{n as e,o as t,t as n}from"./index-BRYVHUdW.js";import{a as r,i,n as a,r as o,t as s}from"./page-CLR7n3Ss.js";var c=`<article class="course">
         <span class="course-type">核心必修</span>
         <div class="code">CASA0001</div>
         <h2>Urban Systems Theory <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h2>
@@ -77,7 +77,7 @@ import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r
         </details>
         <div class="course-footer"><span class="credits">15 credits · coursework</span><a class="details" href="#casa0001">課程內容 →</a></div>
       </article>
-`,p=`<p>參考內容不代表本屆實際授課進度。</p><details class="course-dossier">
+`,l=`<p>參考內容不代表本屆實際授課進度。</p><details class="course-dossier">
           <summary>展開：週次脈絡、閱讀、授課者與評量</summary>
           <div class="course-dossier-content">
             <h3>學習內容與週次 <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-systems-theory-CASA0001" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
@@ -105,7 +105,7 @@ import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r
             <p class="course-dossier-note">正式授課 roster、每週 reading、essay/作業格式、權重拆分和截止日：以 Moodle 當年度 brief 為準。</p>
           </div>
         </details>
-`,m=`<article class="module-card option featured-module selected-module" id="casa0002" data-source="casa" data-pathways="smart-cities urban-modelling" data-module="casa0002 urban simulation spatial interaction network science python complexity entropy maximization centrality community detection resilience transport commuting">
+`,u=`<article class="module-card option featured-module selected-module" id="casa0002" data-source="casa" data-pathways="smart-cities urban-modelling" data-module="casa0002 urban simulation spatial interaction network science python complexity entropy maximization centrality community detection resilience transport commuting">
             <div class="code">CASA0002</div><h3>Urban Simulation <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-simulation-CASA0002" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill selected-pill">已選</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Smart Cities and Urban Policy</span><span class="pill">Urban Modelling and Simulation</span><span class="pill">FHEQ Level 7</span></div>
             <p>以 complexity science、spatial interaction models 與 network science 建立城市系統模型，分析人與地點之間的流動、交通節點、通勤網絡、社群結構與 resilience。</p>
@@ -127,7 +127,7 @@ import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r
               <p class="module-source-line" id="casa0002-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-simulation-CASA0002" target="_blank" rel="noopener">UCL Module Catalogue：CASA0002</a></p>
             </div>
           </article>
-`,h=`<section id="casa0005-schedule">\r
+`,d=`<section id="casa0005-schedule">\r
 <span id="casa0005-topics">\r
 </span>\r
 <h2>04 · 本屆正式課表</h2>\r
@@ -289,7 +289,7 @@ import{n as e,o as t,t as n}from"./index-DFk_90uH.js";import{a as r,i,n as a,o,r
 <p class="guide-source">來源與延伸：<a href="https://github.com/andrewmaclachlan/CASA0005repo" target="_blank" rel="noopener">README／完整檔案清單 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=1#tabs-tree-start" target="_blank" rel="noopener">本屆正式課表 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=2#tabs-tree-start" target="_blank" rel="noopener">本屆教材入口 ↗</a>\r
 </p>\r
 </section>
-`,g=`<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Catalogue 2026/27 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=0#tabs-tree-start" target="_blank" rel="noopener">本屆 Moodle Welcome ↗</a>\r
+`,f=`<p class="guide-source">來源與延伸：<a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005" target="_blank" rel="noopener">UCL Catalogue 2026/27 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=0#tabs-tree-start" target="_blank" rel="noopener">本屆 Moodle Welcome ↗</a>\r
 </p>\r
 <section id="casa0005-overview">\r
 <span id="casa0005-outcomes">\r
@@ -540,7 +540,7 @@ sessionInfo()</code>\r
 </li>\r
 </ul>\r
 </details>
-`,_=`<p>參考內容不代表本屆實際授課進度。</p><h2>05 · 十週學習指南</h2><p>各週先列 Moodle 的正式安排，接著以公開教材與本站編輯建議展開。教材的 homework、例子及時間投入可能屬其他版本，不能自動當成本屆計分作業；正式要求以 Moodle 最新發布為準。</p><p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=1#tabs-tree-start" target="_blank" rel="noopener">本屆課表 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">公開教材 ↗</a>\r
+`,p=`<p>參考內容不代表本屆實際授課進度。</p><h2>05 · 十週學習指南</h2><p>各週先列 Moodle 的正式安排，接著以公開教材與本站編輯建議展開。教材的 homework、例子及時間投入可能屬其他版本，不能自動當成本屆計分作業；正式要求以 Moodle 最新發布為準。</p><p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=1#tabs-tree-start" target="_blank" rel="noopener">本屆課表 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/" target="_blank" rel="noopener">公開教材 ↗</a>\r
 </p><article class="guide-week" id="casa0005-week-1">\r
 <span class="guide-badge">Week 01 · 2026-10-08</span>\r
 <h3>從資料到第一張地圖</h3>\r
@@ -1300,7 +1300,7 @@ sessionInfo()</code>\r
 <p class="guide-source">來源與延伸：<a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=0#tabs-tree-start" target="_blank" rel="noopener">官方學習成果 ↗</a> · <a href="https://moodle.ucl.ac.uk/course/view.php?id=62319&section=3#tabs-tree-start" target="_blank" rel="noopener">正式評量入口 ↗</a> · <a href="https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html" target="_blank" rel="noopener">可重現報告 ↗</a>\r
 </p>\r
 </section>
-`,v=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation urban-modelling" data-module="casa0006 data science spatial systems machine learning supervised learning metrics train test cross validation tree based neural networks graph neural networks python model interpretation feature selection imbalanced mlops">
+`,m=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation urban-modelling" data-module="casa0006 data science spatial systems machine learning supervised learning metrics train test cross validation tree based neural networks graph neural networks python model interpretation feature selection imbalanced mlops">
             <div class="code">CASA0006</div><h3>Data Science for Spatial Systems <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/data-science-for-spatial-systems-CASA0006" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill reference-pill">選修參考</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Data Visualisation</span><span class="pill">Urban Modelling and Simulation</span><span class="pill">FHEQ Level 7</span></div>
             <p>進階 spatial data science 與 machine learning module：從 supervised learning workflow、模型評估與 cross-validation，到 tree-based methods、neural networks、graph neural networks、model interpretation 與 MLOps。</p>
@@ -1322,7 +1322,7 @@ sessionInfo()</code>\r
               <p class="module-source-line" id="casa0006-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/data-science-for-spatial-systems-CASA0006" target="_blank" rel="noopener">UCL Module Catalogue：CASA0006</a> · <a href="https://huanfachen.github.io/DSSS_2025/" target="_blank" rel="noopener">CASA0006 module preview</a></p>
             </div>
           </article>
-`,y=`<section class="qm-current" aria-label="2026/27 本屆教材"><span class="qm-cohort-label">2026/27 · 本屆實際課堂教材</span><h3>Week 1｜探索性資料分析（EDA）</h3><p>使用者已確認這份 Week 1 教材實際用於本屆課堂。資料集為英格蘭 2022/23 學校表現，每列代表一所學校；Practical 可選 R 或 Python。</p><nav class="qm-current-links" aria-label="本屆 Week 1 教材入口"><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html" target="_blank" rel="noopener">Lecture 投影片 ↗<small>2026/27 · bea-taylor.com</small></a><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html" target="_blank" rel="noopener">Practical 練習 ↗<small>2026/27 · bea-taylor.com</small></a><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.ipynb" target="_blank" rel="noopener">下載 Notebook ↗<small>2026/27 · bea-taylor.com · .ipynb</small></a></nav><p class="qm-cohort-note">投影片標示的 2026/09/18 是教材日期，不作為實際上課日期；本屆 Week 2 及後續教材目前尚未確認。</p><details class="qm-subdetails"><summary>展開 Week 1 內容</summary><div class="course-dossier-content"><h4>Lecture：用英格蘭學校表現資料學會描述資料 <a class="section-source-link" href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html" target="_blank" rel="noopener">原始投影片 ↗</a></h4>
+`,h=`<section class="qm-current" aria-label="2026/27 本屆教材"><span class="qm-cohort-label">2026/27 · 本屆實際課堂教材</span><h3>Week 1｜探索性資料分析（EDA）</h3><p>使用者已確認這份 Week 1 教材實際用於本屆課堂。資料集為英格蘭 2022/23 學校表現，每列代表一所學校；Practical 可選 R 或 Python。</p><nav class="qm-current-links" aria-label="本屆 Week 1 教材入口"><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html" target="_blank" rel="noopener">Lecture 投影片 ↗<small>2026/27 · bea-taylor.com</small></a><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html" target="_blank" rel="noopener">Practical 練習 ↗<small>2026/27 · bea-taylor.com</small></a><a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.ipynb" target="_blank" rel="noopener">下載 Notebook ↗<small>2026/27 · bea-taylor.com · .ipynb</small></a></nav><p class="qm-cohort-note">投影片標示的 2026/09/18 是教材日期，不作為實際上課日期；本屆 Week 2 及後續教材目前尚未確認。</p><details class="qm-subdetails"><summary>展開 Week 1 內容</summary><div class="course-dossier-content"><h4>Lecture：用英格蘭學校表現資料學會描述資料 <a class="section-source-link" href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html" target="_blank" rel="noopener">原始投影片 ↗</a></h4>
             <ul>
               <li><strong>觀測單位和研究變數：</strong>使用英格蘭教育部（DfE）2022/23 學校表現資料；每列代表一所學校，而不是一名學生。介紹 Attainment 8 學校平均分，以及它沒有調整學校收生組成這項限制。<a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html#/school-performance-in-england-202223" target="_blank" rel="noopener">資料集與觀測單位投影片 ↗</a></li>
               <li><strong>資料尺度與欄位型態：</strong>區分 nominal、ordinal、interval、ratio 四種測量尺度，並介紹 binary、categorical、count、real-valued 等統計型態。數值編碼不會自動把類別或順序欄位變成連續數值；Progress 8 的 0 代表平均預期進步，因此不能把正負數當作倍數比較。<a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html#/four-levels-of-measurements" target="_blank" rel="noopener">測量尺度投影片 ↗</a> <a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_lecture.html#/a-data-encoding-warning" target="_blank" rel="noopener">數值編碼警示 ↗</a></li>
@@ -1334,7 +1334,7 @@ sessionInfo()</code>\r
             <p>Practical 明確說明範例同時提供 R 與 Python，學生可擇一。任務包括讀取並合併 DfE 資料、正確處理 suppression codes、判斷欄位型態、描述和繪製變數、依自選分組欄位比較學校、檢查缺漏與離群，並寫出資料能支持及不能支持的主張。<a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html#before-you-start" target="_blank" rel="noopener">準備說明 ↗</a> <a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html#task-1-read-the-data-in" target="_blank" rel="noopener">Task 1 ↗</a> <a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html#task-6-compare-groups-with-boxplots-and-violins" target="_blank" rel="noopener">Task 6：分組 boxplot／violin ↗</a> <a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html#task-7-write-it-down" target="_blank" rel="noopener">Task 7：寫下可支持的解讀 ↗</a></p>
             <p><strong>這堂用到的繪圖工具：</strong>Python 範例以 Matplotlib 的 <code>pyplot</code> 建立圖，再用 Seaborn 的 <code>violinplot</code> 和 <code>boxplot</code> 呈現資料；R 範例使用 ggplot2 的 <code>geom_violin</code> 和 <code>geom_boxplot</code>。因此她若選 Python，確實會在 Practical 遇到 Matplotlib 與 Seaborn；若選 R，則跟著 R／ggplot2 版本做。<a href="https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html#task-6-compare-groups-with-boxplots-and-violins" target="_blank" rel="noopener">實際繪圖程式碼 ↗</a></p>
             </div></details></section>
-`,b=`<details class="course-dossier research-detail" id="casa0007-official">
+`,g=`<details class="course-dossier research-detail" id="casa0007-official">
           <summary>官方課程資訊與工具｜2026/27</summary>
           <div class="course-dossier-content research-body">
 
@@ -1450,7 +1450,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
             <p>2026/27 catalogue 列 module leader 為 Huanfa Chen（Associate Professor in Spatial Data Science and Quantitative Methods）。研究包括 spatial optimisation、交通與空間規劃、medical geography、public safety/health，以及 GeoAI；研究例子有用最佳化模型配置公共服務設施、分析交通與醫療可近性的差異。另有一則 2026/27 Term 1 教學代理職缺公告指出，代理講師會和 Professor Adam Dennett 各負責約一半的 lectures/practicals；這是招聘公告描述，代理者姓名與最終授課表仍以 Moodle 為準。UCL catalogue 目前仍列 Huanfa Chen 為 module leader。2025/26 公開課本作者還有 Adam Dennett、Bea Taylor；作者名單不等同今年每週授課名單。<a href="https://huanfachen.github.io/" target="_blank" rel="noopener">Huanfa Chen：研究介紹</a> · <a href="https://profiles.ucl.ac.uk/45776-huanfa-chen" target="_blank" rel="noopener">UCL profile</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10179077/1/LIPIcs-GIScience-2023-19.pdf" target="_blank" rel="noopener">公共設施選址最佳化</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10154979/" target="_blank" rel="noopener">交通與醫療可近性公平研究</a> · <a href="https://jobrxiv.org/job/lecturer-teaching-fixed-term-internal-applicants-only/" target="_blank" rel="noopener">Term 1 教學代理職缺公告（2026/27）</a></p>
             </details></div>
         </details>
-`,x=`<details class="course-dossier qm-history" id="casa0007-history"><summary>2025/26 歷屆教材｜預習與複習參考</summary><div class="course-dossier-content"><p class="qm-cohort-note">以下為 Huanfa Chen 公開的 2025/26 教材，保留 Week 1–10 供預習與複習。往年 Week 1 使用人口普查資料，與上方本屆學校資料教材不同。</p><nav class="qm-archive-links" aria-label="2025/26 歷屆教材入口"><a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">2025/26 課程網站 · huanfachen.github.io ↗</a><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">2025/26 原始教材 repo · GitHub ↗</a><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">2025/26 Week 1 demo · huanfachen.github.io ↗</a></nav><h3>2025/26 Week 1–10 教材地圖</h3><div class="qm-weeks">
+`,_=`<details class="course-dossier qm-history" id="casa0007-history"><summary>2025/26 歷屆教材｜預習與複習參考</summary><div class="course-dossier-content"><p class="qm-cohort-note">以下為 Huanfa Chen 公開的 2025/26 教材，保留 Week 1–10 供預習與複習。往年 Week 1 使用人口普查資料，與上方本屆學校資料教材不同。</p><nav class="qm-archive-links" aria-label="2025/26 歷屆教材入口"><a href="https://huanfachen.github.io/QM/" target="_blank" rel="noopener">2025/26 課程網站 · huanfachen.github.io ↗</a><a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">2025/26 原始教材 repo · GitHub ↗</a><a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">2025/26 Week 1 demo · huanfachen.github.io ↗</a></nav><h3>2025/26 Week 1–10 教材地圖</h3><div class="qm-weeks">
               <section class="qm-week"><h4>第 1 週｜探索性資料分析 I：理解與描述資料 <a class="section-source-link" href="https://huanfachen.github.io/QM/sessions/week1.html" target="_blank" rel="noopener">Week 1 課程頁 ↗</a></h4><p><strong>課程頁主題：</strong>課程頁列出資料型態、描述與呈現資料的指標，以及 boxplot。</p><p><strong>Practical 頁面：</strong>Practical 使用英格蘭與威爾斯地方行政區人口普查資料，示範在本機執行 Jupyter Notebook、檢視資料、摘要統計、IQR 離群值與 boxplot。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week1_lecture.html" target="_blank" rel="noopener">Week 1 Lecture 講義 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week1_practical.html" target="_blank" rel="noopener">Week 1 Practical 網頁 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week1_practical.ipynb" target="_blank" rel="noopener">下載 Practical Notebook ↗</a></p></section>
               <section class="qm-week"><h4>第 2 週｜探索性資料分析 II：機率分布與代表性 <a class="section-source-link" href="https://huanfachen.github.io/QM/sessions/week2.html" target="_blank" rel="noopener">Week 2 課程頁 ↗</a></h4><p><strong>課程頁主題：</strong>課程頁列出常見機率分布、指數與對數，以及評估資料是否具代表性。</p><p><strong>Practical 頁面：</strong>Practical 以英格蘭學校 GCSE attainment 資料辨認與繪製分布，包含直方圖、常態分布與 Q-Q plot，並比較學校類別。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week2_lecture.html" target="_blank" rel="noopener">Week 2 Lecture 講義 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week2_practical.html" target="_blank" rel="noopener">Week 2 Practical 網頁 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week2_practical.ipynb" target="_blank" rel="noopener">下載 Practical Notebook ↗</a></p></section>
               <section class="qm-week"><h4>第 3 週｜假設檢定 <a class="section-source-link" href="https://huanfachen.github.io/QM/sessions/week3.html" target="_blank" rel="noopener">Week 3 課程頁 ↗</a></h4><p><strong>課程頁主題：</strong>課程頁介紹研究問題、假設與統計檢定。</p><p><strong>Practical 頁面：</strong>Practical 練習建立和檢驗假設，頁面明列 Student’s t-test 與 Kolmogorov–Smirnov（KS）分布檢定。</p><p class="qm-source"><a href="https://huanfachen.github.io/QM/sessions/week3_lecture.html" target="_blank" rel="noopener">Week 3 Lecture 講義 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week3_practical.html" target="_blank" rel="noopener">Week 3 Practical 網頁 ↗</a> · <a href="https://huanfachen.github.io/QM/sessions/week3_practical.ipynb" target="_blank" rel="noopener">下載 Practical Notebook ↗</a></p></section>
@@ -1471,7 +1471,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
               <section class="qm-week"><h4>影片：公開網站沒有可確認的 lecture recording </h4><p>公開課程頁提供 lecture notes 和 Notebook，我沒有在公開週次頁找到可直接觀看的錄影連結。module repo 的 2025 教材 TODO 曾寫「Moodle: add link to lecture recording video」，因此錄影可能由 Moodle 提供或曾待補，但不能保證每週都有影片；請登入 2026/27 Moodle 查本年度 lecture recording 和可觀看權限。</p><p class="qm-source"><a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">到 Moodle 查詢本年度影片（需登入） <span aria-hidden="true">↗</span></a> · <a href="https://github.com/huanfachen/QM" target="_blank" rel="noopener">公開教材 repo 註記 <span aria-hidden="true">↗</span></a></p></section>
             </div>
             <p>往年 assessment 格式與 quiz 只供參考；本屆作業題目、比例與截止日以 Moodle 公告為準。<a href="https://moodle.ucl.ac.uk/" target="_blank" rel="noopener">Moodle ↗</a></p></div></details>
-`,S=`<article class="module-card option featured-module" data-source="casa" data-pathways="smart-cities" data-module="casa0008 smart cities context policy government technology governance innovation urban information technologies infrastructure analytics partnerships strategies">
+`,v=`<article class="module-card option featured-module" data-source="casa" data-pathways="smart-cities" data-module="casa0008 smart cities context policy government technology governance innovation urban information technologies infrastructure analytics partnerships strategies">
             <div class="code">CASA0008</div><h3>Smart Cities: Context, Policy and Government <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/smart-cities-context-policy-and-government-CASA0008" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill reference-pill">選修參考</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Smart Cities and Urban Policy</span><span class="pill">FHEQ Level 7</span></div>
             <p>從經濟、社會與科技脈絡理解 smart cities 與 smart urbanism，批判性分析城市資訊技術、政策、治理、夥伴關係、基礎設施與 urban analytics。</p>
@@ -1493,7 +1493,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
               <p class="module-source-line" id="casa0008-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/smart-cities-context-policy-and-government-CASA0008" target="_blank" rel="noopener">UCL Module Catalogue：CASA0008</a></p>
             </div>
           </article>
-`,C=`<section class="dissertation-detail" id="dissertation-detail">
+`,y=`<section class="dissertation-detail" id="dissertation-detail">
       <h2>CASA0010 · 完整課程詳解</h2>
         <div class="module-grid">
           <article class="module-card core featured-module" id="casa0010" data-module="casa0010 dissertation research data collection analysis visualisation policy social science industry supervisor programme director">
@@ -1574,7 +1574,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
       </div>
       <p class="small">本頁整理公開網頁中可核對的資料，並非 UCL 對歷屆論文完整性的保證。頁面更新：2026-09-24。</p>
     </section>
-`,w=`<section id="examples"><span class="kicker">02 / Past research examples</span><h2>往屆研究主題例子</h2>
+`,b=`<section id="examples"><span class="kicker">02 / Past research examples</span><h2>往屆研究主題例子</h2>
       <div class="grid">
         <article class="example"><p class="meta">Urban Spatial Science MSc · 2024 · UCL CASA 公開校友案例</p><h3>街道行人化與地方經濟</h3><p>Shiho Tanaka 研究街道行人化對當地經濟的影響，結合六年零售消費資料與 OpenStreetMap 道路特徵。這類題目把城市設計介入、道路空間和經濟活動放在同一個可量化的研究框架中。<a href="https://www.ucl.ac.uk/bartlett/casa/study/careers-research-simulation-modelling-and-data-science" target="_blank" rel="noopener">UCL CASA 校友案例來源 ↗</a></p></article>
         <article class="example"><p class="meta">Urban Spatial Science MSc · 2024 · UNITAC 合作專案</p><h3>以開放資料辨識中美洲脆弱聚落</h3><p>Jan Magnuszewski 將 Sentinel-2 衛星影像與 Overture Maps 建築輪廓結合，使用多模態深度學習改善非正式聚落辨識。學生的作品集進一步展示專案方法與成果。<a href="https://jan.magnuszewski.com/unitac-precarious-areas" target="_blank" rel="noopener">學生專案來源 ↗</a> · <a href="https://jan.magnuszewski.com/portfolio/" target="_blank" rel="noopener">個人作品集 ↗</a></p></article>
@@ -1595,7 +1595,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
         <div class="callout"><strong>搜尋完整論文的小技巧：</strong>先用 dissertation title 的完整字串搜尋，再加作者姓名、UCL 或 CASA；也可以查作者 GitHub／個人網站和期刊 DOI。找不到 PDF 時，校方案例頁仍可確認研究方向，但不能推定全文已公開或可自由下載。</div>
       </div>
     </section>
-`,T=`<article class="module-card option featured-module selected-module" id="casa0011" data-source="casa" data-pathways="urban-modelling" data-module="casa0011 agent based modelling spatial systems ABM GIS netlogo mesa cellular automata ODD optimization forecasts pedestrian traffic transport land use evacuation epidemiology">
+`,x=`<article class="module-card option featured-module selected-module" id="casa0011" data-source="casa" data-pathways="urban-modelling" data-module="casa0011 agent based modelling spatial systems ABM GIS netlogo mesa cellular automata ODD optimization forecasts pedestrian traffic transport land use evacuation epidemiology">
             <div class="code">CASA0011</div><h3>Agent Based Modelling for Spatial Systems <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/agent-based-modelling-for-spatial-systems-CASA0011" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill selected-pill">已選</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Urban Modelling and Simulation</span><span class="pill">FHEQ Level 7</span></div>
             <p>用 Agent Based Modelling（ABM）建立與評估城市空間中的 agents、規則與互動，從 cellular automata、ODD protocol 到 ABM + GIS，應用在交通、土地使用、行人、危機與基本流行病情境。</p>
@@ -1617,7 +1617,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
               <p class="module-source-line" id="casa0011-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/agent-based-modelling-for-spatial-systems-CASA0011" target="_blank" rel="noopener">UCL Module Catalogue：CASA0011</a></p>
             </div>
           </article>
-`,E=`<article class="course optional">
+`,S=`<article class="course optional">
         <span class="course-type">CASA 選修</span>
         <div class="code">CASA0013</div>
         <h2>Foundations of Spatial Data Science <a class="section-source-link" href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">CASA0013 公開課本 ↗</a></h2>
@@ -1648,7 +1648,7 @@ print("scikit-learn", sklearn.__version__)</code></pre>
         </details>
         <div class="course-footer"><span class="credits">15 credits · optional</span><a class="details" href="#casa0013">課程內容 →</a></div>
       </article>
-`,D=`<p>參考內容不代表本屆實際授課進度。</p><details class="course-dossier">
+`,C=`<p>參考內容不代表本屆實際授課進度。</p><details class="course-dossier">
           <summary>展開：每週主題、Python workflow、講師與評量</summary>
           <div class="course-dossier-content">
             <h3>學習內容與週次：公開課本章節地圖（2025/26 預覽） <a class="section-source-link" href="https://jreades.github.io/fsds/" target="_blank" rel="noopener">CASA0013 公開課本 ↗</a></h3>
@@ -1716,7 +1716,7 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
                   <li>Notebook 找不到檔案：在 JupyterLab 左側檔案列表確認位於 <code>work</code>；PowerShell 的目前資料夾要是 <code>$HOME\\CASA0013</code> 才啟動 container。</li>
                 </ul>
               </details>
-`,O=`<article class="module-card option featured-module" data-source="casa" data-pathways="big-data" data-module="casa0023 remotely sensing cities environments remote sensing earth observation R GIS climate sustainability hazards imagery preprocessing spatial data cloud computing policy resources investment">
+`,w=`<article class="module-card option featured-module" data-source="casa" data-pathways="big-data" data-module="casa0023 remotely sensing cities environments remote sensing earth observation R GIS climate sustainability hazards imagery preprocessing spatial data cloud computing policy resources investment">
             <div class="code">CASA0023</div><h3>Remotely Sensing Cities and Environments <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill reference-pill">選修參考</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Big Data</span><span class="pill">FHEQ Level 7</span></div>
             <p>使用 Earth observation／remote sensing imagery 與 spatial data，分析氣候變遷、都市環境風險與未來永續性；large practical 主要使用 R，並接觸 open-source GIS 與 cloud computing。</p>
@@ -1738,7 +1738,7 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
               <p class="module-source-line" id="casa0023-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023" target="_blank" rel="noopener">UCL Module Catalogue：CASA0023</a> · <a href="https://andrewmaclachlan.github.io/CASA0023/" target="_blank" rel="noopener">CASA0023 practical book</a></p>
             </div>
           </article>
-`,k=`<article class="module-card option featured-module selected-module" id="casa0025" data-source="casa" data-pathways="big-data" data-module="casa0025 building spatial applications big data SQL database PostGIS web cloud interactive map spatial analysis large datasets portfolio group project">
+`,T=`<article class="module-card option featured-module selected-module" id="casa0025" data-source="casa" data-pathways="big-data" data-module="casa0025 building spatial applications big data SQL database PostGIS web cloud interactive map spatial analysis large datasets portfolio group project">
             <div class="code">CASA0025</div><h3>Building Spatial Applications with Big Data <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/building-spatial-applications-with-big-data-CASA0025" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill selected-pill">已選</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Big Data</span><span class="pill">同時列為額外 CASA optional</span><span class="pill">FHEQ Level 7</span></div>
             <p>從 SQL、spatial database、大型資料處理、web mapping 到 cloud computing，建立能處理大規模空間資料並呈現互動結果的 spatial application。</p>
@@ -1760,7 +1760,7 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
               <p class="module-source-line" id="casa0025-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/building-spatial-applications-with-big-data-CASA0025" target="_blank" rel="noopener">UCL Module Catalogue：CASA0025</a></p>
             </div>
           </article>
-`,A=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation" data-module="casa0028 designing spatial data stories web react nextjs firebase maplibre deckgl visx generative ai github copilot javascript html sociological design justice user centered speculative design">
+`,E=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation" data-module="casa0028 designing spatial data stories web react nextjs firebase maplibre deckgl visx generative ai github copilot javascript html sociological design justice user centered speculative design">
             <div class="code">CASA0028</div><h3>Designing Spatial Data Stories <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/designing-spatial-data-stories-CASA0028" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill reference-pill">選修參考</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Data Visualisation</span><span class="pill">FHEQ Level 7</span></div>
             <p>用現代 web development、data visualisation libraries 與 LLM／Generative AI 做 interactive spatial data stories，研究互動、敘事、設計選擇與資料如何影響理解。</p>
@@ -1782,7 +1782,7 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
               <p class="module-source-line" id="casa0028-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/designing-spatial-data-stories-CASA0028" target="_blank" rel="noopener">UCL Module Catalogue：CASA0028</a></p>
             </div>
           </article>
-`,j=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation" data-module="casa0029 urban data visualisation map 3d web cartography interaction design demographic topographic remote sensing spatio temporal GIS data science sustainability equity group website">
+`,D=`<article class="module-card option featured-module" data-source="casa" data-pathways="data-visualisation" data-module="casa0029 urban data visualisation map 3d web cartography interaction design demographic topographic remote sensing spatio temporal GIS data science sustainability equity group website">
             <div class="code">CASA0029</div><h3>Urban Data Visualisation <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/urban-data-visualisation-CASA0029" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill reference-pill">選修參考</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Data Visualisation</span><span class="pill">FHEQ Level 7</span></div>
             <p>以 web-based spatial visualisation 呈現城市與 built environment data：從 interactive mapping、統計與基本 3D visualisation，到 cartography、interaction design 與 group project website。</p>
@@ -1804,8 +1804,8 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
               <p class="module-source-line" id="casa0029-sources"><strong>官方來源：</strong> <a href="https://www.ucl.ac.uk/module-catalogue/modules/urban-data-visualisation-CASA0029" target="_blank" rel="noopener">UCL Module Catalogue：CASA0029</a></p>
             </div>
           </article>
-`,M=`<p><a href="https://www.ucl.ac.uk/module-catalogue/modules/spatial-ai-in-practice-CASA0033" target="_blank" rel="noopener">2026/27 官方來源 ↗</a></p>
-`,N=`<article class="module-card option featured-module selected-module" id="casa0034" data-source="casa" data-pathways="smart-cities" data-module="casa0034 city futures systems methods place-based change systems thinking futures foresight participatory collaboration social science research digital tools platform urban policy">
+`,O=`<p><a href="https://www.ucl.ac.uk/module-catalogue/modules/spatial-ai-in-practice-CASA0033" target="_blank" rel="noopener">2026/27 官方來源 ↗</a></p>
+`,k=`<article class="module-card option featured-module selected-module" id="casa0034" data-source="casa" data-pathways="smart-cities" data-module="casa0034 city futures systems methods place-based change systems thinking futures foresight participatory collaboration social science research digital tools platform urban policy">
             <div class="code">CASA0034</div><h3>City Futures: Systems and Methods of Place-Based Change <a class="section-source-link" href="https://www.ucl.ac.uk/module-catalogue/modules/city-futures-systems-and-methods-of-place-based-change-CASA0034" target="_blank" rel="noopener">官方課程來源 ↗</a></h3>
             <div class="meta"><span class="pill selected-pill">已選</span><span class="pill">Term 2</span><span class="pill">15 credits</span><span class="pill">CASA optional</span><span class="pill">Smart Cities and Urban Policy</span><span class="pill">FHEQ Level 7</span></div>
             <p>從課名來看，這門課聚焦如何理解地方變遷背後的城市系統，並運用面向未來與協作的方法思考地方改變。這是依模組名稱與 CASA 公開的相關教學需求整理的課程輪廓；目前可查到的公開資料不足以確認具體每週主題或作業。</p>
@@ -1823,57 +1823,128 @@ print("GeoPandas", gpd.__version__)</code></pre>若看到 Python、pandas、GeoP
               <p class="module-source-line" id="casa0034-sources"><strong>來源：</strong><a href="https://www.ucl.ac.uk/module-catalogue/modules/city-futures-systems-and-methods-of-place-based-change-CASA0034" target="_blank" rel="noopener">UCL Module Catalogue：CASA0034</a> · <a href="https://www.ucl.ac.uk/pg-teaching-opportunities-hub/sites/pg_teaching_opportunities_hub/files/casa_-_pgta_-_jd_-_2026_-2027_sandra_starosta.pdf" target="_blank" rel="noopener">CASA 2026–27 助教職缺說明</a></p>
             </div>
           </article>
-`;t();var P=`.site-shell[data-page="casa0005"] .guide-wrap { width: min(1240px, calc(100% - 36px)); margin: 0 auto; }
-.site-shell[data-page="casa0005"] .guide-hero { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
-.site-shell[data-page="casa0005"] h1 { max-width: 900px; margin: 12px 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.2; }
-.site-shell[data-page="casa0005"] .guide-lede { max-width: 820px; font-size: 1.1rem; }
-.site-shell[data-page="casa0005"] .guide-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 40px; align-items: start; padding: 32px 0 60px; }
-.site-shell[data-page="casa0005"] .guide-toc { position: sticky; top: 100px; max-height: calc(100vh - 120px); overflow: auto; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-md); }
-.site-shell[data-page="casa0005"] .guide-toc summary { display: none; }
-.site-shell[data-page="casa0005"] .guide-toc nav { display: grid; gap: 8px; font-size: .9rem; }
-.site-shell[data-page="casa0005"] .guide-toc a { text-decoration: none; }
-.site-shell[data-page="casa0005"] .guide-toc-mobile { display: none; }
-.site-shell[data-page="casa0005"] .guide-content { min-width: 0; }
-.site-shell[data-page="casa0005"] .guide-content > section { margin-bottom: 40px; }
-.site-shell[data-page="casa0005"] h2 { margin: 0 0 18px; padding-top: 8px; font-size: 1.65rem; line-height: 1.4; }
-.site-shell[data-page="casa0005"] h3 { margin: 24px 0 12px; font-size: 1.22rem; }
-.site-shell[data-page="casa0005"] h4 { margin: 20px 0 8px; font-size: 1rem; }
-.site-shell[data-page="casa0005"] p, .site-shell[data-page="casa0005"] li { overflow-wrap: anywhere; }
-.site-shell[data-page="casa0005"] li { margin-bottom: 10px; }
-.site-shell[data-page="casa0005"] .guide-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-.site-shell[data-page="casa0005"] .guide-badge { padding: 4px 10px; background: var(--mint); border-radius: 999px; font-size: .8rem; font-weight: 700; }
-.site-shell[data-page="casa0005"] .guide-callout { border-left: 4px solid var(--gold); background: #fff6df; padding: 14px 18px; margin: 18px 0; border-radius: 0 10px 10px 0; }
-.site-shell[data-page="casa0005"] .guide-source { font-size: .83rem; color: var(--muted); margin: 8px 0 16px; }
-.site-shell[data-page="casa0005"] .guide-source a { margin-right: 12px; }
-.site-shell[data-page="casa0005"] .guide-table { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
-.site-shell[data-page="casa0005"] table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem; }
-.site-shell[data-page="casa0005"] th, .site-shell[data-page="casa0005"] td { text-align: left; vertical-align: top; padding: 12px; border-bottom: 1px solid var(--line); }
-.site-shell[data-page="casa0005"] th { background: var(--navy); color: white; }
-.site-shell[data-page="casa0005"] .guide-week { padding: 24px; margin-bottom: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
-.site-shell[data-page="casa0005"] .guide-week h3 { margin-top: 8px; }
-.site-shell[data-page="casa0005"] details.guide-detail { margin: 16px 0; border-top: 1px solid var(--line); padding-top: 12px; }
-.site-shell[data-page="casa0005"] details.guide-detail summary { cursor: pointer; font-weight: 700; padding: 6px 0; }
-.site-shell[data-page="casa0005"] pre { overflow: auto; padding: 18px; background: #102a43; color: #f7f4ee; border-radius: 10px; line-height: 1.5; font-size: .84rem; }
-.site-shell[data-page="casa0005"] code { font-family: Consolas, monospace; }
-.site-shell[data-page="casa0005"] .guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.site-shell[data-page="casa0005"] .guide-grid > div { padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
-@media (max-width: 900px) {
-  .site-shell[data-page="casa0005"] .guide-layout { grid-template-columns: 1fr; gap: 24px; }
-  .site-shell[data-page="casa0005"] .guide-toc { position: static; max-height: none; }
-  .site-shell[data-page="casa0005"] .guide-toc-desktop { display: none; }
-  .site-shell[data-page="casa0005"] .guide-toc-mobile { display: block; }
-  .site-shell[data-page="casa0005"] .guide-toc summary { display: list-item; cursor: pointer; font-weight: 700; }
-  .site-shell[data-page="casa0005"] .guide-toc nav { margin-top: 12px; }
-  .site-shell[data-page="casa0005"] .guide-week { padding: 18px; }
-  .site-shell[data-page="casa0005"] .guide-grid { grid-template-columns: 1fr; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-`,F=n(),I=Object.assign({"../content/courses/casa0001-current.html":``,"../content/courses/casa0001-official.html":f,"../content/courses/casa0001-reference.html":p,"../content/courses/casa0002-current.html":``,"../content/courses/casa0002-official.html":m,"../content/courses/casa0002-reference.html":``,"../content/courses/casa0005-current.html":h,"../content/courses/casa0005-official.html":g,"../content/courses/casa0005-reference.html":_,"../content/courses/casa0006-current.html":``,"../content/courses/casa0006-official.html":v,"../content/courses/casa0006-reference.html":``,"../content/courses/casa0007-current.html":y,"../content/courses/casa0007-official.html":b,"../content/courses/casa0007-reference.html":x,"../content/courses/casa0008-current.html":``,"../content/courses/casa0008-official.html":S,"../content/courses/casa0008-reference.html":``,"../content/courses/casa0010-current.html":``,"../content/courses/casa0010-official.html":C,"../content/courses/casa0010-reference.html":w,"../content/courses/casa0011-current.html":``,"../content/courses/casa0011-official.html":T,"../content/courses/casa0011-reference.html":``,"../content/courses/casa0013-current.html":``,"../content/courses/casa0013-official.html":E,"../content/courses/casa0013-reference.html":D,"../content/courses/casa0023-current.html":``,"../content/courses/casa0023-official.html":O,"../content/courses/casa0023-reference.html":``,"../content/courses/casa0025-current.html":``,"../content/courses/casa0025-official.html":k,"../content/courses/casa0025-reference.html":``,"../content/courses/casa0028-current.html":``,"../content/courses/casa0028-official.html":A,"../content/courses/casa0028-reference.html":``,"../content/courses/casa0029-current.html":``,"../content/courses/casa0029-official.html":j,"../content/courses/casa0029-reference.html":``,"../content/courses/casa0033-current.html":``,"../content/courses/casa0033-official.html":M,"../content/courses/casa0033-reference.html":``,"../content/courses/casa0034-current.html":``,"../content/courses/casa0034-official.html":N,"../content/courses/casa0034-reference.html":``});function L({code:t}){let n=e[t],f=e=>I[`../content/courses/${t}-${e}.html`]?.trim()||``,p=f(`current`),m=f(`reference`),h=`<main class="uniform-course-page ">
-    <header class="uniform-course-hero"><a href="/${n.term}">← 返回學期總覽</a>
-    <p class="uniform-course-code">${t.toUpperCase()} · 2026/27</p><h1>${i(n.title)}</h1>${a(n)}</header>
-    <nav class="uniform-course-nav" aria-label="章節導覽"><a href="#basic-information">基本資訊</a><a href="#current-materials">本屆教材與課程內容</a><a href="#official-information">官方課程資訊</a><a href="#reference-materials">歷屆教材與學習參考</a></nav>
-    <section id="basic-information"><h2>基本資訊</h2>${s(n)}</section>
-    <section id="current-materials"><h2>本屆教材與課程內容</h2>${p||`<div class="course-empty"><p>${t===`casa0010`?`本屆研究 brief 與里程碑日期尚未取得或確認。`:`本屆教材尚未取得或確認`}</p></div>`}</section>
-    <section id="official-information"><h2>官方課程資訊</h2><div class="course-existing-content">${f(`official`)}</div></section>
-    <details id="reference-materials" class="uniform-course-reference"><summary>歷屆教材與學習參考</summary><div class="course-existing-content">${m||`<p>尚無已確認的歷屆教材。</p>`}</div></details>
-    </main>`,g=l+u+d+P;return(0,F.jsx)(c,{page:t,content:h,pageStyles:g+r,pageTranslations:o},t)}export{L as default};
+`;t();var A=`.site-shell main.course-detail {\r
+  width:min(1080px,calc(100% - 48px)); margin:0 auto; padding:28px 0 72px;\r
+}\r
+.site-shell .course-detail .course-breadcrumb {\r
+  display:inline-flex; margin-bottom:18px; font-size:.88rem; font-weight:650; text-decoration:none;\r
+}\r
+.site-shell .course-detail .uniform-course-hero {\r
+  padding:36px 40px; border:0; border-radius:20px; color:#f5f9fb;\r
+  background:radial-gradient(ellipse at top right,#22566b 0%,transparent 65%),#082b49;\r
+}\r
+.site-shell .course-detail .uniform-course-code { display:flex; align-items:center; gap:12px; margin:0 0 18px; color:#c9e9df; font-size:.82rem; }\r
+.site-shell .course-detail .uniform-course-code span:first-child { padding:5px 10px; border:1px solid #8cbfb466; border-radius:6px; }\r
+.site-shell .course-detail .uniform-course-code span:last-child { letter-spacing:.04em; opacity:.85; }\r
+.site-shell .course-detail .uniform-course-hero h1 { color:#fffdf9; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:1.2; letter-spacing:-.03em; margin:0 0 20px; max-width:900px; overflow-wrap:anywhere; }\r
+.site-shell .course-detail .uniform-course-hero .course-description { color:#e1edf1; max-width:82ch; margin:0; font-size:1rem; line-height:1.85; }\r
+.site-shell .course-detail .uniform-course-hero a { color:#c5e9df; }\r
+.site-shell .course-detail .uniform-course-nav {\r
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:18px 0 34px;\r
+  padding:8px; background:#e9eeeb; border:0; border-radius:14px;\r
+}\r
+.site-shell .course-detail .uniform-course-nav a {\r
+  display:flex; align-items:center; justify-content:flex-start; gap:10px; width:100%; min-height:52px;\r
+  padding:12px 14px; border:0; border-radius:9px; color:var(--navy); background:var(--card);\r
+  font-size:.86rem; font-weight:750; line-height:1.45; text-decoration:none; text-align:left;\r
+  transition:background-color .15s,color .15s;\r
+}\r
+.site-shell .course-detail .uniform-course-nav a:hover { background:#d0e6dd; }\r
+.site-shell .course-detail .chapter-number { color:#68817a; font-size:.74rem; flex:0 0 auto; }\r
+.site-shell .course-detail .course-section { padding:0; margin:0 0 36px; border:0; scroll-margin-top:24px; min-width:0; }\r
+.site-shell .course-detail h2 { color:var(--navy); margin:0 0 18px; font-size:1.5rem; line-height:1.4; letter-spacing:-.02em; }\r
+.site-shell .course-detail .course-summary-fields { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px; margin:0; }\r
+.site-shell .course-detail .course-summary-fields > div { display:block; grid-column:span 2; padding:18px 20px; border:1px solid #dae3e3; border-radius:12px; background:#fffdf9; min-width:0; }\r
+.site-shell .course-detail .course-summary-fields > div:nth-child(-n+2) { grid-column:span 1; }\r
+.site-shell .course-detail .course-summary-fields > .course-material-status { grid-column:1/-1; display:flex; align-items:baseline; gap:20px; background:#eaf3ee; border-color:#cee1d8; }\r
+.site-shell .course-detail .course-summary-fields dt { margin-bottom:8px; color:#5f7184; font-size:.78rem; font-weight:650; }\r
+.site-shell .course-detail .course-summary-fields dd { margin:0; color:var(--ink); font-size:.95rem; font-weight:650; line-height:1.6; overflow-wrap:anywhere; }\r
+.site-shell .course-detail .course-summary-fields a { color:inherit; text-decoration-color:#a3c1c2; }\r
+.site-shell .course-detail .course-existing-content { padding:0; overflow:visible; min-width:0; }\r
+.site-shell .course-detail .course-existing-content h2 { font-size:1.28rem; margin:24px 0 14px; }\r
+.site-shell .course-detail :is(h3,h4) { color:var(--navy); line-height:1.5; margin:22px 0 12px; }\r
+.site-shell .course-detail h3 { font-size:1.15rem; }\r
+.site-shell .course-detail h4 { font-size:1rem; }\r
+.site-shell .course-detail :is(p,li) { font-size:.96rem; line-height:1.85; overflow-wrap:anywhere; }\r
+.site-shell .course-detail p { margin:0 0 16px; }\r
+.site-shell .course-detail :is(ul,ol) { padding-left:22px; margin:12px 0 20px; }\r
+.site-shell .course-detail li { margin:8px 0; }\r
+.site-shell .course-detail .course-content-panel { padding:0; margin:0; background:transparent; border:0; box-shadow:none; }\r
+.site-shell .course-detail .course-source-row { margin:0 0 16px; font-size:.82rem; }\r
+.site-shell .course-detail .course-source-row:empty { display:none; }\r
+.site-shell .course-detail .course-content-heading { padding:18px 0 8px; font-size:1.08rem; color:var(--navy); }\r
+.site-shell .course-detail .module-detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }\r
+.site-shell .course-detail .module-detail-block { min-width:0; padding:22px; border:1px solid #dae3e3; border-radius:14px; background:var(--card); }\r
+.site-shell .course-detail .module-detail-block.full { grid-column:1/-1; }\r
+.site-shell .course-detail .module-detail-block > :first-child { margin-top:0; }\r
+.site-shell .course-detail .module-dossier-content { display:block; padding:0; }\r
+.site-shell .course-detail .module-dossier-index { display:flex; flex-wrap:wrap; justify-content:flex-start; gap:8px; margin:12px 0 20px; }\r
+.site-shell .course-detail .module-dossier-index a { display:block; padding:6px 10px; border-radius:6px; background:#eaf0ed; font-size:.8rem; font-weight:650; text-decoration:none; }\r
+.site-shell .course-detail :is(.meta,.guide-badges) { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }\r
+.site-shell .course-detail :is(.pill,.guide-badge,.course-type) { display:inline-flex; padding:4px 9px; border-radius:6px; background:#eaf0ed; color:var(--blue); font-size:.77rem; font-weight:650; }\r
+.site-shell .course-detail :is(.guide-source,.module-source-line,.section-source-link) { font-size:.8rem; }\r
+.site-shell .course-detail :is(.callout,.guide-callout) { padding:16px 20px; margin:18px 0; border-left:3px solid #d8ae5f; border-radius:0 10px 10px 0; background:#fbf3e3; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:20px 0; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a { display:block; padding:18px; border:1px solid #d4e1df; border-radius:12px; background:#edf5f1; text-decoration:none; line-height:1.6; font-weight:700; overflow-wrap:anywhere; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a:hover { background:#dcece4; }\r
+.site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) > a small { display:block; margin-top:6px; font-size:.78rem; font-weight:400; color:var(--muted); }\r
+.site-shell .course-detail .course-empty { min-height:0; padding:20px 22px; border:1px solid #d9e2e1; border-radius:12px; background:#f0f3ef; }\r
+.site-shell .course-detail .course-empty p { margin:0; color:var(--muted); }\r
+.site-shell .course-detail :is(details,.uniform-course-reference) { padding:0; margin:16px 0; border:1px solid #d9e2e1; border-radius:12px; background:var(--card); min-width:0; }\r
+.site-shell .course-detail details > summary { cursor:pointer; padding:18px 22px; font-size:1rem; line-height:1.5; font-weight:750; color:var(--navy); }\r
+.site-shell .course-detail details[open] > summary { border-bottom:1px solid #e0e7e5; }\r
+.site-shell .course-detail details > :not(summary) { margin:0; padding:20px 22px; }\r
+.site-shell .course-detail details > .course-existing-content { padding:22px; }\r
+.site-shell .course-detail .uniform-course-reference { margin-top:8px; scroll-margin-top:24px; }\r
+.site-shell .course-detail .uniform-course-reference > summary { font-size:1.25rem; }\r
+.site-shell .course-detail .guide-week { min-width:0; }\r
+.site-shell .course-detail :is(.guide-table,.table-wrap) { overflow:visible; min-width:0; margin:20px 0; }\r
+.site-shell .course-detail .course-table-scroll { max-width:100%; overflow-x:auto; margin:16px 0; border:1px solid #d9e2e1; border-radius:10px; }\r
+.site-shell .course-detail table { border-collapse:collapse; width:100%; min-width:640px; font-size:.86rem; background:var(--card); }\r
+.site-shell .course-detail :is(th,td) { padding:12px 14px; text-align:left; border-bottom:1px solid #e0e7e5; vertical-align:top; }\r
+.site-shell .course-detail th { background:#eaf0ed; font-weight:750; }\r
+.site-shell .course-detail caption { padding:14px; text-align:left; font-weight:700; }\r
+.site-shell .course-detail pre { max-width:100%; overflow-x:auto; padding:20px; border-radius:10px; background:#102d42; color:#e8f0f3; line-height:1.7; font-size:.82rem; }\r
+.site-shell .course-detail :not(pre) > code { background:#eaf0ed; padding:2px 5px; border-radius:4px; font-size:.86em; overflow-wrap:anywhere; }\r
+.site-shell .course-detail [id] { scroll-margin-top:24px; }\r
+@media(max-width:900px) {\r
+  .site-shell .course-detail .uniform-course-nav { grid-template-columns:repeat(2,minmax(0,1fr)); }\r
+  .site-shell .course-detail .course-summary-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }\r
+  .site-shell .course-detail .course-summary-fields > div { grid-column:span 1; }\r
+  .site-shell .course-detail .course-summary-fields > .course-material-status { grid-column:1/-1; }\r
+  .site-shell .course-detail :is(.material-links,.guide-link-grid,.qm-current-links) { grid-template-columns:1fr; }\r
+}\r
+@media(max-width:600px) {\r
+  .site-shell main.course-detail { width:calc(100% - 28px); padding-top:20px; }\r
+  .site-shell .course-detail .uniform-course-hero { padding:26px 22px; border-radius:16px; }\r
+  .site-shell .course-detail .uniform-course-hero h1 { font-size:1.85rem; margin-bottom:16px; }\r
+  .site-shell .course-detail .uniform-course-hero .course-description { font-size:.92rem; }\r
+  .site-shell .course-detail .uniform-course-nav { gap:6px; padding:6px; margin-bottom:28px; }\r
+  .site-shell .course-detail .uniform-course-nav a { padding:12px 10px; gap:8px; font-size:.8rem; }\r
+  .site-shell .course-detail .course-summary-fields > div { padding:16px; }\r
+  .site-shell .course-detail .module-detail-grid { grid-template-columns:1fr; }\r
+  .site-shell .course-detail .module-detail-block { padding:18px; }\r
+  .site-shell .course-detail details > summary { padding:16px 18px; }\r
+  .site-shell .course-detail details > :not(summary),.site-shell .course-detail details > .course-existing-content { padding:18px; }\r
+}\r
+\r
+.site-shell .course-detail .course-material-status dt { margin:0; flex:0 0 auto; }\r
+\r
+.site-shell .course-detail .qm-cohort-label { display:inline-flex; padding:5px 10px; border-radius:6px; color:var(--blue); background:#e1eee7; font-size:.8rem; font-weight:700; }\r
+.site-shell .course-detail .qm-cohort-note { padding:14px 18px; border-left:3px solid #c6a45c; background:#fbf3e3; border-radius:0 8px 8px 0; font-size:.85rem; }\r
+.site-shell .course-detail .guide-layout { display:block; }\r
+.site-shell .course-detail .guide-toc nav { display:flex; flex-wrap:wrap; gap:8px; }\r
+.site-shell .course-detail .guide-toc nav a { padding:6px 10px; border-radius:6px; background:#eaf0ed; text-decoration:none; }\r
+.site-shell .course-detail .guide-week > h3 { margin-top:0; }\r
+`,j=n(),M=Object.assign({"../content/courses/casa0001-current.html":``,"../content/courses/casa0001-official.html":c,"../content/courses/casa0001-reference.html":l,"../content/courses/casa0002-current.html":``,"../content/courses/casa0002-official.html":u,"../content/courses/casa0002-reference.html":``,"../content/courses/casa0005-current.html":d,"../content/courses/casa0005-official.html":f,"../content/courses/casa0005-reference.html":p,"../content/courses/casa0006-current.html":``,"../content/courses/casa0006-official.html":m,"../content/courses/casa0006-reference.html":``,"../content/courses/casa0007-current.html":h,"../content/courses/casa0007-official.html":g,"../content/courses/casa0007-reference.html":_,"../content/courses/casa0008-current.html":``,"../content/courses/casa0008-official.html":v,"../content/courses/casa0008-reference.html":``,"../content/courses/casa0010-current.html":``,"../content/courses/casa0010-official.html":y,"../content/courses/casa0010-reference.html":b,"../content/courses/casa0011-current.html":``,"../content/courses/casa0011-official.html":x,"../content/courses/casa0011-reference.html":``,"../content/courses/casa0013-current.html":``,"../content/courses/casa0013-official.html":S,"../content/courses/casa0013-reference.html":C,"../content/courses/casa0023-current.html":``,"../content/courses/casa0023-official.html":w,"../content/courses/casa0023-reference.html":``,"../content/courses/casa0025-current.html":``,"../content/courses/casa0025-official.html":T,"../content/courses/casa0025-reference.html":``,"../content/courses/casa0028-current.html":``,"../content/courses/casa0028-official.html":E,"../content/courses/casa0028-reference.html":``,"../content/courses/casa0029-current.html":``,"../content/courses/casa0029-official.html":D,"../content/courses/casa0029-reference.html":``,"../content/courses/casa0033-current.html":``,"../content/courses/casa0033-official.html":O,"../content/courses/casa0033-reference.html":``,"../content/courses/casa0034-current.html":``,"../content/courses/casa0034-official.html":k,"../content/courses/casa0034-reference.html":``}),N=[[`basic-information`,`基本資訊`],[`current-materials`,`本屆教材與課程內容`],[`official-information`,`官方課程資訊`],[`reference-materials`,`歷屆教材與學習參考`]];function P({code:t}){let n=e[t],c=e=>M[`../content/courses/${t}-${e}.html`]?.trim()||``,l=c(`current`),u=c(`reference`),d=`<main class="uniform-course-page course-detail">
+    <a class="course-breadcrumb" href="/${n.term}">← 返回學期總覽</a>
+    <header class="uniform-course-hero">
+      <p class="uniform-course-code"><span>${t.toUpperCase()}</span><span>2026/27</span></p>
+      <h1>${i(n.title)}</h1>${a(n)}
+    </header>
+    <nav class="uniform-course-nav" aria-label="章節導覽">${N.map(([e,t],n)=>`<a href="#${e}"><span class="chapter-number" aria-hidden="true">0${n+1}</span><span>${t}</span></a>`).join(``)}</nav>
+    <section id="basic-information" class="course-section"><h2>基本資訊</h2>${o(n)}</section>
+    <section id="current-materials" class="course-section"><h2>本屆教材與課程內容</h2><div class="course-existing-content">${l||`<div class="course-empty"><p>${t===`casa0010`?`本屆研究 brief 與里程碑日期尚未取得或確認。`:`本屆教材尚未取得或確認`}</p></div>`}</div></section>
+    <section id="official-information" class="course-section"><h2>官方課程資訊</h2><div class="course-existing-content">${c(`official`)}</div></section>
+    <details id="reference-materials" class="uniform-course-reference"><summary>歷屆教材與學習參考</summary><div class="course-existing-content">${u||`<p>尚無已確認的歷屆教材。</p>`}</div></details>
+  </main>`;return(0,j.jsx)(s,{page:t,content:d,pageStyles:A,pageTranslations:r},t)}export{P as default};

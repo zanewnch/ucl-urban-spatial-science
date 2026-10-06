@@ -31,6 +31,35 @@ function routeForHref(href, pathname) {
 function parsePageHtml(html, pathname) {
   const options = {};
   options.replace = (node, index) => {
+      const course = courses[pathname.slice(1)];
+      if (course && node.type === 'tag') {
+        const props = attributesToProps(node.attribs || {});
+        const classes = (node.attribs?.class || '').split(/\s+/);
+        const plainText = item => item.type === 'text' ? item.data : (item.children || []).map(plainText).join('');
+        const preserveId = node.attribs?.id ? { id: node.attribs.id } : {};
+        if (classes.includes('code') && plainText(node).trim().toLowerCase() === course.code) {
+          return <span key={index} {...preserveId} />;
+        }
+        if (/^h[2-3]$/.test(node.name)) {
+          const title = node.children.filter(child => child.name !== 'a').map(plainText).join('').trim();
+          if (title === course.title || title.startsWith(`${course.code.toUpperCase()} · 完整課程詳解`)) {
+            return <div key={index} {...preserveId} className="course-source-row">{domToReact(node.children.filter(child => child.name === 'a'), options)}</div>;
+          }
+        }
+        if (node.name === 'article' && (classes.includes('course') || classes.includes('module-card'))) {
+          return <div key={index} {...props} className="course-content-panel">{domToReact(node.children, options)}</div>;
+        }
+        if (node.name === 'details' && classes.includes('course-dossier')) {
+          return <div key={index} {...preserveId} className="course-content-panel">{domToReact(node.children.filter(child => child.name !== 'summary'), options)}</div>;
+        }
+        if (classes.includes('module-dossier-heading')) {
+          return <div key={index} {...preserveId} className="course-content-heading">{domToReact(node.children.filter(child => child.name === 'strong'), options)}</div>;
+        }
+        if (node.name === 'table') {
+          return <div key={index} className="course-table-scroll" tabIndex={0} role="region" aria-label="可水平捲動的表格"><table {...props}>{domToReact(node.children, options)}</table></div>;
+        }
+      }
+
       if (node.name === 'course-card') return parsePageHtml(courseCardHtml(node.attribs.code, node.attribs), pathname);
       if (node.type !== 'tag' || node.name !== 'a' || !node.attribs?.href) return undefined;
       if (node.attribs.href.startsWith('/ucl-urban-spatial-science/casa0005-handbook/')) return undefined;

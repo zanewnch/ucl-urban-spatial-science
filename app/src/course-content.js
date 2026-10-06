@@ -9,10 +9,14 @@ export function courseSummary(course) {
   const source = (label, url = c.source) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${label}</a>`;
   const toolsSource = c.code === 'casa0007'
     ? 'https://bea-taylor.com/Quant_Methods/sessions/week_EDA1/EDA1_practical.html' : c.source;
-  return `<p class="course-summary-meta">${c.term === 'term3' ? 'Terms 2–3' : c.term === 'term1' ? 'Term 1' : 'Term 2'} · ${c.credits} credits · 2026/27</p>
-    <dl class="course-summary-fields"><div><dt>評量</dt><dd>${source(escapeHtml(c.assessment))}</dd></div>
+  const term = c.term === 'term3' ? 'Terms 2–3' : c.term === 'term1' ? 'Term 1' : 'Term 2';
+  return `<dl class="course-summary-fields">
+    <div><dt>學期</dt><dd>${source(term)}</dd></div>
+    <div><dt>學分</dt><dd>${source(`${c.credits} credits`)}</dd></div>
+    <div><dt>評量</dt><dd>${source(escapeHtml(c.assessment))}</dd></div>
     <div><dt>工具</dt><dd>${source(escapeHtml(c.tools), toolsSource)}</dd></div>
-    <div><dt>教材狀態</dt><dd>${escapeHtml(c.status)}</dd></div></dl>`;
+    <div class="course-material-status"><dt>教材狀態</dt><dd>${escapeHtml(c.status)}</dd></div>
+  </dl>`;
 }
 export function courseCardHtml(code, attributes = {}) {
   const c = courses[code];
