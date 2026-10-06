@@ -79,3 +79,9 @@
 .site-shell .topbar nav .course-menu-panel a span { margin-right:8px; }
 .site-shell .topbar nav .course-menu-panel a:hover,
 .site-shell .topbar nav .course-menu-panel a[aria-current='page'] { background:var(--mint); color:var(--navy); }
+
+.site-shell .topbar .primary-nav { overflow:visible; }
+@media(max-width:980px) {
+ .site-shell .course-menu { position:static; }
+ .site-shell .course-menu-panel { left:14px; right:14px; top:100%; width:auto; max-height:65vh; }
+}
