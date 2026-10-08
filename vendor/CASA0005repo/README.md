@@ -1,3 +1,5 @@
+Course link: [Chapter 1: Geographic Information](https://andrewmaclachlan.github.io/CASA0005repo/geographic-information.html)
+
 # CASA0005 Geographic Information Systems and Science
 
 > This directory is a trimmed content snapshot of the [upstream CASA0005 repository](https://github.com/andrewmaclachlan/CASA0005repo) at commit `c855a108e6969e7d2a490b6aa176f63b83fbf087`, stored inside its parent repository rather than as a Git submodule. The published `docs/` handbook is retained. Source ignore-matched illustration files and local build caches are omitted, so use the upstream repository for a complete source checkout or to regenerate the book.
