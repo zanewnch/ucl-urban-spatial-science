@@ -1,4 +1,4 @@
-import{o as e,t}from"./index-oZ0zhkBt.js";import{t as n}from"./page-DTsIHfpa.js";e();var r=`<main class="wrap">\r
+import{o as e,t}from"./index-BytIeDQ0.js";import{t as n}from"./page-uWLslpFj.js";e();var r=`<main class="wrap">\r
     <span class="eyebrow">Project history · based on Git commits</span>\r
     <h1>Change Log</h1>\r
     <p class="lede">依照這個專案的 Git commit 紀錄，整理課程網站從建立、擴充到近期內容更新的歷程。</p>\r
