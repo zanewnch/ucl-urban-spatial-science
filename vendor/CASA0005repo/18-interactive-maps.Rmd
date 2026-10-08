@@ -1,0 +1,108 @@
+# Interactive maps {-}
+
+::: {.infobox .tip data-latex="{note}"}
+This uses the same data from the mapping practical - airbnbs and hotels (OSM) in London. Run all of that code before starting this!
+:::
+
+```{r message=FALSE, echo=FALSE}
+library(sf)
+library(tidyverse)
+
+# OSM data
+
+OSM <- st_read("prac5_data/greater-london-latest-free.shp/gis_osm_pois_free_1.shp")%>%
+  st_transform(., 27700) %>%
+  #select hotels only
+  filter(fclass == 'hotel')
+
+# Airbnb data
+Airbnb <- read_csv("prac5_data/listings.csv") %>%
+  # longitude is considered x value here, latitude is y
+  st_as_sf(., coords = c("longitude", "latitude"), 
+                   crs = 4326) %>%
+    st_transform(., 27700)%>%
+    #select entire places that are available all year
+    filter(room_type == 'Entire home/apt' & availability_365 =='365')
+
+
+#London Borough data is already in 277000
+Londonborough <- st_read("Prac1_data/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp")%>%
+  st_transform(., 27700)
+
+Accomodation_contained <- Londonborough%>%
+  mutate(hotels_n = lengths(st_contains(., OSM)))%>%
+  mutate(airbnbs_n = lengths(st_contains(., Airbnbs)))
+
+library(classInt)
+
+# Get Jenks breaks for 5 classes
+breaks <- Accomodation_contained%>%
+  st_drop_geometry()%>%
+  #need a numeric vector not a dataframe or tibble
+  pull(airbnbs_n) %>%             
+  classIntervals(., n = 5, style = "jenks")
+```
+
+To make our map interactive we change `tmap_mode()` from plot to view..
+
+```{r message=FALSE, warning=FALSE, cache=FALSE}
+tmap_mode("view")
+
+tm_shape(Accomodation_contained) + 
+  tm_polygons("hotels_n") 
+```
+
+## Advanced interactive map
+
+But let's take it a bit further so we can select our layers on an interactive map..Let's set a few more things up:
+
+* Our CRS needs to be in WGS84
+
+```{r}
+Accomodation_containedWGS84<- Accomodation_contained %>%
+  st_transform(., 4326)
+
+```
+
+Similar to our static maps we must:
+
+* First define the shape object 
+* Then load the map layer (e.g. polygons)
+
+Here, we also set a group which links the polygon both the legend and button selection options.
+
+```{r prac5leaf, message=FALSE, warning=FALSE, cache=FALSE, eval=TRUE}
+
+tmap_mode("view")
+
+# Build the map
+
+  # Airbnb layer
+map <-  tm_shape(Accomodation_containedWGS84) +
+        tm_polygons(fill="airbnbs_n",
+                    fill.scale = list(tm_scale_intervals(values = "brewer.blues", breaks=breaks$brks)),
+                    fill_alpha=0.5,
+                    col="white",
+                    lwd=2,
+                    lty="dashed",
+                    # select columns for popup
+                    popup.vars=c("airbnbs_n", "NAME"),
+                    group="Airbnb") + 
+        
+  # hotel layer  
+        tm_polygons(fill="hotels_n",
+                    fill.scale = list(tm_scale_intervals(values = "brewer.blues", breaks=breaks$brks)),
+                    fill_alpha=0.5,
+                    col="white",
+                    lwd=2,
+                    lty="dashed",
+                    popup.vars=c("hotels_n", "NAME"),
+                    group="Hotels")+
+    # basemap
+          tm_basemap(server = c("OpenStreetMap", "Thunderforest.Landscape"))
+        
+
+map
+```
+
+To see other basemap options (there are loads!) have a look here at [leaflet extras](http://leaflet-extras.github.io/leaflet-providers/preview/)

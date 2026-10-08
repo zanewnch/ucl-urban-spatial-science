@@ -17,7 +17,7 @@ try {
   const index = await stat(path.join(source, 'index.html'));
   if (!index.isFile()) throw new Error('docs/index.html is not a file');
 } catch {
-  throw new Error('CASA0005 handbook docs/index.html is missing. Initialize vendor/CASA0005repo first.');
+  throw new Error('CASA0005 handbook docs/index.html is missing. Restore the vendored files under vendor/CASA0005repo.');
 }
 
 const entries = await readdir(source);
