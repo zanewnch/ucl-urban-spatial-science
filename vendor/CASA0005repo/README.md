@@ -21,17 +21,18 @@ The content covers the principles underlying the conception, representation/meas
 If you want to study the course, use the already-rendered handbook in [`docs/`](docs/). You do not need to open the source files or build the book.
 
 1. Open the handbook [home page](docs/index.html). It contains the welcome page and chapter navigation.
-2. Read [The Basics of Geographic Information](docs/the-basics-of-geographic-information-data.html), then [Chapter 1: Geographic Information](docs/01-geographic-information.html) — this is the same chapter linked at the top of this README and shown on the online course site.
-3. Continue with [Introduction to R](docs/02-introduction-to-r.html) and the later chapters from the handbook navigation.
+2. Read [The Basics of Geographic Information](docs/00-course-introduction/the-basics-of-geographic-information-data.html), then [Chapter 1: Geographic Information](docs/01-geographic-information/01-geographic-information.html) — this is the same chapter linked at the top of this README and shown on the online course site.
+3. Continue with [Introduction to R](docs/02-introduction-to-r/02-introduction-to-r.html) and the later chapters from the handbook navigation.
 
 Keep the whole `docs/` folder together for offline reading because its HTML pages refer to local images, styles, and other supporting files.
 
 ## What the repository files are for
 
 - [`docs/index.html`](docs/index.html) is the rendered handbook home page. [`index.Rmd`](index.Rmd) is its editable source.
-- [`docs/01-geographic-information.html`](docs/01-geographic-information.html) is the rendered Chapter 1 page. [`01-geographic-information.Rmd`](01-geographic-information.Rmd) is its source. Similarly, [`00-basics.Rmd`](00-basics.Rmd) is the source for [`docs/the-basics-of-geographic-information-data.html`](docs/the-basics-of-geographic-information-data.html), and [`02-introduction-to-r.Rmd`](02-introduction-to-r.Rmd) is the source for [`docs/02-introduction-to-r.html`](docs/02-introduction-to-r.html).
-- Other `.Rmd` files are lesson sources. You only need them if you want to inspect or edit how the handbook was written.
-- [`_bookdown.yml`](_bookdown.yml) lists the source chapters and their order; [`_output.yml`](_output.yml) configures the rendered format and appearance. Bookdown builds the multi-chapter handbook, and Pandoc converts its content into HTML. These are build settings, not additional course guidelines.
+- [`docs/01-geographic-information/01-geographic-information.html`](docs/01-geographic-information/01-geographic-information.html) is the rendered Chapter 1 page. [`01-geographic-information/01-geographic-information.Rmd`](01-geographic-information/01-geographic-information.Rmd) is its source. Similarly, [`00-course-introduction/00-basics.Rmd`](00-course-introduction/00-basics.Rmd) is the source for [`docs/00-course-introduction/the-basics-of-geographic-information-data.html`](docs/00-course-introduction/the-basics-of-geographic-information-data.html), and [`02-introduction-to-r/02-introduction-to-r.Rmd`](02-introduction-to-r/02-introduction-to-r.Rmd) is the source for [`docs/02-introduction-to-r/02-introduction-to-r.html`](docs/02-introduction-to-r/02-introduction-to-r.html).
+- Numbered folders group each chapter's `.Rmd` source and `.R` practice script. Their rendered HTML pages are in the matching folder under `docs/`; for example, [`01-geographic-information/`](01-geographic-information/) contains the Chapter 1 sources and [`docs/01-geographic-information/01-geographic-information.html`](docs/01-geographic-information/01-geographic-information.html) is the reading copy. The introductory sources are in [`00-course-introduction/`](00-course-introduction/) and its pages are in [`docs/00-course-introduction/`](docs/00-course-introduction/).
+- [`index.Rmd`](index.Rmd) remains the handbook home page source; [`docs/index.html`](docs/index.html) is the rendered home page. Other numbered folders hold supplementary chapters, including materials not currently listed for the Bookdown build.
+- [`_bookdown.yml`](_bookdown.yml) lists the source chapters and their order; [`_output.yml`](_output.yml) configures the rendered format and appearance. Bookdown builds the multi-chapter handbook, and Pandoc converts its content into HTML. The build script then places chapter HTML in matching `docs/` folders and updates local links. These are build settings, not additional course guidelines.
 - [`docs/404.html`](docs/404.html) is an error page for a missing URL, not a course chapter.
 
 ### JOSE paper
