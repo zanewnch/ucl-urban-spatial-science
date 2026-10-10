@@ -26,7 +26,7 @@ The task is to join some non spatial data to some spatial data.
 
 * Go to the [Stats NZ website](https://www.stats.govt.nz/information-releases/statistical-area-1-dataset-for-2018-census-updated-march-2020) and download the Statistical area 1 dataset for 2018 for the whole of New Zealand. Download the excel file this week, **not** the `.csv`.
 
-* Unzip the downloaded census file and open  2018-SA1-dataset-individual-part-3a-total-NZ_updated_16-7-20, you will see a tab for Territorial authority. Join the 2018 paid employee field to the spatial data and make a basic map. Hint, you may need to make a new `.csv` file from the data.
+* Unzip the downloaded census file and open  assignment-nz-sa1-2018-part-3a-total, you will see a tab for Territorial authority. Join the 2018 paid employee field to the spatial data and make a basic map. Hint, you may need to make a new `.csv` file from the data.
 
 :::
 
@@ -265,20 +265,20 @@ Setting up a project and using Rmarkdown (or Quarto) is extremely useful as it l
 
 ```{r eval=FALSE, cache=FALSE, warning=FALSE}
 library(tidyverse)
-mycsv <- read_csv("C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/fly_tipping_borough_edit.csv"")  
+mycsv <- read_csv("C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/01-geographic-information/course-data/course-demo-fly-tipping-borough.csv"")
 ```
 
 However, **never do this!** Imagine sharing that with someone else, they'd had to change every file path! As i've set my R project up in the CASA0005repo folder with different data folders for each week i can just use:
 
 ```{r eval=TRUE, cache=FALSE, warning=FALSE}
 library(tidyverse)
-mycsv <- read_csv("Prac1_data/fly_tipping_borough_edit.csv")  
+mycsv <- read_csv("01-geographic-information/course-data/course-demo-fly-tipping-borough.csv")
 ```
 
 If i had the `.csv` file in the same folder as my project file i could just use
 
 ```{r eval=FALSE, cache=FALSE, warning=FALSE}
-mycsv <- read_csv("fly_tipping_borough_edit.csv")  
+mycsv <- read_csv("course-demo-fly-tipping-borough.csv")
 ```
 
 You can run put this into a code chunk and press play, the data will load. If you look in the envrionment tab (top right) you will see it as an "object". Click it and it will display like an excel sheet in R.
@@ -286,7 +286,7 @@ You can run put this into a code chunk and press play, the data will load. If yo
 When you load `tidyverse` you might get a list of conflicts, this basically means that several packages have functions named the same thing. For example there is a function named `filter()` in the packages `dplyr` and `stats`. If you wanted to use the `dplyr` version you would use `dplyr::filter()` or for the `stats` version it would be `stats::filter()`...
 
 ::: {.infobox .warning data-latex="{note}"}
-**Note** Your `.csv` might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the `.csv` now and reload it or (b) change the code to... `mycsv <- read_csv("prac1_data/fly_tipping_borough_edit.csv", skip = 1)`
+**Note** Your `.csv` might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the `.csv` now and reload it or (b) change the code to... `mycsv <- read_csv("01-geographic-information/course-data/course-demo-fly-tipping-borough.csv", skip = 1)`
 :::
 
 I'd strongly recommend you think about how you will store data within your project. Is it sensible to just dump all your data into the project folder or perhaps create a new folder (either in R) or how you would normally do so in Windows / OS X and keep your raw data in that folder...like i have done...Here you can see that i'm in my project folder (red box on the right) and i've made new folders for all my data (each practical here) and images that are shown throuhgout....nice and organised!
@@ -306,8 +306,8 @@ knitr::include_graphics('../docs/allisonhorst_images/sf.png', )
 
 ```{r, message=FALSE, warning=FALSE, cache=FALSE}
 library(sf)
-# my data is within a prac1_data folder.
-shape <- st_read("prac1_data/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp")
+# my data is within the Chapter 1 course-data folder.
+shape <- st_read("01-geographic-information/course-data/london-boundaries/ESRI/London_Borough_Excluding_MHW.shp")
 ```
 > **Note** if my data was in the same folder as my project file (.RProj) i would just need.
 
@@ -339,7 +339,7 @@ shape %>%
 When you load `tidyverse` you might get a list of conflicts, this basically means that several packages have functions named the same thing. For example there is a function named `filter()` in the packages `dplyr` and `stats`. If you wanted to use the `dplyr` version you would use `dplyr::filter()` or for the `stats` version it would be `stats::filter()`...
 
 ::: {.infobox .warning data-latex="{note}"}
-**Note** Your `.csv` might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the `.csv` now and reload it or (b) change the code to... `mycsv <- read_csv("prac1_data/fly_tipping_borough_edit.csv",      skip = 1)`
+**Note** Your `.csv` might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the `.csv` now and reload it or (b) change the code to... `mycsv <- read_csv("01-geographic-information/course-data/course-demo-fly-tipping-borough.csv",      skip = 1)`
 :::
 
 To view the `.csv`either click on it in the envrionment tab (top right) or run the following, try this in the console:
@@ -393,7 +393,7 @@ Finally write shape to a new GeoPackage (`.gpkg`) giving it the layer name of yo
 ```{r cache=FALSE, message=FALSE}
 
 shape%>% st_write(.,
-  "prac1_data/flytipping.gpkg",
+  "01-geographic-information/course-data/flytipping.gpkg",
   layer = "london_boroughs_fly_tipping",
   delete_dsn = TRUE
 )
@@ -406,7 +406,7 @@ Let's also add the originally `.csv` so someone could repliacte this analysis (t
 library(readr)
 library(RSQLite)
 
-con <- dbConnect(RSQLite::SQLite(),dbname="prac1_data/flytipping.gpkg")
+con <- dbConnect(RSQLite::SQLite(),dbname="01-geographic-information/course-data/flytipping.gpkg")
 ```
 
 Now examine what is in the `.gpkg`...you can see that i've already got my `original_csv` stored within the `.gpkg` as when i developed this practical i made sure it was working!

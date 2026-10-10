@@ -1360,7 +1360,7 @@ div.csl-indent {
 <ul>
 <li><p>Go to the <a href="https://datafinder.stats.govt.nz/">New Zealand spatial data portal</a> and download the file Territorial Authority 2018 (generalised), <a href="https://www.localcouncils.govt.nz/lgip.nsf/wpg_url/About-Local-Government-Local-Government-In-New-Zealand-Councils-roles-and-functions#TerritorialAuthorities(District%20and%20City%20Councils)">these are city or district councils</a>. Make sure it’s the Territorial Authority 2018 data <strong>not</strong> SA1.</p></li>
 <li><p>Go to the <a href="https://www.stats.govt.nz/information-releases/statistical-area-1-dataset-for-2018-census-updated-march-2020">Stats NZ website</a> and download the Statistical area 1 dataset for 2018 for the whole of New Zealand. Download the excel file this week, <strong>not</strong> the <code>.csv</code>.</p></li>
-<li><p>Unzip the downloaded census file and open 2018-SA1-dataset-individual-part-3a-total-NZ_updated_16-7-20, you will see a tab for Territorial authority. Join the 2018 paid employee field to the spatial data and make a basic map. Hint, you may need to make a new <code>.csv</code> file from the data.</p></li>
+<li><p>Unzip the downloaded census file and open assignment-nz-sa1-2018-part-3a-total, you will see a tab for Territorial authority. Join the 2018 paid employee field to the spatial data and make a basic map. Hint, you may need to make a new <code>.csv</code> file from the data.</p></li>
 </ul>
 </div>
 <div class="infobox note">
@@ -1541,10 +1541,10 @@ Figure 1.2: Installing vs loading (with library) packages. Source: <a href="http
 <h3><span class="header-section-number">1.5.6</span> Why use a project and markdown<a href="01-geographic-information.html#why-use-a-project-and-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Setting up a project and using Rmarkdown (or Quarto) is extremely useful as it lets you easily access (and share) your data and files…for example….today we will be using a flytipping <code>.csv</code>. It is stored at the full file path that we can load directly. The tidyverse package is actually a collection of packages, to read a <code>.csv</code> we need the readr package (part of tidyverse) and the <code>read_csv</code> function.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="01-geographic-information.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-2"><a href="01-geographic-information.html#cb4-2" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/fly_tipping_borough_edit.csv&quot;&quot;)  </span></span></code></pre></div>
+<span id="cb4-2"><a href="01-geographic-information.html#cb4-2" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/01-geographic-information/course-data/course-demo-fly-tipping-borough.csv&quot;&quot;)  </span></span></code></pre></div>
 <p>However, <strong>never do this!</strong> Imagine sharing that with someone else, they’d had to change every file path! As i’ve set my R project up in the CASA0005repo folder with different data folders for each week i can just use:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="01-geographic-information.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-2"><a href="01-geographic-information.html#cb5-2" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;Prac1_data/fly_tipping_borough_edit.csv&quot;</span>)  </span></code></pre></div>
+<span id="cb5-2"><a href="01-geographic-information.html#cb5-2" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;01-geographic-information/course-data/course-demo-fly-tipping-borough.csv&quot;</span>)  </span></code></pre></div>
 <pre><code>## Rows: 34 Columns: 9
 ## ── Column specification ──────────
 ## Delimiter: &quot;,&quot;
@@ -1554,11 +1554,11 @@ Figure 1.2: Installing vs loading (with library) packages. Source: <a href="http
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <p>If i had the <code>.csv</code> file in the same folder as my project file i could just use</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="01-geographic-information.html#cb7-1" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;fly_tipping_borough_edit.csv&quot;</span>)  </span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="01-geographic-information.html#cb7-1" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;course-demo-fly-tipping-borough.csv&quot;</span>)  </span></code></pre></div>
 <p>You can run put this into a code chunk and press play, the data will load. If you look in the envrionment tab (top right) you will see it as an “object”. Click it and it will display like an excel sheet in R.</p>
 <p>When you load <code>tidyverse</code> you might get a list of conflicts, this basically means that several packages have functions named the same thing. For example there is a function named <code>filter()</code> in the packages <code>dplyr</code> and <code>stats</code>. If you wanted to use the <code>dplyr</code> version you would use <code>dplyr::filter()</code> or for the <code>stats</code> version it would be <code>stats::filter()</code>…</p>
 <div class="infobox warning">
-<p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the <code>.csv</code> now and reload it or (b) change the code to… <code>mycsv &lt;- read_csv("prac1_data/fly_tipping_borough_edit.csv", skip = 1)</code></p>
+<p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the <code>.csv</code> now and reload it or (b) change the code to… <code>mycsv &lt;- read_csv("01-geographic-information/course-data/course-demo-fly-tipping-borough.csv", skip = 1)</code></p>
 </div>
 <p>I’d strongly recommend you think about how you will store data within your project. Is it sensible to just dump all your data into the project folder or perhaps create a new folder (either in R) or how you would normally do so in Windows / OS X and keep your raw data in that folder…like i have done…Here you can see that i’m in my project folder (red box on the right) and i’ve made new folders for all my data (each practical here) and images that are shown throuhgout….nice and organised!</p>
 <p><img src="../prac2_images/file_storage.png" alt="" width="500px" style="display: block; margin: auto;" /></p>
@@ -1573,10 +1573,10 @@ Figure 1.3: sf introduction graphic. Source: <a href="https://github.com/allison
 </p>
 </div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="01-geographic-information.html#cb8-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb8-2"><a href="01-geographic-information.html#cb8-2" tabindex="-1"></a><span class="co"># my data is within a prac1_data folder.</span></span>
-<span id="cb8-3"><a href="01-geographic-information.html#cb8-3" tabindex="-1"></a>shape <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;prac1_data/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp&quot;</span>)</span></code></pre></div>
+<span id="cb8-2"><a href="01-geographic-information.html#cb8-2" tabindex="-1"></a><span class="co"># my data is within the Chapter 1 course-data folder.</span></span>
+<span id="cb8-3"><a href="01-geographic-information.html#cb8-3" tabindex="-1"></a>shape <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;01-geographic-information/course-data/london-boundaries/ESRI/London_Borough_Excluding_MHW.shp&quot;</span>)</span></code></pre></div>
 <pre><code>## Reading layer `London_Borough_Excluding_MHW&#39; from data source
-##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\prac1_data\statistical-gis-boundaries-london\ESRI\London_Borough_Excluding_MHW.shp&#39;
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\01-geographic-information\course-data\london-boundaries\ESRI\London_Borough_Excluding_MHW.shp&#39;
 ##   using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 33 features and 8 fields
 ## Geometry type: MULTIPOLYGON
@@ -1621,7 +1621,7 @@ Figure 1.3: sf introduction graphic. Source: <a href="https://github.com/allison
 <p><img src="../CASA0005_files/figure-html/unnamed-chunk-39-1.png" alt="" width="672" /></p>
 <p>When you load <code>tidyverse</code> you might get a list of conflicts, this basically means that several packages have functions named the same thing. For example there is a function named <code>filter()</code> in the packages <code>dplyr</code> and <code>stats</code>. If you wanted to use the <code>dplyr</code> version you would use <code>dplyr::filter()</code> or for the <code>stats</code> version it would be <code>stats::filter()</code>…</p>
 <div class="infobox warning">
-<p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the <code>.csv</code> now and reload it or (b) change the code to… <code>mycsv &lt;- read_csv("prac1_data/fly_tipping_borough_edit.csv",      skip = 1)</code></p>
+<p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the <code>.csv</code> now and reload it or (b) change the code to… <code>mycsv &lt;- read_csv("01-geographic-information/course-data/course-demo-fly-tipping-borough.csv",      skip = 1)</code></p>
 </div>
 <p>To view the <code>.csv</code>either click on it in the envrionment tab (top right) or run the following, try this in the console:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="01-geographic-information.html#cb15-1" tabindex="-1"></a>mycsv </span></code></pre></div>
@@ -1695,20 +1695,20 @@ Figure 1.3: sf introduction graphic. Source: <a href="https://github.com/allison
 <h3><span class="header-section-number">1.5.9</span> Export data<a href="01-geographic-information.html#export-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Finally write shape to a new GeoPackage (<code>.gpkg</code>) giving it the layer name of your choice:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="01-geographic-information.html#cb23-1" tabindex="-1"></a>shape<span class="sc">%&gt;%</span> <span class="fu">st_write</span>(.,</span>
-<span id="cb23-2"><a href="01-geographic-information.html#cb23-2" tabindex="-1"></a>  <span class="st">&quot;prac1_data/flytipping.gpkg&quot;</span>,</span>
+<span id="cb23-2"><a href="01-geographic-information.html#cb23-2" tabindex="-1"></a>  <span class="st">&quot;01-geographic-information/course-data/flytipping.gpkg&quot;</span>,</span>
 <span id="cb23-3"><a href="01-geographic-information.html#cb23-3" tabindex="-1"></a>  <span class="at">layer =</span> <span class="st">&quot;london_boroughs_fly_tipping&quot;</span>,</span>
 <span id="cb23-4"><a href="01-geographic-information.html#cb23-4" tabindex="-1"></a>  <span class="at">delete_dsn =</span> <span class="cn">TRUE</span></span>
 <span id="cb23-5"><a href="01-geographic-information.html#cb23-5" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## Deleting source `prac1_data/flytipping.gpkg&#39; using driver `GPKG&#39;
+<pre><code>## Deleting source `01-geographic-information/course-data/flytipping.gpkg&#39; using driver `GPKG&#39;
 ## Writing layer `london_boroughs_fly_tipping&#39; to data source
-##   `prac1_data/flytipping.gpkg&#39; using driver `GPKG&#39;
+##   `01-geographic-information/course-data/flytipping.gpkg&#39; using driver `GPKG&#39;
 ## Writing 33 features with 8 fields and geometry type Multi Polygon.</code></pre>
 <p>So here, we are saying the shape is the object we want to save, then we are saving this to a new GeoPacakge that will be created, with the layer name of <code>london_boroughs_fly_tipping</code>. I’ve set <code>delete_layer</code> to true so I could overwrite mine when I developed this practical. Changing it to false would generate an error message if you ever tried to re-run the code.</p>
 <p>Let’s also add the originally <code>.csv</code> so someone could repliacte this analysis (they’d also need the original shapefile). This is a bit more complicated as we have to use the SQLite database package. Firstly, connect to the <code>.gpkg</code> we just made:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="01-geographic-information.html#cb25-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb25-2"><a href="01-geographic-information.html#cb25-2" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span></code></pre></div>
 <pre><code>## Warning: package &#39;RSQLite&#39; was built under R version 4.5.3</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="01-geographic-information.html#cb27-1" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(),<span class="at">dbname=</span><span class="st">&quot;prac1_data/flytipping.gpkg&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="01-geographic-information.html#cb27-1" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(),<span class="at">dbname=</span><span class="st">&quot;01-geographic-information/course-data/flytipping.gpkg&quot;</span>)</span></code></pre></div>
 <p>Now examine what is in the <code>.gpkg</code>…you can see that i’ve already got my <code>original_csv</code> stored within the <code>.gpkg</code> as when i developed this practical i made sure it was working!</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="01-geographic-information.html#cb28-1" tabindex="-1"></a>con <span class="sc">%&gt;%</span></span>
 <span id="cb28-2"><a href="01-geographic-information.html#cb28-2" tabindex="-1"></a>  <span class="fu">dbListTables</span>()</span></code></pre></div>
