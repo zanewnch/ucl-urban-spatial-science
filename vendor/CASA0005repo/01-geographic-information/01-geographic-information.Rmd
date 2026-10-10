@@ -101,13 +101,13 @@ Let's download some data..
 **Answer** The year is a column and for each area the values are repeated for different years. In our analysis it is easier to have the different years as a column and populated for each area. So, we want to go from this...
 
 ```{r echo=FALSE, out.width = "600pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/csv_original.png')
+knitr::include_graphics('../docs/prac1_images/csv_original.png')
 ```
 
 To this...
 
 ```{r echo=FALSE, out.width = "600pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/csv_pivot.png')
+knitr::include_graphics('../docs/prac1_images/csv_pivot.png')
 ```
 
 ::: {.infobox .tip data-latex="{note}"}
@@ -125,7 +125,7 @@ As we are going to use this dataset in QGIS and R I've done it in Excel using a 
 I've used the following:
 
 ```{r echo=FALSE, out.width = "400pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/pivot_example.png')
+knitr::include_graphics('../docs/prac1_images/pivot_example.png')
 ```
 
 Note how I've altered the total_action_taken to the sum of... as the original was displaying incorrectly, to do so:
@@ -164,7 +164,7 @@ The purpose of this practical is just to demonstrate data loading and manipulati
 When you download and install R, you get the R Graphical User Interface (GUI) as standard (below). This is fine and some purists prefer using the clean, unfussy command-line original, but it has some limitations such as no graphical way to view data tables or keep track of what is in your working directory (there are a number of others too).
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac2_images/R.png') 
+knitr::include_graphics('../docs/prac2_images/R.png')
 ```
 
 Fortunately there are a number of software environments that have been developed for R to make it a little more user-friendly; the best of these by a long way is RStudio. RStudio can be downloaded for free from <https://www.rstudio.com/>. We covered the RStudio layout last week.
@@ -178,7 +178,7 @@ If you are some kind of masochist, you are welcome to use the bundled R GUI for 
 You should be able to see these quadrants (without the code):
 
 ```{r echo=FALSE, out.width = "800pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/RStudio.png') 
+knitr::include_graphics('../docs/prac1_images/RStudio.png')
 ```
 
 Once RStudio has opened, the first thing we will do is create a new project – projects enable you to organise your work effectively and store all of the files for a particular task/project.
@@ -188,7 +188,7 @@ Once RStudio has opened, the first thing we will do is create a new project – 
 1.  Select Start a project in a brand new working directory and create a new project in a directory called "GIS" or "CASA0005". As we will see, you can use one project for the whole module. Each practical can be a new script, with data stored in related folders (e.g. week1data)
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac2_images/r_newproject.png') 
+knitr::include_graphics('../docs/prac2_images/r_newproject.png')
 ```
 
 Once we've made an RProject:
@@ -196,7 +196,7 @@ Once we've made an RProject:
 * In the top right of Rstudio (above the environment window) you will see your Project name next to a blue box with R
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/project_top_right.png') 
+knitr::include_graphics('../docs/prac1_images/project_top_right.png')
 ```
 
 In the file window (bottom right) you will see:
@@ -206,7 +206,7 @@ In the file window (bottom right) you will see:
 * The blue square with the R logo (red cirlce), clicking this will always return you to the project folder
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/project_bottom_left.png') 
+knitr::include_graphics('../docs/prac1_images/project_bottom_left.png')
 ```
 
 ### Files in R
@@ -228,7 +228,7 @@ Make sure you save the file in your project folder.
 R works on packages that are collections of functions and data. Packages are bits of code that extend R beyond the basic statistical functionality it was originally designed for. For spatial data, they enable R to process spatial data formats, carry out analysis tasks and create some of the maps that follow. Most packages are easily recognisable through a hexagon (hex) logo, or sticker. 
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE, fig.cap="R package hex sticker wall. Source: [Mitchell O'Hara-Wild arranging Hex stickers in R](https://www.mitchelloharawild.com/blog/hexwall/)"}
-knitr::include_graphics('prac1_images/hex_stickers.png') 
+knitr::include_graphics('../docs/prac1_images/hex_stickers.png')
 ```
 
 Basically, without packages, R would be very limited. With packages, you can do virtually anything! One of the issues you will come across is that packages are being continually developed and updated and unless you keep your version of R updated and your packages updated, there may be some functions and options not available to you. 
@@ -243,7 +243,7 @@ install.packages(c("sf", "tmap", "tmaptools", "RSQLite", "tidyverse"),
 1.  We can also install and load packages through RStudio packages tab. If you can see the package listed in the package tab it is installed and a tick means it is loaded.
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac2_images/r_packages.png') 
+knitr::include_graphics('../docs/prac2_images/r_packages.png')
 ```
 
 Packages we've installed with our code:
@@ -256,7 +256,7 @@ Packages we've installed with our code:
 Here, `repos` stands for repository where we will download the packages from. Once you have set it, you shouldn't need to specify it again. Whilst we've installed the packages we haven't loaded them...this is done through using `library()` function.
 
 ```{r echo=FALSE, out.width = "600pt", fig.align='center', cache=FALSE, fig.cap="Installing vs loading (with library) packages. Source: [Dianne Cook](https://twitter.com/visnut)"}
-knitr::include_graphics('prac1_images/install_library.jfif') 
+knitr::include_graphics('../docs/prac1_images/install_library.jfif')
 ```
 
 ### Why use a project and markdown
@@ -292,7 +292,7 @@ When you load `tidyverse` you might get a list of conflicts, this basically mean
 I'd strongly recommend you think about how you will store data within your project. Is it sensible to just dump all your data into the project folder or perhaps create a new folder (either in R) or how you would normally do so in Windows / OS X and keep your raw data in that folder...like i have done...Here you can see that i'm in my project folder (red box on the right) and i've made new folders for all my data (each practical here) and images that are shown throuhgout....nice and organised!
 
 ```{r echo=FALSE, out.width = "500px", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac2_images/file_storage.png') 
+knitr::include_graphics('../docs/prac2_images/file_storage.png')
 ```
 
 ### Load data
@@ -300,7 +300,7 @@ knitr::include_graphics('prac2_images/file_storage.png')
 Load the `sf` package so we can read our shapefile in --- your data should be in your project.
 
 ```{r echo=FALSE, out.width = "450pt", fig.align='center', cache=FALSE, fig.cap="sf introduction graphic. Source: [Allison Horst data science and stats illustrations](https://github.com/allisonhorst/stats-illustrations)"}
-knitr::include_graphics('allisonhorst_images/sf.png', )
+knitr::include_graphics('../docs/allisonhorst_images/sf.png', )
 ```
 
 
@@ -375,7 +375,7 @@ shape%>%
 Now, let's make a quick thematic map (or a qtm) using the package `tmap`. I've made mine for flytipping between 2011 and 2012 (column 2011_12). But check what your column name is from the above code `head(shape, n=10)` it might be slightly different like 2011-2012 or x2011_2012....
 
 ```{r echo=FALSE, out.width = "600pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/colname.png') 
+knitr::include_graphics('../docs/prac1_images/colname.png')
 ```
 
 ```{r cache=FALSE, message=FALSE}
