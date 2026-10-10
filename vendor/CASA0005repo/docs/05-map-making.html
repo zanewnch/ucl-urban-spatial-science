@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Map making | CASA0005 Geographic Information Systems and Science</title>
+  <meta name="description" content="The CASA0005 Geographic Information Systems and Science practical book" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Map making | CASA0005 Geographic Information Systems and Science" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://andrewmaclachlan.github.io/CASA0005repo//general_images/casa_logo.png" />
+  <meta property="og:description" content="The CASA0005 Geographic Information Systems and Science practical book" />
+  <meta name="github-repo" content="andrewmaclachlan/CASA0005repo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Map making | CASA0005 Geographic Information Systems and Science" />
+  
+  <meta name="twitter:description" content="The CASA0005 Geographic Information Systems and Science practical book" />
+  <meta name="twitter:image" content="https://andrewmaclachlan.github.io/CASA0005repo//general_images/casa_logo.png" />
+
+<meta name="author" content="Andy MacLachlan, Adam Dennett and Claire Dooley" />
+
+
+<meta name="date" content="2026-10-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="04-git-github-and-rmarkdown.html"/>
+<link rel="next" href="06-detecting-spatial-patterns.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<script src="libs/plotly-binding-4.12.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+<script src="libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+<script src="libs/logodeps-1.0.0/logo.js"></script>
+<script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151934476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151934476-1');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7M7GJR768X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7M7GJR768X');
+</script>
+<script src="assets/book.js"></script>
+
+<script>
+/* ========================================================================
+ * Bootstrap: transition.js v3.3.7
+ * http://getbootstrap.com/javascript/#transitions
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // ============================================================
+
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    }
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    }
+
+    return false // explicit for ie8 (  ._.)
+  }
+
+  // http://blog.alexmaccaw.com/css-transitions
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false
+    var $el = this
+    $(this).one('bsTransitionEnd', function () { called = true })
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    setTimeout(callback, duration)
+    return this
+  }
+
+  $(function () {
+    $.support.transition = transitionEnd()
+
+    if (!$.support.transition) return
+
+    $.event.special.bsTransitionEnd = {
+      bindType: $.support.transition.end,
+      delegateType: $.support.transition.end,
+      handle: function (e) {
+        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+      }
+    }
+  })
+
+}(jQuery);
+</script>
+<script>
+/* ========================================================================
+ * Bootstrap: collapse.js v3.3.7
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+/* jshint latedef: false */
+
++function ($) {
+  'use strict';
+
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
+
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.transitioning = null
+
+    if (this.options.parent) {
+      this.$parent = this.getParent()
+    } else {
+      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+    }
+
+    if (this.options.toggle) this.toggle()
+  }
+
+  Collapse.VERSION  = '3.3.7'
+
+  Collapse.TRANSITION_DURATION = 350
+
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
+
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
+
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
+
+    var activesData
+    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+
+    if (actives && actives.length) {
+      activesData = actives.data('bs.collapse')
+      if (activesData && activesData.transitioning) return
+    }
+
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    if (actives && actives.length) {
+      Plugin.call(actives, 'hide')
+      activesData || actives.data('bs.collapse', null)
+    }
+
+    var dimension = this.dimension()
+
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')[dimension](0)
+      .attr('aria-expanded', true)
+
+    this.$trigger
+      .removeClass('collapsed')
+      .attr('aria-expanded', true)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+
+    this.$element
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  }
+
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
+
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    var dimension = this.dimension()
+
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse in')
+      .attr('aria-expanded', false)
+
+    this.$trigger
+      .addClass('collapsed')
+      .attr('aria-expanded', false)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse')
+        .trigger('hidden.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    this.$element
+      [dimension](0)
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+  }
+
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
+
+  Collapse.prototype.getParent = function () {
+    return $(this.options.parent)
+      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+      .each($.proxy(function (i, element) {
+        var $element = $(element)
+        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+      }, this))
+      .end()
+  }
+
+  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+    var isOpen = $element.hasClass('in')
+
+    $element.attr('aria-expanded', isOpen)
+    $trigger
+      .toggleClass('collapsed', !isOpen)
+      .attr('aria-expanded', isOpen)
+  }
+
+  function getTargetFromTrigger($trigger) {
+    var href
+    var target = $trigger.attr('data-target')
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+
+    return $(target)
+  }
+
+
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+
+      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.collapse
+
+  $.fn.collapse             = Plugin
+  $.fn.collapse.Constructor = Collapse
+
+
+  // COLLAPSE NO CONFLICT
+  // ====================
+
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
+
+
+  // COLLAPSE DATA-API
+  // =================
+
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var $this   = $(this)
+
+    if (!$this.attr('data-target')) e.preventDefault()
+
+    var $target = getTargetFromTrigger($this)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
+
+    Plugin.call($target, option)
+  })
+
+}(jQuery);
+</script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    // close the dropdown menu when an option is clicked
+    $("#allCodeButton").dropdown("toggle");
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    // close the dropdown menu when an option is clicked
+    $("#allCodeButton").dropdown("toggle");
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.sourceCode, pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan');
+  rCodeBlocks.each(function() {
+
+    // if code block has been labeled with class `fold-show`, show the code on init!
+    var classList = $(this).attr('class').split(/\s+/);
+    for (var i = 0; i < classList.length; i++) {
+    if (classList[i] === 'fold-show') {
+        show = true;
+      }
+    }
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    if (show)
+      div.addClass('in');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (show ? 'Hide' : 'Code') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn pull-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', show)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // hack: return show to false, otherwise all next codeBlocks will be shown!
+    show = false;
+
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('Code');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+    });
+  });
+
+}
+</script>
+<script>
+/* ========================================================================
+ * Bootstrap: dropdown.js v3.3.7
+ * http://getbootstrap.com/javascript/#dropdowns
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // DROPDOWN CLASS DEFINITION
+  // =========================
+
+  var backdrop = '.dropdown-backdrop'
+  var toggle   = '[data-toggle="dropdown"]'
+  var Dropdown = function (element) {
+    $(element).on('click.bs.dropdown', this.toggle)
+  }
+
+  Dropdown.VERSION = '3.3.7'
+
+  function getParent($this) {
+    var selector = $this.attr('data-target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+    }
+
+    var $parent = selector && $(selector)
+
+    return $parent && $parent.length ? $parent : $this.parent()
+  }
+
+  function clearMenus(e) {
+    if (e && e.which === 3) return
+    $(backdrop).remove()
+    $(toggle).each(function () {
+      var $this         = $(this)
+      var $parent       = getParent($this)
+      var relatedTarget = { relatedTarget: this }
+
+      if (!$parent.hasClass('open')) return
+
+      if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+
+      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $this.attr('aria-expanded', 'false')
+      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+    })
+  }
+
+  Dropdown.prototype.toggle = function (e) {
+    var $this = $(this)
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    clearMenus()
+
+    if (!isActive) {
+      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+        // if mobile we use a backdrop because click events don't delegate
+        $(document.createElement('div'))
+          .addClass('dropdown-backdrop')
+          .insertAfter($(this))
+          .on('click', clearMenus)
+      }
+
+      var relatedTarget = { relatedTarget: this }
+      $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $this
+        .trigger('focus')
+        .attr('aria-expanded', 'true')
+
+      $parent
+        .toggleClass('open')
+        .trigger($.Event('shown.bs.dropdown', relatedTarget))
+    }
+
+    return false
+  }
+
+  Dropdown.prototype.keydown = function (e) {
+    if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+
+    var $this = $(this)
+
+    e.preventDefault()
+    e.stopPropagation()
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    if (!isActive && e.which != 27 || isActive && e.which == 27) {
+      if (e.which == 27) $parent.find(toggle).trigger('focus')
+      return $this.trigger('click')
+    }
+
+    var desc = ' li:not(.disabled):visible a'
+    var $items = $parent.find('.dropdown-menu' + desc)
+
+    if (!$items.length) return
+
+    var index = $items.index(e.target)
+
+    if (e.which == 38 && index > 0)                 index--         // up
+    if (e.which == 40 && index < $items.length - 1) index++         // down
+    if (!~index)                                    index = 0
+
+    $items.eq(index).trigger('focus')
+  }
+
+
+  // DROPDOWN PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this = $(this)
+      var data  = $this.data('bs.dropdown')
+
+      if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+      if (typeof option == 'string') data[option].call($this)
+    })
+  }
+
+  var old = $.fn.dropdown
+
+  $.fn.dropdown             = Plugin
+  $.fn.dropdown.Constructor = Dropdown
+
+
+  // DROPDOWN NO CONFLICT
+  // ====================
+
+  $.fn.dropdown.noConflict = function () {
+    $.fn.dropdown = old
+    return this
+  }
+
+
+  // APPLY TO STANDARD DROPDOWN ELEMENTS
+  // ===================================
+
+  $(document)
+    .on('click.bs.dropdown.data-api', clearMenus)
+    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+    .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+
+}(jQuery);
+</script>
+<style type="text/css">
+.code-folding-btn {
+  margin-bottom: 4px;
+}
+
+.row { display: flex; }
+.collapse { display: none; }
+.in { display:block }
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.open > .dropdown-menu {
+    display: block;
+    color: #ffffff;
+    background-color: #ffffff;
+    background-image: none;
+    border-color: #92897e;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #e95420;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #e95420;
+  outline: 0;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #aea79f;
+}
+
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 1;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: 0.65;
+  box-shadow: none;
+}
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+.btn-default {
+  color: #ffffff;
+  background-color: #aea79f; #important
+  border-color: #aea79f;
+}
+
+.btn-default:focus,
+.btn-default.focus {
+  color: #ffffff;
+  background-color: #978e83;
+  border-color: #6f675e;
+}
+
+.btn-default:hover {
+  color: #ffffff;
+  background-color: #978e83;
+  border-color: #92897e;
+}
+.btn-default:active,
+.btn-default.active,
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+.btn-group > .btn + .dropdown-toggle {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-group.open .dropdown-toggle.btn-link {
+  box-shadow: none;
+}
+
+</style>
+<script>
+var str = '<div class="btn-group pull-right" style="position: fixed; right: 50px; top: 10px; z-index: 200"><button type="button" class="btn btn-default btn-xs dropdown-toggle" id="allCodeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-_extension-text-contrast=""><span>Code</span> <span class="caret"></span></button><ul class="dropdown-menu" style="min-width: 50px;"><li><a id="rmd-show-all-code" href="#">Show All Code</a></li><li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li></ul></div>';
+document.write(str);
+</script>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "hide");
+});
+</script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="https://www.ucl.ac.uk/module-catalogue/modules/geographic-information-systems-and-science-CASA0005"><img src="general_images/casa_logo.jpg"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgement"><i class="fa fa-check"></i>Acknowledgement</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#citation"><i class="fa fa-check"></i>Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html"><i class="fa fa-check"></i>Software installation</a>
+<ul>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html#qgis"><i class="fa fa-check"></i>QGIS</a></li>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html#r"><i class="fa fa-check"></i>R</a>
+<ul>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html#basics"><i class="fa fa-check"></i>Basics</a></li>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html#packages"><i class="fa fa-check"></i>Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software-installation.html"><a href="software-installation.html#arcgis"><i class="fa fa-check"></i>ArcGIS</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html"><i class="fa fa-check"></i>External usage</a>
+<ul>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#how-to-adopt-this-course"><i class="fa fa-check"></i>How to adopt this course</a></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#supporting-the-module"><i class="fa fa-check"></i>Supporting the module</a></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#license"><i class="fa fa-check"></i>License</a></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#updates"><i class="fa fa-check"></i>Updates</a></li>
+<li class="chapter" data-level="" data-path="external-usage.html"><a href="external-usage.html#packages-1"><i class="fa fa-check"></i>Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html"><i class="fa fa-check"></i>The Basics of Geographic Information data</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#important-gis-data-formats"><i class="fa fa-check"></i><b>0.1</b> Important GIS data formats</a>
+<ul>
+<li class="chapter" data-level="0.1.1" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#shapefiles"><i class="fa fa-check"></i><b>0.1.1</b> Shapefiles</a></li>
+<li class="chapter" data-level="0.1.2" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#geojson"><i class="fa fa-check"></i><b>0.1.2</b> GeoJSON</a></li>
+<li class="chapter" data-level="0.1.3" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#shapefile-and-geojson"><i class="fa fa-check"></i><b>0.1.3</b> Shapefile and GeoJSON</a></li>
+<li class="chapter" data-level="0.1.4" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#raster-data"><i class="fa fa-check"></i><b>0.1.4</b> Raster data</a></li>
+<li class="chapter" data-level="0.1.5" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#other-data-formats"><i class="fa fa-check"></i><b>0.1.5</b> Other data formats</a></li>
+<li class="chapter" data-level="0.1.6" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#geodatabase"><i class="fa fa-check"></i><b>0.1.6</b> Geodatabase</a></li>
+<li class="chapter" data-level="0.1.7" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#geopackage"><i class="fa fa-check"></i><b>0.1.7</b> GeoPackage</a></li>
+<li class="chapter" data-level="0.1.8" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#spatialite"><i class="fa fa-check"></i><b>0.1.8</b> SpatiaLite</a></li>
+<li class="chapter" data-level="0.1.9" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#postgis"><i class="fa fa-check"></i><b>0.1.9</b> PostGIS</a></li>
+<li class="chapter" data-level="0.1.10" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#what-will-i-use"><i class="fa fa-check"></i><b>0.1.10</b> What will I use</a></li>
+</ul></li>
+<li class="chapter" data-level="0.2" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#general-data-flow"><i class="fa fa-check"></i><b>0.2</b> General data flow</a></li>
+<li class="chapter" data-level="0.3" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#data-sources-and-task"><i class="fa fa-check"></i><b>0.3</b> Data sources and task</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#uk-data-service"><i class="fa fa-check"></i><b>0.3.1</b> UK Data Service</a></li>
+<li class="chapter" data-level="0.3.2" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#ons"><i class="fa fa-check"></i><b>0.3.2</b> ONS</a></li>
+<li class="chapter" data-level="0.3.3" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#nomis"><i class="fa fa-check"></i><b>0.3.3</b> nomis</a></li>
+<li class="chapter" data-level="0.3.4" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#os"><i class="fa fa-check"></i><b>0.3.4</b> OS</a></li>
+<li class="chapter" data-level="0.3.5" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#edina-digimap"><i class="fa fa-check"></i><b>0.3.5</b> Edina Digimap</a></li>
+<li class="chapter" data-level="0.3.6" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#osm"><i class="fa fa-check"></i><b>0.3.6</b> OSM</a></li>
+<li class="chapter" data-level="0.3.7" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#defra"><i class="fa fa-check"></i><b>0.3.7</b> DEFRA</a></li>
+<li class="chapter" data-level="0.3.8" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#data-lists"><i class="fa fa-check"></i><b>0.3.8</b> Data lists</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="the-basics-of-geographic-information-data.html"><a href="the-basics-of-geographic-information-data.html#summary"><i class="fa fa-check"></i><b>0.4</b> Summary</a></li>
+</ul></li>
+<li class="part"><span><b>I GIS tools</b></span></li>
+<li class="chapter" data-level="1" data-path="01-geographic-information.html"><a href="01-geographic-information.html"><i class="fa fa-check"></i><b>1</b> Geographic Information</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="01-geographic-information.html"><a href="01-geographic-information.html#learning-outcomes"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.2" data-path="01-geographic-information.html"><a href="01-geographic-information.html#homework"><i class="fa fa-check"></i><b>1.2</b> Homework</a></li>
+<li class="chapter" data-level="1.3" data-path="01-geographic-information.html"><a href="01-geographic-information.html#recommended-listening"><i class="fa fa-check"></i><b>1.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="1.4" data-path="01-geographic-information.html"><a href="01-geographic-information.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="01-geographic-information.html"><a href="01-geographic-information.html#file-paths"><i class="fa fa-check"></i><b>1.4.1</b> File paths</a></li>
+<li class="chapter" data-level="1.4.2" data-path="01-geographic-information.html"><a href="01-geographic-information.html#data-download"><i class="fa fa-check"></i><b>1.4.2</b> Data download</a></li>
+<li class="chapter" data-level="1.4.3" data-path="01-geographic-information.html"><a href="01-geographic-information.html#data-pre-processing"><i class="fa fa-check"></i><b>1.4.3</b> Data pre-processing</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="01-geographic-information.html"><a href="01-geographic-information.html#r-1"><i class="fa fa-check"></i><b>1.5</b> R</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="01-geographic-information.html"><a href="01-geographic-information.html#introduction"><i class="fa fa-check"></i><b>1.5.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.5.2" data-path="01-geographic-information.html"><a href="01-geographic-information.html#r-and-rstudio"><i class="fa fa-check"></i><b>1.5.2</b> R and RStudio</a></li>
+<li class="chapter" data-level="1.5.3" data-path="01-geographic-information.html"><a href="01-geographic-information.html#getting-started"><i class="fa fa-check"></i><b>1.5.3</b> Getting started</a></li>
+<li class="chapter" data-level="1.5.4" data-path="01-geographic-information.html"><a href="01-geographic-information.html#files-in-r"><i class="fa fa-check"></i><b>1.5.4</b> Files in R</a></li>
+<li class="chapter" data-level="1.5.5" data-path="01-geographic-information.html"><a href="01-geographic-information.html#packages-in-r"><i class="fa fa-check"></i><b>1.5.5</b> Packages in R</a></li>
+<li class="chapter" data-level="1.5.6" data-path="01-geographic-information.html"><a href="01-geographic-information.html#why-use-a-project-and-markdown"><i class="fa fa-check"></i><b>1.5.6</b> Why use a project and markdown</a></li>
+<li class="chapter" data-level="1.5.7" data-path="01-geographic-information.html"><a href="01-geographic-information.html#load-data"><i class="fa fa-check"></i><b>1.5.7</b> Load data</a></li>
+<li class="chapter" data-level="1.5.8" data-path="01-geographic-information.html"><a href="01-geographic-information.html#join-data"><i class="fa fa-check"></i><b>1.5.8</b> Join data</a></li>
+<li class="chapter" data-level="1.5.9" data-path="01-geographic-information.html"><a href="01-geographic-information.html#export-data"><i class="fa fa-check"></i><b>1.5.9</b> Export data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="01-geographic-information.html"><a href="01-geographic-information.html#feedback"><i class="fa fa-check"></i><b>1.6</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html"><i class="fa fa-check"></i><b>2</b> Introduction to R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#learning-outcomes-1"><i class="fa fa-check"></i><b>2.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="2.2" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#homework-1"><i class="fa fa-check"></i><b>2.2</b> Homework</a></li>
+<li class="chapter" data-level="2.3" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#recommended-listening-1"><i class="fa fa-check"></i><b>2.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="2.4" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#introduction-1"><i class="fa fa-check"></i><b>2.4</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#online-forums-are-your-friend"><i class="fa fa-check"></i><b>2.4.1</b> Online forums are your friend!!</a></li>
+<li class="chapter" data-level="2.4.2" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#health-warning"><i class="fa fa-check"></i><b>2.4.2</b> Health warning</a></li>
+<li class="chapter" data-level="2.4.3" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#basics-1"><i class="fa fa-check"></i><b>2.4.3</b> Basics</a></li>
+<li class="chapter" data-level="2.4.4" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#scripts-and-some-basic-commands"><i class="fa fa-check"></i><b>2.4.4</b> Scripts and some basic commands</a></li>
+<li class="chapter" data-level="2.4.5" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#functions"><i class="fa fa-check"></i><b>2.4.5</b> Functions</a></li>
+<li class="chapter" data-level="2.4.6" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#basic-plotting"><i class="fa fa-check"></i><b>2.4.6</b> Basic plotting</a></li>
+<li class="chapter" data-level="2.4.7" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#help"><i class="fa fa-check"></i><b>2.4.7</b> Help</a></li>
+<li class="chapter" data-level="2.4.8" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#data-structures"><i class="fa fa-check"></i><b>2.4.8</b> Data structures</a></li>
+<li class="chapter" data-level="2.4.9" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#elements-of-a-data-frame"><i class="fa fa-check"></i><b>2.4.9</b> Elements of a data frame</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#reading-data-into-r"><i class="fa fa-check"></i><b>2.5</b> Reading data into R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#old-skool-cleaning"><i class="fa fa-check"></i><b>2.5.1</b> Old skool cleaning</a></li>
+<li class="chapter" data-level="2.5.2" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#here"><i class="fa fa-check"></i><b>2.5.2</b> Here</a></li>
+<li class="chapter" data-level="2.5.3" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#new-skool-cleaning"><i class="fa fa-check"></i><b>2.5.3</b> New skool cleaning</a></li>
+<li class="chapter" data-level="2.5.4" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#examining-your-new-data"><i class="fa fa-check"></i><b>2.5.4</b> Examining your new data</a></li>
+<li class="chapter" data-level="2.5.5" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#data-manipulation-in-r"><i class="fa fa-check"></i><b>2.5.5</b> Data manipulation in R</a></li>
+<li class="chapter" data-level="2.5.6" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#plotting"><i class="fa fa-check"></i><b>2.5.6</b> Plotting</a></li>
+<li class="chapter" data-level="2.5.7" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#pimp-my-graph"><i class="fa fa-check"></i><b>2.5.7</b> Pimp my graph!</a></li>
+<li class="chapter" data-level="2.5.8" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#spatial-data-in-r"><i class="fa fa-check"></i><b>2.5.8</b> Spatial Data in R</a></li>
+<li class="chapter" data-level="2.5.9" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#simple-mapping"><i class="fa fa-check"></i><b>2.5.9</b> Simple mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#tidying-data"><i class="fa fa-check"></i><b>2.6</b> Tidying data</a></li>
+<li class="chapter" data-level="2.7" data-path="02-introduction-to-r.html"><a href="02-introduction-to-r.html#feedback-1"><i class="fa fa-check"></i><b>2.7</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Spatial descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#learning-outcomes-2"><i class="fa fa-check"></i><b>3.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="3.2" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#homework-2"><i class="fa fa-check"></i><b>3.2</b> Homework</a></li>
+<li class="chapter" data-level="3.3" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#recommended-listening-2"><i class="fa fa-check"></i><b>3.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="3.4" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#introduction-2"><i class="fa fa-check"></i><b>3.4</b> Introduction</a></li>
+<li class="chapter" data-level="3.5" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#part-1-projections"><i class="fa fa-check"></i><b>3.5</b> Part 1 projections</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#changing-projections"><i class="fa fa-check"></i><b>3.5.1</b> Changing projections</a></li>
+<li class="chapter" data-level="3.5.2" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#worldclim-data"><i class="fa fa-check"></i><b>3.5.2</b> WorldClim data</a></li>
+<li class="chapter" data-level="3.5.3" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#data-loading"><i class="fa fa-check"></i><b>3.5.3</b> Data loading</a></li>
+<li class="chapter" data-level="3.5.4" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#raster-location"><i class="fa fa-check"></i><b>3.5.4</b> Raster location</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#part-2-descriptive-statistics"><i class="fa fa-check"></i><b>3.6</b> Part 2 descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#data-preparation"><i class="fa fa-check"></i><b>3.6.1</b> Data preparation</a></li>
+<li class="chapter" data-level="3.6.2" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#histogram"><i class="fa fa-check"></i><b>3.6.2</b> Histogram</a></li>
+<li class="chapter" data-level="3.6.3" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#using-more-data"><i class="fa fa-check"></i><b>3.6.3</b> Using more data</a></li>
+<li class="chapter" data-level="3.6.4" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#histogram-with-ggplot"><i class="fa fa-check"></i><b>3.6.4</b> Histogram with ggplot</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="03-spatial-descriptive-statistics.html"><a href="03-spatial-descriptive-statistics.html#feedback-2"><i class="fa fa-check"></i><b>3.7</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html"><i class="fa fa-check"></i><b>4</b> Git, GitHub and RMarkdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#learning-outcomes-3"><i class="fa fa-check"></i><b>4.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="4.2" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#homework-3"><i class="fa fa-check"></i><b>4.2</b> Homework</a></li>
+<li class="chapter" data-level="4.3" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#recommended-listening-3"><i class="fa fa-check"></i><b>4.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="4.4" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#introduction-3"><i class="fa fa-check"></i><b>4.4</b> Introduction</a></li>
+<li class="chapter" data-level="4.5" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#git-and-github"><i class="fa fa-check"></i><b>4.5</b> Git and GitHub</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#the-three-ways"><i class="fa fa-check"></i><b>4.5.1</b> The three ways</a></li>
+<li class="chapter" data-level="4.5.2" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#set-up-your-github"><i class="fa fa-check"></i><b>4.5.2</b> Set up your GitHub</a></li>
+<li class="chapter" data-level="4.5.3" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#using-rstudio-with-git"><i class="fa fa-check"></i><b>4.5.3</b> Using RStudio with Git</a></li>
+<li class="chapter" data-level="4.5.4" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#using-the-git-gui---way-1"><i class="fa fa-check"></i><b>4.5.4</b> Using the Git GUI - way 1</a></li>
+<li class="chapter" data-level="4.5.5" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#create-a-new-version-control-in-rstudio---way-2"><i class="fa fa-check"></i><b>4.5.5</b> Create a new version control in RStudio - way 2</a></li>
+<li class="chapter" data-level="4.5.6" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#if-have-an-existing-project---way-3"><i class="fa fa-check"></i><b>4.5.6</b> If have an existing project - way 3</a></li>
+<li class="chapter" data-level="4.5.7" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#commiting-to-git"><i class="fa fa-check"></i><b>4.5.7</b> Commiting to Git</a></li>
+<li class="chapter" data-level="4.5.8" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#push-to-github"><i class="fa fa-check"></i><b>4.5.8</b> Push to Github</a></li>
+<li class="chapter" data-level="4.5.9" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#pull-from-github"><i class="fa fa-check"></i><b>4.5.9</b> Pull from GitHub</a></li>
+<li class="chapter" data-level="4.5.10" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#using-git-outside-rstudio"><i class="fa fa-check"></i><b>4.5.10</b> Using Git outside RStudio</a></li>
+<li class="chapter" data-level="4.5.11" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#troubleshooting"><i class="fa fa-check"></i><b>4.5.11</b> Troubleshooting</a></li>
+<li class="chapter" data-level="4.5.12" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#fork-a-repository"><i class="fa fa-check"></i><b>4.5.12</b> Fork a repository</a></li>
+<li class="chapter" data-level="4.5.13" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#branches"><i class="fa fa-check"></i><b>4.5.13</b> Branches</a></li>
+<li class="chapter" data-level="4.5.14" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#health-warning-1"><i class="fa fa-check"></i><b>4.5.14</b> Health warning</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#rmarkdown"><i class="fa fa-check"></i><b>4.6</b> RMarkdown</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#html"><i class="fa fa-check"></i><b>4.6.1</b> HTML</a></li>
+<li class="chapter" data-level="4.6.2" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#knit-options"><i class="fa fa-check"></i><b>4.6.2</b> Knit options</a></li>
+<li class="chapter" data-level="4.6.3" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#shortcuts"><i class="fa fa-check"></i><b>4.6.3</b> Shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#further-reading"><i class="fa fa-check"></i><b>4.7</b> Further reading</a></li>
+<li class="chapter" data-level="4.8" data-path="04-git-github-and-rmarkdown.html"><a href="04-git-github-and-rmarkdown.html#feedback-3"><i class="fa fa-check"></i><b>4.8</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-map-making.html"><a href="05-map-making.html"><i class="fa fa-check"></i><b>5</b> Map making</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05-map-making.html"><a href="05-map-making.html#learning-outcomes-4"><i class="fa fa-check"></i><b>5.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="5.2" data-path="05-map-making.html"><a href="05-map-making.html#homework-4"><i class="fa fa-check"></i><b>5.2</b> Homework</a></li>
+<li class="chapter" data-level="5.3" data-path="05-map-making.html"><a href="05-map-making.html#recommended-listening-4"><i class="fa fa-check"></i><b>5.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="5.4" data-path="05-map-making.html"><a href="05-map-making.html#introduction-4"><i class="fa fa-check"></i><b>5.4</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="05-map-making.html"><a href="05-map-making.html#osm-1"><i class="fa fa-check"></i><b>5.4.1</b> OSM</a></li>
+<li class="chapter" data-level="5.4.2" data-path="05-map-making.html"><a href="05-map-making.html#airbnb"><i class="fa fa-check"></i><b>5.4.2</b> Airbnb</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="05-map-making.html"><a href="05-map-making.html#data-1"><i class="fa fa-check"></i><b>5.5</b> Data</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="05-map-making.html"><a href="05-map-making.html#osm-2"><i class="fa fa-check"></i><b>5.5.1</b> OSM</a></li>
+<li class="chapter" data-level="5.5.2" data-path="05-map-making.html"><a href="05-map-making.html#london-boroughs"><i class="fa fa-check"></i><b>5.5.2</b> London boroughs</a></li>
+<li class="chapter" data-level="5.5.3" data-path="05-map-making.html"><a href="05-map-making.html#world-cities"><i class="fa fa-check"></i><b>5.5.3</b> World cities</a></li>
+<li class="chapter" data-level="5.5.4" data-path="05-map-making.html"><a href="05-map-making.html#uk-outline"><i class="fa fa-check"></i><b>5.5.4</b> Uk outline</a></li>
+<li class="chapter" data-level="5.5.5" data-path="05-map-making.html"><a href="05-map-making.html#airbnb-1"><i class="fa fa-check"></i><b>5.5.5</b> Airbnb</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="05-map-making.html"><a href="05-map-making.html#plan"><i class="fa fa-check"></i><b>5.6</b> Plan</a></li>
+<li class="chapter" data-level="5.7" data-path="05-map-making.html"><a href="05-map-making.html#crs-and-filter"><i class="fa fa-check"></i><b>5.7</b> CRS and filter</a></li>
+<li class="chapter" data-level="5.8" data-path="05-map-making.html"><a href="05-map-making.html#join-and-sum"><i class="fa fa-check"></i><b>5.8</b> Join and sum</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="05-map-making.html"><a href="05-map-making.html#key-advice"><i class="fa fa-check"></i><b>5.8.1</b> Key advice</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="05-map-making.html"><a href="05-map-making.html#mapping"><i class="fa fa-check"></i><b>5.9</b> Mapping</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="05-map-making.html"><a href="05-map-making.html#tmap-syntax"><i class="fa fa-check"></i><b>5.9.1</b> tmap syntax</a></li>
+<li class="chapter" data-level="5.9.2" data-path="05-map-making.html"><a href="05-map-making.html#complete-map"><i class="fa fa-check"></i><b>5.9.2</b> Complete map</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="05-map-making.html"><a href="05-map-making.html#bad-maps"><i class="fa fa-check"></i><b>5.10</b> Bad maps</a></li>
+<li class="chapter" data-level="5.11" data-path="05-map-making.html"><a href="05-map-making.html#feedback-4"><i class="fa fa-check"></i><b>5.11</b> Feedback</a></li>
+</ul></li>
+<li class="part"><span><b>II GIS analysis</b></span></li>
+<li class="chapter" data-level="6" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html"><i class="fa fa-check"></i><b>6</b> Detecting spatial patterns</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#learning-outcomes-5"><i class="fa fa-check"></i><b>6.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="6.2" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#homework-5"><i class="fa fa-check"></i><b>6.2</b> Homework</a></li>
+<li class="chapter" data-level="6.3" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#recommended-listening-5"><i class="fa fa-check"></i><b>6.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="6.4" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#introduction-5"><i class="fa fa-check"></i><b>6.4</b> Introduction</a></li>
+<li class="chapter" data-level="6.5" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#setting-up-your-data"><i class="fa fa-check"></i><b>6.5</b> Setting up your data</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#data-cleaning"><i class="fa fa-check"></i><b>6.5.1</b> Data cleaning</a></li>
+<li class="chapter" data-level="6.5.2" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#spatial-subsetting"><i class="fa fa-check"></i><b>6.5.2</b> Spatial subsetting</a></li>
+<li class="chapter" data-level="6.5.3" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#spatial-clipping"><i class="fa fa-check"></i><b>6.5.3</b> Spatial clipping</a></li>
+<li class="chapter" data-level="6.5.4" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#key-advice-1"><i class="fa fa-check"></i><b>6.5.4</b> Key advice</a></li>
+<li class="chapter" data-level="6.5.5" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#study-area-1"><i class="fa fa-check"></i><b>6.5.5</b> Study area</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#point-pattern-analysis"><i class="fa fa-check"></i><b>6.6</b> Point pattern analysis</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#kernel-density-estimation"><i class="fa fa-check"></i><b>6.6.1</b> Kernel Density Estimation</a></li>
+<li class="chapter" data-level="6.6.2" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#quadrat-analysis"><i class="fa fa-check"></i><b>6.6.2</b> Quadrat Analysis</a></li>
+<li class="chapter" data-level="6.6.3" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#try-experimenting"><i class="fa fa-check"></i><b>6.6.3</b> Try experimenting…</a></li>
+<li class="chapter" data-level="6.6.4" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#ripleys-k"><i class="fa fa-check"></i><b>6.6.4</b> Ripley’s K</a></li>
+<li class="chapter" data-level="6.6.5" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#alternatives-to-ripleys-k"><i class="fa fa-check"></i><b>6.6.5</b> Alternatives to Ripley’s K</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#density-based-spatial-clustering-of-applications-with-noise-dbscan"><i class="fa fa-check"></i><b>6.7</b> Density-based spatial clustering of applications with noise: DBSCAN</a></li>
+<li class="chapter" data-level="6.8" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#point-pattern-analysis-summary"><i class="fa fa-check"></i><b>6.8</b> Point pattern analysis summary</a></li>
+<li class="chapter" data-level="6.9" data-path="06-detecting-spatial-patterns.html"><a href="06-detecting-spatial-patterns.html#feedback-5"><i class="fa fa-check"></i><b>6.9</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html"><i class="fa fa-check"></i><b>7</b> Spatial autocorrelation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#learning-outcomes-6"><i class="fa fa-check"></i><b>7.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="7.2" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#homework-6"><i class="fa fa-check"></i><b>7.2</b> Homework</a></li>
+<li class="chapter" data-level="7.3" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#recommended-listening-6"><i class="fa fa-check"></i><b>7.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="7.4" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#introduction-6"><i class="fa fa-check"></i><b>7.4</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#analysing-spatial-autocorrelation-with-morans-i-lisa-and-friends"><i class="fa fa-check"></i><b>7.4.1</b> Analysing Spatial Autocorrelation with Moran’s I, LISA and friends</a></li>
+<li class="chapter" data-level="7.4.2" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#data-download-1"><i class="fa fa-check"></i><b>7.4.2</b> Data download</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#data-cleaning-1"><i class="fa fa-check"></i><b>7.5</b> Data cleaning</a></li>
+<li class="chapter" data-level="7.6" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#data-manipulation"><i class="fa fa-check"></i><b>7.6</b> Data manipulation</a></li>
+<li class="chapter" data-level="7.7" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#weight-matrix"><i class="fa fa-check"></i><b>7.7</b> Weight matrix</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#matrix-style"><i class="fa fa-check"></i><b>7.7.1</b> Matrix style</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#autocorrelation"><i class="fa fa-check"></i><b>7.8</b> Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#morans-i"><i class="fa fa-check"></i><b>7.8.1</b> Moran’s I</a></li>
+<li class="chapter" data-level="7.8.2" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#gearys-c"><i class="fa fa-check"></i><b>7.8.2</b> Geary’s C</a></li>
+<li class="chapter" data-level="7.8.3" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#getis-ord"><i class="fa fa-check"></i><b>7.8.3</b> Getis Ord</a></li>
+<li class="chapter" data-level="7.8.4" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#summary-1"><i class="fa fa-check"></i><b>7.8.4</b> Summary</a></li>
+<li class="chapter" data-level="7.8.5" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#local-morans-i"><i class="fa fa-check"></i><b>7.8.5</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="7.8.6" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#local-getis-ord-g_i"><i class="fa fa-check"></i><b>7.8.6</b> Local Getis Ord <span class="math inline">\(G_{i}^{*}\)</span></a></li>
+<li class="chapter" data-level="7.8.7" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#summary-2"><i class="fa fa-check"></i><b>7.8.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#other-variables"><i class="fa fa-check"></i><b>7.9</b> Other variables</a></li>
+<li class="chapter" data-level="7.10" data-path="07-spatial-autocorrelation.html"><a href="07-spatial-autocorrelation.html#feedback-6"><i class="fa fa-check"></i><b>7.10</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html"><i class="fa fa-check"></i><b>8</b> Explaining spatial patterns</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#homework-7"><i class="fa fa-check"></i><b>8.2</b> Homework</a></li>
+<li class="chapter" data-level="8.3" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#recommended-listening-7"><i class="fa fa-check"></i><b>8.3</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="8.4" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#introduction-7"><i class="fa fa-check"></i><b>8.4</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#setting-up-your-data-1"><i class="fa fa-check"></i><b>8.4.1</b> Setting up your Data</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#analysing-gcse-exam-performance---testing-a-research-hypothesis"><i class="fa fa-check"></i><b>8.5</b> Analysing GCSE exam performance - testing a research hypothesis</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#research-question-and-hypothesis"><i class="fa fa-check"></i><b>8.5.1</b> Research Question and Hypothesis</a></li>
+<li class="chapter" data-level="8.5.2" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#regression-basics"><i class="fa fa-check"></i><b>8.5.2</b> Regression Basics</a></li>
+<li class="chapter" data-level="8.5.3" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#running-a-regression-model-in-r"><i class="fa fa-check"></i><b>8.5.3</b> Running a Regression Model in R</a></li>
+<li class="chapter" data-level="8.5.4" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#tidymodels"><i class="fa fa-check"></i><b>8.5.4</b> tidymodels</a></li>
+<li class="chapter" data-level="8.5.5" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#bootstrap-resampling"><i class="fa fa-check"></i><b>8.5.5</b> Bootstrap resampling</a></li>
+<li class="chapter" data-level="8.5.6" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#variables"><i class="fa fa-check"></i><b>8.5.6</b> Variables</a></li>
+<li class="chapter" data-level="8.5.7" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumptions-underpinning-linear-regression"><i class="fa fa-check"></i><b>8.5.7</b> Assumptions Underpinning Linear Regression</a></li>
+<li class="chapter" data-level="8.5.8" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumption-1---there-is-a-linear-relationship-between-the-dependent-and-independent-variables"><i class="fa fa-check"></i><b>8.5.8</b> Assumption 1 - There is a linear relationship between the dependent and independent variables</a></li>
+<li class="chapter" data-level="8.5.9" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumption-2---the-residuals-in-your-model-should-be-normally-distributed"><i class="fa fa-check"></i><b>8.5.9</b> Assumption 2 - The residuals in your model should be normally distributed</a></li>
+<li class="chapter" data-level="8.5.10" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumption-3---no-multicolinearity-in-the-independent-variables"><i class="fa fa-check"></i><b>8.5.10</b> Assumption 3 - No Multicolinearity in the independent variables</a></li>
+<li class="chapter" data-level="8.5.11" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumption-4---homoscedasticity"><i class="fa fa-check"></i><b>8.5.11</b> Assumption 4 - Homoscedasticity</a></li>
+<li class="chapter" data-level="8.5.12" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#assumption-5---independence-of-errors"><i class="fa fa-check"></i><b>8.5.12</b> Assumption 5 - Independence of Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#spatial-regression-models"><i class="fa fa-check"></i><b>8.6</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#dealing-with-spatially-autocorrelated-residuals---spatial-lag-and-spatial-error-models"><i class="fa fa-check"></i><b>8.6.1</b> Dealing with Spatially Autocorrelated Residuals - Spatial Lag and Spatial Error models</a></li>
+<li class="chapter" data-level="8.6.2" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#key-advice-2"><i class="fa fa-check"></i><b>8.6.2</b> Key advice</a></li>
+<li class="chapter" data-level="8.6.3" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#which-model-to-use"><i class="fa fa-check"></i><b>8.6.3</b> Which model to use</a></li>
+<li class="chapter" data-level="8.6.4" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#more-data"><i class="fa fa-check"></i><b>8.6.4</b> More data</a></li>
+<li class="chapter" data-level="8.6.5" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#extending-your-regression-model---dummy-variables"><i class="fa fa-check"></i><b>8.6.5</b> Extending your regression model - Dummy Variables</a></li>
+<li class="chapter" data-level="8.6.6" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#task-investigating-further---adding-more-explanatory-variables-into-a-multiple-regression-model"><i class="fa fa-check"></i><b>8.6.6</b> TASK: Investigating Further - Adding More Explanatory Variables into a multiple regression model</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#task-3---spatial-non-stationarity-and-geographically-weighted-regression-models-gwr"><i class="fa fa-check"></i><b>8.7</b> Task 3 - Spatial Non-stationarity and Geographically Weighted Regression Models (GWR)</a></li>
+<li class="chapter" data-level="8.8" data-path="08-explaining-spatial-patterns.html"><a href="08-explaining-spatial-patterns.html#feedback-7"><i class="fa fa-check"></i><b>8.8</b> Feedback</a></li>
+</ul></li>
+<li class="part"><span><b>Extra</b></span></li>
+<li class="chapter" data-level="9" data-path="09-qgis-joining-data.html"><a href="09-qgis-joining-data.html"><i class="fa fa-check"></i><b>9</b> QGIS joining data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09-qgis-joining-data.html"><a href="09-qgis-joining-data.html#load-data-1"><i class="fa fa-check"></i><b>9.1</b> Load data</a></li>
+<li class="chapter" data-level="9.2" data-path="09-qgis-joining-data.html"><a href="09-qgis-joining-data.html#join-data-1"><i class="fa fa-check"></i><b>9.2</b> Join data</a></li>
+<li class="chapter" data-level="9.3" data-path="09-qgis-joining-data.html"><a href="09-qgis-joining-data.html#export-data-1"><i class="fa fa-check"></i><b>9.3</b> Export data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i>Multiple Linear Regression</a></li>
+<li class="chapter" data-level="" data-path="module-resources.html"><a href="module-resources.html"><i class="fa fa-check"></i>Module resources</a>
+<ul>
+<li class="chapter" data-level="9.4" data-path="module-resources.html"><a href="module-resources.html#markscheme"><i class="fa fa-check"></i><b>9.4</b> Markscheme</a></li>
+<li class="chapter" data-level="9.5" data-path="module-resources.html"><a href="module-resources.html#old-practicals"><i class="fa fa-check"></i><b>9.5</b> Old practicals</a></li>
+<li class="chapter" data-level="9.6" data-path="module-resources.html"><a href="module-resources.html#events-meet-other-spatial-data-professionals"><i class="fa fa-check"></i><b>9.6</b> Events / meet other spatial data professionals</a></li>
+<li class="chapter" data-level="9.7" data-path="module-resources.html"><a href="module-resources.html#cool-stuff-to-explore"><i class="fa fa-check"></i><b>9.7</b> Cool stuff to explore</a></li>
+<li class="chapter" data-level="9.8" data-path="module-resources.html"><a href="module-resources.html#booksreading-resources"><i class="fa fa-check"></i><b>9.8</b> Books/reading resources</a></li>
+<li class="chapter" data-level="9.9" data-path="module-resources.html"><a href="module-resources.html#new-developments"><i class="fa fa-check"></i><b>9.9</b> New developments</a>
+<ul>
+<li class="chapter" data-level="9.9.1" data-path="module-resources.html"><a href="module-resources.html#twitter"><i class="fa fa-check"></i><b>9.9.1</b> Twitter</a></li>
+</ul></li>
+<li class="chapter" data-level="9.10" data-path="module-resources.html"><a href="module-resources.html#data-2"><i class="fa fa-check"></i><b>9.10</b> Data</a></li>
+<li class="chapter" data-level="9.11" data-path="module-resources.html"><a href="module-resources.html#data-lists-1"><i class="fa fa-check"></i><b>9.11</b> Data lists</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="extra-reproducibility.html"><a href="extra-reproducibility.html"><i class="fa fa-check"></i>Extra reproducibility</a>
+<ul>
+<li class="chapter" data-level="9.12" data-path="extra-reproducibility.html"><a href="extra-reproducibility.html#git-and-github-1"><i class="fa fa-check"></i><b>9.12</b> Git and GitHub</a>
+<ul>
+<li class="chapter" data-level="9.12.1" data-path="extra-reproducibility.html"><a href="extra-reproducibility.html#back-in-time"><i class="fa fa-check"></i><b>9.12.1</b> Back in time</a></li>
+</ul></li>
+<li class="chapter" data-level="9.13" data-path="extra-reproducibility.html"><a href="extra-reproducibility.html#renv"><i class="fa fa-check"></i><b>9.13</b> renv</a></li>
+<li class="chapter" data-level="9.14" data-path="extra-reproducibility.html"><a href="extra-reproducibility.html#referencing-and-more"><i class="fa fa-check"></i><b>9.14</b> Referencing and more</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="qgis-maps.html"><a href="qgis-maps.html"><i class="fa fa-check"></i>QGIS Maps</a>
+<ul>
+<li class="chapter" data-level="9.15" data-path="qgis-maps.html"><a href="qgis-maps.html#load-data-2"><i class="fa fa-check"></i><b>9.15</b> Load data</a></li>
+<li class="chapter" data-level="9.16" data-path="qgis-maps.html"><a href="qgis-maps.html#manipulate-data"><i class="fa fa-check"></i><b>9.16</b> Manipulate data</a></li>
+<li class="chapter" data-level="9.17" data-path="qgis-maps.html"><a href="qgis-maps.html#map-data"><i class="fa fa-check"></i><b>9.17</b> Map data</a></li>
+<li class="chapter" data-level="9.18" data-path="qgis-maps.html"><a href="qgis-maps.html#export-map"><i class="fa fa-check"></i><b>9.18</b> Export map</a></li>
+<li class="chapter" data-level="9.19" data-path="qgis-maps.html"><a href="qgis-maps.html#graphical-modeler"><i class="fa fa-check"></i><b>9.19</b> Graphical modeler</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tmap-version-3.html"><a href="tmap-version-3.html"><i class="fa fa-check"></i>Tmap version 3</a>
+<ul>
+<li class="chapter" data-level="9.20" data-path="tmap-version-3.html"><a href="tmap-version-3.html#learning-outcomes-7"><i class="fa fa-check"></i><b>9.20</b> Learning outcomes</a></li>
+<li class="chapter" data-level="9.21" data-path="tmap-version-3.html"><a href="tmap-version-3.html#homework-8"><i class="fa fa-check"></i><b>9.21</b> Homework</a></li>
+<li class="chapter" data-level="9.22" data-path="tmap-version-3.html"><a href="tmap-version-3.html#recommended-listening-8"><i class="fa fa-check"></i><b>9.22</b> Recommended listening 🎧</a></li>
+<li class="chapter" data-level="9.23" data-path="tmap-version-3.html"><a href="tmap-version-3.html#introduction-8"><i class="fa fa-check"></i><b>9.23</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="9.23.1" data-path="tmap-version-3.html"><a href="tmap-version-3.html#osm-3"><i class="fa fa-check"></i><b>9.23.1</b> OSM</a></li>
+<li class="chapter" data-level="9.23.2" data-path="tmap-version-3.html"><a href="tmap-version-3.html#airbnb-2"><i class="fa fa-check"></i><b>9.23.2</b> Airbnb</a></li>
+</ul></li>
+<li class="chapter" data-level="9.24" data-path="tmap-version-3.html"><a href="tmap-version-3.html#data-3"><i class="fa fa-check"></i><b>9.24</b> Data</a>
+<ul>
+<li class="chapter" data-level="9.24.1" data-path="tmap-version-3.html"><a href="tmap-version-3.html#osm-4"><i class="fa fa-check"></i><b>9.24.1</b> OSM</a></li>
+<li class="chapter" data-level="9.24.2" data-path="tmap-version-3.html"><a href="tmap-version-3.html#london-boroughs-1"><i class="fa fa-check"></i><b>9.24.2</b> London boroughs</a></li>
+<li class="chapter" data-level="9.24.3" data-path="tmap-version-3.html"><a href="tmap-version-3.html#world-cities-1"><i class="fa fa-check"></i><b>9.24.3</b> World cities</a></li>
+<li class="chapter" data-level="9.24.4" data-path="tmap-version-3.html"><a href="tmap-version-3.html#uk-outline-1"><i class="fa fa-check"></i><b>9.24.4</b> Uk outline</a></li>
+<li class="chapter" data-level="9.24.5" data-path="tmap-version-3.html"><a href="tmap-version-3.html#airbnb-3"><i class="fa fa-check"></i><b>9.24.5</b> Airbnb</a></li>
+</ul></li>
+<li class="chapter" data-level="9.25" data-path="tmap-version-3.html"><a href="tmap-version-3.html#spatial-joining"><i class="fa fa-check"></i><b>9.25</b> Spatial joining</a>
+<ul>
+<li class="chapter" data-level="9.25.1" data-path="tmap-version-3.html"><a href="tmap-version-3.html#static-map"><i class="fa fa-check"></i><b>9.25.1</b> Static map</a></li>
+<li class="chapter" data-level="9.25.2" data-path="tmap-version-3.html"><a href="tmap-version-3.html#inset-map"><i class="fa fa-check"></i><b>9.25.2</b> Inset map</a></li>
+<li class="chapter" data-level="9.25.3" data-path="tmap-version-3.html"><a href="tmap-version-3.html#export"><i class="fa fa-check"></i><b>9.25.3</b> Export</a></li>
+<li class="chapter" data-level="9.25.4" data-path="tmap-version-3.html"><a href="tmap-version-3.html#basic-interactive-map"><i class="fa fa-check"></i><b>9.25.4</b> Basic interactive map</a></li>
+<li class="chapter" data-level="9.25.5" data-path="tmap-version-3.html"><a href="tmap-version-3.html#advanced-interactive-map"><i class="fa fa-check"></i><b>9.25.5</b> Advanced interactive map</a></li>
+</ul></li>
+<li class="chapter" data-level="9.26" data-path="tmap-version-3.html"><a href="tmap-version-3.html#bad-maps-1"><i class="fa fa-check"></i><b>9.26</b> Bad maps</a></li>
+<li class="chapter" data-level="9.27" data-path="tmap-version-3.html"><a href="tmap-version-3.html#feedback-8"><i class="fa fa-check"></i><b>9.27</b> Feedback</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="functions-1.html"><a href="functions-1.html"><i class="fa fa-check"></i>Functions</a></li>
+<li class="chapter" data-level="" data-path="interactive-maps.html"><a href="interactive-maps.html"><i class="fa fa-check"></i>Interactive maps</a>
+<ul>
+<li class="chapter" data-level="9.28" data-path="interactive-maps.html"><a href="interactive-maps.html#advanced-interactive-map-1"><i class="fa fa-check"></i><b>9.28</b> Advanced interactive map</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="past-questions.html"><a href="past-questions.html"><i class="fa fa-check"></i>Past questions</a></li>
+<li class="chapter" data-level="" data-path="field-trip.html"><a href="field-trip.html"><i class="fa fa-check"></i>Field trip</a></li>
+<li class="divider"></li>
+<li><center>
+  <a rel="license" href="./external-usage.html#license">
+    License: CC-BY-SA<br>
+    <i class = "fab fa-creative-commons fa-2x"></i>
+    <i class = "fab fa-creative-commons-by fa-2x"></i>
+    <i class = "fab fa-creative-commons-sa fa-2x"></i>
+  </a>
+</li></center>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CASA0005 Geographic Information Systems and Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="map-making" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Map making<a href="05-map-making.html#map-making" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-outcomes-4" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Learning outcomes<a href="05-map-making.html#learning-outcomes-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this practical you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>List and explain basic mapping concepts in R</li>
+<li>Interpret and manipulate data from multiple sources</li>
+<li>Create near publishable static and interactive mapped outputs</li>
+</ol>
+<div class="infobox warning">
+<p>This practical has been updated to tmap version 4. If you are a student studying for the LSA in 2025 and wish to use the original practical please see the extras section.</p>
+</div>
+</div>
+<div id="homework-4" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Homework<a href="05-map-making.html#homework-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Outside of our scheduled sessions you should be doing around 12 hours of extra study per week. Feel free to follow your own GIS interests, but good places to start include the following:</p>
+<div class="infobox assignment">
+<p><strong>Exam</strong></p>
+<p>Each week we will provide a short task to test your knowledge, these should be used to guide your study for the final exam.</p>
+<p>The task this week is to:</p>
+<ul>
+<li>Fork the repository below you from the spreadsheet last week</li>
+<li>Run the code, editing it if required</li>
+<li>Create a map (you can use additional data if you wish)</li>
+<li>submit a pull request to the original person</li>
+</ul>
+</div>
+<div class="infobox note">
+<p><strong>Reading</strong></p>
+<p>This week:</p>
+<ul>
+<li><p><a href="https://geocompr.robinlovelace.net/adv-map.html">Chapter 8 “Making maps with R”</a> from Geocomputation with R by Lovelace, Nowosad and Muenchow (2020)</p></li>
+<li><p><a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma990000462680204761&amp;context=L&amp;vid=44UCL_INST:UCL_VU2">How to lie with maps, Chapter 10</a> by Monmonier (1996).</p></li>
+</ul>
+<p><strong>Watching</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=CfrmHSmwOoo">Episode 1 of Maptastic from the Financial Times with Professor Alasdair Rae formerly of the University of Sheffield</a>.</li>
+</ul>
+<p>Remember this is just a starting point, explore the <a href="https://rl.talis.com/3/ucl/lists/139FBAF8-DACD-60FB-8BDC-E9C9E09BA885.html?lang=en-GB&amp;login=1">reading list</a>, practical and lecture for more ideas.</p>
+</div>
+</div>
+<div id="recommended-listening-4" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Recommended listening 🎧<a href="#recommended-listening-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some of these practicals are long, take regular breaks and have a listen to some of our fav tunes each week.</p>
+<p><a href="https://open.spotify.com/album/0Wmnkh4lzGy5rgkUPOjYbg">Andy</a>. Mumford &amp; Sons, unique sound classed as British folk rock apparently. Enjoy!</p>
+<p><a href="https://open.spotify.com/album/6QcNw2Tt4KxraptfxcYzNy">Adam</a> Your ears are in for an absolute treat this week. Hospital Records have only gone and put out a mind-blowing mini compilation album which completely smashes it. It’s NHS400 - get your ears around this!</p>
+</div>
+<div id="introduction-4" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Introduction<a href="05-map-making.html#introduction-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this practical we’re going to focus on creating mapped outputs in R. For fun we’re going to use data from OpenStreetMap (OSM) and Airbnb.</p>
+<div class="infobox warning">
+<p>Within this practical we show how to make maps in <strong>just</strong> R. We used to provide instructions for QGIS and these have been moved to the additional resources section. It is useful to have some knowledge of QGIS for your future career but it is not needed for the exam.</p>
+</div>
+<div id="osm-1" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> OSM<a href="05-map-making.html#osm-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>OpenStreetMap is collaborative project that has created a free editable map of the World. As users can create their own content it is classed as Volunteered geographic Information (VGI). There is a lot of academic literature on VGI, it’s advnatages and disadvantages. For an overview of VGI checkout this <a href="https://link.springer.com/article/10.1007/s10708-007-9111-y">article</a> by Goodchild (2007).</p>
+<p>If you are interested in exploring the power of VGI and OSM further checkout <a href="https://www.missingmaps.org/">missing maps</a>. They aim to map missing places, often in less developed countires, using OSM so that when natural disasters occur first responders can make data informed decisions. They run events all over the world and it’s worth going to meet other spatial professionals, gain some experience with OSM and contribute to a good cause.</p>
+</div>
+<div id="airbnb" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Airbnb<a href="05-map-making.html#airbnb" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Airbnb is an online marketplace that connects people looking to rent homes to those seeking accommodation often over short time periods.</p>
+</div>
+</div>
+<div id="data-1" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Data<a href="05-map-making.html#data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It’s possible to download OSM data straight from the website, although the interface can be a little unreliable (it works better for small areas). There are, however, a number of websites that allow OSM data to be downloaded more easily and are directly linked to from the ‘Export’ option in OSM. Geofabrik (one of these websites) allows you to download frequently updated shapefiles for various global subdivisions.</p>
+<div id="osm-2" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> OSM<a href="05-map-making.html#osm-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Go to the Geofabrik download server <a href="http://download.geofabrik.de/">website</a></p></li>
+<li><p>Navigate to: Europe &gt; United Kingdom &gt; England &gt; Greater London</p></li>
+<li><p>Download greater-london-latest-free.shp.zip</p></li>
+<li><p>Unzip the data and save it to your current folder</p></li>
+</ol>
+</div>
+<div id="london-boroughs" class="section level3 hasAnchor" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> London boroughs<a href="05-map-making.html#london-boroughs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We’ll use our London boroughs layer again, either load it from week 1 or download it:</p>
+<ol style="list-style-type: decimal">
+<li><p>To get the data go to <a href="https://data.london.gov.uk/">the London data store</a></p></li>
+<li><p>Search for Statistical GIS Boundary Files for London</p></li>
+<li><p>Download the statistical-gis-boundaries-london.zip</p></li>
+<li><p>Unzip the data and save it to your current folder</p></li>
+</ol>
+</div>
+<div id="world-cities" class="section level3 hasAnchor" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> World cities<a href="05-map-making.html#world-cities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will use World cities to provide some context to our maps.</p>
+<ol style="list-style-type: decimal">
+<li>Download them from the <a href="https://hub.arcgis.com/datasets/6996f03a1b364dbab4008d99380370ed_0">ArcGIS HUB</a> &gt; Download &gt; Shapefile.</li>
+</ol>
+</div>
+<div id="uk-outline" class="section level3 hasAnchor" number="5.5.4">
+<h3><span class="header-section-number">5.5.4</span> Uk outline<a href="05-map-making.html#uk-outline" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Download <a href="https://gadm.org/download_country.html">GADM data for the UK</a></li>
+</ol>
+</div>
+<div id="airbnb-1" class="section level3 hasAnchor" number="5.5.5">
+<h3><span class="header-section-number">5.5.5</span> Airbnb<a href="05-map-making.html#airbnb-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Download the <code>listings.csv</code> from the <a href="http://insideairbnb.com/get-the-data.html">inside airbnb website</a> for London.</li>
+</ol>
+<div class="infobox warning">
+<p>In the lecture we discussed how when producing maps there should be some sort of common denominator as opposed to mapping raw counts. Go and source a suitable common denominator then using the skills from previous weeks normalise your data. <strong>Hint</strong> there is a table on the <a href="https://www.nomisweb.co.uk/census/2011/data_finder">Office for National Statistics NOMIS website</a> called number of bedrooms which would let you normalise the airbnb and hotel data based on the number of bedrooms in each ward.</p>
+</div>
+</div>
+</div>
+<div id="plan" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Plan<a href="05-map-making.html#plan" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before we being, it’s useful to draw out what we want our final map to look like otherwise you might find yourself drowning in code without a clear aim. Here, i want to compare airbnbs and hotels across London boroughs…</p>
+<p>I’ve selected boroughs for ease and to show certain concepts:</p>
+<ul>
+<li>Boroughs are <strong>not</strong> a good spatial unit for this</li>
+<li>We should <strong>never</strong> use count data for mapping</li>
+</ul>
+<p>I am going to make a few maps but the first one will resemble an academic figure where there will be sub-figures (e.g. A, B), a study area location map and a legend.</p>
+<p>My drawing skills are very average, but something like this…</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-220"></span>
+<img src="prac5_images/map_plan%20conv%201.png" alt="Map plan" width="100%" />
+<p class="caption">
+Figure 5.1: Map plan
+</p>
+</div>
+<p>So…where do we begin</p>
+<ul>
+<li><p>Conceptually think of each section as a <strong>separate</strong> object. For example, Hotels will be a London borough ‘sf’ object that has a column of Hotels.</p></li>
+<li><p>We need to wrangle our data to get to that point, this will include:</p>
+<p><strong>1. Downloading data:</strong></p>
+<p>For the hotels and airbnb figures</p>
+<ul>
+<li>London borough MSOAs (shp)</li>
+<li>Airbnbs (csv)</li>
+<li>Hotels (shp)</li>
+</ul>
+<p>For the study area map</p>
+<ul>
+<li>Outline of the UK (shp)</li>
+<li>UK cities (shp)</li>
+</ul>
+<p><strong>2. Setting the CRS and filtering:</strong></p>
+<ul>
+<li>Our CRS for the Boroughs needs to be British national grid (BNG)</li>
+<li>Filter hotels from the OSM data</li>
+<li>Filter equivalent airbnbs (e.g. room_type == ‘Entire home/apt’ &amp; availability_365 ==‘365’)</li>
+</ul>
+<p><strong>3. Joining and summing data</strong></p>
+<ul>
+<li>Join the Airbnbs to the MSOAs and sum (i.e. how many are in each MSOA)</li>
+<li>Join the Hotels to the MSOAs and sum</li>
+</ul>
+<p><strong>4. Making some maps</strong></p></li>
+</ul>
+</div>
+<div id="crs-and-filter" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> CRS and filter<a href="05-map-making.html#crs-and-filter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can start with our OSM and Airbnb data which we need for our sub figures…</p>
+<ul>
+<li>OSM</li>
+<li>Airbnb</li>
+<li>MSOAs</li>
+</ul>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="05-map-making.html#cb200-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb200-2"><a href="05-map-making.html#cb200-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb200-3"><a href="05-map-making.html#cb200-3" tabindex="-1"></a></span>
+<span id="cb200-4"><a href="05-map-making.html#cb200-4" tabindex="-1"></a><span class="co"># OSM data</span></span>
+<span id="cb200-5"><a href="05-map-making.html#cb200-5" tabindex="-1"></a></span>
+<span id="cb200-6"><a href="05-map-making.html#cb200-6" tabindex="-1"></a>OSM <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;prac5_data/greater-london-latest-free.shp/gis_osm_pois_free_1.shp&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb200-7"><a href="05-map-making.html#cb200-7" tabindex="-1"></a>  <span class="fu">st_transform</span>(., <span class="dv">27700</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb200-8"><a href="05-map-making.html#cb200-8" tabindex="-1"></a>  <span class="co">#select hotels only</span></span>
+<span id="cb200-9"><a href="05-map-making.html#cb200-9" tabindex="-1"></a>  <span class="fu">filter</span>(fclass <span class="sc">==</span> <span class="st">&#39;hotel&#39;</span>)</span></code></pre></div>
+<pre><code>## Reading layer `gis_osm_pois_free_1&#39; from data source 
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\prac5_data\greater-london-latest-free.shp\gis_osm_pois_free_1.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 57306 features and 4 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -0.5090921 ymin: 51.29201 xmax: 0.2957296 ymax: 51.68432
+## Geodetic CRS:  WGS 84</code></pre>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="05-map-making.html#cb202-1" tabindex="-1"></a><span class="co"># Airbnb data</span></span>
+<span id="cb202-2"><a href="05-map-making.html#cb202-2" tabindex="-1"></a>Airbnb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;prac5_data/listings.csv&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb202-3"><a href="05-map-making.html#cb202-3" tabindex="-1"></a>  <span class="co"># longitude is considered x value here, latitude is y</span></span>
+<span id="cb202-4"><a href="05-map-making.html#cb202-4" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(., <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;longitude&quot;</span>, <span class="st">&quot;latitude&quot;</span>), </span>
+<span id="cb202-5"><a href="05-map-making.html#cb202-5" tabindex="-1"></a>                   <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb202-6"><a href="05-map-making.html#cb202-6" tabindex="-1"></a>    <span class="fu">st_transform</span>(., <span class="dv">27700</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb202-7"><a href="05-map-making.html#cb202-7" tabindex="-1"></a>    <span class="co">#select entire places that are available all year</span></span>
+<span id="cb202-8"><a href="05-map-making.html#cb202-8" tabindex="-1"></a>    <span class="fu">filter</span>(room_type <span class="sc">==</span> <span class="st">&#39;Entire home/apt&#39;</span> <span class="sc">&amp;</span> availability_365 <span class="sc">==</span><span class="st">&#39;365&#39;</span>)</span>
+<span id="cb202-9"><a href="05-map-making.html#cb202-9" tabindex="-1"></a></span>
+<span id="cb202-10"><a href="05-map-making.html#cb202-10" tabindex="-1"></a></span>
+<span id="cb202-11"><a href="05-map-making.html#cb202-11" tabindex="-1"></a><span class="co">#London Borough data is already in 277000</span></span>
+<span id="cb202-12"><a href="05-map-making.html#cb202-12" tabindex="-1"></a>Londonborough <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;Prac1_data/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb202-13"><a href="05-map-making.html#cb202-13" tabindex="-1"></a>  <span class="fu">st_transform</span>(., <span class="dv">27700</span>)</span></code></pre></div>
+<pre><code>## Reading layer `London_Borough_Excluding_MHW&#39; from data source 
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\prac1_data\statistical-gis-boundaries-london\ESRI\London_Borough_Excluding_MHW.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 33 features and 8 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 503568.2 ymin: 155850.8 xmax: 561957.5 ymax: 200933.9
+## Projected CRS: OSGB36 / British National Grid</code></pre>
+<p>Next, let’s load the data needed for our study area map:</p>
+<ul>
+<li>World cities, filtering for Birmingham, London and Edinburgh</li>
+<li>An outline of the UK</li>
+</ul>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="05-map-making.html#cb204-1" tabindex="-1"></a><span class="co"># load world cities</span></span>
+<span id="cb204-2"><a href="05-map-making.html#cb204-2" tabindex="-1"></a>Worldcities <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;prac5_data/World_Cities/World_Cities.shp&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb204-3"><a href="05-map-making.html#cb204-3" tabindex="-1"></a>  <span class="fu">st_transform</span>(., <span class="dv">27700</span>)</span></code></pre></div>
+<pre><code>## Reading layer `World_Cities&#39; from data source 
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\prac5_data\World_Cities\World_Cities.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 2540 features and 13 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -176.1516 ymin: -54.792 xmax: 179.2219 ymax: 78.2
+## Geodetic CRS:  WGS 84</code></pre>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="05-map-making.html#cb206-1" tabindex="-1"></a><span class="co"># filter based on key cities</span></span>
+<span id="cb206-2"><a href="05-map-making.html#cb206-2" tabindex="-1"></a>Worldcities2 <span class="ot">&lt;-</span> Worldcities <span class="sc">%&gt;%</span></span>
+<span id="cb206-3"><a href="05-map-making.html#cb206-3" tabindex="-1"></a>  <span class="fu">filter</span>(CNTRY_NAME<span class="sc">==</span><span class="st">&#39;United Kingdom&#39;</span><span class="sc">&amp;</span></span>
+<span id="cb206-4"><a href="05-map-making.html#cb206-4" tabindex="-1"></a>           Worldcities<span class="sc">$</span>CITY_NAME<span class="sc">==</span><span class="st">&#39;Birmingham&#39;</span><span class="sc">|</span></span>
+<span id="cb206-5"><a href="05-map-making.html#cb206-5" tabindex="-1"></a>           Worldcities<span class="sc">$</span>CITY_NAME<span class="sc">==</span><span class="st">&#39;London&#39;</span><span class="sc">|</span></span>
+<span id="cb206-6"><a href="05-map-making.html#cb206-6" tabindex="-1"></a>           Worldcities<span class="sc">$</span>CITY_NAME<span class="sc">==</span><span class="st">&#39;Edinburgh&#39;</span>)</span>
+<span id="cb206-7"><a href="05-map-making.html#cb206-7" tabindex="-1"></a></span>
+<span id="cb206-8"><a href="05-map-making.html#cb206-8" tabindex="-1"></a><span class="co"># load UK outline</span></span>
+<span id="cb206-9"><a href="05-map-making.html#cb206-9" tabindex="-1"></a>UK_outline <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;prac5_data/gadm36_GBR_shp/gadm36_GBR_0.shp&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb206-10"><a href="05-map-making.html#cb206-10" tabindex="-1"></a>  <span class="fu">st_transform</span>(., <span class="dv">27700</span>)</span></code></pre></div>
+<pre><code>## Reading layer `gadm36_GBR_0&#39; from data source 
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\CASA0005repo\prac5_data\gadm36_GBR_shp\gadm36_GBR_0.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
+## Simple feature collection with 1 feature and 2 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -13.69139 ymin: 49.86542 xmax: 1.764168 ymax: 61.52708
+## Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div id="join-and-sum" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Join and sum<a href="05-map-making.html#join-and-sum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we need to join two spatial features we can use a function called <code>st_join()</code>.</p>
+<p>This is similar to the the joins we explored with attribute data (e.g. joining based on a unique attribute column) but here the join field is actually the spatial unit.</p>
+<p>The output will be a large dataset where:</p>
+<ul>
+<li>Each hotel will be a new row</li>
+<li>It will retain the attributes of the hotel data but also append the attribute of the borough</li>
+<li><code>st_join()</code> defaults to a left join, so in this case the borough data is the left dataset and all the right data has been appended to it. If the left data (borough) had no matches (so no hotels) they would still appear in the final dataset. The default argument for this is <code>st_intersects</code> but we will explore this more next week.</li>
+</ul>
+<p>It is essentially working like this illustration, where the join field is actually the spatial boundaries of the borough - hence the term <strong>spatial join</strong>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-223"></span>
+<img src="prac2_images/left-join-extra.gif" alt="dplyr::left_join() example with multiple matches. Source: [Tidy explain by Garrick Aden‑Buie](https://www.garrickadenbuie.com/project/tidyexplain/)" width="500px" />
+<p class="caption">
+Figure 5.2: dplyr::left_join() example with multiple matches. Source: <a href="https://www.garrickadenbuie.com/project/tidyexplain/">Tidy explain by Garrick Aden‑Buie</a>
+</p>
+</div>
+<p>Let’s do the join</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="05-map-making.html#cb208-1" tabindex="-1"></a>Hotels <span class="ot">&lt;-</span>  <span class="fu">st_join</span>(Londonborough, OSM)</span>
+<span id="cb208-2"><a href="05-map-making.html#cb208-2" tabindex="-1"></a></span>
+<span id="cb208-3"><a href="05-map-making.html#cb208-3" tabindex="-1"></a>Airbnbs <span class="ot">&lt;-</span>  <span class="fu">st_join</span>(Londonborough, Airbnb)</span>
+<span id="cb208-4"><a href="05-map-making.html#cb208-4" tabindex="-1"></a></span>
+<span id="cb208-5"><a href="05-map-making.html#cb208-5" tabindex="-1"></a><span class="fu">head</span>(Hotels)</span></code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 12 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 516362.6 ymin: 159907.4 xmax: 522654 ymax: 172367
+## Projected CRS: OSGB36 / British National Grid
+##                     NAME  GSS_CODE HECTARES NONLD_AREA ONS_INNER SUB_2009
+## 1   Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+## 1.1 Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+## 1.2 Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+## 1.3 Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+## 1.4 Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+## 1.5 Kingston upon Thames E09000021 3726.117          0         F     &lt;NA&gt;
+##     SUB_2006 numeruc     osm_id code fclass
+## 1       &lt;NA&gt;       3  244065165 2401  hotel
+## 1.1     &lt;NA&gt;       3  387544035 2401  hotel
+## 1.2     &lt;NA&gt;       3 1729750835 2401  hotel
+## 1.3     &lt;NA&gt;       3 2411243835 2401  hotel
+## 1.4     &lt;NA&gt;       3 4002880204 2401  hotel
+## 1.5     &lt;NA&gt;       3 5955546285 2401  hotel
+##                                                       name
+## 1                                           The Antoinette
+## 1.1                                   Bosco Hotel &amp; Lounge
+## 1.2                                             Travelodge
+## 1.3 DoubleTree by Hilton Hotel London Kingston Upon Thames
+## 1.4                                            Premier Inn
+## 1.5                       The Bull and Bush Hotel Kingston
+##                           geometry
+## 1   MULTIPOLYGON (((516401.6 16...
+## 1.1 MULTIPOLYGON (((516401.6 16...
+## 1.2 MULTIPOLYGON (((516401.6 16...
+## 1.3 MULTIPOLYGON (((516401.6 16...
+## 1.4 MULTIPOLYGON (((516401.6 16...
+## 1.5 MULTIPOLYGON (((516401.6 16...</code></pre>
+<p>At the moment each hotel/airbnbs is a row and has the borough data appended. However what we actually want is a row per borough and the count of the number of hotels/airbnbs. We can do this using <code>group_by()</code>, which is always followed by <code>summarise()</code>:</p>
+<ul>
+<li><code>group_by()</code> creates temporary groups, if you were to print the data it would look the same as before just with the number of groups specified</li>
+<li><code>summarise()</code> takes the groups and provides a summary, here a count per group.</li>
+</ul>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="05-map-making.html#cb210-1" tabindex="-1"></a>Hotels_sum <span class="ot">&lt;-</span> Hotels <span class="sc">%&gt;%</span></span>
+<span id="cb210-2"><a href="05-map-making.html#cb210-2" tabindex="-1"></a>  <span class="co"># we need to list the columns we want to keep in the summarise</span></span>
+<span id="cb210-3"><a href="05-map-making.html#cb210-3" tabindex="-1"></a>  <span class="fu">group_by</span>(., GSS_CODE, NAME)<span class="sc">%&gt;%</span></span>
+<span id="cb210-4"><a href="05-map-making.html#cb210-4" tabindex="-1"></a>  <span class="co"># for each group count the number of rows and store in a column called accomodation count.</span></span>
+<span id="cb210-5"><a href="05-map-making.html#cb210-5" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Accomodation count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>())</span>
+<span id="cb210-6"><a href="05-map-making.html#cb210-6" tabindex="-1"></a></span>
+<span id="cb210-7"><a href="05-map-making.html#cb210-7" tabindex="-1"></a>Airbnb_sum <span class="ot">&lt;-</span> Airbnbs <span class="sc">%&gt;%</span></span>
+<span id="cb210-8"><a href="05-map-making.html#cb210-8" tabindex="-1"></a>  <span class="fu">group_by</span>(., GSS_CODE, NAME)<span class="sc">%&gt;%</span></span>
+<span id="cb210-9"><a href="05-map-making.html#cb210-9" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Accomodation count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>())</span></code></pre></div>
+<p>Look back at the left_join illustration and think about the <code>group_by()</code> and <code>summarise()</code> code. What result would be get if a borough had 0 hotels or airbnbs. For example in my data Sutton does not have any hotels or Airbnbs (note, OSM and Airbnbs are live datasets so it may have changed).</p>
+<p>A spatial join is like a left join. The Boroughs will always exist (there is always a row for Barking and Dagenham) and we have grouped by and summarised the Borough (Barking and Dagenham). As it has a row it will return a value of 1, even through it is actually 0. To explore this let’s filter our Hotels object (the one we spatially joined on Barking and Dagenham). Then compare it to the Hotel sum data…</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="05-map-making.html#cb211-1" tabindex="-1"></a><span class="co"># the st_join data = 0 Hotels</span></span>
+<span id="cb211-2"><a href="05-map-making.html#cb211-2" tabindex="-1"></a>Hotels <span class="sc">%&gt;%</span></span>
+<span id="cb211-3"><a href="05-map-making.html#cb211-3" tabindex="-1"></a>  <span class="fu">filter</span>(NAME<span class="sc">==</span><span class="st">&quot;Barking and Dagenham&quot;</span>)</span></code></pre></div>
+<pre><code>## Simple feature collection with 1 feature and 12 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 543417.3 ymin: 181434.1 xmax: 551944.6 ymax: 191137.3
+## Projected CRS: OSGB36 / British National Grid
+##                    NAME  GSS_CODE HECTARES NONLD_AREA ONS_INNER SUB_2009
+## 32 Barking and Dagenham E09000002 3779.934     169.15         F     &lt;NA&gt;
+##    SUB_2006 numeruc osm_id code fclass name                       geometry
+## 32     &lt;NA&gt;    1066   &lt;NA&gt;   NA   &lt;NA&gt; &lt;NA&gt; MULTIPOLYGON (((543905.4 18...</code></pre>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="05-map-making.html#cb213-1" tabindex="-1"></a><span class="co"># the group by and summarise data = 1 Hotel!</span></span>
+<span id="cb213-2"><a href="05-map-making.html#cb213-2" tabindex="-1"></a>Hotels_sum <span class="sc">%&gt;%</span></span>
+<span id="cb213-3"><a href="05-map-making.html#cb213-3" tabindex="-1"></a>  <span class="fu">filter</span>(NAME<span class="sc">==</span><span class="st">&quot;Barking and Dagenham&quot;</span>)</span></code></pre></div>
+<pre><code>## Simple feature collection with 1 feature and 3 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 543417.3 ymin: 181434.1 xmax: 551944.6 ymax: 191137.3
+## Projected CRS: OSGB36 / British National Grid
+## # A tibble: 1 × 4
+## # Groups:   GSS_CODE [1]
+##   GSS_CODE  NAME                 `Accomodation count`                   geometry
+## * &lt;chr&gt;     &lt;chr&gt;                               &lt;int&gt;         &lt;MULTIPOLYGON [m]&gt;
+## 1 E09000002 Barking and Dagenham                    1 (((543905.4 183199.1, 543…</code></pre>
+<p>So how do we fix this?</p>
+<p>We can use a topological relationship. Here, the first data set (A) dictates the length (e.g. first data set boroughs then 33 rows returned)</p>
+<p>There are <a href="http://postgis.net/workshops/postgis-intro/spatial_relationships.html">many to choose from, here each tick denotes the relations that apply to the polygons. Note, that in several cases multiple topological relations would work.</a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-227"></span>
+<img src="prac6_images/relations-1.png" alt="Topological relations between vector geometries. Source: [Lovelace et al. 2022](https://geocompr.robinlovelace.net/spatial-operations.html)" width="600px" />
+<p class="caption">
+Figure 5.3: Topological relations between vector geometries. Source: <a href="https://geocompr.robinlovelace.net/spatial-operations.html">Lovelace et al. 2022</a>
+</p>
+</div>
+<p>Common ones to focus on include:</p>
+<ul>
+<li><code>st_intersects(A, B)</code> - Do A (boroughs) touch or overlap with B (OSM).
+<ul>
+<li>Returns a list of boroughs (33 rows) and in each borough a list of hotels</li>
+</ul></li>
+<li><code>st_contains(A, B)</code> - Does A (boroughs) contain B (OSM)
+<ul>
+<li>Returns a list of boroughs (33 rows) and in each borough a list of hotels</li>
+</ul></li>
+<li><code>st_within(A, B)</code> - Is A (boroughs) inside B (OSM). This is asking are boroughs inside hotels
+<ul>
+<li>Returns a list of boroughs that are inside hotels, this produces a result of 0. If we flip it we get a result but it will be the length of the hotels (e.g. <code>st_within(OSM, Londonborough)</code>). Note, <code>st_within(A, B)  ==  st_contains(B, A)</code></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="05-map-making.html#cb215-1" tabindex="-1"></a>Hotels_example <span class="ot">&lt;-</span><span class="fu">st_contains</span>(Londonborough, OSM)</span>
+<span id="cb215-2"><a href="05-map-making.html#cb215-2" tabindex="-1"></a></span>
+<span id="cb215-3"><a href="05-map-making.html#cb215-3" tabindex="-1"></a>Hotels_example</span></code></pre></div>
+<pre><code>## Sparse geometry binary predicate list of length 33, where the predicate
+## was `contains&#39;
+## first 10 elements:
+##  1: 11, 66, 202, 226, 316, 413
+##  2: 400, 416
+##  3: 3, 77, 79, 401
+##  4: 7, 16, 143, 220, 313
+##  5: 74, 238, 435
+##  6: 212, 366, 402, 403, 404
+##  7: 1, 2, 116, 149, 180, 219, 229, 318, 363, 419, ...
+##  8: 280
+##  9: 72, 73, 241, 265, 289, 373, 378, 432
+##  10: 162, 209, 266, 408</code></pre>
+<p>The result is 33 rows! If you have used a graphic user interface GIS before, this is the same as <code>select by location</code> (e.g. <a href="https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorselection.html#select-by-location">select by location in QGIS</a>), and as using filter from <code>dplyr</code> is the same as <code>select by attribute</code>.</p>
+<ul>
+<li>Now, we take the length of that list per borough.</li>
+</ul>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="05-map-making.html#cb217-1" tabindex="-1"></a>Accomodation_contained <span class="ot">&lt;-</span> Londonborough<span class="sc">%&gt;%</span></span>
+<span id="cb217-2"><a href="05-map-making.html#cb217-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hotels_n =</span> <span class="fu">lengths</span>(<span class="fu">st_contains</span>(., OSM)))<span class="sc">%&gt;%</span></span>
+<span id="cb217-3"><a href="05-map-making.html#cb217-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">airbnbs_n =</span> <span class="fu">lengths</span>(<span class="fu">st_contains</span>(., Airbnbs)))</span></code></pre></div>
+<p>Let’s check our example of Barking and Dagenham, it should be 0 hotels <strong>not</strong> 1.</p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="05-map-making.html#cb218-1" tabindex="-1"></a><span class="co"># the group by and summarise data = 1 Hotel!</span></span>
+<span id="cb218-2"><a href="05-map-making.html#cb218-2" tabindex="-1"></a>Accomodation_contained <span class="sc">%&gt;%</span></span>
+<span id="cb218-3"><a href="05-map-making.html#cb218-3" tabindex="-1"></a>  <span class="fu">filter</span>(NAME<span class="sc">==</span><span class="st">&quot;Barking and Dagenham&quot;</span>)</span></code></pre></div>
+<pre><code>## Simple feature collection with 1 feature and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 543417.3 ymin: 181434.1 xmax: 551944.6 ymax: 191137.3
+## Projected CRS: OSGB36 / British National Grid
+##                   NAME  GSS_CODE HECTARES NONLD_AREA ONS_INNER SUB_2009
+## 1 Barking and Dagenham E09000002 3779.934     169.15         F     &lt;NA&gt;
+##   SUB_2006 numeruc                       geometry hotels_n airbnbs_n
+## 1     &lt;NA&gt;    1066 MULTIPOLYGON (((543905.4 18...        0         9</code></pre>
+<div class="infobox warning">
+<p>What is the <a href="https://gis.stackexchange.com/questions/345184/st-intersects-vs-st-within/345186#:~:text=ST_Intersects%3A%20https%3A%2F%2Fpostgis.net,of%20space%20then%20they%20intersect.&amp;text=For%20points%2C%20there%20is%20no,do%20the%20same%20with%20lines.">difference between intersects and within for points like ours?</a></p>
+</div>
+<div id="key-advice" class="section level3 hasAnchor" number="5.8.1">
+<h3><span class="header-section-number">5.8.1</span> Key advice<a href="05-map-making.html#key-advice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When to use <code>st_join()</code> or a topological relationship</p>
+<p><strong><code>st_join()</code></strong></p>
+<ul>
+<li>joins attributes of two spatial objects e.g. if i wanted to know what borough each hotel was in…the output here would be points (as the first dataset is point)</li>
+</ul>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="05-map-making.html#cb220-1" tabindex="-1"></a>Hotels2 <span class="ot">&lt;-</span>  <span class="fu">st_join</span>(OSM, Londonborough)</span></code></pre></div>
+<ul>
+<li>It can easily join polygons or points of the same exact geometry (e.g. if i had data in two sf objects for London)</li>
+</ul>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="05-map-making.html#cb221-1" tabindex="-1"></a>London_data <span class="ot">&lt;-</span>  <span class="fu">st_join</span>(London_borough_data1, London_borough_data2, <span class="at">join=</span>st_equals)</span></code></pre></div>
+<p><strong>topological relationships</strong></p>
+<ul>
+<li>Create counts of points in polygons but without knowing what borough each hotel is in. It returns the borough polygons with a count.</li>
+</ul>
+</div>
+</div>
+<div id="mapping" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Mapping<a href="05-map-making.html#mapping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tmap-syntax" class="section level3 hasAnchor" number="5.9.1">
+<h3><span class="header-section-number">5.9.1</span> tmap syntax<a href="05-map-making.html#tmap-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ok, let’s map! There are several mapping packages in R, the most popular being <code>tmap</code> (thematic map) and <code>ggplot2</code> which now can deal with <code>sf</code> objects through <code>geom_sf</code>. However we will focus on <code>tmap</code> as it is a dedicated spatial mapping package. In 2025 <code>tmap</code> transitioned from version 3 to 4. They are similar and if you use version 3 code a helper will provide suggestions for version 4. Version 4 has more options for displaying data and selecting colours.</p>
+<p>When installing <code>tmap</code> make sure to install the development version:</p>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="05-map-making.html#cb222-1" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;r-tmap/tmap&quot;</span>)</span></code></pre></div>
+<p>Go back to my original map plan drawing. Think of each section (A), (B), study area and legend as a quadrant. For each quadrant we need to make an object…Our first object for mapping hotels is below.</p>
+<p><code>tmap</code> works on the principle of:</p>
+<ul>
+<li>loading your shape object with <code>tm_shape()</code> (here <code>sf</code> object, but it could be a raster)</li>
+<li>setting the map layer (e.g. polygons (<code>tm_polygons()</code>), symbols (<code>tm_symbols()</code>),raster (<code>tm_raster()</code>), text (<code>tm_text()</code>), lines (<code>tm_lines()</code>) etc).</li>
+<li>applying a derived function (e.g. border (<code>tm_borders()</code>), fill (<code>tm_fill()</code>), markers (<code>tm_markers()</code>).</li>
+</ul>
+<p>See the <a href="https://r-tmap.github.io/tmap-book/layers.html">tmap guide for a full table of these</a></p>
+<p>For example…</p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="05-map-making.html#cb223-1" tabindex="-1"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb223-2"><a href="05-map-making.html#cb223-2" tabindex="-1"></a></span>
+<span id="cb223-3"><a href="05-map-making.html#cb223-3" tabindex="-1"></a><span class="co"># change to &quot;view&quot; for an interactive map</span></span>
+<span id="cb223-4"><a href="05-map-making.html#cb223-4" tabindex="-1"></a><span class="fu">tmap_mode</span>(<span class="st">&quot;plot&quot;</span>)</span></code></pre></div>
+<pre><code>## ℹ tmap modes &quot;plot&quot; - &quot;view&quot;</code></pre>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="05-map-making.html#cb225-1" tabindex="-1"></a><span class="co"># set the shape</span></span>
+<span id="cb225-2"><a href="05-map-making.html#cb225-2" tabindex="-1"></a>tm1 <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(Accomodation_contained) <span class="sc">+</span> </span>
+<span id="cb225-3"><a href="05-map-making.html#cb225-3" tabindex="-1"></a>  <span class="co"># set the map layer</span></span>
+<span id="cb225-4"><a href="05-map-making.html#cb225-4" tabindex="-1"></a>  <span class="co"># try changing this to tm_symbols()</span></span>
+<span id="cb225-5"><a href="05-map-making.html#cb225-5" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="st">&quot;hotels_n&quot;</span>,</span>
+<span id="cb225-6"><a href="05-map-making.html#cb225-6" tabindex="-1"></a>              <span class="at">col =</span> <span class="st">&quot;black&quot;</span>, <span class="at">lwd=</span><span class="fl">0.5</span>, <span class="at">lty=</span><span class="st">&quot;dashed&quot;</span>,)</span>
+<span id="cb225-7"><a href="05-map-making.html#cb225-7" tabindex="-1"></a></span>
+<span id="cb225-8"><a href="05-map-making.html#cb225-8" tabindex="-1"></a><span class="co"># plot the map</span></span>
+<span id="cb225-9"><a href="05-map-making.html#cb225-9" tabindex="-1"></a>tm1</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-234-1.png" alt="" width="672" /></p>
+<div class="infobox warning">
+<p>Here, where we have map layer (e.g <code>tm_polyons()</code>) the <em>derived function (e.g. border colour)</em> is within the map layer function.if we didn’t have the map layer and just wanted to borders…</p>
+</div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="05-map-making.html#cb226-1" tabindex="-1"></a>tm_no_map_layer <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(Accomodation_contained) <span class="sc">+</span> </span>
+<span id="cb226-2"><a href="05-map-making.html#cb226-2" tabindex="-1"></a>  <span class="co"># there is no tm_polygons() if we just want the map with no spatial data</span></span>
+<span id="cb226-3"><a href="05-map-making.html#cb226-3" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">&quot;darkblue&quot;</span>)</span>
+<span id="cb226-4"><a href="05-map-making.html#cb226-4" tabindex="-1"></a></span>
+<span id="cb226-5"><a href="05-map-making.html#cb226-5" tabindex="-1"></a>tm_no_map_layer</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-235-1.png" alt="" width="672" /></p>
+<p>Let’s add in some more information to our map.</p>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="05-map-making.html#cb227-1" tabindex="-1"></a><span class="fu">tmap_mode</span>(<span class="st">&quot;plot&quot;</span>)</span></code></pre></div>
+<pre><code>## ℹ tmap modes &quot;plot&quot; - &quot;view&quot;</code></pre>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="05-map-making.html#cb229-1" tabindex="-1"></a><span class="co"># plot each map</span></span>
+<span id="cb229-2"><a href="05-map-making.html#cb229-2" tabindex="-1"></a>tm1 <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(Accomodation_contained) <span class="sc">+</span> </span>
+<span id="cb229-3"><a href="05-map-making.html#cb229-3" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">fill =</span><span class="st">&quot;hotels_n&quot;</span>,</span>
+<span id="cb229-4"><a href="05-map-making.html#cb229-4" tabindex="-1"></a>              <span class="at">col =</span> <span class="st">&quot;black&quot;</span>, </span>
+<span id="cb229-5"><a href="05-map-making.html#cb229-5" tabindex="-1"></a>              <span class="at">lwd =</span><span class="fl">0.5</span>,</span>
+<span id="cb229-6"><a href="05-map-making.html#cb229-6" tabindex="-1"></a>              <span class="at">lty=</span><span class="st">&quot;dashed&quot;</span>,</span>
+<span id="cb229-7"><a href="05-map-making.html#cb229-7" tabindex="-1"></a>              <span class="at">fill.chart =</span> <span class="fu">tm_chart_violin</span>(),</span>
+<span id="cb229-8"><a href="05-map-making.html#cb229-8" tabindex="-1"></a>              <span class="co"># above this was the same as before</span></span>
+<span id="cb229-9"><a href="05-map-making.html#cb229-9" tabindex="-1"></a>              <span class="at">fill.scale =</span> <span class="fu">tm_scale_intervals</span>(</span>
+<span id="cb229-10"><a href="05-map-making.html#cb229-10" tabindex="-1"></a>                <span class="at">values=</span><span class="st">&quot;brewer.bu_pu&quot;</span>,</span>
+<span id="cb229-11"><a href="05-map-making.html#cb229-11" tabindex="-1"></a>                <span class="at">n=</span><span class="dv">5</span>,</span>
+<span id="cb229-12"><a href="05-map-making.html#cb229-12" tabindex="-1"></a>                <span class="at">style=</span><span class="st">&quot;jenks&quot;</span>))</span>
+<span id="cb229-13"><a href="05-map-making.html#cb229-13" tabindex="-1"></a></span>
+<span id="cb229-14"><a href="05-map-making.html#cb229-14" tabindex="-1"></a>tm1</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-236-1.png" alt="" width="672" /></p>
+<p>In the above code we have:</p>
+<ul>
+<li><code>tm_scale_intervals()</code> - used for numerical data</li>
+<li><code>values</code> - the values to use to style the map, here it’s blue from the colour brewer list. There are a number of options here. See the next code chunk.</li>
+<li><code>n</code> - the number of breaks to have</li>
+<li><code>style</code> - how to decide where to make the breaks. We have a lot of choice for this. See the <a href="https://r-tmap.github.io/tmap/reference/tm_scale_intervals.html">interval scale reference</a>. Jenks looks for the <em>natural breaks</em> in the data and is often used.</li>
+<li><code>fill_chart()</code> produces a summary of the mapped data with a violin plot, there are many options see the <a href="https://r-tmap.github.io/tmap/articles/basics_charts">tmap chart vigette</a></li>
+</ul>
+<p>To see all available colour options run the following code. Find an appropriate colour scheme and use the <code>name</code> in the <code>values</code> argument in the code above (replacing <code>brewer.bu_pu</code>)</p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="05-map-making.html#cb230-1" tabindex="-1"></a><span class="fu">library</span>(colorblindcheck)</span>
+<span id="cb230-2"><a href="05-map-making.html#cb230-2" tabindex="-1"></a>cols4all<span class="sc">::</span><span class="fu">c4a_gui</span>()</span></code></pre></div>
+</div>
+<div id="complete-map" class="section level3 hasAnchor" number="5.9.2">
+<h3><span class="header-section-number">5.9.2</span> Complete map<a href="05-map-making.html#complete-map" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before we progress we need to set up our breaks to be consistent across the two datasets, otherwise our maps will not be comparable. First of all let’s see which dataset has the greatest range</p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="05-map-making.html#cb231-1" tabindex="-1"></a>stats <span class="ot">&lt;-</span> Accomodation_contained <span class="sc">%&gt;%</span></span>
+<span id="cb231-2"><a href="05-map-making.html#cb231-2" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb231-3"><a href="05-map-making.html#cb231-3" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(hotels_n, airbnbs_n) <span class="sc">%&gt;%</span>  </span>
+<span id="cb231-4"><a href="05-map-making.html#cb231-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), <span class="fu">list</span>(</span>
+<span id="cb231-5"><a href="05-map-making.html#cb231-5" tabindex="-1"></a>    <span class="at">min =</span> min,</span>
+<span id="cb231-6"><a href="05-map-making.html#cb231-6" tabindex="-1"></a>    <span class="at">max =</span> max,</span>
+<span id="cb231-7"><a href="05-map-making.html#cb231-7" tabindex="-1"></a>    <span class="at">mean =</span> mean,</span>
+<span id="cb231-8"><a href="05-map-making.html#cb231-8" tabindex="-1"></a>    <span class="at">median =</span> median,</span>
+<span id="cb231-9"><a href="05-map-making.html#cb231-9" tabindex="-1"></a>    <span class="at">sd =</span> sd</span>
+<span id="cb231-10"><a href="05-map-making.html#cb231-10" tabindex="-1"></a>  )))</span></code></pre></div>
+<p>As the Airbnbs have the greatest range we will use that to generate our breaks and apply them to both datasets.</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="05-map-making.html#cb232-1" tabindex="-1"></a><span class="fu">library</span>(classInt)</span>
+<span id="cb232-2"><a href="05-map-making.html#cb232-2" tabindex="-1"></a></span>
+<span id="cb232-3"><a href="05-map-making.html#cb232-3" tabindex="-1"></a><span class="co"># Get Jenks breaks for 5 classes</span></span>
+<span id="cb232-4"><a href="05-map-making.html#cb232-4" tabindex="-1"></a>breaks <span class="ot">&lt;-</span> Accomodation_contained<span class="sc">%&gt;%</span></span>
+<span id="cb232-5"><a href="05-map-making.html#cb232-5" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>()<span class="sc">%&gt;%</span></span>
+<span id="cb232-6"><a href="05-map-making.html#cb232-6" tabindex="-1"></a>  <span class="co">#need a numeric vector not a dataframe or tibble</span></span>
+<span id="cb232-7"><a href="05-map-making.html#cb232-7" tabindex="-1"></a>  <span class="fu">pull</span>(airbnbs_n) <span class="sc">%&gt;%</span>             </span>
+<span id="cb232-8"><a href="05-map-making.html#cb232-8" tabindex="-1"></a>  <span class="fu">classIntervals</span>(., <span class="at">n =</span> <span class="dv">5</span>, <span class="at">style =</span> <span class="st">&quot;jenks&quot;</span>)</span>
+<span id="cb232-9"><a href="05-map-making.html#cb232-9" tabindex="-1"></a>  </span>
+<span id="cb232-10"><a href="05-map-making.html#cb232-10" tabindex="-1"></a>breaks<span class="sc">$</span>brks</span></code></pre></div>
+<pre><code>## [1]   1  10  26  66  98 197</code></pre>
+<p>Not let’s make the maps for Hotels and Airbnbs as per the original plan. Because we have our data of interest in two separate we have a few options:</p>
+<ol style="list-style-type: decimal">
+<li>Make a <code>tmap</code> object for each dataset (i.e. the same as above but now for airbnb)</li>
+<li>Use a facet map - this allows small maps for each group (here the group is airbnb or hotel)</li>
+</ol>
+<p>Let’s set up the facets..</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="05-map-making.html#cb234-1" tabindex="-1"></a>tm1 <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(Accomodation_contained) <span class="sc">+</span></span>
+<span id="cb234-2"><a href="05-map-making.html#cb234-2" tabindex="-1"></a>    <span class="fu">tm_polygons</span>(</span>
+<span id="cb234-3"><a href="05-map-making.html#cb234-3" tabindex="-1"></a>      <span class="at">fill =</span> <span class="fu">c</span>(<span class="st">&quot;hotels_n&quot;</span>, <span class="st">&quot;airbnbs_n&quot;</span>),</span>
+<span id="cb234-4"><a href="05-map-making.html#cb234-4" tabindex="-1"></a>      <span class="at">fill.scale =</span> <span class="fu">tm_scale_intervals</span>(<span class="at">values =</span> <span class="st">&quot;brewer.blues&quot;</span>, <span class="at">breaks=</span>breaks<span class="sc">$</span>brks),</span>
+<span id="cb234-5"><a href="05-map-making.html#cb234-5" tabindex="-1"></a>      <span class="co"># set the legend</span></span>
+<span id="cb234-6"><a href="05-map-making.html#cb234-6" tabindex="-1"></a>      <span class="at">fill.legend =</span> <span class="fu">tm_legend</span>(<span class="at">title=</span><span class="st">&quot;Accomodation count&quot;</span>,</span>
+<span id="cb234-7"><a href="05-map-making.html#cb234-7" tabindex="-1"></a>                              <span class="at">title.size=</span><span class="fl">0.85</span>,</span>
+<span id="cb234-8"><a href="05-map-making.html#cb234-8" tabindex="-1"></a>                              <span class="at">size=</span><span class="fl">0.8</span>,</span>
+<span id="cb234-9"><a href="05-map-making.html#cb234-9" tabindex="-1"></a>                              <span class="co"># plot outside of the main map</span></span>
+<span id="cb234-10"><a href="05-map-making.html#cb234-10" tabindex="-1"></a>                              <span class="co">#explained below</span></span>
+<span id="cb234-11"><a href="05-map-making.html#cb234-11" tabindex="-1"></a>                              <span class="at">position=</span><span class="fu">tm_pos_out</span>(<span class="st">&quot;right&quot;</span>, </span>
+<span id="cb234-12"><a href="05-map-making.html#cb234-12" tabindex="-1"></a>                                                  <span class="st">&quot;center&quot;</span>,</span>
+<span id="cb234-13"><a href="05-map-making.html#cb234-13" tabindex="-1"></a>                                                  <span class="at">pos.v =</span> <span class="st">&quot;center&quot;</span>)),</span>
+<span id="cb234-14"><a href="05-map-making.html#cb234-14" tabindex="-1"></a>      <span class="co"># all facets share the same legend</span></span>
+<span id="cb234-15"><a href="05-map-making.html#cb234-15" tabindex="-1"></a>      <span class="at">fill.free =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb234-16"><a href="05-map-making.html#cb234-16" tabindex="-1"></a>  <span class="co"># make 2 rows for the facets</span></span>
+<span id="cb234-17"><a href="05-map-making.html#cb234-17" tabindex="-1"></a>  <span class="fu">tm_facets</span>(<span class="at">nrow=</span><span class="dv">2</span>)</span>
+<span id="cb234-18"><a href="05-map-making.html#cb234-18" tabindex="-1"></a></span>
+<span id="cb234-19"><a href="05-map-making.html#cb234-19" tabindex="-1"></a>tm1</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-240-1.png" alt="" width="672" /></p>
+<p>Here, we’ve set the position of the legend to be outside the main plot <code>tm_pos_out()</code> the arguments that follow set where to place the legend:</p>
+<ul>
+<li>right = in the area to the right side of the plot (each map is a 3x3 grid or possible area)</li>
+<li>center = in the center [adjusted to the center] of the right “column”</li>
+<li><code>pos.v = "center"</code> = in the middle of the column (not top of bottom)</li>
+</ul>
+<p>The vertical (<code>pos.v</code>) and horizontal (<code>pos.h</code>) positions can also be set numerically where in relation to the top left hand corner of the object you are placing.</p>
+<p>0 = left (<code>pos.h</code>) or bottom (<code>pos.v</code>)
+1 = right (<code>pos.h</code>) or top (<code>pos.v</code>)</p>
+<p>See the <a href="https://r-tmap.github.io/tmap/articles/adv_positions#shortcut-method-inside-the-map-frame">tmap position guide for more information and examples</a></p>
+<div class="infobox warning">
+<p>Note, if we include a chart here it will combine the data into a single plot. So we could either:</p>
+<ul>
+<li>separate out our facets into individual tmap objects with a chart</li>
+<li>make separate charts with ggplot2 and add them onto the map as objects later.</li>
+</ul>
+</div>
+<p>For now, we need to:</p>
+<ul>
+<li>Change the labels (<code>tm_layout()</code>)</li>
+<li>Add a compass (<code>tm_compass()</code>)</li>
+<li>Add a scalebar (<code>tm_scalebar()</code>)</li>
+<li>Add a credit to OSM/Airbnb (<code>tm_credits()</code>)</li>
+</ul>
+<p><strong>Note</strong>, when writing this practical i found an issue with the new version of tmap that meant the third item would not plot. See my <a href="https://github.com/r-tmap/tmap/issues/1140#issuecomment-2980198902">minimal worked example</a> on the issue tab.</p>
+<p>Then we can save the map (<code>tm_save()</code>). When making position adjustments always check the saved version as this will differ to what you see in R.</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="05-map-making.html#cb235-1" tabindex="-1"></a>  <span class="co"># change headings or remove</span></span>
+<span id="cb235-2"><a href="05-map-making.html#cb235-2" tabindex="-1"></a></span>
+<span id="cb235-3"><a href="05-map-making.html#cb235-3" tabindex="-1"></a>tm2 <span class="ot">&lt;-</span> tm1<span class="sc">+</span></span>
+<span id="cb235-4"><a href="05-map-making.html#cb235-4" tabindex="-1"></a>  <span class="fu">tm_layout</span>(<span class="at">panel.labels=</span><span class="fu">c</span>(<span class="st">&quot;Hotels&quot;</span>, <span class="st">&quot;Airbnb&quot;</span>),</span>
+<span id="cb235-5"><a href="05-map-making.html#cb235-5" tabindex="-1"></a>            <span class="at">panel.show =</span> <span class="cn">TRUE</span></span>
+<span id="cb235-6"><a href="05-map-making.html#cb235-6" tabindex="-1"></a>            <span class="co">#panel.label.bg.color = &quot;transparent&quot;,</span></span>
+<span id="cb235-7"><a href="05-map-making.html#cb235-7" tabindex="-1"></a>            )<span class="sc">+</span></span>
+<span id="cb235-8"><a href="05-map-making.html#cb235-8" tabindex="-1"></a>  </span>
+<span id="cb235-9"><a href="05-map-making.html#cb235-9" tabindex="-1"></a>  <span class="fu">tm_compass</span>(<span class="at">type=</span> <span class="st">&quot;arrow&quot;</span>,</span>
+<span id="cb235-10"><a href="05-map-making.html#cb235-10" tabindex="-1"></a>            <span class="at">size=</span><span class="fl">1.8</span>, </span>
+<span id="cb235-11"><a href="05-map-making.html#cb235-11" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">tm_pos_out</span>(<span class="st">&quot;right&quot;</span>, </span>
+<span id="cb235-12"><a href="05-map-making.html#cb235-12" tabindex="-1"></a>                                  <span class="st">&quot;center&quot;</span>,</span>
+<span id="cb235-13"><a href="05-map-making.html#cb235-13" tabindex="-1"></a>                                  <span class="at">pos.h=</span> <span class="sc">-</span><span class="fl">0.05</span>,</span>
+<span id="cb235-14"><a href="05-map-making.html#cb235-14" tabindex="-1"></a>                                  <span class="at">pos.v =</span><span class="fl">0.72</span>))<span class="sc">+</span></span>
+<span id="cb235-15"><a href="05-map-making.html#cb235-15" tabindex="-1"></a>  <span class="fu">tm_scalebar</span>(<span class="at">text.size =</span> <span class="fl">0.7</span>,</span>
+<span id="cb235-16"><a href="05-map-making.html#cb235-16" tabindex="-1"></a>              <span class="at">width=</span><span class="dv">10</span>,</span>
+<span id="cb235-17"><a href="05-map-making.html#cb235-17" tabindex="-1"></a>              <span class="at">breaks=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">20</span>),</span>
+<span id="cb235-18"><a href="05-map-making.html#cb235-18" tabindex="-1"></a>              <span class="at">position =</span> <span class="fu">tm_pos_out</span>(<span class="st">&quot;right&quot;</span>,</span>
+<span id="cb235-19"><a href="05-map-making.html#cb235-19" tabindex="-1"></a>                                    <span class="st">&quot;center&quot;</span>, </span>
+<span id="cb235-20"><a href="05-map-making.html#cb235-20" tabindex="-1"></a>                                    <span class="at">pos.h=</span><span class="fl">0.075</span>,</span>
+<span id="cb235-21"><a href="05-map-making.html#cb235-21" tabindex="-1"></a>                                    <span class="at">pos.v =</span> <span class="fl">0.68</span>))<span class="sc">+</span></span>
+<span id="cb235-22"><a href="05-map-making.html#cb235-22" tabindex="-1"></a>  <span class="co"># we could use tm_credits to place sub-titles like (A) or (B)</span></span>
+<span id="cb235-23"><a href="05-map-making.html#cb235-23" tabindex="-1"></a>  <span class="co"># on the map.</span></span>
+<span id="cb235-24"><a href="05-map-making.html#cb235-24" tabindex="-1"></a>  <span class="fu">tm_credits</span>(<span class="st">&quot;(c) OpenStreetMap contrbutors and Air b n b&quot;</span>,</span>
+<span id="cb235-25"><a href="05-map-making.html#cb235-25" tabindex="-1"></a>             <span class="at">size=</span><span class="fl">0.6</span>,</span>
+<span id="cb235-26"><a href="05-map-making.html#cb235-26" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">tm_pos_out</span>(<span class="st">&quot;center&quot;</span>,</span>
+<span id="cb235-27"><a href="05-map-making.html#cb235-27" tabindex="-1"></a>                                   <span class="st">&quot;bottom&quot;</span>,</span>
+<span id="cb235-28"><a href="05-map-making.html#cb235-28" tabindex="-1"></a>                                   <span class="at">pos.v =</span> <span class="fl">1.5</span>,</span>
+<span id="cb235-29"><a href="05-map-making.html#cb235-29" tabindex="-1"></a>                                   <span class="at">pos.h=</span><span class="sc">-</span><span class="fl">0.02</span>))</span>
+<span id="cb235-30"><a href="05-map-making.html#cb235-30" tabindex="-1"></a></span>
+<span id="cb235-31"><a href="05-map-making.html#cb235-31" tabindex="-1"></a>tm2</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-241-1.png" alt="" width="672" /></p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="05-map-making.html#cb236-1" tabindex="-1"></a><span class="fu">tmap_save</span>(tm2, <span class="st">&quot;prac5_data/1_facet.png&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">units=</span><span class="st">&quot;in&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span></code></pre></div>
+<div id="study-area" class="section level4 hasAnchor" number="5.9.2.1">
+<h4><span class="header-section-number">5.9.2.1</span> Study area<a href="05-map-making.html#study-area" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We want to add an “inset” map for our study area - this is just a map <strong>on</strong> our map</p>
+<p>If we do a quick thematic map (<code>qtm()</code>) of our study outline we see that Scottish islands make it appear off centre. We use a <em>bounding box</em> to clip (cookie cutter) or shape.</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="05-map-making.html#cb237-1" tabindex="-1"></a><span class="fu">qtm</span>(UK_outline)</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-242-1.png" alt="" width="800pt" /></p>
+<p>Go to <a href="www.bboxfinder.com">www.bboxfinder.com</a></p>
+<ul>
+<li>On the left hand side you can select your CRS (here, British national grid, 27700). This will <strong>load a new tab at the bottom</strong> (like tabs in a spreadsheet)</li>
+<li>Click on the 27700 tab, draw a box and copy the coordinates</li>
+<li>Use <em><code>st_crop()</code></em> to clip the UK geometry to our box.</li>
+</ul>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="05-map-making.html#cb238-1" tabindex="-1"></a>newbb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">xmin=</span><span class="sc">-</span><span class="dv">296000</span>, <span class="at">ymin=</span><span class="dv">5408</span>, <span class="at">xmax=</span><span class="dv">655696</span>, <span class="at">ymax=</span><span class="dv">1000000</span>)</span>
+<span id="cb238-2"><a href="05-map-making.html#cb238-2" tabindex="-1"></a>  </span>
+<span id="cb238-3"><a href="05-map-making.html#cb238-3" tabindex="-1"></a>UK_outlinecrop <span class="ot">&lt;-</span> UK_outline<span class="sc">$</span>geometry <span class="sc">%&gt;%</span></span>
+<span id="cb238-4"><a href="05-map-making.html#cb238-4" tabindex="-1"></a>  <span class="fu">st_crop</span>(., newbb)</span></code></pre></div>
+<p>To add layers to an individual map we <strong>add</strong> another geometry, here we have out UK outline (<code>tm_polygons</code>) then <strong>add</strong> our cities (<code>tm_symbols</code>) <strong>on top of the polygons</strong>.</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="05-map-making.html#cb239-1" tabindex="-1"></a>tm3 <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(UK_outlinecrop)<span class="sc">+</span> </span>
+<span id="cb239-2"><a href="05-map-making.html#cb239-2" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">col=</span><span class="st">&quot;darkslategray1&quot;</span>)<span class="sc">+</span></span>
+<span id="cb239-3"><a href="05-map-making.html#cb239-3" tabindex="-1"></a>    <span class="fu">tm_layout</span>(<span class="at">frame=</span><span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb239-4"><a href="05-map-making.html#cb239-4" tabindex="-1"></a>  <span class="fu">tm_shape</span>(Worldcities2) <span class="sc">+</span></span>
+<span id="cb239-5"><a href="05-map-making.html#cb239-5" tabindex="-1"></a>    <span class="co">#adds the city points</span></span>
+<span id="cb239-6"><a href="05-map-making.html#cb239-6" tabindex="-1"></a>    <span class="fu">tm_symbols</span>(<span class="at">shape=</span><span class="dv">20</span>,</span>
+<span id="cb239-7"><a href="05-map-making.html#cb239-7" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">&quot;orange&quot;</span>,</span>
+<span id="cb239-8"><a href="05-map-making.html#cb239-8" tabindex="-1"></a>               <span class="co">#outline colour</span></span>
+<span id="cb239-9"><a href="05-map-making.html#cb239-9" tabindex="-1"></a>               <span class="at">col=</span><span class="st">&quot;black&quot;</span>,</span>
+<span id="cb239-10"><a href="05-map-making.html#cb239-10" tabindex="-1"></a>               <span class="at">size=</span><span class="fl">0.8</span>)<span class="sc">+</span></span>
+<span id="cb239-11"><a href="05-map-making.html#cb239-11" tabindex="-1"></a>        <span class="co">#add the city labels, x and y move the label around the point</span></span>
+<span id="cb239-12"><a href="05-map-making.html#cb239-12" tabindex="-1"></a>    <span class="fu">tm_text</span>(<span class="st">&quot;CITY_NAME&quot;</span>, <span class="at">xmod=</span><span class="sc">-</span><span class="dv">1</span>, <span class="at">ymod=</span><span class="sc">-</span><span class="fl">0.5</span>)</span>
+<span id="cb239-13"><a href="05-map-making.html#cb239-13" tabindex="-1"></a></span>
+<span id="cb239-14"><a href="05-map-making.html#cb239-14" tabindex="-1"></a></span>
+<span id="cb239-15"><a href="05-map-making.html#cb239-15" tabindex="-1"></a>tm3</span></code></pre></div>
+<p><img src="CASA0005_files/figure-html/unnamed-chunk-244-1.png" alt="" width="800pt" /></p>
+<p>We can also add a visual grey bounding box to our study area map. This is optional…</p>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="05-map-making.html#cb240-1" tabindex="-1"></a><span class="co"># st_bbox gives the bounding x and y coordinates </span></span>
+<span id="cb240-2"><a href="05-map-making.html#cb240-2" tabindex="-1"></a>Londonbb <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(Accomodation_contained,</span>
+<span id="cb240-3"><a href="05-map-making.html#cb240-3" tabindex="-1"></a>                    <span class="at">crs =</span> <span class="fu">st_crs</span>(Accomodation_contained))<span class="sc">%&gt;%</span></span>
+<span id="cb240-4"><a href="05-map-making.html#cb240-4" tabindex="-1"></a><span class="co"># st_as_sfc coverts the coordinates to an sf object</span></span>
+<span id="cb240-5"><a href="05-map-making.html#cb240-5" tabindex="-1"></a>  <span class="fu">st_as_sfc</span>()</span>
+<span id="cb240-6"><a href="05-map-making.html#cb240-6" tabindex="-1"></a></span>
+<span id="cb240-7"><a href="05-map-making.html#cb240-7" tabindex="-1"></a>tm4 <span class="ot">&lt;-</span> tm3 <span class="sc">+</span></span>
+<span id="cb240-8"><a href="05-map-making.html#cb240-8" tabindex="-1"></a>  <span class="fu">tm_shape</span>(Londonbb)<span class="sc">+</span> </span>
+<span id="cb240-9"><a href="05-map-making.html#cb240-9" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">&quot;grey40&quot;</span>, <span class="at">lwd =</span> <span class="dv">3</span>)<span class="sc">+</span></span>
+<span id="cb240-10"><a href="05-map-making.html#cb240-10" tabindex="-1"></a>    <span class="fu">tm_layout</span>(<span class="at">frame=</span><span class="cn">FALSE</span>,</span>
+<span id="cb240-11"><a href="05-map-making.html#cb240-11" tabindex="-1"></a>            <span class="at">bg.color =</span> <span class="st">&quot;transparent&quot;</span>)</span></code></pre></div>
+<p>We can arrange our maps with a number of tools:</p>
+<ol style="list-style-type: decimal">
+<li><code>tmap_arrange()</code> this is fairly simply but doesn’t give much control over <strong>placement</strong> (e.g. <code>tmap_arrange(tm1, tm2)</code>)</li>
+</ol>
+<p>We will focus on:</p>
+<ol start="2" style="list-style-type: decimal">
+<li><code>tm_inset()</code> function. However, at the moment <code>tm_inset()</code> does not work with a tmap object. Instead we can take an image of our inset map with <code>tm_grob()</code> but we have a little less control with placement. See</li>
+</ol>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="05-map-making.html#cb241-1" tabindex="-1"></a>inset <span class="ot">&lt;-</span> <span class="fu">tmap_grob</span>(tm4, <span class="at">asp=</span><span class="fl">1.1</span>)</span>
+<span id="cb241-2"><a href="05-map-making.html#cb241-2" tabindex="-1"></a></span>
+<span id="cb241-3"><a href="05-map-making.html#cb241-3" tabindex="-1"></a>final_map<span class="ot">&lt;-</span> tm2<span class="sc">+</span></span>
+<span id="cb241-4"><a href="05-map-making.html#cb241-4" tabindex="-1"></a>  <span class="fu">tm_inset</span>(inset,</span>
+<span id="cb241-5"><a href="05-map-making.html#cb241-5" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">tm_pos_out</span>(<span class="st">&quot;right&quot;</span>, <span class="st">&quot;center&quot;</span>))</span>
+<span id="cb241-6"><a href="05-map-making.html#cb241-6" tabindex="-1"></a><span class="fu">tmap_save</span>(final_map, <span class="st">&quot;prac5_data/2_facet.png&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">units=</span><span class="st">&quot;in&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>the <code>grid</code> package. Again, can be used in a simple way but also permits re-location of the objects. However, once we use the <code>grid</code> package we can’t export through tmap (e.g. <code>tmap_save(tm, filename = "mymap.png"</code>)</li>
+</ol>
+<p>As i noted earlier i could also add a violin plot as an inset object…to enable a group function on our violin plot - meaning a violin plot for both hotels and airbnb we need to make our data long…</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="05-map-making.html#cb242-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb242-2"><a href="05-map-making.html#cb242-2" tabindex="-1"></a></span>
+<span id="cb242-3"><a href="05-map-making.html#cb242-3" tabindex="-1"></a>accom_long <span class="ot">&lt;-</span> Accomodation_contained <span class="sc">%&gt;%</span></span>
+<span id="cb242-4"><a href="05-map-making.html#cb242-4" tabindex="-1"></a>  <span class="co"># drop geometry for plotting</span></span>
+<span id="cb242-5"><a href="05-map-making.html#cb242-5" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>() <span class="sc">%&gt;%</span>  </span>
+<span id="cb242-6"><a href="05-map-making.html#cb242-6" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb242-7"><a href="05-map-making.html#cb242-7" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(hotels_n, airbnbs_n),</span>
+<span id="cb242-8"><a href="05-map-making.html#cb242-8" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;accom_type&quot;</span>,</span>
+<span id="cb242-9"><a href="05-map-making.html#cb242-9" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;count&quot;</span></span>
+<span id="cb242-10"><a href="05-map-making.html#cb242-10" tabindex="-1"></a>  )</span></code></pre></div>
+<p>Next we use that object (<code>accom_long</code>) to make the plot</p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="05-map-making.html#cb243-1" tabindex="-1"></a>violin <span class="ot">&lt;-</span> accom_long <span class="sc">%&gt;%</span></span>
+<span id="cb243-2"><a href="05-map-making.html#cb243-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> accom_type, </span>
+<span id="cb243-3"><a href="05-map-making.html#cb243-3" tabindex="-1"></a>             <span class="co"># number</span></span>
+<span id="cb243-4"><a href="05-map-making.html#cb243-4" tabindex="-1"></a>             <span class="at">y =</span> count, </span>
+<span id="cb243-5"><a href="05-map-making.html#cb243-5" tabindex="-1"></a>             <span class="co"># hotels or airbnb </span></span>
+<span id="cb243-6"><a href="05-map-making.html#cb243-6" tabindex="-1"></a>             <span class="at">fill =</span> accom_type)) <span class="sc">+</span></span>
+<span id="cb243-7"><a href="05-map-making.html#cb243-7" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb243-8"><a href="05-map-making.html#cb243-8" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">&quot;grey30&quot;</span>, </span>
+<span id="cb243-9"><a href="05-map-making.html#cb243-9" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb243-10"><a href="05-map-making.html#cb243-10" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb243-11"><a href="05-map-making.html#cb243-11" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb243-12"><a href="05-map-making.html#cb243-12" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb243-13"><a href="05-map-making.html#cb243-13" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb243-14"><a href="05-map-making.html#cb243-14" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb243-15"><a href="05-map-making.html#cb243-15" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;black&quot;</span></span>
+<span id="cb243-16"><a href="05-map-making.html#cb243-16" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb243-17"><a href="05-map-making.html#cb243-17" tabindex="-1"></a>  <span class="co"># change the labels from the column names to..</span></span>
+<span id="cb243-18"><a href="05-map-making.html#cb243-18" tabindex="-1"></a><span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;hotels_n&quot;</span> <span class="ot">=</span> <span class="st">&quot;Hotels&quot;</span>, </span>
+<span id="cb243-19"><a href="05-map-making.html#cb243-19" tabindex="-1"></a>                            <span class="st">&quot;airbnbs_n&quot;</span> <span class="ot">=</span> <span class="st">&quot;Airbnbs&quot;</span>))<span class="sc">+</span></span>
+<span id="cb243-20"><a href="05-map-making.html#cb243-20" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)<span class="sc">+</span></span>
+<span id="cb243-21"><a href="05-map-making.html#cb243-21" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb243-22"><a href="05-map-making.html#cb243-22" tabindex="-1"></a>    <span class="co"># no legend</span></span>
+<span id="cb243-23"><a href="05-map-making.html#cb243-23" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb243-24"><a href="05-map-making.html#cb243-24" tabindex="-1"></a>    <span class="co"># all text to black</span></span>
+<span id="cb243-25"><a href="05-map-making.html#cb243-25" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>),         <span class="co"># set all text to black</span></span>
+<span id="cb243-26"><a href="05-map-making.html#cb243-26" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>),    <span class="co"># axis tick labels</span></span>
+<span id="cb243-27"><a href="05-map-making.html#cb243-27" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>),   <span class="co"># axis titles (if used)</span></span>
+<span id="cb243-28"><a href="05-map-making.html#cb243-28" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>)    <span class="co"># title (if used)</span></span>
+<span id="cb243-29"><a href="05-map-making.html#cb243-29" tabindex="-1"></a>  )</span></code></pre></div>
+<p>Here is the grid package, we:</p>
+<ul>
+<li>plot our map (<code>tm2</code>)</li>
+<li>then “print” over the study area map and violin plot with the x and y controlling placement on the page.</li>
+<li>save the plot by</li>
+</ul>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="05-map-making.html#cb244-1" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
+<span id="cb244-2"><a href="05-map-making.html#cb244-2" tabindex="-1"></a></span>
+<span id="cb244-3"><a href="05-map-making.html#cb244-3" tabindex="-1"></a><span class="co"># Open PNG device</span></span>
+<span id="cb244-4"><a href="05-map-making.html#cb244-4" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;prac5_data/3_facet.png&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">units=</span><span class="st">&quot;in&quot;</span>, <span class="at">res =</span> <span class="dv">300</span>)</span>
+<span id="cb244-5"><a href="05-map-making.html#cb244-5" tabindex="-1"></a></span>
+<span id="cb244-6"><a href="05-map-making.html#cb244-6" tabindex="-1"></a>tm2</span>
+<span id="cb244-7"><a href="05-map-making.html#cb244-7" tabindex="-1"></a><span class="fu">print</span>(tm4, <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">x=</span><span class="fl">0.68</span>, <span class="at">y=</span> <span class="fl">0.25</span>, <span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.35</span>))</span>
+<span id="cb244-8"><a href="05-map-making.html#cb244-8" tabindex="-1"></a><span class="fu">print</span>(violin, <span class="at">vp =</span> <span class="fu">viewport</span>(<span class="at">x=</span><span class="fl">0.67</span>, <span class="at">y=</span> <span class="fl">0.83</span>, <span class="at">width =</span> <span class="fl">0.25</span>, <span class="at">height =</span> <span class="fl">0.35</span>))</span>
+<span id="cb244-9"><a href="05-map-making.html#cb244-9" tabindex="-1"></a></span>
+<span id="cb244-10"><a href="05-map-making.html#cb244-10" tabindex="-1"></a></span>
+<span id="cb244-11"><a href="05-map-making.html#cb244-11" tabindex="-1"></a><span class="co"># Close device</span></span>
+<span id="cb244-12"><a href="05-map-making.html#cb244-12" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<pre><code>## png 
+##   2</code></pre>
+</div>
+</div>
+</div>
+<div id="bad-maps" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Bad maps<a href="05-map-making.html#bad-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Things to avoid:</p>
+<ul>
+<li>Poor labeling — don’t present something as an output with the file name (e.g. layer_1_osm) in the legend — name your layers properly, it’s <strong>really easy</strong> to do and makes a <strong>big</strong> difference to the quality of the map.</li>
+<li>No legend</li>
+<li>Screenshot of the map — export it properly, we’ve been doing this a while and can tell</li>
+<li>Change the values in the legend … what is aesthetically more pleasing 31.99999 or 32?. Make it as easy as possible to interpret your map.</li>
+<li>Too much data presented on one map — be selective or plot multiple maps</li>
+<li>Presented data is too small or too big — be critical about what you produce, it should be easy to read and understand</li>
+<li>A map or figure without enough detail — <strong>A reader should be able to understand a map or figure using the graphic in the figure/map and the caption alone!</strong> A long caption is <strong>fine</strong> assuming it’s all relevant information.</li>
+</ul>
+<p>For more cartography ideas/advice have a look at <a href="https://www.katiejolly.io/blog/2019-08-28/nyt-urban-heat">Katie Jolly’s blog post on urban heat islands</a>, consult <a href="https://www.axismaps.com/guide/">axis map catography guide</a> and check out the <a href="https://www.reddit.com/r/dataisbeautiful/">data is beautiful reddit</a>.</p>
+<p>Another decent resource is the <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization book</a></p>
+<p>That’s the end of the practical! If you’d like to see how to make an interactive map then some guidance has been given in the Extras section, although this is not required.</p>
+</div>
+<div id="feedback-4" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Feedback<a href="05-map-making.html#feedback-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Was anything that we explained unclear this week or was something really clear…let us know using the <a href="https://forms.gle/w2GUDYc7tSavGy7r6">feedback form</a>. It’s anonymous and we’ll use the responses to clear any issues up in the future / adapt the material.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="04-git-github-and-rmarkdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="06-detecting-spatial-patterns.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": true,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": false
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/andrewmaclachlan/CASA0005repo/edit/master/05-prac5.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["https://github.com/andrewmaclachlan/CASA0005repo/raw/master/05-prac5.Rmd"],
+  "search": {
+    "engine": "fuse",
+    "options": {
+      "includeScore": true
+    }
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
