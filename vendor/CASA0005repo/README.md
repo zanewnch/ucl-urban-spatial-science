@@ -16,15 +16,23 @@ The module is a combination of lectures and practicals, with this repository hol
 
 The content covers the principles underlying the conception, representation/measurement and analysis of spatial phenomena. As such, it presents an overview of the core organising concepts and techniques of Geographic Information Systems, and the software and analysis systems that are integral to their effective deployment in spatial analysis. It is concerned with unearthing and understanding the importance of spatial data in a range of applied contexts.
 
-## Suggested reading order
+## Where to read and where to start
 
-1. [`README.md`](README.md) — course overview and link to the [published handbook](https://andrewmaclachlan.github.io/CASA0005repo/).
-2. [`index.Rmd`](index.Rmd) — the handbook's welcome and opening page.
-3. [`00-software.Rmd`](00-software.Rmd) and [`00-usage.Rmd`](00-usage.Rmd) — software setup and guidance on using the materials. The published pages are [Software installation](docs/software-installation.html) and [External usage](docs/external-usage.html).
-4. [`00-basics.Rmd`](00-basics.Rmd) — introductory concepts about geographic information; see the published [basics chapter](docs/the-basics-of-geographic-information-data.html).
-5. [`01-prac1.Rmd`](01-prac1.Rmd) onward — practical chapters. The first is [Geographic Information](docs/geographic-information.html), followed by [Introduction to R](docs/introduction-to-r.html) and later practicals on spatial data, mapping, and analysis.
-6. [`docs/`](docs/) — the published HTML handbook, which you can read without building the book.
-7. [`_bookdown.yml`](_bookdown.yml) — lists the source files in handbook order. `00-course_info.Rmd` is currently commented out.
+If you want to study the course, use the already-rendered handbook in [`docs/`](docs/). You do not need to open the source files or build the book.
+
+1. Open the handbook [home page](docs/index.html). It contains the welcome page and chapter navigation.
+2. Read [The Basics of Geographic Information](docs/the-basics-of-geographic-information-data.html), then [Chapter 1: Geographic Information](docs/geographic-information.html) — this is the same chapter linked at the top of this README and shown on the online course site.
+3. Continue with [Introduction to R](docs/introduction-to-r.html) and the later chapters from the handbook navigation.
+
+Keep the whole `docs/` folder together for offline reading because its HTML pages refer to local images, styles, and other supporting files.
+
+## What the repository files are for
+
+- [`docs/index.html`](docs/index.html) is the rendered handbook home page. [`index.Rmd`](index.Rmd) is its editable source.
+- [`docs/geographic-information.html`](docs/geographic-information.html) is the rendered Chapter 1 page. [`01-prac1.Rmd`](01-prac1.Rmd) is its source. Similarly, [`00-basics.Rmd`](00-basics.Rmd) is the source for [`docs/the-basics-of-geographic-information-data.html`](docs/the-basics-of-geographic-information-data.html), and [`02-prac2.Rmd`](02-prac2.Rmd) is the source for [`docs/introduction-to-r.html`](docs/introduction-to-r.html).
+- Other `.Rmd` files are lesson sources. You only need them if you want to inspect or edit how the handbook was written.
+- [`_bookdown.yml`](_bookdown.yml) lists the source chapters and their order; [`_output.yml`](_output.yml) configures the rendered format and appearance. Bookdown builds the multi-chapter handbook, and Pandoc converts its content into HTML. These are build settings, not additional course guidelines.
+- [`docs/404.html`](docs/404.html) is an error page for a missing URL, not a course chapter.
 
 ### JOSE paper
 
