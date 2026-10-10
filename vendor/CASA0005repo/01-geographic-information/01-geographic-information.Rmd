@@ -48,7 +48,7 @@ This week:
 -   [What is Spatial Data Science](https://www.youtube.com/watch?v=osAbJeTho5w) from some of our friends at CARTO
 :::
 
-## Recommended listening 🎧
+## Recommended listening `r emo::ji("headphones")`
 
 Some of these practicals are long, take regular breaks and have a listen to some of our fav tunes each week.
 
