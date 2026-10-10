@@ -1,8 +1,21 @@
 # The Basics of Geographic Information data {-}
+
+```{r setup-course-images, include=FALSE}
+# The trimmed repository keeps published images under docs/ instead of the ignored source folders.
+course_image <- function(path) {
+  if (file.exists(path)) return(path)
+
+  published_copy <- file.path("docs", path)
+  if (file.exists(published_copy)) return(published_copy)
+
+  stop("Image not found in the source folder or published handbook: ", path, call. = FALSE)
+}
+```
+
 Geographic data, geospatial data or geographic information is data that identifies the location of features on Earth. There are two main types of data which are used in GIS applications to represent the real world. **Vectors** that are composed of points, lines and polygons and **rasters** that are grids of cells with individual values...
 
 ```{r echo=FALSE, out.width = "300pt", fig.align='center', cache=FALSE, fig.cap="Types of spatial data. Source: [Spatial data models](https://planet.uwc.ac.za/nisl/gis/web_page/page_15.htm)"}
-knitr::include_graphics('prac1_images/rasvsvec.png') 
+knitr::include_graphics(course_image('prac1_images/rasvsvec.png'))
 ```
 
 In the above example the features in the real world (e.g. lake, forest, marsh and grassland) have been represented by points, lines and polygons (vector) or discrete grid cells (raster) of a certain size (e.g. 1 x 1m) specifying land cover type.
@@ -18,7 +31,7 @@ Discrete data have finite values (meaning you can finish counting something). It
 Foot length would be continuous data but shoe size would be discrete data.
 
 ```{r echo=FALSE, out.width = "450", fig.align='center', cache=FALSE, fig.cap="Continuous and discrete data. Source: [Allison Horst data science and stats illustrations](https://github.com/allisonhorst/stats-illustrations)"}
-knitr::include_graphics('allisonhorst_images/continuous_discrete.png')
+knitr::include_graphics(course_image('allisonhorst_images/continuous_discrete.png'))
 ```
 
 Nominal (also called categorical) data has labels without any quantitative value such as hair colour or type of animal. Think names or categories - there are no numbers here. 
@@ -28,7 +41,7 @@ Ordinal, similar to categorical but the data has an order or scale, for example 
 Binary data is that that can have only two possible outcomes, yes and no or shark and not shark.
 
 ```{r echo=FALSE, out.width = "550pt", fig.align='center', cache=FALSE, fig.cap="Nominal, ordinal and binary data. Source: [Allison Horst data science and stats illustrations](https://github.com/allisonhorst/stats-illustrations)"}
-knitr::include_graphics('allisonhorst_images/nominal_ordinal_binary.png')
+knitr::include_graphics(course_image('allisonhorst_images/nominal_ordinal_binary.png'))
 ```
 
 ## Important GIS data formats
@@ -57,7 +70,7 @@ We're now going to explore a shapefile (`.shp` ) and GeoJSON (`.geojson`) in act
 Go to: <http://geojson.io/#map=16/51.5247/-0.1339>
 
 ```{r echo=FALSE, out.width = "500pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/JSONwebsite.png') 
+knitr::include_graphics(course_image('prac1_images/JSONwebsite.png'))
 ```
 
 1.  Using the drawing tools to the right of the map window, create 3 objects: a point, line and a polygon as I have done above. Click on your polygon and colour it red and colour your point green
@@ -89,13 +102,13 @@ There are normally valid reasons for storing data in one of these other formats.
 A geodatabase is a collection of geographic data held within a database. Geodatabases were developed by ESRI to overcome some of the limitations of shapefiles. They come in two main types: Personal (up to 1 TB) and File (limited to 250 - 500 MB), with Personal Geodatabases storing everything in a Microsoft Access database (`.mdb`) file and File Geodatabases offering more flexibility, storing everything as a series of folders in a file system. In the example below we can see that the FCC_Geodatabase (left hand pane) holds multiple points, lines, polygons, tables and raster layers in the contents tab.
 
 ```{r echo=FALSE, out.width = "500pt", fig.align='center', cache=FALSE}
-knitr::include_graphics('prac1_images/geodatabase.png') 
+knitr::include_graphics(course_image('prac1_images/geodatabase.png'))
 ```
 
 ### GeoPackage
 
 ```{r echo=FALSE, out.width = "100pt", fig.align='center', cache=FALSE, fig.cap="GeoPacakge logo"}
-knitr::include_graphics('prac1_images/geopkg.png')
+knitr::include_graphics(course_image('prac1_images/geopkg.png'))
 ```
 
 A GeoPackage is an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial data. It stores spatial data layers (vector and raster) as a single file, and is based upon an SQLite database, a widely used relational database management system, permitting code based, reproducible and transparent workflows. As it stores data in a single file it is very easy to share, copy or move.
@@ -103,7 +116,7 @@ A GeoPackage is an open, standards-based, platform-independent, portable, self-d
 ### SpatiaLite
 
 ```{r echo=FALSE, out.width = "100pt", fig.align='center', cache=FALSE, fig.cap="SpatialLite logo"}
-knitr::include_graphics('prac1_images/spatialite.png')
+knitr::include_graphics(course_image('prac1_images/spatialite.png'))
 ```
 
 SpatialLite is an open-source library that extends SQLite core. Support is fairly limited and most software that supports SpatiaLite also supports GeoPackage, as they both build upon SQLite. It doesn't have any clear advantage over GeoPackage, however it is unable to support raster data.
@@ -111,7 +124,7 @@ SpatialLite is an open-source library that extends SQLite core. Support is fairl
 ### PostGIS
 
 ```{r echo=FALSE, out.width = "100pt", fig.align='center', cache=FALSE, fig.cap="PostGIS logo"}
-knitr::include_graphics('prac1_images/postGIS.jpg') 
+knitr::include_graphics(course_image('prac1_images/postGIS.jpg'))
 ```
 
 PostGIS is an opensource database extender for PostrgeSQL. Essentially PostgreSQL is a database and PostGIS is an add on which permits spatial functions. The advantages of using PostGIS over a GeoPackage are that it allows users to access the data at the same time, can handle large data more efficiently and reduces processing time. In [this example](https://medium.com/@GispoLearning/learn-spatial-sql-and-master-geopackage-with-qgis-3-16b1e17f0291) calculating the number of bars per neighbourhood in Leon, Mexico the processing time reduced from 1.443 seconds (SQLite) to 0.08 seconds in PostGIS. However, data stored in PostGIS is much harder to share, move or copy.
@@ -129,7 +142,7 @@ As Grolemund and Wickham state in [R for Data Science](https://r4ds.had.co.nz/).
 However, a nice place to start is looking at the typical workflow of a data science (or GIS) project which you will see throughout these practicals, which is summarised nicely in this diagram produced by [Dr. Julia Lowndes](https://twitter.com/juliesquid) adapted from Grolemund and Wickham.
 
 ```{r echo=FALSE, out.width = "600pt", fig.align='center', cache=FALSE, fig.cap="Updated from Grolemund & Wickham's classis R4DS schematic, envisioned by Dr. Julia Lowndes for her 2019 useR! keynote talk and illustrated by Allison Horst. Source: [Allison Horst data science and stats illustrations](https://github.com/allisonhorst/stats-illustrations)"}
-knitr::include_graphics('allisonhorst_images/environmental_data_science_r4ds_general.png')
+knitr::include_graphics(course_image('allisonhorst_images/environmental_data_science_r4ds_general.png'))
 ```
 
 To begin you have to **import** your data (not necessarily environmental) into R or some other kind of GIS to actually be able to do any kind of analysis on it.
@@ -141,7 +154,7 @@ When you have (or haven't) tidied data you then will most likely want to **trans
 Tidying and transfrom = data wrangling. Remember from the introduction this could be 50-80% of a data science job!
 
 ```{r echo=FALSE, out.width = "450pt", fig.align='center', cache=FALSE, fig.cap="dplyr introduction graphic. Source: [Allison Horst data science and stats illustrations](https://github.com/allisonhorst/stats-illustrations)"}
-knitr::include_graphics('allisonhorst_images/dplyr_wrangling.png')
+knitr::include_graphics(course_image('allisonhorst_images/dplyr_wrangling.png'))
 ```
 
 After you have transformed the data the next best thing to do is **visualise** it --- even with some basic summary statistics. This simple step will often let you look at your data in a different way and select more appropraite analysis.
@@ -185,7 +198,7 @@ Before the Ordnance Survey opened up much of its data for public use, academics 
 Perhaps the most exciting of the additional OS data products available from Digimap is OS MasterMap. MasterMap is a framework for all OS data and contains layers of data that include details of real world objects such as buildings, roads, paths, rivers, physical structures and land parcels, as well as the complete UK transport network. Whilst we still are required to go through Edina OS have recently announced plans to make this dataset free in the near future under the new Geospatial Commission.
 
 ```{r echo=FALSE, out.width = "500pt", fig.align='center'}
-knitr::include_graphics('prac1_images/mastermap.png') 
+knitr::include_graphics(course_image('prac1_images/mastermap.png'))
 ```
 
 ### OSM
