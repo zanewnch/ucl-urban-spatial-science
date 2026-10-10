@@ -16,6 +16,16 @@ The module is a combination of lectures and practicals, with this repository hol
 
 The content covers the principles underlying the conception, representation/measurement and analysis of spatial phenomena. As such, it presents an overview of the core organising concepts and techniques of Geographic Information Systems, and the software and analysis systems that are integral to their effective deployment in spatial analysis. It is concerned with unearthing and understanding the importance of spatial data in a range of applied contexts.
 
+## Suggested reading order
+
+1. [`README.md`](README.md) — course overview and link to the [published handbook](https://andrewmaclachlan.github.io/CASA0005repo/).
+2. [`index.Rmd`](index.Rmd) — the handbook's welcome and opening page.
+3. [`00-software.Rmd`](00-software.Rmd) and [`00-usage.Rmd`](00-usage.Rmd) — software setup and guidance on using the materials. The published pages are [Software installation](docs/software-installation.html) and [External usage](docs/external-usage.html).
+4. [`00-basics.Rmd`](00-basics.Rmd) — introductory concepts about geographic information; see the published [basics chapter](docs/the-basics-of-geographic-information-data.html).
+5. [`01-prac1.Rmd`](01-prac1.Rmd) onward — practical chapters. The first is [Geographic Information](docs/geographic-information.html), followed by [Introduction to R](docs/introduction-to-r.html) and later practicals on spatial data, mapping, and analysis.
+6. [`docs/`](docs/) — the published HTML handbook, which you can read without building the book.
+7. [`_bookdown.yml`](_bookdown.yml) — lists the source files in handbook order. `00-course_info.Rmd` is currently commented out.
+
 ### JOSE paper
 
 The content discussed within the JOSE paper specifically refers to the module created for the academic year 2020-2021: https://andrewmaclachlan.github.io/CASA0005repo_20202021/. At the conclusion of each year content is copied to a new repository ending with the academic year it was taught, whilst the content applicable to the current academic year remains on the primary repository: https://github.com/andrewmaclachlan/CASA0005repo. This allows the authors and external users to track the development of the content. 
